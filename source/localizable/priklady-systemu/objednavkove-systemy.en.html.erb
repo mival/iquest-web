@@ -1,0 +1,61 @@
+---
+title: Ordering systems development | iQuest s.r.o.
+subtitle: What significantly helps to increase the supply of orders? What facilitates transactions for customers, wherever they are? It's an option to order your services or goods directly using the internet or using mobile solutions.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Ordering systems</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">What significantly helps to increase the supply of orders? What facilitates transactions for customers, wherever they are? It's an option to order your services or goods directly using the internet or using mobile solutions.</h3>
+    <p data-aos="fade-up">Mobile orders reach up to 50% of the purchase volume today!</p>
+  </div>
+
+  <div class="info">
+    <div class="box right">
+      <img alt="Objednávkové systémy" src="/images/app_kinds/order_systems_1.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>For whom is customized orders solution suitable?</b></p>
+        <ul>
+          <li>You offer quality services and your customers are not able to order using the internet yet.</li>
+          <li>You sell concert tickets, vouchers, tickets, flight tickets, and more.</li>
+          <li>You want customers to demand and order through the internet whatever you offer.</li>
+        </ul>
+        <p><a href="/kontakt">We will be happy to design the optimal solution for you.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

@@ -1,0 +1,86 @@
+---
+layout: no-header
+title: PF2018 | iQuest s.r.o.
+---
+<div id="opening">
+  <div class="circles">
+    <div class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="bg-point4 circle index4 orange" data-aos="zoom-in"></div>
+        <div class="bg-point5 circle index5 orange" data-aos="zoom-in"></div>
+        <div class="bg-point6 circle index6 orange" data-aos="zoom-in"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="bg-point1 circle index4 yellow" data-aos="zoom-in"></div>
+        <div class="bg-point2 circle index5 yellow" data-aos="zoom-in"></div>
+        <div class="bg-point3 circle index6 yellow" data-aos="zoom-in"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="bg-point7 circle index4 blue" data-aos="zoom-in"></div>
+        <div class="bg-point8 circle index5 blue" data-aos="zoom-in"></div>
+        <div class="bg-point9 circle index6 blue" data-aos="zoom-in"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="bg-point10 circle index4 green" data-aos="zoom-in"></div>
+        <div class="bg-point11 circle index5 green" data-aos="zoom-in"></div>
+        <div class="bg-point12 circle index6 green" data-aos="zoom-in"></div>
+      </div>
+    </div>
+  </div> <!-- .circles -->
+
+  <div class="page-offset">
+    <div class="pf-video-column">
+      <div class="pf-video-block-responsive" id="insert-video-here">
+        <video id="the-video" _autoplay _muted controls playsinline>
+          <source src="/images/video/video-2018.new.webm" type="video/webm" />
+          <source src="/images/video/video-2018.new.mp4" type="video/mp4" />
+        </video>
+        <!--a href="javascript:void 0;" id="video-replay-btn"><span class="fa fa-refresh"></span></a-->
+      </div>
+    </div> <!-- .pf-video-column -->
+  </div>
+</div> <!-- #opening -->
+
+<div id="video-overlay"></div>
+<div id="video-prompt">
+  <a href="javascript:$('#video-overlay, #video-prompt').fadeOut();$('#the-video').prop('muted', false).get(0).play();void 0;" class="tag">Pustit se zvukem</a>
+  <a href="javascript:$('#video-overlay, #video-prompt').fadeOut();$('#the-video').prop('muted', true).get(0).play();void 0;"class="tag">Pustit beze zvuku</a>
+</div>
+
+<script type="text/javascript">
+$(window).scroll(function(){
+	$('.circles').scrollTop($(document).scrollTop());
+});
+
+$('#the-video').bind('ended', function(){
+	//TODO ???
+});
+
+//Generate video element
+/* * * 
+var video = document.createElement('video');
+var source = document.createElement('source');
+video.autoplay = false;
+video.controls = true;
+video.playsinline = true;
+video.muted = true;
+var maybeCanPlay = false;
+if (video.canPlayType('video/webm').length > 0) {
+	source.src = '/images/video/video-2018.webm';
+	source.type = 'video/webm';
+	maybeCanPlay = true;
+}
+else if (video.canPlayType('video/mp4').length > 0) {
+	source.src = '/images/video/video-2018.mp4';
+	source.type = 'video/mp4';
+	maybeCanPlay = true;
+}
+if(maybeCanPlay){
+	video.appendChild(source);
+	document.getElementById('insert-video-here').appendChild(video);
+	//setTimeout(function(){
+	//	video.muted = false;
+	//}, 5000);
+}
+* * */
+</script>

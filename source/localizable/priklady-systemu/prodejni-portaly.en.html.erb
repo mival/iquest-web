@@ -1,0 +1,64 @@
+---
+title: Vendor portals development | iQuest s.r.o.
+subtitle: Where “box solutions” end, we begin. A perfect user experience ensures purchases maximization. Design, development, integration of tailored e-shop.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Vendor portals</h1>
+    <h2 data-aos="fade-up">Where “box solutions” end, we begin.</h2>
+  </div>
+
+  <div class="what-is">
+    <p data-aos="fade-up">For standard e-shops, which mostly don't excel, there are many solutions already. However, unlike them, those, who are serious about their business, won't get by without a customized solution.</p>
+  </div>
+
+  <div class="info">
+    <div class="box right">
+      <img alt="vývoj prodejních portálů" src="/images/app_kinds/sale_portals_e_shop.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>Custom e-shop solutions are ideal for you if:</b></p>
+        <ul>
+          <li>You are a wholesaler and you use extensive data integration.</li>
+          <li>Your desire and goal is to develop constantly.</li>
+          <li>You sell non-standard goods or services.</li>
+          <li>Your selling process is more complex.</li>
+          <li>You offer special goods requiring advanced search or sorting.</li>
+          <li>There are other reasons why a simple, standardized solution does not suit you.</li>
+        </ul>
+        <p><a href="/kontakt">In that moment we are here for you.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

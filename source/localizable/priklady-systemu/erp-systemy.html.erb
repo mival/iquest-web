@@ -1,0 +1,62 @@
+---
+title: Vývoj ERP systémů | iQuest s.r.o.
+subtitle: Poptejte ERP systém, máme zkušenosti se složitými a rozsáhlými systémy. ERP je efektivní systém na řízení velké organizace.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">ERP systémy</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">ERP systém (Enterprise Resource Planning) je podnikový informační systém pro automatizaci plánování a účetnictví, kontrolu a analýzu všech klíčových podnikových procesů a řešení obchodních problémů v rámci celé organizace.</h3>
+  </div>
+
+  <div class="info">
+    <div class="box left">
+      <img alt="ERP systémy na míru" src="/images/app_kinds/erp.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>Jak Vám ERP systém pomůže?</b></p>
+        <ul>
+          <li>Automatizace byznys procesů</li>
+          <li>Standardizace výrobních procesů</li>
+          <li>Zlepšení kvality plánování</li>
+          <li>Sjednocení finančních dat</li>
+          <li>Standardizace dat v personalistice</li>
+        </ul>
+        <p><a href="/kontakt">ERP je efektivní systém na řízení velké organizace. Poptejte ERP systém, máme zkušenosti se složitými a rozsáhlými systémy.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

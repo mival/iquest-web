@@ -1,0 +1,101 @@
+---
+title: Custom information systems development | iQuest s.r.o.
+subtitle: Get your new information system designed by experienced professionals. We will create an information system that matches your business.
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">We develop customized business information systems</h1>
+    <h2 data-aos="fade-up">Where the software is going to follow you...</h2>
+  </div>
+
+  <%= partial 'kinds_of_products' %>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">Why you should have customized business information system?</h3>
+    <p data-aos="fade-up">
+      If your business is something exceptional, it is quite possible that <b>you won’t find any suitable box software that meets all your requirements.</b>
+    </p>
+    <br>
+    <p>Customized information systems development has a number of advantages:
+      <ul>
+        <li>Before the implementation, detailed analysis and design take place, processes are getting optimized and therefore it leads to <b> improvement of overall business performance.</b></li>
+        <li><b>Bespoke software</b> is completely adapted to your requirements and needs.  </li>
+        <li>Continuous <b>software development</b> allows you to creatively customize company processes, dates, settings, and other features that ideally serve you or your customers. </li>
+        <li><b>The tailor-made information system development</b> gives you the freedom for your business growth.</li>
+      </ul>
+    </p>
+    <br>
+    <p>iQuest has been creating <b>bespoke software</b> for the customers for more than 14 years. We are able to ensure all stages of <b>information system development</b>, from data collection to software deployment and user training.  Custom software development is a challenge for us, with both advanced and modern technologies and maximum customization for users for the easiest and fastest use. We use a variety of powerful technologies <b>to create information systems</b> (Ember JS, Ruby on Rails, HTML 5).”</p>
+  </div>
+  <div class="we-are-the-champions" data-aos="fade-up">
+    <div class="text-green">We are precise in analysis and design</div>
+    <div class="text-green">We develop useful systems</div>
+  </div>
+  <div class="info">
+    <div class="box left">
+      <img alt="firemní informační systémy" src="/images/corporate_information_systems_1.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>What systems have we developed?</b></p>
+        <p> During our existence we have created a great number of information systems. </p>
+        <ul>
+          <li>Specialized <b>CRM software</b> for effective management of sales representatives for GreenSwan Pharmaceuticals.</li>
+          <li>System for <b>data collection and sophisticated field reporting</b> for Space and Profit.</li>
+          <li><b>Dispatching and call center</b> for Blue Angel.</li>
+          <li>Fully integrated <b>wholesale shopping system</b> of spare parts distributor for PARTSPOINT cars.</li>
+          <li>Web information system for <b>work management</b> of hundreds of merchandisers for Space and Profit.</li>
+          <li>Internal information system for <b>managing hundreds of nurses</b> in home health care at Procare.</li>
+          <li>And many others... (<a href="/en/reference">references</a>).</li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 10px;"></div>
+    <div class="box right">
+      <img alt="podnikový informační systém na míru" src="/images/corporate_information_systems_2.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>How does customized business information system come into being?</b></p>
+        <ul>
+          <li><b>Business plan</b> - compiling of basic description, requirements and goals.</li>
+          <li><b>Initial study</b> - conceptual description of the area solution, rough design of the system.</li>
+          <li><b>Project, detailed design</b> - detailed description and design of all dimensions of the future information system.</li>
+          <li><b>Implementation</b> - <b>programming</b>, integration, data conversion,...</li>
+          <li>Pilot operation</b>.</li>
+          <li>Users training and adaptation.</li>
+          <li>Putting into operation.</li>
+          <li>Operation, maintenance, development.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 10px;"></div>
+    <div class="box left">
+      <img alt="vývoj firemních informačních systémů" src="/images/corporate_information_systems_3.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>We integrate mobile applications with information systems:</b></p>
+        <p>The advantage of our next generation mobile applications is usability on multiple platforms (Android, iPhone) without the need to create a variety of applications. There is no need to develop a separate application for each platform. We bring development speed and cost savings.</p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+</script>

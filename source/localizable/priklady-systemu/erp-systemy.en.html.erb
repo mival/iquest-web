@@ -1,0 +1,62 @@
+---
+title: ERP systems development | iQuest s.r.o.
+subtitle: We will create a customized ERP system. We have experience with complex and extensive systems. ERP is an effective organization to manage a large organization.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">ERP systems</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">ERP system (Enterprise Resource Planning) is an enterprise information system for automatization of planning and accounting, control and analysis of all key business processes and business issues solution within the organization.</h3>
+  </div>
+
+  <div class="info">
+    <div class="box left">
+      <img alt="ERP systémy na míru" src="/images/app_kinds/erp.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>How will an ERP system help you?</b></p>
+        <ul>
+          <li>Automatization of business processes</li>
+          <li>Standardization of production processes</li>
+          <li>Planning quality improvement</li>
+          <li>Financial data unification</li>
+          <li>Data standardization in human resources</li>
+        </ul>
+        <p><a href="/kontakt">ERP is an efficient system for managing large organizations. Inquire an ERP system, we have experience with complex and extensive systems.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

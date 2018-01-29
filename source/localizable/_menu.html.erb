@@ -1,0 +1,109 @@
+<aside id="menu">
+ <!-- <ul class="lang">
+      <li>CZ</li>
+      <li>EN</li>
+  </ul>-->
+  <div id="menu-close">
+    <span class="text-green font-medium">MENU</span> <img alt="Close" src="/images/close.png" />
+  </div>
+  <ul>
+    <% link_to t('urls.home'), class: 'hide' do %>
+      <li>
+        <%= t('menu.home') %>
+      </li>
+    <% end %>
+    <!-- link_to '/pf2018/' do >
+      <li>
+        PF2018
+      </li>
+    < end -->
+    <% link_to t('urls.iquest_way'), class: 'hide' do %>
+      <li>
+        <%= t('menu.iquest_way') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.why_iquest'), class: 'hide' do %>
+      <li>
+        <%= t('menu.why_iquest') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.reference'), class: 'hide' do %>
+      <li>
+        <%= t('menu.reference') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.technology') do %>
+      <li>
+        <%= t('menu.technology') %>
+      </li>
+    <% end %>
+
+    <% link_to "http://www.rubyonrailspraha.cz/" do %>
+      <li>
+        <%= t('menu.microsite_ruby') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.vyvojaplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_aplikace') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.jedenvyvoj.cz/" do %>
+      <li>
+        <%= t('menu.microsite_jeden') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.hybridniaplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_hybrid') %>
+      </li>
+    <% end %>
+    <% link_to "https://www.progresivni-webove-aplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_pwa') %>
+      </li>
+    <% end %>
+
+    <% link_to t('urls.development') do %>
+      <li>
+        <%= t('menu.development') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.mobile_applications') do %>
+      <li>
+        <%= t('menu.mobile_applications') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.not_only_money') do %>
+      <li>
+        <%= t('menu.not_only_money') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.volne_pozice') do %>
+      <li>
+        <%= t('menu.volne_pozice') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.blog'), class: 'hide' do %>
+      <li>
+        <%= t('menu.blog') %>
+      </li>
+    <% end %>
+    <% link_to t('urls.contact'), class: 'hide' do %>
+      <li>
+        <%= t('menu.contact') %>
+      </li>
+    <% end %>
+  </ul>
+</aside>
+<script type="text/javascript">
+$( window ).resize(menu_change);
+$( window ).load(menu_change);
+function menu_change() {
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('.hide').show();
+  } else {
+    $('.hide').hide();
+  }
+}
+</script>

@@ -1,0 +1,77 @@
+---
+title: Reservation systems development | iQuest s.r.o.
+subtitle: Optimize your and your clients' time. Immediate reservation of your services through web and mobile technologies will help you to get more orders!
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Reservation systems</h1>
+    <h2 data-aos="fade-up">Leave us to create web and mobile applications.<br />Concentrate on what's important and not be satisfied with the "box solution".</h2>
+  </div>
+
+  <div class="info">
+    <div class="box left">
+      <div class="img-wrap"><img alt="zakázkový rezervační systém" src="/images/app_kinds/reservation_systems_1.jpg" data-aos="fade-right" /></div>
+      <div class="offset" data-aos="fade-left">
+        <p><b>When to let us create custom reservation system?</b></p>
+        <ul>
+          <li>You provide quality services that customers reserve.</li>
+          <li>You are a big hotel or other facility and you're not satisfied with "box systems".</li>
+          <li>You have more employees whose time you need to organize effectively.</li>
+          <li>You want to secure a variety of resources, such as equipment, premises and other.</li>
+          <li>You need to book places in the means of transport.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+    <h3 class="text-green" data-aos="fade-up">We cope with all types of reservation systems. We map the processes,<br />users and data structures and we are glad to project an optimal solution.</h3>
+  <div class="info">
+    <div class="box right">
+      <img alt="Rezervační systémy" src="/images/app_kinds/reservation_systems_2.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>Why let us create a customized reservation system?</b></p>
+        <ul>
+          <li>We completely optimize it for your use.</li>
+          <li>You can offer the services exactly as you need, and you don't have to adapt to inflexible system.</li>
+          <li>The booking process will be open to further development and improvement.</li>
+          <li>You can expand your services, add bonuses and suchlike.</li>
+          <li>We will be happy to connect you to any payment gateways.</li>
+          <li>We will easily link reservation system to your accountancy, CRM or any other integrated system.</li>
+        </ul>
+        <p><a href="/kontakt">Contact us.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

@@ -1,0 +1,63 @@
+---
+title: Development of software for order management | iQuest s.r.o.
+subtitle: Do you want to have all the needed order information using internet and mobile apps? Let us design an optimal order management solution.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Order management</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">Simply order. In demands, supplies, orders, delivery and transfer protocols. What's more? Do you want to have all needed information for management available through internet and mobile application?</h3>
+    <p data-aos="fade-up">Let us analyze your needs, processes and data. We will design optimal solution.</p>
+  </div>
+
+  <div class="info">
+    <div class="box left">
+      <img alt="software pro správu zakázek" src="/images/app_kinds/order_management_1.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>When do you need customized administration?</b></p>
+        <ul>
+          <li>You want to share information through secure web and mobile.</li>
+          <li>You need to make your data accessible for people in the field.</li>
+          <li>You have more branches and want to share orders data.</li>
+          <li>Excel is still your primary tool for data keeping and it isn't enough.</li>
+          <li>You would like to entrust your data arrangement to professional analysts.</li>
+        </ul>
+        <p><a href="/kontakt">We will be glad to come up with solution just for you.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

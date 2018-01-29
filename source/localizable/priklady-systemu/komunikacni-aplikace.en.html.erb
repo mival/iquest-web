@@ -1,0 +1,63 @@
+---
+title: Communication applications development | iQuest s.r.o.
+subtitle: Do you communicate with your employees, customers, suppliers or partners? We will invent, design and create the optimal software solution in the form of a web or mobile application.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Communication applications</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">You communicate with your employees, customers, suppliers or partners. Do you want to use web and mobile technologies for that? Would you like to make the whole communication clear and to keep it as well?</h3>
+    <p data-aos="fade-up">We will be glad to invent, design and create optimal software solution for you.</p>
+  </div>
+
+  <div class="info">
+    <div class="box right">
+      <img alt="komunikační aplikace na míru" src="/images/app_kinds/communication_applications_1.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>When is customized application great?</b></p>
+        <ul>
+          <li>Your people are often on the ways and they need to have information incessantly available.</li>
+          <li>You don't have arrangement in internal communication.</li>
+          <li>You would like to improve communication with customers.</li>
+          <li>You want to make information flow on projects clearer.</li>
+          <li>Your goal is to gain maximum from the latest communication technologies.</li>
+        </ul>
+        <p><a href="/kontakt">We will be glad to consult solution with you. We have enough experiences.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

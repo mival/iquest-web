@@ -1,0 +1,62 @@
+---
+title: Web dispatching development | iQuest s.r.o. 
+subtitle: You won't find much dispatching box systems. Every business is specific and needs its own. We have already developed several solutions of web and mobile dispatching in different business areas.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Web dispatching</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">You won't find much dispatching box systems. Every business is specific and needs its own. We have already developed several sophisticated dispatchers.</h3>
+  </div>
+
+  <div class="info">
+    <div class="box right">
+      <img alt="Webové dispečinky" src="/images/app_kinds/web_dispatching_1.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>You will appreciate customized dispatching, when:</b></p>
+        <ul>
+          <li>You need to assign orders to employees.</li>
+          <li>It's necessary to manage operation of means of transport well.</li>
+          <li>You require automatization of assigning your resources to orders.</li>
+          <li>Thanks to growth of the business, current system is not enough for you.</li>
+          <li>You long for simplicity, speed and clarity.</li>
+        </ul>
+        <p><a href="/kontakt">We will take it.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>

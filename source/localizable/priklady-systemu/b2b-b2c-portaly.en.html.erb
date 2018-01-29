@@ -1,0 +1,69 @@
+---
+title: B2B/B2C portals development | iQuest s.r.o.
+subtitle: Create a new and modern web and mobile portal environment for your customers, partners, or dealers, where they find all the information needed.
+
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">B2B/B2C portals</h1>
+  </div>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">Create modern environment of web and mobile portal for your customers, partners or dealers, where they find all the information needed.</h3>
+    <p data-aos="fade-up"><b>Let your business partners sign up and buy for their own wholesale prices. They will easily download their documents and review their offers.</b></p>
+  </div>
+
+  <div class="info">
+    <div class="box left">
+      <img alt="Vývoj B2B/B2C portálů" src="/images/app_kinds/b2b-b2c-portaly_1.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>How will you utilize B2B/B2C web and mobile portals?</b></p>
+        <ul>
+          <li>Web and mobile environment fully integrated with the internal information system.</li>
+          <li>Possibility of wholesale / retail purchases with taking the margin into consideration.</li>
+          <li>Reservation of services.</li>
+          <li>Overview of store and goods delivery state.</li>
+          <li>Mediation of individual business offers.</li>
+          <li>Overview of orders, invoices and other documents.</li>
+          <li>Documents to download.</li>
+          <li>POS and promotional items order.</li>
+          <li>Registration for participation in events.</li>
+          <li>Creation of retail offers with stock supply reservations.</li>
+          <li>And much more.</li>
+        </ul>
+        <p><a href="/kontakt">Demand iQuest, who has 14 years of experience with the design, development and integration of B2B/B2C portals.</a></p>
+      </div>
+    </div>
+  </div>
+  <%= partial 'kinds_of_products' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+<%= partial 'icons' %>
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+
+  $('.info .box').on('mouseenter', function() {
+		$(this).find('img').addClass('animated pulse');
+	}).on('mouseleave', function() {
+		$(this).find('img').removeClass('animated pulse');
+	})
+</script>
