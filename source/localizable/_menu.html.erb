@@ -37,33 +37,6 @@
         <%= t('menu.technology') %>
       </li>
     <% end %>
-
-    <% link_to "http://www.rubyonrailspraha.cz/" do %>
-      <li>
-        <%= t('menu.microsite_ruby') %>
-      </li>
-    <% end %>
-    <% link_to "http://www.vyvojaplikace.cz/" do %>
-      <li>
-        <%= t('menu.microsite_aplikace') %>
-      </li>
-    <% end %>
-    <% link_to "http://www.jedenvyvoj.cz/" do %>
-      <li>
-        <%= t('menu.microsite_jeden') %>
-      </li>
-    <% end %>
-    <% link_to "http://www.hybridniaplikace.cz/" do %>
-      <li>
-        <%= t('menu.microsite_hybrid') %>
-      </li>
-    <% end %>
-    <% link_to "https://www.progresivni-webove-aplikace.cz/" do %>
-      <li>
-        <%= t('menu.microsite_pwa') %>
-      </li>
-    <% end %>
-
     <% link_to t('urls.development') do %>
       <li>
         <%= t('menu.development') %>
@@ -92,6 +65,35 @@
     <% link_to t('urls.contact'), class: 'hide' do %>
       <li>
         <%= t('menu.contact') %>
+      </li>
+    <% end %>
+    
+    <li><a>iQuest microsites</a></li>
+    .menu a { border-top: 1px solid blue;}
+
+    <% link_to "http://www.rubyonrailspraha.cz/" do %>
+      <li>
+        <%= t('menu.microsite_ruby') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.vyvojaplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_aplikace') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.jedenvyvoj.cz/" do %>
+      <li>
+        <%= t('menu.microsite_jeden') %>
+      </li>
+    <% end %>
+    <% link_to "http://www.hybridniaplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_hybrid') %>
+      </li>
+    <% end %>
+    <% link_to "https://www.progresivni-webove-aplikace.cz/" do %>
+      <li>
+        <%= t('menu.microsite_pwa') %>
       </li>
     <% end %>
   </ul>

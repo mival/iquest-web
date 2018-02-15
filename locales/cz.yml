@@ -74,17 +74,17 @@ cz:
     blog           : 'Blog'
     volne_pozice   : 'Přidej se k nám'
     development    : 'Vývoj webových aplikací'
-    mobile_applications : 'Hybridní mobilní aplikace'
+    mobile_applications : 'Mobilní aplikace nové generace'
     microsite_ruby      : 'Ruby on Rails Praha'
     microsite_aplikace  : 'Průvodce vývojem aplikací'
-    microsite_jeden     : 'Jeden vývoj'
+    microsite_jeden     : 'Jeden vývoj - jedna aplikace pro Android i iPhone'
     microsite_hybrid    : 'Vše o hybridních aplikacích'
     microsite_pwa       : 'Progresivní webové aplikace'
 
   pages:
     main:  # Uvodni stranka.
       title                 : 'Měníme myšlenky v software'
-      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 14 let'
+      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 14 let.'
       examples_of_work      : 'Příklady naší práce'
       more_references       : 'Více referencí'
       our_main_echnologies  : 'Naše hlavní technologie'

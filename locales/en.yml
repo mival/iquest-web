@@ -99,17 +99,17 @@ en:
     contact        : 'Contact'
     blog           : 'Read'
     development    : 'Web applications development'
-    mobile_applications : 'Hybrid mobile applications'
+    mobile_applications : 'Mobile applications new generation'
     microsite_ruby      : 'Ruby on Rails Prague'
     microsite_aplikace  : 'Guide to application development'
-    microsite_jeden     : 'Integrated development'
+    microsite_jeden     : 'Hybrid development'
     microsite_hybrid    : 'All about hybrid applications'
     microsite_pwa       : 'Progressive web apps'
 
   pages:
     main: # Uvodni stranka.
       title                 : 'We transform ideas into software'
-      sub_title             : 'We create web systems and mobile applications.<br/>For over 14 years'
+      sub_title             : 'We create web systems and mobile applications.<br/>For over 14 years.'
       examples_of_work      : 'The examples of our work'
       more_references       : 'More references'
       our_main_echnologies  : 'Our main technologies'
