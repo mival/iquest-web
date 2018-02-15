@@ -40,7 +40,7 @@ en:
     join_us                    : '/en/join-us/'
     consultation_free          : '/en/consultation-free-of-charge/'
     development                : '/en/web-application-development/'
-    inforation_systems         : '/en/tailored-information-systems/'
+    information_systems         : '/en/tailored-information-systems/'
     mobile_applications        : '/en/enterprise-mobile-applications/'
     mobilni_aplikace           : '/en/podnikove-mobilni-aplikace/'
     verejne_aplikace           : '/en/verejne-mobilni-aplikace/'
@@ -117,7 +117,7 @@ en:
       buttons:
         consultation        : 'I want an initial consultation <strong>FREE</strong> of charge'
         development         : 'Web<br />Application<br />Development'
-        inforation_systems  : 'Tailored<br />corporate<br />inforation <br class="br" /> systems'
+        information_systems  : 'Tailored<br />corporate<br />information <br class="br" /> systems'
         mobile_applications : 'Mobile<br />applications new<br /> generation'
 
     contact:

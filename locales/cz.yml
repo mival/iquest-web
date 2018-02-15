@@ -11,7 +11,7 @@ cz:
     join_us                    : '/prace-programator-ruby-on-rails/'
     consultation_free          : '/konzultaci-zdarma/'
     development                : '/webove-aplikace-na-miru/'
-    inforation_systems         : '/firemni-informacni-systemy-na-miru/'
+    information_systems        : '/firemni-informacni-systemy-na-miru/'
     mobile_applications        : '/mobilni-aplikace-nove-generace/'
     mobilni_aplikace           : '/podnikove-mobilni-aplikace/'
     verejne_aplikace           : '/verejne-mobilni-aplikace/'
@@ -91,8 +91,8 @@ cz:
       more_about_technology : 'Více o technologiích'
       buttons:
         consultation        : 'Chci první konzultaci <strong>ZDARMA</strong>'
-        development         : 'Webové<br />aplikace<br />nové generace'
-        inforation_systems  : 'Firemní<br />informační<br />systémy <br class="br" /> na míru'
+        development         : 'Rozsáhlé <br />webové<br />aplikace'
+        information_systems : 'Firemní<br />informační<br />systémy <br class="br" /> na míru'
         mobile_applications : 'Mobilní <br />aplikace nové<br /> generace'
 
     contact:
