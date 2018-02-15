@@ -1,7 +1,9 @@
 <div class="tags">
-  <h3><a href="https://www.progresivni-webove-aplikace.cz/"><%= t('kinds_of_products.title') %></a></h3>
   <div class="offset">
-    <% link_to t('urls.reservation_systems') do %>
+  <% link_to t('urls.progressive_web_apps') do %>
+    <div class="tag" data-aos="fade-up"><%= t('kinds_of_products.progressive_web_apps') %></div>
+  <% end %>
+  <% link_to t('urls.reservation_systems') do %>
       <div class="tag" data-aos="fade-up"><%= t('kinds_of_products.reservation_systems') %></div>
     <% end  %>
     <% link_to t('urls.vendor_portals') do %>

@@ -12,6 +12,7 @@ en:
     podnikove-mobilni-aplikace         : 'enterprise-mobile-applications'
     # Kinds of products
     priklady-systemu                   : 'systems'
+    progresivni-webove-aplikace        : 'progressive-web-apps'
     rezervacni-systemy                 : 'reservation-systems'
     prodejni-portaly                   : 'vendor-portals'
     crm-systemy                        : 'crm-systems'
@@ -45,6 +46,7 @@ en:
     verejne_aplikace           : '/en/verejne-mobilni-aplikace/'
     blog                       : '/en/blog/'
     # Kinds of products
+    progressive_web_apps       : 'https://www.progresivni-webove-aplikace.cz/'
     reservation_systems        : '/en/systems/reservation-systems/'
     vendor_portals             : '/en/systems/vendor-portals/'
     crm_systems                : '/en/systems/crm-systems/'
@@ -123,7 +125,7 @@ en:
 
 
   kinds_of_products:
-    title                      : 'We create progressive web apps'
+    progressive_web_apps       : 'progressive web apps'
     reservation_systems        : 'reservation systems'
     vendor_portals             : 'vendor portals'
     crm_systems                : 'CRM systems'

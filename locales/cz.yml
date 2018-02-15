@@ -20,6 +20,7 @@ cz:
     frontend_developer         : '/frontend-developer/'
     backend_developer          : '/backend-developer/'
     # Kinds of products
+    progressive_web_apps       : 'https://www.progresivni-webove-aplikace.cz/'
     reservation_systems        : '/priklady-systemu/rezervacni-systemy/'
     vendor_portals             : '/priklady-systemu/prodejni-portaly/'
     crm_systems                : '/priklady-systemu/crm-systemy/'
@@ -99,7 +100,7 @@ cz:
 
 
   kinds_of_products:
-    title                      : 'Tvoříme progresivní webové aplikace'
+    progressive_web_apps       : 'progresivní webové aplikace'
     reservation_systems        : 'rezervační systémy'
     vendor_portals             : 'prodejní portály'
     crm_systems                : 'CRM systémy'
