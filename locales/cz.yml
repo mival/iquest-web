@@ -80,6 +80,8 @@ cz:
     microsite_jeden     : 'Jeden vývoj - jedna aplikace pro Android i iPhone'
     microsite_hybrid    : 'Vše o hybridních aplikacích'
     microsite_pwa       : 'Progresivní webové aplikace'
+    microsite_vyvojariP : 'Vývojáři Praha'
+    microsite_vyvojarisw: 'Vývojáři softwaru'
 
   pages:
     main:  # Uvodni stranka.
