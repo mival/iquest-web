@@ -4023,7 +4023,9 @@ footer.footer .container .offset .inner form button[type="submit"] {
 
 
 .go-home,
-.go-facebook{
+.go-facebook,
+.go-twitter,
+.go-linkedin{
   margin: 40px 20px 0;
   display: inline-block;
   vertical-align: top;
@@ -4052,10 +4054,34 @@ footer.footer .container .offset .inner form button[type="submit"] {
   background-color: #46629e;
 }
 .go-home span,
-.go-facebook span{
+.go-facebook span,
+.go-twitter span,
+.go-linkedin span{
   padding-top: 6px;
   display: block;
   clear: both;
+}
+.go-twitter i{
+  color: white;
+  line-height: 58px;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #1da1f2;
+}
+.go-linkedin i{
+  color: white;
+  line-height: 58px;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #0077b5;
 }
 .success-icon{
   font-size: 100px;
