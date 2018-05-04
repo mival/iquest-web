@@ -1,0 +1,118 @@
+---
+title: Custom corporate web applications development | iQuest s.r.o.
+subtitle: We create extensive new generation web applications. We will create for you a perfect, modern and technologically advanced web application or an extensive web-based information system
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Vyvíjíme <b> aplikací pro Android</b></h1>
+    <h2 data-aos="fade-up">Tvoříme rozsáhlé aplikace pro Android a iPhone</h2>
+  </div>
+
+  <%= partial 'kinds_of_products' %>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/example1.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b> Vývoj aplikací pro Android</b> v iQuestu je důkladná analýza projektů a další technická podpora.
+      Práce na projektu začíná otázkou: "Co chce uživatel?" Hledáme odpovědi a zapisujeme všechny nápady, které vznikají, a pak vybereme ty nejlepší. Tvoříme aplikace a analyzujeme výsledek. <b> Programování pro Android </b> je založeno na preferencích a chování uživatelů. Výhodou našich aplikací je jednoduchost a možnost intuitivního využití.</p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="box right">
+      <img alt="webové aplikace na míru pro Vaše podnikání" src="/images/web_application_development_2.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>Vývoj aplikací pro Android </b> v rámci iQuest:</p>
+        <p>
+        <ul>
+          <li>
+            Provádíme detailní analýzu a výzkum konkurenčního prostředí dle různých kritérií (pohodlí, funkčnost, návrh, splnění požadavků uživatelů).
+          </li>
+          <li>
+            Pečlivě vyvíjíme všechny prvky rozhraní, aby aplikace byla uživatelsky přívětivá, srozumitelná a užitečná.
+          </li>
+          <li>
+            Přicházíme s jasným a praktickým designem. Je důležité, aby aplikace vypadala na obrazovkách různých zařízení stejně atraktivní.
+          </li>
+          <li>
+            Tvorba aplikací pro Android probíhá postupně pod kontrolou zákazníka.
+          </li>
+          <li>
+            Provádíme dlouhé a komplexní testování. Aplikace bude na trhu jenom když jsme 100% jisti její výkonností a kvalitou.
+          </li>
+          <li>
+            Bereme v úvahu požadavky obchodů s aplikacemi na nové aplikace pro Android.
+          </li>
+          <li>
+            Poskytujeme technickou podporu produktu. Aplikace funguje správně na všech zařízeních a chyby, které se vyskytuji během procesu, jsou rychle odstraněny.
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/example2.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p>
+          <b> Tvorba aplikací pro Android</b> probíhá pomocí agilního vývoje. Co to znamená?
+          <ul>
+            <li>
+              Vytváříme úplný seznam úkolů (tzv. Back-log).
+            </li>
+            <li>
+               Rozdělíme je na malé části (nazvané "sprinty"). Jeden sprint trvá 1 - 2 týdni.
+            </li>
+            <li>
+              Krok za krokem programujeme a ukazujeme výsledek po každém sprintu.
+            </li>
+          </ul>
+          Čím je to dobrý pro zákazníky?
+          <ul>
+            <li>
+              Můžete rozhodovat, které funkce budou v aplikaci.
+            </li>
+            <li>
+              Můžete změnit prioritu úkolů.
+            </li>
+            <li>
+               Po každém sprintu vidíte výsledek práce. Můžete osobně otestovat aplikace v průběhu vývoje.
+            </li>
+          </ul>
+          Výsledkem je, že <b> vývoj aplikací </b> pro Android je pro zákazníka jasný a průhledný.
+        </p>
+      </div>
+    </div>
+  </div>
+    <br/>
+    <br/>
+    <h3 class="text-green text-center" data-aos="fade-up" style="padding-left: 5%; padding-right: 5%;">Android + iPhone = jedná aplikace <br/>
+      Aplikace pro Android můžeme jednoduše přizpůsobit i pro iPhone. Díky moderním technologiím tvoříme jednu <b>aplikace pro Android </b> a iPhone. Díky jednomu kódu se dramaticky snižují náklady na vývoj aplikace a samozřejmě i její údržbu.
+    </h3>
+  <%= link_to "Kontaktujte nás", t('urls.contact'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma kontakt-btn', :'data-aos' => 'fade-up' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+</script>

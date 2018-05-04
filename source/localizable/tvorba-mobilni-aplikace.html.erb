@@ -1,0 +1,89 @@
+---
+title: Custom corporate web applications development | iQuest s.r.o.
+subtitle: We create extensive new generation web applications. We will create for you a perfect, modern and technologically advanced web application or an extensive web-based information system
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up"><b> Tvoříme mobilní aplikace</b> nové generace</b></h1>
+    <h2 data-aos="fade-up">Tvorba aplikace pro Android a iPhone</h2>
+    <h2 data-aos="fade-up">Vyvíjíme pro startupy, střední a velké projekty</h2>
+  </div>
+
+  <%= partial 'kinds_of_products' %>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/example6.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p>Proč tvořit vlastní mobilní aplikace?
+        <b> Tvorba mobilních aplikací </b> pro platformy Android a iOS je nezbytná jak pro startupy, tak i pro existující úspěšně fungující projekty. Uživatele stráví více a více času v mobilních zařízeních, které jsou zdrojem informací a zábavy. Pro podniky je to další slibný komunikační a prodejní kanál.
+        V současné době se mobilní aplikace stávají povinným marketingovým nástrojem v B2C oblasti. S jednorázovou investicí do <b> tvorby mobilní aplikace </b> získáte příležitost být neustále v kontaktu s uživatelem. Pokud vaše společnost pracuje v B2B oblasti, mobilní vývoj umožní optimalizovat mnoho obchodních procesů.</p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="box right">
+      <img alt="webové aplikace na míru pro Vaše podnikání" src="/images/example7.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p>
+          Proč mobilní aplikace nové generace od iQuestu?
+          Pokud chcete vytvořit efektivní aplikace pro mobilní zařízení, potřebujete nejprve zvolit spolehlivého dodavatele. <b> Tvorba mobilních aplikací </b> pro iPhone a Android je jednou z našich prioritních aktivit, a proto můžeme zaručit kvalitu, stabilitu a efektivní řešení pro vaše podnikání.
+          Naším cílem je <b>tvorba mobilní aplikace </b>, která bude podporovat vaši firmu. Především provádíme detailní analýzu Vašeho podniku a oblasti podnikání, identifikujeme potřeby uživatelů a rozvineme Váš nápad.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="benefits">
+    <h3>Výhody vývoje hybridních aplikací pro mobilní zařízení</h3>
+    <div class="benefits-content">
+      <div class="box">
+        <div class="icon-circle green-dark">
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+        </div>
+        <p class="text"><b>Tvoří jeden tým</b><br>pro Android, iOS a prohlížeč</p>
+      </div>
+      <div class="box">
+        <div class="icon-circle yellow-dark">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </div>
+        <p class="text"><b>Jednoduchá údržba</b><br>díky nejnovějším technologiím</p>
+      </div>
+      <div class="box">
+        <div class="icon-circle blue-dark">
+          <i class="fa fa-mobile" aria-hidden="true"></i>
+        </div>
+        <p class="text"><b>Náklady</b><br>Tvorba aplikace je jedna pro všechny platformy</p>
+      </div>
+      <div class="box">
+        <div class="icon-circle orange-dark">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </div>
+        <p class="text"><b>Vstup na trh</b><br>v krátkodobém horizontu</p>
+      </div>
+    </div> <!-- .benefits-content -->
+  </div>
+  <%= link_to "Kontaktujte nás", t('urls.contact'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma kontakt-btn', :'data-aos' => 'fade-up' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+</script>

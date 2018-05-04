@@ -1,0 +1,85 @@
+---
+title: Custom corporate web applications development | iQuest s.r.o.
+subtitle: We create extensive new generation web applications. We will create for you a perfect, modern and technologically advanced web application or an extensive web-based information system
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">We develop customized web applications<br />for your business</h1>
+    <h2 data-aos="fade-up">From simple applications<br />to complex enterprise information systems</h2>
+  </div>
+
+  <%= partial 'kinds_of_products' %>
+
+  <div class="what-is">
+    <h3 data-aos="fade-up">What are web applications?</h3>
+    <p data-aos="fade-up">
+      AAAA web application is the software that a user can use through a web browser. Current modern technologies enable to  use internet browser as a desktop application even for very complex information systems.
+      Google Docs is, for example, the web application. <b>You work with the web browser like with MS Office on desktop for example</b>.
+    </p>
+  </div>
+  <div class="we-are-the-champions" data-aos="fade-up">
+    <div class="text-green">We invent</div>
+    <div class="text-green">We make project</div>
+    <div class="text-green">We develop</div>
+    <div class="text-green">We integrate</div>
+    <div class="text-green">We operate</div>
+  </div>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/web_application_development_1.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p><b>Why use the information system in web browser?</b></p>
+        <ul>
+          <li>Users <b>don’t need to install</b> any application on PC (it's enough to have browser).</li>
+          <li><b>Updates take place immediately</b> after the release and for all users at once.</li>
+          <li><b>Easy maintenance</b> - no need to solve any specific installation for single user, none is there.</li>
+          <li>User can sign into the system <b>from any computer</b> on the internet, tablet or smartphone.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <br/>
+    <br/>
+    <h3 class="text-green text-center" data-aos="fade-up">We will create perfect, modern and technologically advanced<br />web application or an extensive web-based information system for you.</h3>
+  <div class="info">
+    <div class="box right">
+      <img alt="webové aplikace na míru pro Vaše podnikání" src="/images/web_application_development_2.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p><b>Which web application have we created?</b></p>
+        <p><b>During our existence we have created a great number of web applications. Examples are here: <a href="/en/reference">More in references.</a>.</b></p>
+        <ul>
+          <li>Specialized CRM software for effective management <b>of sales representatives</b> for GreenSwan Pharmaceuticals.</li>
+          <li>Dispatching and call center <b>for Blue Angel.</b>.</li>
+          <li>Fully integrated <b>wholesale shopping system</b> of spare parts distributor for PARTSPOINT cars.</li>
+          <li>Web information system for work management <b>of hundreds of merchandisers</b> for Space and Profit.</li>
+          <li>Internal information system for managing <b>hundreds of nurses</b> in home health care at Procare.</li>
+          <li>And many others (<a href="/en/reference">references</a>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  })
+</script>

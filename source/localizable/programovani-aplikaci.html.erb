@@ -1,0 +1,89 @@
+---
+title: Custom corporate web applications development | iQuest s.r.o.
+subtitle: We create extensive new generation web applications. We will create for you a perfect, modern and technologically advanced web application or an extensive web-based information system
+---
+<div class="what-we-do">
+  <header></header>
+  <div class="title">
+    <div class="back-fixed" data-aos="fade-left">
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
+    </div>
+    <h1 data-aos="fade-up">Programování aplikací</h1>
+    <h2 data-aos="fade-up">Programujeme rozsáhlé webové a mobilní aplikace</h2>
+  </div>
+  <%= partial 'icons' %>
+  <%= partial 'kinds_of_products' %>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/example3.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+         <p><b>Programování software</b> na míru</p>
+        <p>V <b>programování na míru</b> dbáme na kvalitní čistý kód. Máme talentovaný tým odborníku v <b> programování aplikací</b> a hledáme zajímavé projekty, které nám přinesou náročné a zajímavé úkoly. Nabízíme naše služby v <b> programování na zakázku</b>, ve vývoji a <b> programování mobilních aplikací</b> a rozsáhlých webových systémů pro podnikání všech velikostí a zaměření: od detailní analýzy dát po odbornou podporu po nasazení aplikace.</p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="box right">
+      <img alt="webové aplikace na míru pro Vaše podnikání" src="/images/example4.jpg" data-aos="fade-left" />
+      <div class="offset" data-aos="fade-right">
+        <p>Proč <b> programování </b> od iQuestu?</p>
+        <p>
+          Tvoříme webové a mobilní aplikace již přes 14 let, máme znalosti a velké zkušenosti v <b> programování aplikací</b>.
+          Používáme nejmodernější technologie, které umožňují rychlé a kvalitní <b> programování webových aplikací </b> na míru, tak složitých a náročných informačních systémů.
+          Jsme analytici. Našim zákazníkům často poskytneme nový pohled na jejich vlastní podnik a jeho fungování.  Na vývoji se podílí vždy řada členů našeho týmu, a to vždy na základě jejich specializace pro danou součást vyvíjené aplikace.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="box left">
+      <img alt="vývoj webových aplikací na míru" src="/images/example5.jpg" data-aos="fade-right" />
+      <div class="offset" data-aos="fade-left">
+        <p>Naším zákazníkům nabízíme:</p>
+        <ul>
+          <li>
+            Seznámení, vytváření společné vize, předprojektová analýza a hrubý návrh systému na základě očekávání. Pořádáme několik setkání se zákazníkem, během kterých se seznámíme se specifiky podniku, komunikujeme s budoucími uživateli systému a analyzujeme zadaní.
+          </li>
+          <li>
+            Vypracování podrobného technického zadání a návrh rozhraní. V této etapě navrhujeme, koordinujeme a podrobně popisujeme všechny scénáře budoucího systému. V důsledku toho získáme dynamický prototyp programu a jeho technické vysvětlení.
+          </li>
+          <li>
+            Implementace - <b> programování </b>, integrace. Implementace bude realizována metodou Agilního vývoje, který preferujeme a v drtivé většině případů tento způsob volíme.
+          </li>
+          <li>
+            Nasazení softwaru a školení uživatelů. Posledním krokem je testování a nasazení vyvinutého softwaru pro váš podnik.
+          </li>
+          <li>
+            Provoz, údržba, rozvoj. V průběhu provozu systému se má vždy zákazník na koho obrátit a konzultovat jak běžné operativní věci, tak složitější otázky úprav a rozvoje systému.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Kontaktujte nás", t('urls.contact'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma kontakt-btn', :'data-aos' => 'fade-up' %>
+  <%= partial 'references' %>
+  <%= partial 'our_technology' %>
+</div>
+
+<%= partial 'footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.we-are-the-champions').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true
+    });
+  });
+
+  $('.back-fixed').on('mouseenter', function() {
+    $(this).addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).removeClass('animated pulse');
+  });
+  $('.icons .box').on('mouseenter', function() {
+    $(this).find('.img-wrap').addClass('animated pulse');
+  }).on('mouseleave', function() {
+    $(this).find('.img-wrap').removeClass('animated pulse');
+  });
+</script>
