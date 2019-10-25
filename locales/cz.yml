@@ -51,6 +51,11 @@ cz:
     bahal                      : '/reference/bahal/'
     autoprima                  : '/reference/autoprima/'
     hasek                      : '/reference/hasek/'
+    magistra                   : '/reference/magistra/'
+    hipp                       : '/reference/hipp/'
+    assa-abloy                 : '/reference/assa-abloy/'
+    galerie-rudolfinum         : '/reference/galerie-rudolfinum/'
+    one-click                  : '/reference/one-click/'
 
   # default_meta_title: 'iQuest - Měníme myšlenky v software'
   default_meta_title: 'iQuest s.r.o'
@@ -120,7 +125,7 @@ cz:
     intranety                  : 'intranety'
     erp_systemy                : 'ERP systémy'
     ostatni                    : 'ostatní'
-    
+
 
   footer:
     we_are            : 'Jsme'
