@@ -8,22 +8,28 @@
         Ruby on Rails
       </div>
     <% end  %>
+    <% link_to "#{url}/bootstrap", :class => 'card half', :'data-aos' => 'fade-up' do %>
+      <div class="content react"></div>
+      <div class="title">
+        React
+      </div>
+    <% end %>
+    <% link_to "#{url}/sass", :class => 'card half', :'data-aos' => 'fade-up' do %>
+      <div class="content react-native"></div>
+      <div class="title">
+        React Native
+      </div>
+    <% end %>
     <% link_to "#{url}/emberjs", :class => 'card half', :'data-aos' => 'fade-up' do %>
       <div class="content emberjs"></div>
       <div class="title">
         Ember JS
       </div>
     <% end %>
-    <% link_to "#{url}/bootstrap", :class => 'card half', :'data-aos' => 'fade-up' do %>
-      <div class="content bootstrap"></div>
+    <% link_to "#{url}/firebase", :class => 'card half', :'data-aos' => 'fade-up' do %>
+      <div class="content firebase"></div>
       <div class="title">
-        Bootstrap
-      </div>
-    <% end %>
-    <% link_to "#{url}/sass", :class => 'card half', :'data-aos' => 'fade-up' do %>
-      <div class="content sass"></div>
-      <div class="title">
-        Sass
+        Firebase
       </div>
     <% end %>
     <% link_to "#{url}/cordova", :class => 'card half', :'data-aos' => 'fade-up' do %>
@@ -36,12 +42,6 @@
       <div class="content rabbitmq"></div>
       <div class="title">
         RabbitMQ
-      </div>
-    <% end %>
-    <% link_to "#{url}/firebase", :class => 'card half', :'data-aos' => 'fade-up' do %>
-      <div class="content firebase"></div>
-      <div class="title">
-        Firebase
       </div>
     <% end %>
   </div>

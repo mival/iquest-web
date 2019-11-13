@@ -8,8 +8,10 @@
 function toggleMenu() {
 	$("#menu_open").click(function(e) {
 		$("#overlay, #menu").fadeIn(), e.preventDefault(), e.stopPropagation()
+		$('body').css('overflow', 'hidden');
 	}), $("#menu-close, #overlay").click(function(e) {
 		$("#overlay, #menu").fadeOut(), e.preventDefault(), e.stopPropagation()
+		$('body').css('overflow', 'auto');
 	})
 }
 

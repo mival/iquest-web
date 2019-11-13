@@ -1253,6 +1253,7 @@ html, body {
 }
 
 .reference .circles-box .circle {
+  filter: grayscale(1);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -1269,6 +1270,7 @@ html, body {
 }
 
 .reference .circles-box .circle:hover {
+  filter: none;
   box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.3)
 }
 
@@ -1280,117 +1282,78 @@ html, body {
   top: 25px
 }
 
-.reference .circles-box .circle.greenswan {
-  background-image: url("/images/Refs/greenswan_gray.png")
+.reference .circles-box .circle.hipp {
+  background-image: url("/images/Refs/hipp.svg");
 }
 
-.reference .circles-box .circle.greenswan:hover {
+.reference .circles-box .circle.assa-abloy {
+  background-image: url("/images/Refs/assaabloy.png");
+}
+
+.reference .circles-box .circle.galerie-rudolfinum {
+  background-image: url("/images/Refs/galerie-rudolfinum.png");
+  background-size: 55%;
+}
+
+.reference .circles-box .circle.one-click {
+  background-image: url("/images/Refs/one-click.svg");
+}
+
+.reference .circles-box .circle.greenswan {
   background-image: url("/images/Refs/greenswan.png")
 }
 
 .reference .circles-box .circle.cia-news {
-  background-image: url("/images/Refs/cia-news_gray.png")
-}
-
-.reference .circles-box .circle.cia-news:hover {
   background-image: url("/images/Refs/cia-news.png")
 }
 
 .reference .circles-box .circle.cemio {
-  background-image: url("/images/Refs/cemio_gray.png")
-}
-
-.reference .circles-box .circle.cemio:hover {
   background-image: url("/images/Refs/cemio.png")
 }
 
 .reference .circles-box .circle.ignum {
-  background-image: url("/images/Refs/ignum_gray.png")
-}
-
-.reference .circles-box .circle.ignum:hover {
   background-image: url("/images/Refs/ignum.png")
 }
 
 .reference .circles-box .circle.modry-andel {
-  background-image: url("/images/Refs/modry-andel_gray.png")
-}
-
-.reference .circles-box .circle.modry-andel:hover {
   background-image: url("/images/Refs/modry-andel.png")
 }
 
 .reference .circles-box .circle.autoprima {
-  background-image: url("/images/Refs/autoprima_gray.png")
-}
-
-.reference .circles-box .circle.autoprima:hover {
   background-image: url("/images/Refs/autoprima.png")
 }
 
 .reference .circles-box .circle.procare {
-  background-image: url("/images/Refs/procare_gray.png")
-}
-
-.reference .circles-box .circle.procare:hover {
   background-image: url("/images/Refs/procare.png")
 }
 
 .reference .circles-box .circle.hasbro {
-  background-image: url("/images/Refs/hasbro_gray.png");
   background-size: 70%;
-}
-
-.reference .circles-box .circle.hasbro:hover {
   background-image: url("/images/Refs/hasbro.png")
 }
 
 .reference .circles-box .circle.domenacz {
-  background-image: url("/images/Refs/domenacz_gray.png");
   background-size: 80%;
-}
-
-.reference .circles-box .circle.domenacz:hover {
   background-image: url("/images/Refs/domenacz.png")
 }
 
 .reference .circles-box .circle.magistra {
-  background-image: url("/images/Refs/magistra_gray.png");
-}
-
-.reference .circles-box .circle.magistra:hover {
   background-image: url("/images/Refs/magistra.png")
 }
 
 .reference .circles-box .circle.avu {
-  background-image: url("/images/Refs/avu_gray.png");
-}
-
-.reference .circles-box .circle.avu:hover {
   background-image: url("/images/Refs/avu.png")
 }
 
 .reference .circles-box .circle.chirs {
-  background-image: url("/images/Refs/chirs_gray.png");
-}
-
-.reference .circles-box .circle.chirs:hover {
   background-image: url("/images/Refs/chirs.png");
 }
 
 .reference .circles-box .circle.impuls {
-  background-image: url("/images/Refs/impuls_gray.png");
-}
-
-.reference .circles-box .circle.impuls:hover {
   background-image: url("/images/Refs/impuls.png");
 }
 
 .reference .circles-box .circle.burda {
-  background-image: url("/images/Refs/burda_gray.png");
-}
-
-.reference .circles-box .circle.burda:hover {
   background-image: url("/images/Refs/burda.png");
 }
 
@@ -3575,7 +3538,7 @@ ul.breadcrumb {
 }
 
 .cards .card .content {
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -3587,6 +3550,14 @@ ul.breadcrumb {
 
 .cards .card .content.ruby-on-rails {
   background-image: url("/images/Technology/ruby-on-rails.jpg")
+}
+
+.cards .card {
+  .content.react, .content.react-native {
+    background-color: #2a2c2e;
+    background-image: url("/images/Technology/react.svg");
+    background-size: 40%;
+  }
 }
 
 .cards .card .content.emberjs {
@@ -3608,14 +3579,6 @@ ul.breadcrumb {
 
 .cards .card .content.html5 {
   background-image: url("/images/Technology/html5.jpg")
-}
-
-.cards .card .content.bootstrap {
-  background-image: url("/images/Technology/bootstrap.jpg")
-}
-
-.cards .card .content.sass {
-  background-image: url("/images/Technology/sass.jpg")
 }
 
 .cards .card .content.git {
@@ -4857,7 +4820,7 @@ body.en .konzultace-zdarma{width: 320px;}
   height: 630px;
 
   background: url(../images/map_bg.png) center top no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   width: 100%;
 
   .container{
