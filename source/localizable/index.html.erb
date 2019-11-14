@@ -16,36 +16,37 @@ redirect_url: '/'
     <div class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="bg-point4 circle index1 orange" data-aos="zoom-in"></div>
-        		<div class="bg-point5 circle index2 orange" data-aos="zoom-in"></div>
-        		<div class="bg-point6 circle index3 orange" data-aos="zoom-in"></div>
+				<div class="bg-point5 circle index2 orange" data-aos="zoom-in"></div>
+				<div class="bg-point6 circle index3 orange" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="bg-point1 circle index1 yellow" data-aos="zoom-in"></div>
-        		<div class="bg-point2 circle index2 yellow" data-aos="zoom-in"></div>
-        		<div class="bg-point3 circle index3 yellow" data-aos="zoom-in"></div>
+				<div class="bg-point2 circle index2 yellow" data-aos="zoom-in"></div>
+				<div class="bg-point3 circle index3 yellow" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--fore">
         <div class="bg-point7 circle index1 blue" data-aos="zoom-in"></div>
-        		<div class="bg-point8 circle index2 blue" data-aos="zoom-in"></div>
-        		<div class="bg-point9 circle index3 blue" data-aos="zoom-in"></div>
+				<div class="bg-point8 circle index2 blue" data-aos="zoom-in"></div>
+				<div class="bg-point9 circle index3 blue" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--deep">
         <div class="bg-point10 circle index1 green" data-aos="zoom-in"></div>
-        		<div class="bg-point11 circle index2 green" data-aos="zoom-in"></div>
-        		<div class="bg-point12 circle index3 green" data-aos="zoom-in"></div>
+				<div class="bg-point11 circle index2 green" data-aos="zoom-in"></div>
+				<div class="bg-point12 circle index3 green" data-aos="zoom-in"></div>
       </div>
     </div>
 	</div>
 	<div class="title inner-center">
 		<h1 class="title1 text-center" data-aos="fade-up"><%= t('pages.main.title') %></h1>
 		<h2 class="title2 text-center" data-aos="fade-up"><%= t('pages.main.sub_title') %></h2>
-		<%= link_to t('pages.main.buttons.consultation'), t('urls.consultation_free'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma', :'data-aos' => 'fade-up' %>
 		<%= partial 'icons' %>
 	</div>
 
 	<div class="clear"></div>
 
 	<%= partial 'kinds_of_products' %>
+
+	<%#= link_to t('pages.main.buttons.consultation'), t('urls.consultation_free'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma', :'data-aos' => 'fade-up' %>
 
 	<%= partial 'references' %>
 
