@@ -2101,17 +2101,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.img-maps > img {
+.img-maps>img {
   // position: relative;
   width: 100%;
   height: inherit;
 }
 
-.img-maps > p {
+.img-maps>p {
   position: absolute;
 }
 
-.img-maps > .add-img {
+.img-maps>.add-img {
   color: white;
   font: normal 20px/45px SupriaSans-Light, Sans-Serif;
   letter-spacing: -1px;
@@ -3680,12 +3680,10 @@ footer .fa-stack-2x {
 }
 
 .footer .services {
-  // text-align: center;
-  // padding-left: 20%;
-  padding-top: 33px !important;
-  margin-bottom: -33px;
-  font-size: 0.9em;
   color: #d5eaf8 !important;
+  font-size: 0.9em;
+  margin-bottom: -33px;
+  padding-top: 33px !important;
 
   ul {
     font-size: 0.9em;
@@ -3699,12 +3697,10 @@ footer .fa-stack-2x {
 }
 
 .footer .contact-mail {
-  // text-align: center;
-  // padding-left: 20%;
-  padding-top: 33px !important;
-  margin-bottom: -33px;
-  font-size: 0.9em !important;
   color: #d5eaf8 !important;
+  font-size: 0.9em !important;
+  margin-bottom: -33px;
+  padding-top: 33px !important;
 
   .title {
     display: inline-block;
@@ -3732,21 +3728,21 @@ footer .fa-stack-2x {
   }
 
   .inner form .form-group textarea {
-    border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    width: 60%;
-    padding: 5px;
     min-height: 60px;
+    padding: 5px;
+    width: 60%;
   }
 
   .inner form button[type="submit"] {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
+    margin: 5px 0 0 11%;
     padding: 5px 15px;
-    margin: 5px 0 0 11%
   }
 }
 
@@ -3754,22 +3750,11 @@ footer .fa-stack-2x {
   padding-bottom: 25px !important;
 }
 
-// .index .contact {
-//   color: #d5eaf8;
-//   letter-spacing: 3px;
-//   padding-bottom: 0px;
-//   font-size: 1.5em;
-// }
-
-// .index .contact td {
-//   padding: 10px 10px 5px 0px;
-// }
-
 .footer .contact {
   color: #d5eaf8;
+  font-size: 1.5em;
   letter-spacing: 3px;
   padding-bottom: 0px;
-  font-size: 1.5em;
 }
 
 .footer .contact td {
@@ -3857,12 +3842,14 @@ footer.footer .container .offset .inner form .form-group input {
 }
 
 footer.footer .container .offset .inner form .form-group textarea {
-  border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  width: 60%;
-  padding: 5px;
+  max-width: 60%;
   min-height: 80px;
+  min-width: 60%;
+  padding: 5px;
+  width: 60%;
 }
 
 footer.footer .container .offset .inner form button[type="submit"] {
@@ -4842,7 +4829,7 @@ body.en .konzultace-zdarma {
           margin-top: 110px;
           padding: 0 10px 0 10px;
           font-size: 22px;
-              font-weight: 200;
+          font-weight: 200;
           color: #626262;
           text-align: center;
           line-height: 22px;
@@ -4860,7 +4847,7 @@ body.en .konzultace-zdarma {
           }
 
           p {
-                  position: relative;
+            position: relative;
             padding-left: 40px;
             display: inline-block;
             font-size: 20px;
@@ -4909,22 +4896,21 @@ body.en .konzultace-zdarma {
     button[type=submit],
     a.submit {
       background-color: #f1b769;
-      min-width: 180px;
-      padding: 0 14px;
-      font-weight: 500;
-      letter-spacing: .05em;
-      font-size: 16px;
-      color: #fff;
-      border: none;
       border-radius: 3px;
+      border: none;
+      clear: both;
+      color: #fff;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
       height: 44px;
       line-height: 44px;
-      overflow: hidden;
-      display: inline-block;
-      text-overflow: ellipsis;
-      text-align: center;
-      clear: both;
+      min-width: 180px;
       outline: none;
+      overflow: hidden;
+      padding: 0 14px;
+      text-align: center;
+      text-overflow: ellipsis;
 
       &:hover {
         background-color: #4590AF;
@@ -4988,7 +4974,7 @@ body.en .konzultace-zdarma {
             display: block;
 
             span {
-                      font-size: 16px;
+              font-size: 16px;
               font-weight: 100;
               line-height: 18px;
               margin: 20px 0 16px;
@@ -4997,14 +4983,14 @@ body.en .konzultace-zdarma {
           }
 
           h4 {
-                  font-weight: 400;
+            font-weight: 400;
             font-size: 24px;
             margin: 0;
             margin-bottom: 8px;
           }
 
           span.sub-title {
-                  font-weight: 100;
+            font-weight: 100;
             font-size: 20px;
             color: #424242;
             margin-bottom: 38px;
@@ -5023,7 +5009,7 @@ body.en .konzultace-zdarma {
             border: none;
             box-shadow: inset 0 3px 7px rgba(0, 0, 0, .1);
             margin-top: 20px;
-                  font-weight: 100;
+            font-weight: 100;
             border: 1px solid transparent;
             outline: none;
           }
@@ -5038,8 +5024,12 @@ body.en .konzultace-zdarma {
           }
 
           textarea {
-            margin-bottom: 32px;
             height: 170px;
+            margin-bottom: 32px;
+            max-height: 170px;
+            max-width: 100%;
+            min-height: 170px;
+            min-width: 100%;
           }
 
           .shadow {
@@ -5088,8 +5078,7 @@ body.en .konzultace-zdarma {
     background: url(../images/bubbles.svg) right 100px bottom no-repeat;
     background-size: 60vh;
 
-    & * {
-    }
+    & * {}
 
     h1 {
       font-size: 6.5em;
