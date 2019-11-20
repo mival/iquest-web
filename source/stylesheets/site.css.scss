@@ -2775,6 +2775,14 @@ body.posa .page-scroll-show .header{
   background-color: #A02B3B
 }
 
+.page-scroll-show.react .header {
+  background-color: #2a2c2e;
+}
+
+.page-scroll-show.-native .header {
+  background-color: white;
+}
+
 .page-scroll-show.emberjs .header {
   background-color: #E5E5E5
 }
@@ -3553,8 +3561,14 @@ ul.breadcrumb {
 }
 
 .cards .card {
-  .content.react, .content.react-native {
+  .content.react {
     background-color: #2a2c2e;
+    background-image: url("/images/Technology/react.svg");
+    background-size: 40%;
+  }
+
+  .content.react-native {
+    background-color: white;
     background-image: url("/images/Technology/react.svg");
     background-size: 40%;
   }
@@ -3579,6 +3593,14 @@ ul.breadcrumb {
 
 .cards .card .content.html5 {
   background-image: url("/images/Technology/html5.jpg")
+}
+
+.cards .card .content.bootstrap {
+  background-image: url("/images/Technology/bootstrap.jpg")
+}
+
+.cards .card .content.sass {
+  background-image: url("/images/Technology/sass.jpg")
 }
 
 .cards .card .content.git {
