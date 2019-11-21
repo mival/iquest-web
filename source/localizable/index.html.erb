@@ -46,8 +46,6 @@ redirect_url: '/'
 
 	<%= partial 'kinds_of_products' %>
 
-	<%#= link_to t('pages.main.buttons.consultation'), t('urls.consultation_free'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma', :'data-aos' => 'fade-up' %>
-
 	<%= partial 'references' %>
 
 	<%= partial 'our_technology' %>
@@ -131,16 +129,13 @@ redirect_url: '/'
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		// for (var i = 1; i < 13; i++) {
-		// 	animateDiv('.bg-point'+i);
-		// }
-
 		$('.we-are-the-champions').slick({
 			autoplay: true,
 			autoplaySpeed: 2000,
 			dots: true
 		});
 	});
+
 	$(window).scroll(function(){
 		$('.circles').scrollTop($(document).scrollTop());
 	});
@@ -152,11 +147,6 @@ redirect_url: '/'
 	$('<img alt="modry-andel" src="/images/Refs/modry-andel.png" />');
 	$('<img alt="Autoprima" src="/images/Refs/autoprima.png" />');
 	$('<img alt="Procare" src="/images/Refs/procare.png" />');
-
-	/*$(window).scroll(function() {
-		//movement of the circles
-		$('#opening .circles').css('top', $(this).scrollTop() * -0.75);
-	});*/
 
 	$('.reference .circle').on('mouseenter', function() {
 		$(this).addClass('animated pulse');
@@ -170,54 +160,38 @@ redirect_url: '/'
 		$(this).find('img').removeClass('animated pulse');
 	})
 
+	function makeNewPosition($container) {
+		// Get viewport dimensions (remove the dimension of the div)
+		$container = ($container || $(window))
+		var h = $container.height() - 50;
+		var w = $container.width() - 50;
 
+		var nh = Math.floor(Math.random() * h);
+		var nw = Math.floor(Math.random() * w);
 
+		return [nh, nw];
+	}
 
+	function animateDiv(element) {
+		var $target = $(element);
+		var newq = makeNewPosition($target.parent());
+		var oldq = $target.offset();
+		var speed = calcSpeed([oldq.top, oldq.left], newq);
 
+		$(element).animate({
+				top: newq[0],
+				left: newq[1]
+		}, speed, function() {
+				animateDiv(element);
+		});
+	};
 
-
-
-function makeNewPosition($container) {
-
-    // Get viewport dimensions (remove the dimension of the div)
-    $container = ($container || $(window))
-    var h = $container.height() - 50;
-    var w = $container.width() - 50;
-
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-
-}
-
-function animateDiv(element) {
-    var $target = $(element);
-    var newq = makeNewPosition($target.parent());
-    var oldq = $target.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    $(element).animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateDiv(element);
-    });
-
-};
-
-function calcSpeed(prev, next) {
-
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = 0.07;
-
-    var speed = Math.ceil(greatest / speedModifier);
-
-    return speed;
-
-}
+	function calcSpeed(prev, next) {
+		var x = Math.abs(prev[1] - next[1]);
+		var y = Math.abs(prev[0] - next[0]);
+		var greatest = x > y ? x : y;
+		var speedModifier = 0.07;
+		var speed = Math.ceil(greatest / speedModifier);
+		return speed;
+	}
 </script>

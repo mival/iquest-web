@@ -18,10 +18,8 @@
     <script async src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js" ></script>
 
-
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
-
   </head>
 
   <body class="<%= page_classes %>">
@@ -47,8 +45,8 @@
     </script>
     <!-- End Google Tag Manager -->
 
-
     <%= yield %>
+
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -57,9 +55,9 @@
       });
     </script>
     <style>
-    .page-offset{
-      padding-top: 65px;
-    }
+      .page-offset{
+        padding-top: 65px;
+      }
     </style>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -67,8 +65,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-
   </body>
 </html>

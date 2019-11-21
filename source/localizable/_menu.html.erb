@@ -68,8 +68,8 @@
       </li>
     <% end %>
     </ul>
-  
-    <div class="text-green font-medium" style="margin-right: 40px; font-size: 1.5em; padding-top: 50px; margin-bottom: -10px">iQuest microsites:</div> 
+
+    <div class="text-green font-medium" style="margin-right: 40px; font-size: 1.5em; padding-top: 50px; margin-bottom: -10px">iQuest microsites:</div>
     <ul>
     <% link_to "http://www.rubyonrailspraha.cz/" do %>
       <li>
@@ -108,14 +108,15 @@
     <% end %>
   </ul>
 </aside>
+
 <script type="text/javascript">
-$( window ).resize(menu_change);
-$( window ).load(menu_change);
-function menu_change() {
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    $('.hide').show();
-  } else {
-    $('.hide').hide();
+  $( window ).resize(menu_change);
+  $( window ).load(menu_change);
+  function menu_change() {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      $('.hide').show();
+    } else {
+      $('.hide').hide();
+    }
   }
-}
 </script>

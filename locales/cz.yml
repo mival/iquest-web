@@ -9,7 +9,6 @@ cz:
     technology                 : '/technologie/'
     not_only_money             : '/not-only-money/'
     join_us                    : '/prace-programator-ruby-on-rails/'
-    consultation_free          : '/konzultaci-zdarma/'
     development                : '/webove-aplikace-na-miru/'
     information_systems        : '/firemni-informacni-systemy-na-miru/'
     mobile_applications        : '/mobilni-aplikace-nove-generace/'
@@ -91,13 +90,12 @@ cz:
   pages:
     main:  # Uvodni stranka.
       title                 : 'Měníme myšlenky v software'
-      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 15 let.'
+      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 16 let.'
       examples_of_work      : 'Příklady naší práce'
       more_references       : 'Více referencí'
       our_main_echnologies  : 'Naše hlavní technologie'
       more_about_technology : 'Více o technologiích'
       buttons:
-        consultation        : 'Chci první konzultaci <strong>ZDARMA</strong>'
         development         : 'Rozsáhlé <br />webové<br />aplikace'
         information_systems : 'Firemní<br />informační<br />systémy <br class="br" /> na míru'
         mobile_applications : 'Mobilní <br />aplikace'

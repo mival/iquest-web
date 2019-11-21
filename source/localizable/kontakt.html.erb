@@ -98,7 +98,6 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
     Plaská 5
     <br>150 00 Praha 5
     </p>
-    <!--<img src="/images/Praha.jpg">-->
   </div>
 </div>
 <div class="col-35 kontakt-maps">
@@ -108,41 +107,11 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
       <span class="town-img">Brno</span><br>
       Cejl 494/25 <br>602 00 Brno
     </p>
-    <!--<img src="/images/Brno.png">-->
   </div>
 </div>
 </div>
 
 <%= partial 'footer' %>
-
-<script>
-  // function initialize() {
-  //   var mapCanvas = document.getElementById('map-canvas');
-
-  //   var mapOptions = {
-  //     center: new google.maps.LatLng(50.080469, 14.405934),
-  //     zoom: 17,
-  //     scrollwheel: false,
-  //     mapTypeId: google.maps.MapTypeId.ROADMAP,
-  //     panControl: false,
-  //     mapTypeControl: false,
-  //     streetViewControl: false,
-  //     zoomControl: true,
-  //     zoomControlOptions: {
-  //       position: google.maps.ControlPosition.RIGHT_CENTER
-  //     }
-  //   }
-
-  //   var map = new google.maps.Map(mapCanvas, mapOptions)
-  //   var marker = new google.maps.Marker({
-  //     position: new google.maps.LatLng(50.080469, 14.405934)
-  //   });
-
-  //   marker.setMap(map);
-  // }
-
-  // google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 
 <script>
   var point = {
@@ -153,7 +122,6 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
     x: 22,
     y: 40
   };
-
 
   google.maps.Marker.prototype.setLabel = function(label) {
     this.label = new MarkerLabel({

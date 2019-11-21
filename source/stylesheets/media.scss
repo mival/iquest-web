@@ -296,17 +296,6 @@
 }
 
 @media screen and (max-width: 860px){
-  .konzultaci-zdarma{
-    .title-container{
-      .title, .step-box{
-        width: 100% !important;
-        clear: both;
-      }
-      .step-box{
-        margin-top: 20px !important;
-      }
-    }
-  }
   .kinds-of-contacts{
     height: 100%;
     background: #415D71;
@@ -956,85 +945,6 @@
     width: 100%;
   }
 
-  .konzultaci-zdarma{
-    .steps{
-      height: auto;
-      background: none;
-      margin-top: 0;
-      overflow: hidden;
-
-      .container{
-        .row{
-          display: block;
-
-          .col{
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-
-            &:first-child{
-              padding-top: 0;
-            }
-
-            &.col2, &.col4{
-              span{
-                padding-left: 0;
-                padding-right: 118px;
-                text-align: right;
-
-                p{
-                  padding-left: 0;
-                }
-
-                strong{
-                  left: initial;
-                  right: -2px;
-                }
-
-                &:before{
-                  left: initial;
-                  right: 0;
-                }
-              }
-            }
-
-            span{
-              display: table;
-              height: 110px;
-              margin-top: 0;
-              padding-left: 80px;
-              margin: 0 auto;
-              text-align: left;
-              width: 50%;
-
-              &:before{
-                top: 6px;
-                left: 0;
-                margin-left: 0;
-              }
-
-              p{
-                display: table-cell;
-                vertical-align: middle;
-                position: initial;
-
-                strong{
-                  border: 2px solid white;
-                  left: -2px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    a.call-us{
-      display: none;
-      &.mobile{
-        display: block !important;
-      }
-    }
-  }
   .x404{
     .container{
       padding-left: 40px;
