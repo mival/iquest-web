@@ -4950,7 +4950,6 @@ body.en .konzultace-zdarma {
               bottom: -50px;
               color: #fff;
               font-size: 60px;
-              font: normal normal normal 14px/1 FontAwesome;
               height: 100px;
               left: 50%;
               line-height: 108px;
@@ -4961,11 +4960,12 @@ body.en .konzultace-zdarma {
               &:hover {
                 background-color: #418F8F;
               }
+
+              &.mobile {
+                display: none;
+              }
             }
 
-            a.call-us.mobile {
-              display: none;
-            }
           }
         }
       }
