@@ -1,10 +1,10 @@
 $blue-dark:#4590af;
 // $blue: $blue-dark; //abd4f0
 $black-light: #525252;
-$green-dark:#418f8f;
-// $green: #9ed8cc;
+// $green-dark:#418f8f;
+$green: #9ed8cc;
 $grey-dark: #b7b7b7;
-$orange-dark:#EFAC52;
+$orange-dark:#f1b769;
 $orange:#fdd7a8;
 $yellow-dark:#dfdb71;
 // $yellow:#f5eeb7;
@@ -15,8 +15,8 @@ $connect:#73CFE9;
 $deliver:#009482;
 $process:#00AFAC;
 
-// To colors
-$blue:#73CFE9;
-$dark-blue:#00AFAC;
-$green:#009482;
-$yellow:#F2E999;
+// Design manual -> to colors
+$blue: $connect;
+$dark-blue: $process;
+$green-dark: $deliver;
+$yellow: $analyze;

@@ -7,6 +7,7 @@
 @import "remodal-default-theme";
 @import "media";
 @import "variables";
+@import "mixins";
 
 @font-face {
   font-family: Raleway-Medium;
@@ -36,6 +37,67 @@
 @font-face {
   font-family: SupriaSans-Regular;
   src: url(../fonts/SupriaSans-Regular.otf)
+}
+
+// Colors
+.yellow {
+  background-color: $yellow;
+  @include hover($yellow);
+}
+
+.yellow-dark {
+  background-color: $yellow-dark;
+  @include hover($yellow-dark);
+}
+
+.orange {
+  background-color: $orange;
+  @include hover($orange);
+}
+
+.orange-dark {
+  background-color: $orange-dark;
+  @include hover($orange-dark);
+}
+
+.blue {
+  background-color: $blue;
+  @include hover($blue);
+}
+
+.blue-dark {
+  background-color: $blue-dark;
+  @include hover($blue-dark);
+}
+
+.green {
+  background-color: $green;
+  @include hover($green);
+}
+
+.green-dark {
+  background-color: $green-dark;
+  @include hover($green-dark);
+}
+
+.text-white {
+  color: white
+}
+
+.text-yellow {
+  color: $yellow-dark;
+}
+
+.text-orange {
+  color: $orange-dark;
+}
+
+.text-blue {
+  color: $blue-dark;
+}
+
+.text-green {
+  color: $green-dark;
 }
 
 .test {
@@ -128,58 +190,6 @@
 .clearfix {
   overflow: auto;
   zoom: 1;
-}
-
-.yellow {
-  background-color: $yellow;
-}
-
-.yellow-dark {
-  background-color: $yellow-dark;
-}
-
-.orange {
-  background-color: $orange;
-}
-
-.orange-dark {
-  background-color: $orange-dark;
-}
-
-.blue {
-  background-color: $blue;
-}
-
-.blue-dark {
-  background-color: $blue-dark;
-}
-
-.green {
-  background-color: $green;
-}
-
-.green-dark {
-  background-color: $green-dark;
-}
-
-.text-white {
-  color: white
-}
-
-.text-yellow {
-  color: $yellow-dark;
-}
-
-.text-orange {
-  color: $orange-dark;
-}
-
-.text-blue {
-  color: $blue-dark;
-}
-
-.text-green {
-  color: $green-dark;
 }
 
 .text-gradient {
@@ -836,7 +846,7 @@ body {
 
 .tags .offset a:hover .tag,
 .tag:hover {
-  background-color: $green;
+  background-color: $green-dark;
   color: white;
 }
 
@@ -854,10 +864,9 @@ body {
 
 .tags .offset.mobile_applications .tag {
   background-color: $orange-dark;
-}
-
-.tags .offset.mobile_applications .tag:hover {
-  background-color: $green;
+  &:hover {
+    background-color: $green-dark;
+  }
 }
 
 .tags .contact-bubble {
@@ -1055,7 +1064,7 @@ body {
 }
 
 .info.icons {
-  margin: 135px 25% 0
+  margin: 165px 25% 0
 }
 
 .info.icons .container .box {
@@ -2336,22 +2345,12 @@ body {
   top: 0;
 }
 
-[class*='why-iquest'] .content .pillar.pillar-1:hover,
-[class*='proc-iquest'] .content .pillar.pillar-1:hover {
-  background-color: $yellow;
-}
-
 [class*='why-iquest'] .content .pillar.pillar-2,
 [class*='proc-iquest'] .content .pillar.pillar-2 {
   bottom: 50%;
   left: 50%;
   right: 0;
   top: 0;
-}
-
-[class*='why-iquest'] .content .pillar.pillar-2:hover,
-[class*='proc-iquest'] .content .pillar.pillar-2:hover {
-  background-color: $blue;
 }
 
 [class*='why-iquest'] .content .pillar.pillar-3,
@@ -2365,11 +2364,6 @@ body {
   background-repeat: no-repeat;
 }
 
-[class*='why-iquest'] .content .pillar.pillar-3:hover,
-[class*='proc-iquest'] .content .pillar.pillar-3:hover {
-  background-color: $blue-dark;
-}
-
 [class*='why-iquest'] .content .pillar.pillar-4,
 [class*='proc-iquest'] .content .pillar.pillar-4 {
   top: 50%;
@@ -2379,11 +2373,6 @@ body {
   background-image: url(../images/logo_hand_white.png);
   background-position: bottom right;
   background-repeat: no-repeat;
-}
-
-[class*='why-iquest'] .content .pillar.pillar-4:hover,
-[class*='proc-iquest'] .content .pillar.pillar-4:hover {
-  background-color: $green;
 }
 
 [class*='why-iquest'] .content .pillar.active,
@@ -4406,7 +4395,6 @@ ul.breadcrumb {
 }
 
 a.contact-bubble {
-  background-color: $orange-dark;
   border-radius: 50%;
   color: white;
   display: table;
@@ -4422,10 +4410,6 @@ a.contact-bubble {
 
   .icon {
     display: none;
-  }
-
-  &:hover {
-    background-color: #DFDB71;
   }
 
   &.fixed {
@@ -4945,7 +4929,7 @@ body.en .konzultace-zdarma {
             position: relative;
 
             a.call-us {
-              background-color: #4590AF;
+              background-color: $blue-dark;
               border-radius: 50%;
               bottom: -50px;
               color: #fff;
@@ -4958,7 +4942,7 @@ body.en .konzultace-zdarma {
               width: 100px;
 
               &:hover {
-                background-color: #418F8F;
+                background-color: $green-dark;
               }
 
               &.mobile {
