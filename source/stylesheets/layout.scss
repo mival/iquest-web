@@ -1,0 +1,123 @@
+.row {
+  display: table;
+  width: 100%
+}
+
+.row:after {
+  content: ' ';
+  clear: both
+}
+
+.col-offset-02 {
+  margin-left: 0.2%;
+}
+
+.col-offset-1 {
+  margin-left: 1%;
+}
+
+.col-offset-5 {
+  margin-left: 5%;
+}
+
+.col-offset-10 {
+  margin-left: 10%;
+}
+
+.col-offset-20 {
+  margin-left: 20%;
+}
+
+.col-offset-30 {
+  margin-left: 30%;
+}
+
+.col-offset-33 {
+  margin-left: 33.33%;
+}
+
+.col-offset-40 {
+  margin-left: 40%;
+}
+
+.row .col-10 {
+  float: left;
+  width: 10%
+}
+
+.row .col-20 {
+  float: left;
+  width: 20%
+}
+
+.row .col-25 {
+  float: left;
+  width: 25%
+}
+
+.row .col-30vw {
+  float: left;
+  width: 30vw;
+}
+
+.row .col-30 {
+  float: left;
+  width: 30%
+}
+
+.row .col-33 {
+  float: left;
+  width: 33.33%
+}
+
+.row .col-33:nth-child(3n+1) {
+  clear: both;
+}
+
+.row .col-35 {
+  float: left;
+  width: 35%
+}
+
+.row .col-40 {
+  float: left;
+  width: 40%
+}
+
+.row .col-45 {
+  float: left;
+  width: 45%
+}
+
+.row .col-50 {
+  float: left;
+  width: 50%
+}
+
+.row .col-60 {
+  float: left;
+  width: 60%
+}
+
+.row .col-70 {
+  float: left;
+  width: 70%
+}
+
+.row .col-80 {
+  float: left;
+  width: 80%
+}
+
+.row .col-100 {
+  float: left;
+  width: 100%
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.text-center {
+  text-align: center;
+}

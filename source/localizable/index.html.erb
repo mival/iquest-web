@@ -16,30 +16,29 @@ redirect_url: '/'
     <div class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="bg-point4 circle index1 orange" data-aos="zoom-in"></div>
-        		<div class="bg-point5 circle index2 orange" data-aos="zoom-in"></div>
-        		<div class="bg-point6 circle index3 orange" data-aos="zoom-in"></div>
+				<div class="bg-point5 circle index2 orange" data-aos="zoom-in"></div>
+				<div class="bg-point6 circle index3 orange" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="bg-point1 circle index1 yellow" data-aos="zoom-in"></div>
-        		<div class="bg-point2 circle index2 yellow" data-aos="zoom-in"></div>
-        		<div class="bg-point3 circle index3 yellow" data-aos="zoom-in"></div>
+				<div class="bg-point2 circle index2 yellow" data-aos="zoom-in"></div>
+				<div class="bg-point3 circle index3 yellow" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--fore">
         <div class="bg-point7 circle index1 blue" data-aos="zoom-in"></div>
-        		<div class="bg-point8 circle index2 blue" data-aos="zoom-in"></div>
-        		<div class="bg-point9 circle index3 blue" data-aos="zoom-in"></div>
+				<div class="bg-point8 circle index2 blue" data-aos="zoom-in"></div>
+				<div class="bg-point9 circle index3 blue" data-aos="zoom-in"></div>
       </div>
       <div class="parallax__layer parallax__layer--deep">
         <div class="bg-point10 circle index1 green" data-aos="zoom-in"></div>
-        		<div class="bg-point11 circle index2 green" data-aos="zoom-in"></div>
-        		<div class="bg-point12 circle index3 green" data-aos="zoom-in"></div>
+				<div class="bg-point11 circle index2 green" data-aos="zoom-in"></div>
+				<div class="bg-point12 circle index3 green" data-aos="zoom-in"></div>
       </div>
     </div>
 	</div>
 	<div class="title inner-center">
 		<h1 class="title1 text-center" data-aos="fade-up"><%= t('pages.main.title') %></h1>
 		<h2 class="title2 text-center" data-aos="fade-up"><%= t('pages.main.sub_title') %></h2>
-		<%= link_to t('pages.main.buttons.consultation'), t('urls.consultation_free'), :id => 'konzultace_zdarma', :class => 'konzultace-zdarma', :'data-aos' => 'fade-up' %>
 		<%= partial 'icons' %>
 	</div>
 
@@ -93,7 +92,7 @@ redirect_url: '/'
 					<div class="cont" data-aos="fade-up">
 						<h4>Navštivte nás</h4>
 						<span class="sub-title city">Praha:</span>
-						<span class="sub-title first">Plaská 5, Praha 5 - Malá Strana</span>
+						<span class="sub-title first">Sněmovní 9, 118 00 Praha 1 - Malá Strana</span>
 						<span class="sub-title city">Brno:</span>
 						<span class="sub-title">Cejl 494/25, Brno</span>
 						<a href="/kontakt" class="submit">ZOBRAZIT MAPU</a>
@@ -126,195 +125,17 @@ redirect_url: '/'
 	</div>
 </div>
 
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-50">
-				<div class="offset">
-					<div class="title"><%= t('footer.we_are') %>:</div>
-					<div class="col-50">
-						<div class="inner">
-							<u>Sídlo a centrála Praha</u>
-							<br />iQuest s.r.o.
-							<br /> Plaská 5
-							<br /> 150 00 Praha 5 - Malá strana
-							<br />
-							<br />
-							<a href="tel:+420777314768" class="c-phone"><i class="fa fa-phone"></i> 777 314 768</a>
-							<br />
-							<i class="fa fa-envelope"></i> <a href="mailto:vyvojari@iquest.cz">vyvojari@iquest.cz</a>
-							<br />
-							<br />
-							<a href="https://www.facebook.com/iquest.cz" class="c-facebook"><i class="fa fa-facebook"></i></a>
-							<a href="https://twitter.com/iQuestCZ" class="c-twitter"><i class="fa fa-twitter"></i></a>
-							<a href="https://www.linkedin.com/company-beta/3021019/ " class="c-linkedin"><i class="fa fa-linkedin"></i></a>
-							<br />
-							<br />
-							<% link_to t('urls.contact') do %>
-								<%= t('footer.map') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
-							<% end  %>
-						</div>
-					</div>
-					<div class="col-50">
-						<div class="inner">
-							<u>Kancelář Brno</u>
-							<br />iQuest s.r.o.
-							<br /> Cejl 494/25
-							<br /> 602 00 Brno
-							<br />
-							<br />
-							<% link_to t('urls.contact') do %>
-								<%= t('footer.map') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
-							<% end  %>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-50">
-				<div class="offset">
-					<div class="title"><%= t('footer.simply_contact_us') %>:</div>
-					<div class="inner">
-						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form" class="contact-form">
-							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
-							<input type="text" name="_gotcha" style="display:none" />
-							<div class="form-group">
-								<label for="email">E-mail:</label>
-								<input type="text" name="email" id="email">
-							</div>
-							<div class="form-group">
-								<label for="message"><%= t('footer.message') %>:</label>
-								<textarea wrap="soft | hard" name="message" id="message"><%= t('footer.message_example') %></textarea>
-							</div>
-							<button type="submit" id="submit_<%= current_page.page_id.split('.')[0] %>"><i class="fa fa-share"></i> <%= t('footer.send_contact') %></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
-<!--<footer class="footer">
-	<div class="">
-		<div class="row">
-			<div class="col-33">
-				<div class="row">
-					<div class="col-offset-20 col-80">
-						<div class="contact-mail">
-							<div class="title">Kontaktujte nás, ozveme se Vám zpět:</div>
-							<div class="inner">
-								<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form" class="contact-form">
-									<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
-									<input type="text" name="_gotcha" style="display:none" />
-									<div class="form-group">
-										<label for="email">E-mail:</label>
-										<input type="text" name="email" id="email">
-									</div>
-									<div class="form-group">
-										<label for="message">Vzkaz:</label>
-										<textarea wrap="soft | hard" name="message" id="message">Dobrý den, &#010;rádi bychom poptali ...&#010;&#010;Tel.:&nbsp;</textarea>
-									</div>
-									<button type="submit" id='submit_<%= current_page.page_id.split('.')[0].gsub('/', '_') %>'><i class="fa fa-share"></i> Odeslat kontakt</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-33">
-				<div class="row">
-					<div class="col-100">
-						<div class="offset center social-icons">
-							<a href="https://www.facebook.com/iquest.cz" target="_blank">
-		                        <span class="fa-stack fa-2x">
-		                          <i class="fa fa-circle fa-stack-2x"></i>
-		                          <i class="fa fa-facebook fa-stack-1x" aria-hidden="true"></i>
-		                        </span>
-		                    </a>
-		                    <a href="https://www.linkedin.com/company-beta/3021019/" target="_blank">
-		                        <span class="fa-stack fa-2x">
-		                          <i class="fa fa-circle fa-stack-2x"></i>
-		                          <i class="fa fa-linkedin fa-stack-1x" aria-hidden="true"></i>
-		                        </span>
-		                    </a>
-		                    <a href="https://github.com/iquest" target="_blank">
-		                        <span class="fa-stack fa-2x">
-		                          <i class="fa fa-circle fa-stack-2x"></i>
-		                          <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i>
-		                        </span>
-		                    </a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-100">
-						<table align="center" class="contact">
-							<tr>
-								<td class="fas"><a href="tel:+420777314768"><span class="fa fa-phone-square"></span></a></td><td><a href="tel:+420777314768">+420 777 314 768</a></td>
-							</tr>
-							<tr>
-								<td class="fas"><a href="mailto:vyvojari@iquest.cz"><span class="fa fa-envelope"></span></a></td><td><a href="mailto:vyvojari@iquest.cz">vyvojari@iquest.cz</a></td>
-							</tr>
-							<tr>
-								<td class="fas"><a href="https://www.google.es/maps/place/Plask%C3%A1+623%2F5,+150+00+Praha+5-Sm%C3%ADchov,+Chequia/@50.0804691,14.4053866,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x470b94fb74137e67:0xf0879059d1d15d52!2sPlask%C3%A1+622%2F3,+150+00+Praha+5-Sm%C3%ADchov,+Chequia!3b1!8m2!3d50.080473!4d14.4061696!3m4!1s0x470b94fb76ebaff3:0xae50b344cb48020f!8m2!3d50.0804691!4d14.4059338"><span class="fa fa-map-marker"></span></a></td>
-								<td><a href="https://www.google.es/maps/place/Plask%C3%A1+623%2F5,+150+00+Praha+5-Sm%C3%ADchov,+Chequia/@50.0804691,14.4053866,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x470b94fb74137e67:0xf0879059d1d15d52!2sPlask%C3%A1+622%2F3,+150+00+Praha+5-Sm%C3%ADchov,+Chequia!3b1!8m2!3d50.080473!4d14.4061696!3m4!1s0x470b94fb76ebaff3:0xae50b344cb48020f!8m2!3d50.0804691!4d14.4059338">iQuest s.r.o.<br>
-									Plaská 5 <br>
-									150 00 Praha 5</a></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-			<div class="col-33">
-				<div class="row">
-					<div class="col-offset-20 col-80">
-						<div class="services">
-							<div class="title">S čím vším Vám pomůžeme?</div>
-							<div class="inner">
-								<ul>
-									<li>Analýza problémů, či zadání</li>
-									<li>Pomoc při tvorbě zadání</li>
-									<li>Projekt systému</li>
-									<li>Grafický návrh</li>
-									<li>Vývoj a implementace</li>
-									<li>Integrace s jinými systémy</li>
-									<li>Optimalizace uživatelského prostředí</li>
-									<li>Provozování</li>
-									<li>Podpora</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-100">
-					<div class="offset center fv-center">
-						Copyright © 2017 iQuest s.r.o - All Rights Reserved - Privacy
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>-->
+<%= partial 'footer' %>
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		// for (var i = 1; i < 13; i++) {
-		// 	animateDiv('.bg-point'+i);
-		// }
-
 		$('.we-are-the-champions').slick({
 			autoplay: true,
 			autoplaySpeed: 2000,
 			dots: true
 		});
 	});
+
 	$(window).scroll(function(){
 		$('.circles').scrollTop($(document).scrollTop());
 	});
@@ -326,11 +147,6 @@ redirect_url: '/'
 	$('<img alt="modry-andel" src="/images/Refs/modry-andel.png" />');
 	$('<img alt="Autoprima" src="/images/Refs/autoprima.png" />');
 	$('<img alt="Procare" src="/images/Refs/procare.png" />');
-
-	/*$(window).scroll(function() {
-		//movement of the circles
-		$('#opening .circles').css('top', $(this).scrollTop() * -0.75);
-	});*/
 
 	$('.reference .circle').on('mouseenter', function() {
 		$(this).addClass('animated pulse');
@@ -344,54 +160,38 @@ redirect_url: '/'
 		$(this).find('img').removeClass('animated pulse');
 	})
 
+	function makeNewPosition($container) {
+		// Get viewport dimensions (remove the dimension of the div)
+		$container = ($container || $(window))
+		var h = $container.height() - 50;
+		var w = $container.width() - 50;
 
+		var nh = Math.floor(Math.random() * h);
+		var nw = Math.floor(Math.random() * w);
 
+		return [nh, nw];
+	}
 
+	function animateDiv(element) {
+		var $target = $(element);
+		var newq = makeNewPosition($target.parent());
+		var oldq = $target.offset();
+		var speed = calcSpeed([oldq.top, oldq.left], newq);
 
+		$(element).animate({
+				top: newq[0],
+				left: newq[1]
+		}, speed, function() {
+				animateDiv(element);
+		});
+	};
 
-
-
-function makeNewPosition($container) {
-
-    // Get viewport dimensions (remove the dimension of the div)
-    $container = ($container || $(window))
-    var h = $container.height() - 50;
-    var w = $container.width() - 50;
-
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-
-}
-
-function animateDiv(element) {
-    var $target = $(element);
-    var newq = makeNewPosition($target.parent());
-    var oldq = $target.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    $(element).animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateDiv(element);
-    });
-
-};
-
-function calcSpeed(prev, next) {
-
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = 0.07;
-
-    var speed = Math.ceil(greatest / speedModifier);
-
-    return speed;
-
-}
+	function calcSpeed(prev, next) {
+		var x = Math.abs(prev[1] - next[1]);
+		var y = Math.abs(prev[0] - next[0]);
+		var greatest = x > y ? x : y;
+		var speedModifier = 0.07;
+		var speed = Math.ceil(greatest / speedModifier);
+		return speed;
+	}
 </script>

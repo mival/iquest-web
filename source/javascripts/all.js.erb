@@ -1,9 +1,7 @@
-
 //= require remodal
 //= require jquery.easing.compatibility
 //= require jquery.validate.min
 //= require additional-methods.min
-
 
 function toggleMenu() {
 	$("#menu_open").click(function(e) {
@@ -28,7 +26,7 @@ function load_page(e, n, t, a) {
 function page_scroll(e) {
 	function n(e) {
 		var n = window.location.pathname;
-		current_page_name = n /*n.substring(n.lastIndexOf("/") + 1).replace(".html", "")*/, l = o.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += o.length : c >= o.length && (c -= o.length)
+		current_page_name = n, l = o.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += o.length : c >= o.length && (c -= o.length)
 	}
 
 	function t() {
@@ -66,8 +64,6 @@ function page_scroll(e) {
 		load_page(window.location.pathname, ".page-load", ".page-load", function() {
 			n(), t()
 		})
-	}), $(document).scroll(function() {
-		// $(".page-scroll-show .header").css("top", $(this).scrollTop());
 	})
 }
 
@@ -79,7 +75,6 @@ var getUrlParameter = function(e) {
 };
 
 $(document).ready(function(){
-
 	contact_bubble_init();
 
 	if (location.pathname == '/index.html'){
@@ -87,64 +82,6 @@ $(document).ready(function(){
 	}
 
 	toggleMenu();
-
-	// Footer contact form validation
-	// if($('#contact_form').length != 0){
-	//
-	// 	$('#contact_form').validate({
-	// 		highlight: function(element, errorClass){
-	// 	    $(element).addClass('error');
-	// 	    setTimeout(function(){
-	// 	    		$(element).next().addClass('show');
-	// 	    }, 200);
-	//   	},
-	// 		unhighlight: function(element, errorClass){
-	// 			$(element).removeClass('error');
-	//     	$(element).next().removeClass('show');
-	//   	},
-	//   	validClass: "success",
-	// 		rules: {
-	// 			// name: {
-	// 			// 	required: true,
-	// 			// 	minlength: 2,
-	// 			// 	pattern: /^[А-яA-z\s]+$/i
-	// 			// },
-	// 			// company: {
-	// 			// 	required: true,
-	// 			// 	minlength: 2
-	// 			// },
-	// 			// phone: {
-	// 			// 	required: true,
-	// 			// 	pattern: /^[0-9\-_!,.:+=?\s)(]*$/
-	// 			// }
-	// 			email: {
-	// 				required: true,
-	// 				email: true
-	// 			},
-	// 			message: {
-	// 				required: true,
-	// 			},
-	// 		},
-	// 		messages: {
-	// 			name: {
-	// 				required: 'Prosím, zadejte jméno',
-	// 				pattern: 'Zadali jste špatně jméno'
-	// 			},
-	// 			company: 'Prosím, zadejte nazev firmy',
-	// 			email: {
-	// 				required: 'Prosím, zadejte email',
-	// 				email: 'Zadali jste špatně email'
-	// 			},
-	// 			phone: {
-	// 				required: 'Prosím, zadejte telefon',
-	// 				pattern: 'Zadali jste špatně telefon'
-	// 			},
-	// 			message: {
-	// 				required: 'Prosím, zadejte text'
-	// 			}
-	// 		}
-	// 	});
-	// }
 
 	// Mac contact form
 	if($('#contact_form2').length != 0){
@@ -162,19 +99,6 @@ $(document).ready(function(){
 	  	},
 	  	validClass: "success",
 			rules: {
-				// name: {
-				// 	required: true,
-				// 	minlength: 2,
-				// 	pattern: /^[А-яA-z\s]+$/i
-				// },
-				// company: {
-				// 	required: true,
-				// 	minlength: 2
-				// },
-				// phone: {
-				// 	required: true,
-				// 	pattern: /^[0-9\-_!,.:+=?\s)(]*$/
-				// }
 				email: {
 					required: true,
 					email: true
@@ -284,8 +208,6 @@ function contact_bubble_init(){
 	});
 }
 
-
-
 /** Swipe open/close menu start **/
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
     $(document).bind("touchstart",empezar);
@@ -332,10 +254,8 @@ function contact_bubble_init(){
   	  if (mancho > mstop){
   	    if (eancho < sancho){
   	    	$("#overlay, #menu").fadeOut(), event.preventDefault(), event.stopPropagation()
-  	      // $('.menu').removeClass('visible-menu');
   	    } else if (sancho < eancho){
   	    	$("#overlay, #menu").fadeIn(), event.preventDefault(), event.stopPropagation();
-  	      //$('.menu').addClass('visible-menu');
   	    }
   	  }
   	}

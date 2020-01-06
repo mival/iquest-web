@@ -1,4 +1,5 @@
 <nav class="navigation" data-aos="fade-down">
+  <%# <div class="nav-back"></div> %>
   <img id="logo" alt="Logo_hand" src="/images/logo_hand.png" />
   <a id="logo_box" href="/"></a>
   <ul class="navbar">
@@ -7,11 +8,6 @@
         <span class="text"><i class="fa fa-lg fa-home"></i></span>
       <% end  %>
     </li>
-    <!-- <li class="contact">
-      <% link_to t('urls.contact'), :id => 'pillars_kontakt', :class => 'blue-dark small' do %>
-        <span class="text"><i class="fa fa-lg fa-phone"></i></span>
-      <% end  %>
-    </li> -->
     <li>
       <% link_to t('urls.iquest_way'), :class => 'green-dark big' do %>
         <span class="text nowrap"><%= t('navigation.iquest_way') %></span>
@@ -27,11 +23,6 @@
         <span class="text nowrap"><%= t('navigation.reference') %></span>
       <% end  %>
     </li>
-    <!-- <li>
-      <% link_to t('urls.contact'), :id => 'nav_contact', :class => 'blue-dark big' do %>
-        <span class="text"><%= t('navigation.contact') %></span>
-      <% end  %>
-    </li> -->
     <li>
         <% link_to t('urls.blog'), :class => 'green-dark big' do %>
             <span class="text nowrap"><%= t('menu.blog') %></span>
@@ -48,200 +39,95 @@
   </ul>
 </nav>
 <script>
-    // function init() {
-    //     window.addEventListener('scroll', function(e){
-    //         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    //             shrinkOn = 100,
-    //             navbar = $('.navigation');
-    //             logo = $('#logo');
-    //         if (distanceY > shrinkOn) {
-    //             navbar.addClass("smaller");
-    //             logo.addClass("smaller");
-    //         } else {
-    //             if (navbar.hasClass("smaller")) {
-    //                 navbar.removeClass("smaller");
-    //             }
-    //             if (logo.hasClass("smaller")) {
-    //                 logo.removeClass("smaller");
-    //             }
-    //         }
-    //     });
-    // }
-    // window.onload = init();
+  $(function () {
+    $('.navigation').data('size', 'big');
+  });
 
-    $(function(){
-        $('.navigation').data('size','big');
-    });
-
-    // $(window).scroll(function(){
-    //     if($(document).scrollTop() > 75)
-    //     {
-    //         if($('.navigation').data('size') == 'big')
-    //         {
-    //             $('.navigation').data('size','small');
-
-    //             $('#logo').stop().animate({
-    //                 height:'65px'
-    //             },600);
-
-    //             // if($('.small')) {
-    //             //     $('.navbar li a').removeClass('big-nav-button');
-    //             // } else {
-    //                 $('.big').removeClass('big-nav-button');
-    //                 $('.big').addClass('small-nav-button', 600);
-    //                 $('.contact-bubble').removeClass('big-nav-button');
-    //                 $('.contact-bubble').addClass('small-nav-button');
-    //             $('.small').stop().animate({
-    //                 bottom:'0vw'
-    //             },600);
-    //             // }
-    //             $('.navigation').stop().animate({
-    //                 height:'80px'
-    //             },1000);
-    //             $('.navbar').stop().animate({
-    //                 top:'5px'
-    //             },600);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         if($('.navigation').data('size') == 'small')
-    //         {
-    //             $('.navigation').data('size','big');
-
-    //             $('#logo').stop().animate({
-    //                 height:'130px'
-    //             },600);
-
-    //                 $('.big').removeClass('small-nav-button');
-    //                 $('.big').addClass('big-nav-button', 600);
-    //                 $('.contact-bubble').removeClass('small-nav-button');
-    //                 $('.contact-bubble').addClass('big-nav-button');
-    //             $('.small').stop().animate({
-    //                 bottom:'2vw'
-    //             },600);
-    //             $('.navigation').stop().animate({
-    //                 height:'150px'
-    //             },10);
-    //             $('.navbar').stop().animate({
-    //                 top:'20px'
-    //             },600);
-    //         }
-    //     }
-    // });
-    $(window).scroll(function(){
+  $(window).scroll(function () {
     if (!window.matchMedia('(max-width: 768px)').matches) {
-        if($(document).scrollTop() > 50)
-        {
-            if($('.navigation').data('size') == 'big')
-            {
-                $('.navigation').data('size','small');
+      if ($(document).scrollTop() > 50) {
+        if ($('.navigation').data('size') == 'big') {
+          $('.navigation').data('size', 'small');
 
-                $('#logo').stop().animate({
-                    height:'65px'//,
-                    // top: '0'
-                },600);
-                // $('#logo').css("padding-top", '0px');
+          $('#logo').stop().animate({
+            height: '65px'
+          }, 600);
 
-                $('a.big > .text').stop().animate({
-                    top:'60%'
-                },600);
-                // $('a.big').stop().animate({
-                //     'border-top-left-radius':'0%',
-                //     'border-top-right-radius':'0%'
-                // },600);
-                $('a.contact-bubble > .text').stop().animate({
-                    top:'60%'
-                },600);
+          $('a.big > .text').stop().animate({
+            top: '60%'
+          }, 600);
+          $('a.contact-bubble > .text').stop().animate({
+            top: '60%'
+          }, 600);
 
-                $('a.small').stop().animate({
-                    bottom:'-0.5vw'
-                },600);
+          $('a.small').stop().animate({
+            bottom: '-0.5vw'
+          }, 600);
 
-                $('#home').stop().animate({
-                    bottom:'1.5vw'
-                },600);
-                $('#home .text').stop().animate({
-                    top:'55%'
-                },600);
-                // }
-                // $('.navigation').stop().animate({
-                //     height:'70px'
-                // },1500);
-                $('.navbar').stop().animate({
-                    top:'-65px'
-                },600);
-            }
+          $('#home').stop().animate({
+            bottom: '1.5vw'
+          }, 600);
+          $('#home .text').stop().animate({
+            top: '55%'
+          }, 600);
+          $('.navbar').stop().animate({
+            top: '-65px'
+          }, 600);
         }
-        else
-        {
-            if($('.navigation').data('size') == 'small')
-            {
-                $('.navigation').data('size','big');
+      } else {
+        if ($('.navigation').data('size') == 'small') {
+          $('.navigation').data('size', 'big');
 
-                $('#logo').stop().animate({
-                    height:'130px'//,
-                    // 'padding-top': '30px'
-                },600);
+          $('#logo').stop().animate({
+            height: '130px'
+          }, 600);
 
-                $('a.big > .text').stop().animate({
-                    top:'50%'
-                },600);
-                // $('a.big').stop().animate({
-                //     'border-top-left-radius':'50%',
-                //     'border-top-right-radius':'50%'
-                // },600);
-                $('a.contact-bubble > .text').stop().animate({
-                    top:'50%'
-                },600);
+          $('a.big > .text').stop().animate({
+            top: '50%'
+          }, 600);
+          $('a.contact-bubble > .text').stop().animate({
+            top: '50%'
+          }, 600);
 
-                $('a.small').stop().animate({
-                    bottom:'2vw'
-                },600);
+          $('a.small').stop().animate({
+            bottom: '2vw'
+          }, 600);
 
-                $('#home').stop().animate({
-                    bottom:'2vw'
-                },600);
-                $('#home .text').stop().animate({
-                    top:'50%'
-                },600);
-                // $('.navigation').stop().animate({
-                //     height:'150px'
-                // },1);
-                $('.navbar').stop().animate({
-                    top:'50px'
-                },600);
-            }
+          $('#home').stop().animate({
+            bottom: '2vw'
+          }, 600);
+          $('#home .text').stop().animate({
+            top: '50%'
+          }, 600);
+          $('.navbar').stop().animate({
+            top: '50px'
+          }, 600);
         }
+      }
     } else {
-        if($(document).scrollTop() > 30)
-        {
-            if($('.navigation').data('size') == 'big')
-            {
-                $('.navigation').data('size','small');
+      if ($(document).scrollTop() > 30) {
+        if ($('.navigation').data('size') == 'big') {
+          $('.navigation').data('size', 'small');
 
-                $('#logo').stop().animate({
-                    height:'65px'
-                },300);
-                $('.navigation').stop().animate({
-                    height:'65px'
-                },1500);
-            }
+          $('#logo').stop().animate({
+            height: '65px'
+          }, 300);
+          $('.navigation').stop().animate({
+            height: '65px'
+          }, 1500);
         }
-        else
-        {
-            if($('.navigation').data('size') == 'small')
-            {
-                $('.navigation').data('size','big');
+      } else {
+        if ($('.navigation').data('size') == 'small') {
+          $('.navigation').data('size', 'big');
 
-                $('#logo').stop().animate({
-                    height:'90px'
-                },300);
-                $('.navigation').stop().animate({
-                    height:'80px'
-                },1);
-            }
+          $('#logo').stop().animate({
+            height: '90px'
+          }, 300);
+          $('.navigation').stop().animate({
+            height: '80px'
+          }, 1);
         }
+      }
     }
-    });
+  });
 </script>
