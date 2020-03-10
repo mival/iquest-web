@@ -4760,11 +4760,11 @@ a.contact-us.inline {
           }
 
           textarea {
-            height: 170px;
+            height: 120px;
             margin-bottom: 32px;
-            max-height: 170px;
+            max-height: 120px;
             max-width: 100%;
-            min-height: 170px;
+            min-height: 120px;
             min-width: 100%;
           }
 
@@ -4883,7 +4883,7 @@ a.contact-us.inline {
   font-weight: lighter;
 }
 
-// TODO - currently not used
+// TODO - optional - currently not used
 .nav-back {
   background-color: white;
   box-shadow: 0px 10px 30px 55px white;
@@ -4892,6 +4892,25 @@ a.contact-us.inline {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.thumbs.row {
+  .col {
+    width: 100%;
+
+    @media (min-width: 768px) {
+      min-height: 600px;
+      width: 50%;
+    }
+
+    @media (min-width: 1500px) {
+      width: 20%;
+    }
+  }
+
+  .circle {
+    max-width: 250px;
+  }
 }
 
 @import "media";
