@@ -317,6 +317,7 @@ body {
 .navigation {
   height: auto;
   left: 0;
+  overflow: unset !important;
   position: fixed;
   right: 0;
   top: 0;
