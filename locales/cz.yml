@@ -55,6 +55,9 @@ cz:
     assa-abloy                 : '/reference/assa-abloy/'
     galerie-rudolfinum         : '/reference/galerie-rudolfinum/'
     one-click                  : '/reference/one-click/'
+    doosan                     : '/reference/doosan/'
+    challingo                  : '/reference/challingo/'
+    cesmad                     : '/reference/cesmad/'
 
   # default_meta_title: 'iQuest - Měníme myšlenky v software'
   default_meta_title: 'iQuest s.r.o'

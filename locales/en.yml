@@ -76,6 +76,9 @@ en:
     bahal                      : '/en/reference/bahal/'
     autoprima                  : '/en/reference/autoprima/'
     hasek                      : '/en/reference/hasek/'
+    doosan                     : '/en/reference/doosan/'
+    challingo                  : '/en/reference/challingo/'
+    cesmad                     : '/en/reference/cesmad/'
 
   # default_meta_title: 'iQuest - We transform ideas into software'
   default_meta_title: 'iQuest s.r.o'
