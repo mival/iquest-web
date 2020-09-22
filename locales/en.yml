@@ -79,6 +79,7 @@ en:
     doosan                     : '/en/reference/doosan/'
     challingo                  : '/en/reference/challingo/'
     cesmad                     : '/en/reference/cesmad/'
+    local-loyalty              : '/en/reference/local-loyalty/'
 
   # default_meta_title: 'iQuest - We transform ideas into software'
   default_meta_title: 'iQuest s.r.o'
