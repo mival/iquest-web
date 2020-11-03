@@ -13,31 +13,37 @@
 
 @font-face {
   font-family: Raleway-Medium;
+  font-display: swap;
   src: url(../fonts/Raleway-Medium.ttf)
 }
 
 @font-face {
   font-family: Raleway-Light;
+  font-display: swap;
   src: url(../fonts/Raleway-Light.ttf)
 }
 
 @font-face {
   font-family: Raleway-Thin;
+  font-display: swap;
   src: url(../fonts/Raleway-Thin.ttf)
 }
 
 @font-face {
   font-family: SupriaSans-Medium;
+  font-display: swap;
   src: url(../fonts/SupriaSans-Medium.otf)
 }
 
 @font-face {
   font-family: SupriaSans-Light;
+  font-display: swap;
   src: url(../fonts/SupriaSans-Light.otf)
 }
 
 @font-face {
   font-family: SupriaSans-Regular;
+  font-display: swap;
   src: url(../fonts/SupriaSans-Regular.otf)
 }
 
@@ -95,7 +101,7 @@
 }
 
 .text-blue {
-  color: $blue-dark;
+  color: darken($blue-dark, 10%);
 }
 
 .text-green {
@@ -4413,7 +4419,7 @@ a.contact-us.inline {
 }
 
 .restyling a:hover div.text {
-  color: #4590af;
+  color: darken($blue-dark, 10%);
 }
 
 .restyling .img-wrap {
