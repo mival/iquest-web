@@ -1,5 +1,0 @@
-@mixin hover($color) {
-  &:hover {
-    background-color: darken($color, 5%);
-  }
-}
