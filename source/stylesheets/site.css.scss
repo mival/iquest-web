@@ -1,15 +1,40 @@
 @charset "utf-8";
 
-@import "normalize";
-@import "animate";
-@import "hover";
-@import "remodal";
-@import "remodal-default-theme";
-@import "media";
-@import "variables";
-@import "mixins";
-@import "layout";
-@import "pf2018";
+@mixin hover($color) {
+  &:hover {
+    background-color: darken($color, 5%);
+  }
+}
+
+// Design manual
+$analyze:#F2E999;
+$connect:#73CFE9;
+$deliver:#009482;
+$process:#00AFAC;
+
+// Design manual -> to colors
+$blue: $connect;
+$dark-blue: $process;
+$green-dark: #397d7d;
+$yellow: $analyze;
+
+// Mod colors
+$blue-dark:#4590af;
+$black-light: #525252;
+$green: #9ed8cc;
+$grey-dark: #b7b7b7;
+$orange-dark:#f1b769;
+$orange:#fdd7a8;
+$yellow-dark:#dfdb71;
+
+
+@import "normalize.css";
+@import "animate.css";
+@import "hover.css";
+@import "remodal.css";
+@import "remodal-default-theme.css";
+@import "layout.css";
+@import "pf2018.css";
 
 @font-face {
   font-family: Raleway-Medium;
@@ -4920,4 +4945,4 @@ a.contact-us.inline {
   }
 }
 
-@import "media";
+@import "media.css";

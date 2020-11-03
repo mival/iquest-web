@@ -15,9 +15,9 @@ source 'https://rubygems.org'
 # gem "middleman-livereload", "~> 3.1.0"
 
 # gem 'middleman-sync'
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
-gem "middleman-sprockets", "~> 4.1.0"
+gem 'middleman', '~> 4.3'
+gem 'middleman-autoprefixer', '~> 2.10'
+gem 'middleman-sprockets', '~> 4.1'
 gem 'middleman-minify-html'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
