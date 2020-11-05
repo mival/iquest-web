@@ -1183,7 +1183,7 @@ body {
 }
 
 .reference .circles-box .circle.hipp {
-  background-image: url("/images/Refs/hipp.svg");
+  background-image: url("/images/Refs/hipp.png");
 }
 
 .reference .circles-box .circle.assa-abloy {
@@ -1196,7 +1196,7 @@ body {
 }
 
 .reference .circles-box .circle.one-click {
-  background-image: url("/images/Refs/one-click.svg");
+  background-image: url("/images/Refs/one-click.png");
 }
 
 .reference .circles-box .circle.greenswan {
@@ -4649,10 +4649,16 @@ a.contact-us.inline {
   width: 240px;
 }
 
+.no-webp .kinds-of-contacts {
+  background: url(../images/map_bg.png) center top no-repeat;
+}
+
+.webp .kinds-of-contacts {
+  background: url(../images/map_bg.webp) center top no-repeat;
+}
+
 .kinds-of-contacts {
   height: 630px;
-
-  background: url(../images/map_bg.png) center top no-repeat;
   background-size: cover;
   width: 100%;
 
