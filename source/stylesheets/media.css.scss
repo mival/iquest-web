@@ -381,9 +381,12 @@
 @media screen and (max-width: 860px) {
   .kinds-of-contacts {
     height: 100%;
-    background: #415D71;
     // overflow: auto;
     margin-top: 60px;
+    background: #415D71;
+    .image-map {
+      display: none;
+  }
 
     .container {
       padding: 40px 0;

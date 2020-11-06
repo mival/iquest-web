@@ -69,6 +69,12 @@ redirect_url: '/'
 		</div>
 	</div>
 	<div class="kinds-of-contacts">
+		<picture>
+			<source loading="lazy" class="image-map" srcset="../images/map_bg.webp" type="image/webp" media="(min-width: 861px)">
+			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.webp" type="image/webp" media="(max-width: 860px)">  
+			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.png" type="image/png" media="(max-width: 860px)">  
+			<img loading="lazy" class="image-map" alt="Logo hand" src="../images/map_bg.png" />
+		</picture>
 		<div class="container">
 			<div class="row">
 				<div class="col col1">
@@ -91,10 +97,12 @@ redirect_url: '/'
 				<div class="col col2 address">
 					<div class="cont" data-aos="fade-up">
 						<h4>Navštivte nás</h4>
-						<span class="sub-title city">Praha:</span>
-						<span class="sub-title first">Sněmovní 9, 118 00 Praha 1 - Malá Strana</span>
-						<span class="sub-title city">Brno:</span>
-						<span class="sub-title">Cejl 494/25, Brno</span>
+						<div>
+							<span class="sub-title city">Praha:</span>
+							<span class="sub-title first">Sněmovní 9, 118 00 Praha 1 - Malá Strana</span>
+							<span class="sub-title city">Brno:</span>
+							<span class="sub-title">Cejl 494/25, Brno</span>
+						</div>
 						<a href="/kontakt" class="submit">ZOBRAZIT MAPU</a>
 					</div>
 				</div>
