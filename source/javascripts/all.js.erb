@@ -1,6 +1,5 @@
 //= require remodal
 //= require jquery.easing.compatibility
-//= require additional-methods.min
 
 function toggleMenu() {
 	$("#menu_open").click(function(e) {
@@ -74,6 +73,7 @@ var getUrlParameter = function(e) {
 };
 
 $(document).ready(function(){
+
 	contact_bubble_init();
 
 	if (location.pathname == '/index.html'){
@@ -82,115 +82,122 @@ $(document).ready(function(){
 
 	toggleMenu();
 
-	// Mac contact form
-	if($('#contact_form2').length != 0){
+	function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
+		console.log(emailElement, emailElementError, messageElement, messageElementError);
+		const showErrors = function() {
+			if(emailElement.validity.valueMissing) {
+				emailElementError.textContent = 'Prosím, zadejte email';
+			}	else if (emailElement.validity.typeMismatch) {
+				emailElementError.textContent = 'Zadali jste špatně email';
+			} 
+			if (messageElement.validity.valueMissing) {
+				messageElementError.textContent = 'Prosím, zadejte text';
+			} 
 
-		$('#contact_form2').validate({
-			highlight: function(element, errorClass){
-		    $(element).addClass('error');
-		    setTimeout(function(){
-		    		$(element).next().addClass('show');
-		    }, 200);
-	  	},
-			unhighlight: function(element, errorClass){
-				$(element).removeClass('error');
-	    	$(element).next().removeClass('show');
-	  	},
-	  	validClass: "success",
-			rules: {
-				email: {
-					required: true,
-					email: true
-				},
-				message: {
-					required: true,
-				},
-			},
-			messages: {
-				name: {
-					required: 'Prosím, zadejte jméno',
-					pattern: 'Zadali jste špatně jméno'
-				},
-				company: 'Prosím, zadejte nazev firmy',
-				email: {
-					required: 'Prosím, zadejte email',
-					email: 'Zadali jste špatně email'
-				},
-				phone: {
-					required: 'Prosím, zadejte telefon',
-					pattern: 'Zadali jste špatně telefon'
-				},
-				message: {
-					required: 'Prosím, zadejte text'
-				}
+			// Set the styling appropriately
+
+			if (!emailElement.validity.valid) {
+				emailElement.classList.add('error');
+				emailElementError.classList.add('show');
+			} else {
+				messageElement.classList.add('error');
+				messageElementError.classList.add('show');
+			}	
+		}
+
+				
+		emailElement.addEventListener('input', function() {
+			if(emailElement.validity.valid) {
+				emailElementError.innerHTML = '';
+				emailElement.classList.remove('error');
+				emailElementError.classList.remove('show')
+			} else {
+				emailElement.classList.add('error');
+				emailElementError.classList.add('show');
+				showErrors();
+			}
+		});
+		messageElement.addEventListener('input', function() {
+			if(messageElement.validity.valid) {
+				messageElementError.innerHTML = '';
+				messageElement.classList.remove('error');
+				messageElementError.classList.remove('show');
+			}
+			else {
+				messageElement.classList.add('error');
+				messageElementError.classList.add('show');
+				showErrors();
+			}
+		});
+		formElement.addEventListener('submit', function(event) {
+		if (!emailElement.validity.valid || !messageElement.validity.valid) {
+			showErrors();
+			event.preventDefault();
 			}
 		});
 	}
 
-	// Mac contact form
-	if($('#contact_form_kozultace_zdarma').length !== 0){
+	const freeConsultationForm = document.getElementById("contact_form_kozultace_zdarma");
 
-		$('#contact_form_kozultace_zdarma').validate({
-			highlight: function(element, errorClass){
-		    $(element).addClass('error');
-		    setTimeout(function(){
-		    		$(element).next().addClass('show');
-		    }, 200);
-	  	},
-			unhighlight: function(element, errorClass){
-				$(element).removeClass('error');
-	    	$(element).next().removeClass('show');
-	  	},
-	  	validClass: "success",
-			rules: {
-				email: {
-					required: true,
-					email: true
-				},
-				message: {
-					required: true,
-				}
-			},
-			messages: {
-				email: {
-					required: 'Prosím, zadejte email',
-					email: 'Zadali jste špatně email'
-				},
-				message: {
-					required: 'Prosím, zadejte text'
-				}
-			}
-		});
+	if(freeConsultationForm) { 
+		const freeConsultationEmail = document.querySelector("#contact_form_kozultace_zdarma #email");
+		const freeConsultationEmailError = document.querySelector("#contact_form_kozultace_zdarma #email + span.error");
+		const freeConsultationMessage = document.querySelector("#contact_form_kozultace_zdarma #message");
+		const freeConsultationMessageError = document.querySelector("#contact_form_kozultace_zdarma #message + span.error");
+		
+		formValidation(freeConsultationEmail, freeConsultationEmailError, freeConsultationMessage, freeConsultationMessageError, freeConsultationForm);
 	}
 
-	// Mac contact form
-	if($('#contact_form_tel_kozultace_zdarma').length !== 0){
+//contact form 2 validation
 
-		$('#contact_form_tel_kozultace_zdarma').validate({
-			highlight: function(element, errorClass){
-		    $(element).addClass('error');
-		    setTimeout(function(){
-		    		$(element).next().addClass('show');
-		    }, 200);
-	  	},
-			unhighlight: function(element, errorClass){
-				$(element).removeClass('error');
-	    	$(element).next().removeClass('show');
-	  	},
-	  	validClass: "success",
-			rules: {
-				phone: {
-					required: true,
-					pattern: /^[0-9\-_!,.:+=?\s)(]*$/
-				}
-			},
-			messages: {
-				phone: {
-					required: 'Prosím, zadejte telefon',
-					pattern: 'Zadali jste špatně telefon'
-				}
+	const contactForm2 = document.getElementById("contact_form2");
+
+	if(contactForm2) {
+		const contactEmail = document.querySelector("#contact_form2 #email");
+		const contactEmailError = document.querySelector("#contact_form2 #email + span.error")
+		const contactMessage = document.querySelector("#contact_form2 #message");
+		const contactMessageError = document.querySelector("#contact_form2 #message + span.error");
+		
+		formValidation(contactEmail, contactEmailError, contactMessage, contactMessageError, contactForm2);
+	}
+
+//free phone consultation validation
+
+	const freePhoneConsultationForm = document.getElementById("contact_form_tel_kozultace_zdarma");
+	if(freePhoneConsultationForm) {
+		const phoneConsultationEmail = document.querySelector("#contact_form_tel_kozultace_zdarma #phone");
+		const phoneConsultationEmailError = document.querySelector("#contact_form_tel_kozultace_zdarma #phone + span.error")
+	
+		function showPhoneError() {
+			if(phoneConsultationEmail.validity.valueMissing) {
+				phoneConsultationEmailError.textContent = 'Prosím, zadejte telefon';
+			} else if(phoneConsultationEmail.validity.patternMismatch) {
+				phoneConsultationEmailError.textContent = 'Zadali jste špatně telefon';
+			}
+		}
+		
+		phoneConsultationEmail.addEventListener('input', function() {
+			if(phoneConsultationEmail.validity.valid) {
+				phoneConsultationEmailError.innerHTML = '';
+				phoneConsultationEmail.classList.remove('error');
+				phoneConsultationEmailError.classList.remove('show');
+			}
+			else {
+				phoneConsultationEmail.classList.add('error');
+				phoneConsultationEmailError.classList.add('show');
+				showPhoneError();
 			}
 		});
+		freePhoneConsultationForm.addEventListener('submit', function(event) {
+			if (!phoneConsultationEmail.validity.valid) {
+				showPhoneError();
+				event.preventDefault();
+
+				phoneConsultationEmail.classList.add('error');
+				phoneConsultationEmailError.classList.add('show');
+				}
+		});
+	
 	}
 });
 

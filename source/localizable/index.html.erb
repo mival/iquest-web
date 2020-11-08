@@ -79,18 +79,24 @@ redirect_url: '/'
 			<div class="row">
 				<div class="col col1">
 					<div class="cont" data-aos="fade-up">
-						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form_kozultace_zdarma" class="contact-form">
+						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form_kozultace_zdarma" class="contact-form" novalidate>
 							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
 							<input type="text" name="_gotcha" style="display:none" />
-							<h4>Napište nám</h4>
-							<span class="sub-title">vyvojari@iquest.cz</span>
-							<div class="form-group">
-								<input type="text" name="email" placeholder="email" />
+							<div>
+								<h4>Napište nám</h4>
+								<span class="sub-title">vyvojari@iquest.cz</span>
 							</div>
-							<div class="form-group">
-								<textarea name="vzkaz">Dobrý den, &#010;rádi bychom poptali ...&#010;&#010;Tel.:&nbsp;</textarea>
+							<div>
+								<div class="form-group">
+									<input type="email" name="email" id="email" placeholder="email" required>
+									<span class="error" aria-live="polite"></span>
+								</div>
+								<div class="form-group">
+									<textarea name="message" id="message" required>Dobrý den, &#010;rádi bychom poptali ...&#010;&#010;Tel.:&nbsp;</textarea>
+									<span class="error" aria-live="polite"></span>
+								</div>
 							</div>
-							<button type="submit" id='submit_<%= current_page.page_id.split('.')[0] %>'>ODESLAT</button>
+							<div><button type="submit" id='submit_<%= current_page.page_id.split('.')[0] %>'>ODESLAT</button></div>
 						</form>
 					</div>
 				</div>
@@ -103,12 +109,12 @@ redirect_url: '/'
 							<span class="sub-title city">Brno:</span>
 							<span class="sub-title">Cejl 494/25, Brno</span>
 						</div>
-						<a href="/kontakt" class="submit">ZOBRAZIT MAPU</a>
+						<div><a href="/kontakt" class="submit">ZOBRAZIT MAPU</a></div>
 					</div>
 				</div>
 				<div class="col col3">
 					<div class="cont" data-aos="fade-up">
-						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form_tel_kozultace_zdarma" class="contact-form">
+						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form_tel_kozultace_zdarma" class="contact-form" novalidate>
 							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
 							<input type="text" name="_gotcha" style="display:none" />
 							<input type="text" name="tema" value="Zavolejte mě prosím." style="display:none" />
@@ -121,7 +127,8 @@ redirect_url: '/'
 							<div class="sub-cont">
 								<span>Zanechte kontakt, zavoláme Vám</span>
 								<div class="form-group">
-									<input type="text" name="phone" value="+420 " />
+									<input type="text" name="phone" id='phone' value="+420 " pattern="/^[0-9\-_!,.:+=?\s)(]*$/" required />
+									<span class="error" aria-live="polite"></span>
 								</div>
 								<button type="submit" id='submit_tel_<%= current_page.page_id.split('.')[0] %>'>ODESLAT</button>
 							</div>

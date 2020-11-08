@@ -72,16 +72,22 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
         </tr>
       </table>
       <p class="business-register">Společnost byla zapsána dne 15.11.2003 v obchodním rejstříku vedeném u Městského soudu v Praze, oddíl C., vložka 95959.</p>
-      <form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form2" class="contact-form">
+      <form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form2" class="contact-form" novalidate>
         <input type="hidden" name="_next" value="https://www.iquest.cz/success" />
         <input type="text" name="_gotcha" style="display:none" />
         <table>
           <tr>
             <td><label for="email">E-mail:</label></td>
-            <td><input type="text" name="email" id="email"></tr>
+            <td> 
+              <input type="email" name="email" id="email" required>
+              <span class="error" aria-live="polite"></span>
+            </tr>
           <tr>
             <td><label for="message">Vzkaz:</label></td>
-            <td><textarea name="message" id="message">Dobrý den, &#010;rádi bychom poptali ...&#010;Tel.:&nbsp;</textarea></td>
+            <td>
+              <textarea name="message" id="message" required>Dobrý den, &#010;rádi bychom poptali ...&#010;Tel.:&nbsp;</textarea>
+              <span class="error" aria-live="polite"></span>
+            </td>
           </tr>
           <tr>
             <td></td>

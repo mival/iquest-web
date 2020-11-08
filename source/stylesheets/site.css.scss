@@ -422,6 +422,15 @@ body {
   text-transform: uppercase;
   transition: color 0.25s, background-color 0.25s, box-shadow 0.25s;
   width: 7vw;
+
+  &.orange-dark {
+    color: darken($black-light, 10%);
+    font-weight: bold;
+
+    .bubble-3 {
+      color: white;
+    }
+  }
 }
 
 #menu .lang {
@@ -2133,7 +2142,7 @@ body {
       height: 86px;
     }
 
-    label.error {
+    label.error, span.error {
       width: 100% !important;
 
       &.show {
@@ -3857,7 +3866,7 @@ ul.breadcrumb {
     line-height: 15px;
   }
 
-  label.error {
+  label.error, span.error {
     color: #FFB9B9;
     display: block !important;
     font-size: 12px;
@@ -3868,11 +3877,11 @@ ul.breadcrumb {
     text-align: right;
     transition: 1s;
     width: 85% !important;
-  }
 
-  label.error.show {
-    height: 21px;
-    opacity: 1;
+    &.show {
+      height: 21px;
+      opacity: 1;
+    }
   }
 }
 
@@ -4661,6 +4670,7 @@ a.contact-us.inline {
     left: 0;
     min-width: 100%;
     height: 100%;
+    z-index: -1;
   }
 
   .container {
@@ -4748,6 +4758,19 @@ a.contact-us.inline {
           width: 348px;
           height: 100%;
 
+          form {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &#contact_form_kozultace_zdarma {
+              button[type=submit] {
+                margin-top: 32px;
+              }
+            }
+          }
+
           .sub-cont {
             display: block;
             padding: 0 24px 30px 24px;
@@ -4777,6 +4800,7 @@ a.contact-us.inline {
           }
 
           input[type=text],
+          input[type=email],
           textarea {
             background-color: #f4f4f4;
             border-radius: 6px;
@@ -4790,9 +4814,12 @@ a.contact-us.inline {
             outline: none;
             padding: 11px 16px;
             width: 100%;
+            &.error {
+              border: 1px solid red;
+            }
           }
 
-          label.error {
+          span.error {
             color: red !important;
             width: 100% !important;
 
@@ -4803,7 +4830,6 @@ a.contact-us.inline {
 
           textarea {
             height: 120px;
-            margin-bottom: 32px;
             max-height: 120px;
             max-width: 100%;
             min-height: 120px;
