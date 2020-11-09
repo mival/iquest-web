@@ -22,11 +22,13 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
     </p>
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">Vymýšlíme</div>
-    <div class="text-green">Navrhujeme</div>
-    <div class="text-green">Vyvíjíme</div>
-    <div class="text-green">Integrujeme</div>
-    <div class="text-green">Provozujeme</div>
+    <ul>
+      <li class="text-green">Vymýšlíme</li>
+      <li class="text-green">Navrhujeme</li>
+      <li class="text-green">Vyvíjíme</li>
+      <li class="text-green">Integrujeme</li>
+      <li class="text-green">Provozujeme</li>
+    </ul>
   </div>
   <div class="info">
     <div class="box left">
@@ -132,14 +134,6 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
   $('.back-fixed').on('mouseenter', function() {
     $(this).addClass('animated pulse');
   }).on('mouseleave', function() {

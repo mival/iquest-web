@@ -68,10 +68,12 @@ subtitle: Vyberte ty nejlepší na vývoj mobilních aplikaci. Vyvíjíme mobiln
 
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">Specializované technologie</div>
-    <div class="text-green">Rychlý vývoj</div>
-    <div class="text-green">Okamžitá realizace požadavků</div>
-    <div class="text-green">Přehledné a jednoduché ovládání</div>
+    <ul>
+      <li class="text-green">Specializované technologie</li>
+      <li class="text-green">Rychlý vývoj</li>
+      <li class="text-green">Okamžitá realizace požadavků</li>
+      <li class="text-green">Přehledné a jednoduché ovládání</li>
+    </ul>
   </div>
   <div class="info">
     <div class="box right v-center">
@@ -138,14 +140,6 @@ subtitle: Vyberte ty nejlepší na vývoj mobilních aplikaci. Vyvíjíme mobiln
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
   $('.back-fixed').on('mouseenter', function() {
     $(this).addClass('animated pulse');
   }).on('mouseleave', function() {

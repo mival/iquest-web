@@ -22,11 +22,13 @@ subtitle: We create extensive new generation web applications. We will create fo
     </p>
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">We invent</div>
-    <div class="text-green">We make project</div>
-    <div class="text-green">We develop</div>
-    <div class="text-green">We integrate</div>
-    <div class="text-green">We operate</div>
+    <ul>
+      <li class="text-green">We invent</li>
+      <li class="text-green">We make project</li>
+      <li class="text-green">We develop</li>
+      <li class="text-green">We integrate</li>
+      <li class="text-green">We operate</li>
+    </ul>
   </div>
   <div class="info">
     <div class="box left">
@@ -69,14 +71,6 @@ subtitle: We create extensive new generation web applications. We will create fo
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
   $('.back-fixed').on('mouseenter', function() {
     $(this).addClass('animated pulse');
   }).on('mouseleave', function() {

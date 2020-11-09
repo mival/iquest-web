@@ -813,61 +813,23 @@ body {
 
 .we-are-the-champions {
   width: 900px;
-  margin: 0 auto
-}
-
-.we-are-the-champions>div {
-  color: #444;
-  font-size: 30px;
-  text-align: center;
-  padding-bottom: 10px
-}
-
-.we-are-the-champions>div .number {
-  color: #418f8f
-}
-
-.we-are-the-champions .slick-active {
-  outline: none
-}
-
-.we-are-the-champions .slick-dots li button:before {
-  color: #4590af;
-  opacity: 0.5
-}
-
-.we-are-the-champions .slick-dots li.slick-active button:before {
-  color: #4590af;
-  opacity: 1
-}
-
-.we-are-the-champions .slick-prev,
-.we-are-the-champions .slick-next {
-  opacity: 0.4;
-  width: 40px;
-  height: 40px;
-  -webkit-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s
-}
-
-.we-are-the-champions .slick-prev:hover,
-.we-are-the-champions .slick-next:hover {
-  opacity: 0.8
-}
-
-.we-are-the-champions .slick-prev:before,
-.we-are-the-champions .slick-next:before {
-  color: #4590af;
-  font-size: 40px
-}
-
-.we-are-the-champions .slick-prev {
-  left: -40px
-}
-
-.we-are-the-champions .slick-next {
-  right: -40px
+  margin: 0 auto;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    li {
+      white-space: nowrap;
+      padding-bottom: 15px;
+      &:not(:last-child) {
+        padding-right: 15px;
+      }
+    };
+  }
 }
 
 #opening {

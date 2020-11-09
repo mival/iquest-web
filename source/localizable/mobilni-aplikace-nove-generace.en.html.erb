@@ -68,10 +68,12 @@ subtitle: Choose the best team for mobile app development. We develop hybrid mob
 
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">Special technology</div>
-    <div class="text-green">Fast development</div>
-    <div class="text-green">Immediate realization of requirements</div>
-    <div class="text-green">Clear and simple control</div>
+    <li>
+      <ul class="text-green">Special technology</ul>
+      <ul class="text-green">Fast development</ul>
+      <ul class="text-green">Immediate realization of requirements</ul>
+      <ul class="text-green">Clear and simple control</ul>
+    </li>
   </div>
   <div class="info">
     <div class="box right v-center">
@@ -137,14 +139,6 @@ subtitle: Choose the best team for mobile app development. We develop hybrid mob
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
   $('.back-fixed').on('mouseenter', function() {
     $(this).addClass('animated pulse');
   }).on('mouseleave', function() {
