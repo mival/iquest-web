@@ -120,12 +120,11 @@ redirect_url: '/'
 							<input type="text" name="tema" value="Zavolejte mě prosím." style="display:none" />
 							<div class="shadow">
 								<h4>Zavolejte nám</h4>
-								<span class="sub-title"><a href="tel:+420777314768">+ 420 777 314 768</a></span>
-								<a href="/kontakt" class="call-us fa fa-phone"></a>
-								<a href="tel:+420777314768" class="call-us fa fa-phone mobile"></a>
+								<span class="sub-title"><a href="tel:+420777314768" aria-label="zavolejte nám">+ 420 777 314 768</a></span>
+								<a href="tel:+420777314768" class="call-us fa fa-phone" aria-label="zavolejte nám"></a>
 							</div>
 							<div class="sub-cont">
-								<span>Zanechte kontakt, zavoláme Vám</span>
+								<label for="phone">Zanechte kontakt, zavoláme Vám</label>
 								<div class="form-group">
 									<input type="text" name="phone" id='phone' value="+420 " pattern="/^[0-9\-_!,.:+=?\s)(]*$/" required />
 									<span class="error" aria-live="polite"></span>

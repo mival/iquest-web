@@ -5,30 +5,30 @@
     <source loading="lazy" srcset="/images/logo_hand.png" type="image/png"> 
     <img loading="lazy" id="logo" alt="Logo hand" src="/images/logo_hand.png" />
   </picture>
-  <a id="logo_box" href="/"></a>
+  <a id="logo_box" href="/" aria-label="úvodní stránka iquest.cz"></a>
   <ul class="navbar">
     <li>
-      <% link_to t('urls.home'), :class => 'blue-dark small', id: 'home' do %>
+      <% link_to t('urls.home'), :class => 'blue-dark small', id: 'home', 'aria-label': "úvodní stránka iquest.cz" do %>
         <span class="text"><i class="fa fa-lg fa-home"></i></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.iquest_way'), :class => 'green-dark big' do %>
+      <% link_to t('urls.iquest_way'), :class => 'green-dark big', 'aria-label': "přejít na stránku iquest way"  do %>
         <span class="text nowrap"><%= t('navigation.iquest_way') %></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.why_iquest'), :class => 'green-dark big' do %>
+      <% link_to t('urls.why_iquest'), :class => 'green-dark big', 'aria-label': "přejít na stránku proč iquest" do %>
         <span class="text nowrap"><%= t('navigation.why_iquest') %></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.reference'), :id => 'nav_reference', :class => 'green-dark big' do %>
+      <% link_to t('urls.reference'), :id => 'nav_reference', :class => 'green-dark big', 'aria-label': "přejít na stránku reference" do %>
         <span class="text nowrap"><%= t('navigation.reference') %></span>
       <% end  %>
     </li>
     <li>
-        <% link_to t('urls.blog'), :class => 'green-dark big' do %>
+        <% link_to t('urls.blog'), :class => 'green-dark big', 'aria-label': "přejít na stránku iquest blogu" do %>
             <span class="text nowrap"><%= t('menu.blog') %></span>
         <% end %>
     </li>
@@ -36,7 +36,7 @@
       <%= partial 'contact_us_bottom' %>
     </li>
     <li>
-      <a id="menu_open" class="blue-dark small" href="#">
+      <a id="menu_open" class="blue-dark small" href="#" aria-label="otevřit menu">
         <span class="text"><i class="fa fa-lg fa-bars"></i></span>
       </a>
     </li>
