@@ -422,15 +422,6 @@ body {
   text-transform: uppercase;
   transition: color 0.25s, background-color 0.25s, box-shadow 0.25s;
   width: 7vw;
-
-  &.orange-dark {
-    color: darken($black-light, 10%);
-    font-weight: bold;
-
-    .bubble-3 {
-      color: white;
-    }
-  }
 }
 
 #menu .lang {
@@ -824,7 +815,7 @@ body {
     font-weight: bold;
     li {
       white-space: nowrap;
-      padding-bottom: 15px;
+      padding-bottom: 15px;#logo_box
       &:not(:last-child) {
         padding-right: 15px;
       }
@@ -1943,11 +1934,19 @@ body {
   background-color: #abd4f0
 }
 
+.kontakt nav {
+  position: relative;
+}
+
 [class*='kontakt'] #logo,
-[class*='contact'] #logo,
-[class*='kontakt'] #logo_box,
-[class*='contact'] #logo_box {
+[class*='contact'] #logo {
   display: none !important;
+}
+
+[class*='kontakt'] #logo_box,
+[class*='contact'] #logo_box { 
+  top: 30px;
+  position: absolute;
 }
 
 [class*='contact'] #map-canvas {

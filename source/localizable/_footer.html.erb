@@ -46,16 +46,18 @@
 				<div class="offset">
 					<div class="title"><%= t('footer.simply_contact_us') %>:</div>
 					<div class="inner">
-						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form" class="contact-form">
+						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form" class="contact-form" novalidate>
 							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
 							<input type="text" name="_gotcha" style="display:none" />
 							<div class="form-group">
 								<label for="email">E-mail:</label>
-								<input type="text" name="email" id="email">
+								<input type="email" name="email" id="email" required>
+								<span class="error" aria-live="polite"></span>
 							</div>
 							<div class="form-group">
 								<label for="message"><%= t('footer.message') %>:</label>
-								<textarea wrap="soft | hard" name="message" id="message"><%= t('footer.message_example') %></textarea>
+								<textarea wrap="soft | hard" name="message" id="message" required><%= t('footer.message_example') %></textarea>
+								<span class="error" aria-live="polite"></span>
 							</div>
 							<button type="submit" id="submit_<%= current_page.page_id.split('.')[0] %>"><i class="fa fa-share"></i> <%= t('footer.send_contact') %></button>
 						</form>

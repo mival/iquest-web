@@ -148,6 +148,19 @@ $(document).ready(function(){
 		formValidation(freeConsultationEmail, freeConsultationEmailError, freeConsultationMessage, freeConsultationMessageError, freeConsultationForm);
 	}
 
+//footer form 
+
+	const footerForm = document.getElementById("contact_form");
+
+	if(footerForm) {
+		const footerContactEmail = document.querySelector("#contact_form #email");
+		const footerContactEmailError = document.querySelector("#contact_form #email + span.error")
+		const footerContactMessage = document.querySelector("#contact_form #message");
+		const footerContactMessageError = document.querySelector("#contact_form #message + span.error");
+
+		formValidation(footerContactEmail, footerContactEmailError, footerContactMessage, footerContactMessageError, footerForm);
+	}
+
 //contact form 2 validation
 
 	const contactForm2 = document.getElementById("contact_form2");
