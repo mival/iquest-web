@@ -83,7 +83,6 @@ $(document).ready(function(){
 	toggleMenu();
 
 	function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
-		console.log(emailElement, emailElementError, messageElement, messageElementError);
 		const showErrors = function() {
 			if(emailElement.validity.valueMissing) {
 				emailElementError.textContent = 'Prosím, zadejte email';

@@ -1970,6 +1970,18 @@ body {
   padding: 0 1px;
 }
 
+.img-google-map {
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+  &--prague {
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=50.089990,14.403665&CA&zoom=15&size=440x840&markers=size:mid|50.089990,14.403665&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA'); 
+  }
+  &--brno {
+    background-image: url("https://maps.googleapis.com/maps/api/staticmap?center=49.1976471,16.617709&zoom=15&size=440x840&markers=size:mid|49.197653,16.617851&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"); 
+  }
+}
+
 .img-maps {
   background-position: center;
   background-repeat: no-repeat;
