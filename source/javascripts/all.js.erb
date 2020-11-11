@@ -62,99 +62,88 @@ var getUrlParameter = function(e) {
 		if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
 };
 
+function contactBubbleAnimation() {
+	const contactBubbleEl = document.querySelector('.contact-bubble');
+	contactBubbleEl.addEventListener('mouseover', function(e) {
+		if(e.target.nodeName === 'SPAN') {
+			let childrenCollection = contactBubbleEl.children; 
+			for(let i = 0; i < childrenCollection.length; i+=1 ) {
+				const currentChildren =  childrenCollection[i];
+				if (currentChildren.className.includes('bubble')) {
+					currentChildren.classList.remove('bounceIn');
+					setTimeout(function() {
+						currentChildren.classList.add('bounceIn');
+					}, 10);
+				}
+			}
+		}
+	})
+}
+
+function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
+	const showErrors = function() {
+		if(emailElement.validity.valueMissing) {
+			emailElementError.textContent = 'Prosím, zadejte email';
+		}	else if (emailElement.validity.typeMismatch) {
+			emailElementError.textContent = 'Zadali jste špatně email';
+		} 
+		if (messageElement.validity.valueMissing) {
+			messageElementError.textContent = 'Prosím, zadejte text';
+		} 
+		// Set the styling appropriately
+		if (!emailElement.validity.valid) {
+			emailElement.classList.add('error');
+			emailElementError.classList.add('show');
+		} else {
+			messageElement.classList.add('error');
+			messageElementError.classList.add('show');
+		}	
+	}
+			
+	emailElement.addEventListener('input', function() {
+		if(emailElement.validity.valid) {
+			emailElementError.innerHTML = '';
+			emailElement.classList.remove('error');
+			emailElementError.classList.remove('show')
+		} else {
+			emailElement.classList.add('error');
+			emailElementError.classList.add('show');
+			showErrors();
+		}
+	});
+	messageElement.addEventListener('input', function() {
+		if(messageElement.validity.valid) {
+			messageElementError.innerHTML = '';
+			messageElement.classList.remove('error');
+			messageElementError.classList.remove('show');
+		}
+		else {
+			messageElement.classList.add('error');
+			messageElementError.classList.add('show');
+			showErrors();
+		}
+	});
+	formElement.addEventListener('submit', function(event) {
+	if (!emailElement.validity.valid || !messageElement.validity.valid) {
+		showErrors();
+		event.preventDefault();
+		}
+	});
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 	const bodyEl = document.querySelector("body");
 	const overlayEl = document.getElementById("overlay");
 	const menuEl = document.getElementById("menu");
 	const munuOpenEl = document.getElementById("menu_open");
 
-	munuOpenEl.addEventListener("click", function openMenu() {
-		const menuCloseElement = document.querySelector("#menu-close");
-		bodyEl.style.overflow = "hidden";
-		overlayEl.classList.value = 'fade-in';
-		menuEl.classList.value = 'fade-in';
-		overlayEl.style.display = "block";
-		menuEl.style.display = "block";
-
-		[overlayEl, menuCloseElement].forEach(el => {
-			el.addEventListener('click', function closeMenu() { 
-				console.log('close click')
-				overlayEl.classList.value ='fade-out';
-		 		menuEl.classList.value ='fade-out';
-		 		bodyEl.style.overflow = "auto";
-				 setTimeout(() => {
-					overlayEl.style.display ='none';
-		 			menuEl.style.display ='none';
-					}, 400
-				 )
-			})
-		})
-	});
-})
-
-$(document).ready(function(){
-
-	contact_bubble_init();
-
 	if (location.pathname == '/index.html'){
 		location.href = '/';
 	}
 
-	function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
-		const showErrors = function() {
-			if(emailElement.validity.valueMissing) {
-				emailElementError.textContent = 'Prosím, zadejte email';
-			}	else if (emailElement.validity.typeMismatch) {
-				emailElementError.textContent = 'Zadali jste špatně email';
-			} 
-			if (messageElement.validity.valueMissing) {
-				messageElementError.textContent = 'Prosím, zadejte text';
-			} 
+	contactBubbleAnimation();
 
-			// Set the styling appropriately
-
-			if (!emailElement.validity.valid) {
-				emailElement.classList.add('error');
-				emailElementError.classList.add('show');
-			} else {
-				messageElement.classList.add('error');
-				messageElementError.classList.add('show');
-			}	
-		}
-
-				
-		emailElement.addEventListener('input', function() {
-			if(emailElement.validity.valid) {
-				emailElementError.innerHTML = '';
-				emailElement.classList.remove('error');
-				emailElementError.classList.remove('show')
-			} else {
-				emailElement.classList.add('error');
-				emailElementError.classList.add('show');
-				showErrors();
-			}
-		});
-		messageElement.addEventListener('input', function() {
-			if(messageElement.validity.valid) {
-				messageElementError.innerHTML = '';
-				messageElement.classList.remove('error');
-				messageElementError.classList.remove('show');
-			}
-			else {
-				messageElement.classList.add('error');
-				messageElementError.classList.add('show');
-				showErrors();
-			}
-		});
-		formElement.addEventListener('submit', function(event) {
-		if (!emailElement.validity.valid || !messageElement.validity.valid) {
-			showErrors();
-			event.preventDefault();
-			}
-		});
-	}
-
-	const freeConsultationForm = document.getElementById("contact_form_kozultace_zdarma");
+		const freeConsultationForm = document.getElementById("contact_form_kozultace_zdarma");
 
 	if(freeConsultationForm) { 
 		const freeConsultationEmail = document.querySelector("#contact_form_kozultace_zdarma #email");
@@ -165,7 +154,7 @@ $(document).ready(function(){
 		formValidation(freeConsultationEmail, freeConsultationEmailError, freeConsultationMessage, freeConsultationMessageError, freeConsultationForm);
 	}
 
-//footer form 
+	//footer form 
 
 	const footerForm = document.getElementById("contact_form");
 
@@ -178,7 +167,7 @@ $(document).ready(function(){
 		formValidation(footerContactEmail, footerContactEmailError, footerContactMessage, footerContactMessageError, footerForm);
 	}
 
-//contact form 2 validation
+	//contact form 2 validation
 
 	const contactForm2 = document.getElementById("contact_form2");
 
@@ -191,7 +180,7 @@ $(document).ready(function(){
 		formValidation(contactEmail, contactEmailError, contactMessage, contactMessageError, contactForm2);
 	}
 
-//free phone consultation validation
+	//free phone consultation validation
 
 	const freePhoneConsultationForm = document.getElementById("contact_form_tel_kozultace_zdarma");
 	if(freePhoneConsultationForm) {
@@ -229,20 +218,30 @@ $(document).ready(function(){
 		});
 	
 	}
-});
 
-// Contact bubble animation.1
-function contact_bubble_init(){
-	$('.contact-bubble').bind('mouseover', function(e){
-	  var _this = $(this);
-	  if(e.target.nodeName === 'SPAN'){
-	    _this.children('[class ^= bubble]').removeClass('bounceIn');
-	    setTimeout(function(){
-	      _this.children('[class ^= bubble]').addClass('bounceIn');
-	    }, 10);
-	  }
+	munuOpenEl.addEventListener("click", function openMenu() {
+		const menuCloseElement = document.querySelector("#menu-close");
+		bodyEl.style.overflow = "hidden";
+		overlayEl.classList.value = 'fade-in';
+		menuEl.classList.value = 'fade-in';
+		overlayEl.style.display = "block";
+		menuEl.style.display = "block";
+
+		[overlayEl, menuCloseElement].forEach(el => {
+			el.addEventListener('click', function closeMenu() { 
+				overlayEl.classList.value ='fade-out';
+		 		menuEl.classList.value ='fade-out';
+		 		bodyEl.style.overflow = "auto";
+				 setTimeout(() => {
+					overlayEl.style.display ='none';
+		 			menuEl.style.display ='none';
+					}, 400
+				 )
+			})
+		})
 	});
-}
+})
+
 
 /** Swipe open/close menu start **/
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
