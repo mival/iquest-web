@@ -72,6 +72,25 @@ $yellow-dark:#dfdb71;
   src: url(../fonts/SupriaSans-Regular.otf)
 }
 
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fadeOut {
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+
+.fade-out {
+  animation: fadeOut ease 0.4s;
+}
+
+.fade-in {
+  animation: fadeIn ease 0.4s;
+}
+
+
 // Colors
 .yellow {
   background-color: $yellow;
@@ -4641,7 +4660,7 @@ a.contact-us.inline {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    width: 100%;
     height: 100%;
     z-index: -1;
   }
