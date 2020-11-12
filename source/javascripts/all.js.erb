@@ -2,297 +2,298 @@
 //= require jquery.easing.compatibility
 
 function load_page(e, n, t, a) {
-	$.ajax({
-		url: e,
-		success: function(o) {
-			var l = $(o).filter(n).children();
-			$(t).empty().append(l), a(e)
-		}
-	})
+  $.ajax({
+    url: e,
+    success: function(o) {
+      var l = $(o).filter(n).children();
+      $(t).empty().append(l), a(e)
+    }
+  })
 }
 
 function page_scroll(e) {
-	function n(e) {
-		var n = window.location.pathname;
-		current_page_name = n, l = o.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += o.length : c >= o.length && (c -= o.length)
-	}
+  function n(e) {
+    var n = window.location.pathname;
+    current_page_name = n, l = o.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += o.length : c >= o.length && (c -= o.length)
+  }
 
-	function t() {
-		a("left"), a("right")
-	}
+  function t() {
+    a("left"), a("right")
+  }
 
-	function a(e) {
-		$(".page-scroll-" + e).off().click(function(a) {
-			$('body').addClass('posa');
-			$(".page-scroll-show .header").css("top", $(document).scrollTop());
+  function a(e) {
+    $(".page-scroll-" + e).off().click(function(a) {
+      $('body').addClass('posa');
+      $(".page-scroll-show .header").css("top", $(document).scrollTop());
 
-			if (!r) {
-				r = !0;
-				var l = null,
-					u = null;
-				"left" == e ? (l = i, u = "100%") : "right" == e && (l = c, u = "-100%"), $(".page-load").addClass("process").after('<div class="page-preload-' + e + '"></div>'), load_page(o[l], ".page-load", ".page-preload-" + e, function(a) {
-					n(l), setTimeout(function() {
-						$(".page-load").css("left", u), $(".page-preload-" + e).css("left", 0)
-					}, 500), setTimeout(function() {
-						$('body').removeClass('posa');
-						$(".page-load").remove(), $(".page-preload-" + e).addClass("page-load").removeClass("page-preload-" + e), r = !1, contact_bubble_init()
-					}, 1e3), t(), history.pushState(null, null, a)
-				})
-			}
-			a.preventDefault()
-		})
-	}
+      if (!r) {
+        r = !0;
+        var l = null,
+          u = null;
+        "left" == e ? (l = i, u = "100%") : "right" == e && (l = c, u = "-100%"), $(".page-load").addClass("process").after('<div class="page-preload-' + e + '"></div>'), load_page(o[l], ".page-load", ".page-preload-" + e, function(a) {
+          n(l), setTimeout(function() {
+            $(".page-load").css("left", u), $(".page-preload-" + e).css("left", 0)
+          }, 500), setTimeout(function() {
+            $('body').removeClass('posa');
+            $(".page-load").remove(), $(".page-preload-" + e).addClass("page-load").removeClass("page-preload-" + e), r = !1, contact_bubble_init()
+          }, 1e3), t(), history.pushState(null, null, a)
+        })
+      }
+      a.preventDefault()
+    })
+  }
 
-	var o = e,
-		l = null,
-		c = null,
-		i = null,
-		r = !1;
-	n(), t(), window.addEventListener("popstate", function() {
-		load_page(window.location.pathname, ".page-load", ".page-load", function() {
-			n(), t()
-		})
-	})
+  var o = e,
+    l = null,
+    c = null,
+    i = null,
+    r = !1;
+  n(), t(), window.addEventListener("popstate", function() {
+    load_page(window.location.pathname, ".page-load", ".page-load", function() {
+      n(), t()
+    })
+  })
 }
 
 var getUrlParameter = function(e) {
-	var n, t, a = decodeURIComponent(window.location.search.substring(1)),
-		o = a.split("&");
-	for (t = 0; t < o.length; t++)
-		if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
+  var n, t, a = decodeURIComponent(window.location.search.substring(1)),
+    o = a.split("&");
+  for (t = 0; t < o.length; t++)
+    if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
 };
 
 function contactBubbleAnimation() {
-	const contactBubbleEl = document.querySelector('.contact-bubble');
-	contactBubbleEl.addEventListener('mouseover', function(e) {
-		if(e.target.nodeName === 'SPAN') {
-			let childrenCollection = contactBubbleEl.children; 
-			for(let i = 0; i < childrenCollection.length; i+=1 ) {
-				const currentChildren =  childrenCollection[i];
-				if (currentChildren.className.includes('bubble')) {
-					currentChildren.classList.remove('bounceIn');
-					setTimeout(function() {
-						currentChildren.classList.add('bounceIn');
-					}, 10);
-				}
-			}
-		}
-	})
+  const contactBubbleEl = document.querySelector('.contact-bubble');
+  contactBubbleEl.addEventListener('mouseover', function(e) {
+    if(e.target.nodeName === 'SPAN') {
+      const childrenCollection = contactBubbleEl.children;
+      for(var i = 0; i < childrenCollection.length; i+=1 ) {
+        const currentChildren =  childrenCollection[i];
+        if (currentChildren.className.includes('bubble')) {
+          currentChildren.classList.remove('bounceIn');
+          setTimeout(function() {
+            currentChildren.classList.add('bounceIn');
+          }, 10);
+        }
+      }
+    }
+  })
 }
 
 function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
-	const showErrors = function() {
-		if(emailElement.validity.valueMissing) {
-			emailElementError.textContent = 'Prosím, zadejte email';
-		}	else if (emailElement.validity.typeMismatch) {
-			emailElementError.textContent = 'Zadali jste špatně email';
-		} 
-		if (messageElement.validity.valueMissing) {
-			messageElementError.textContent = 'Prosím, zadejte text';
-		} 
-		// Set the styling appropriately
-		if (!emailElement.validity.valid) {
-			emailElement.classList.add('error');
-			emailElementError.classList.add('show');
-		} else {
-			messageElement.classList.add('error');
-			messageElementError.classList.add('show');
-		}	
-	}
-			
-	emailElement.addEventListener('input', function() {
-		if(emailElement.validity.valid) {
-			emailElementError.innerHTML = '';
-			emailElement.classList.remove('error');
-			emailElementError.classList.remove('show')
-		} else {
-			emailElement.classList.add('error');
-			emailElementError.classList.add('show');
-			showErrors();
-		}
-	});
-	messageElement.addEventListener('input', function() {
-		if(messageElement.validity.valid) {
-			messageElementError.innerHTML = '';
-			messageElement.classList.remove('error');
-			messageElementError.classList.remove('show');
-		}
-		else {
-			messageElement.classList.add('error');
-			messageElementError.classList.add('show');
-			showErrors();
-		}
-	});
-	formElement.addEventListener('submit', function(event) {
-	if (!emailElement.validity.valid || !messageElement.validity.valid) {
-		showErrors();
-		event.preventDefault();
-		}
-	});
+  const showErrors = function() {
+    if(emailElement.validity.valueMissing) {
+      emailElementError.textContent = 'Prosím, zadejte email';
+    }  else if (emailElement.validity.typeMismatch) {
+      emailElementError.textContent = 'Zadali jste špatně email';
+    }
+    if (messageElement.validity.valueMissing) {
+      messageElementError.textContent = 'Prosím, zadejte text';
+    }
+    // Set the styling appropriately
+    if (!emailElement.validity.valid) {
+      emailElement.classList.add('error');
+      emailElementError.classList.add('show');
+    } else {
+      messageElement.classList.add('error');
+      messageElementError.classList.add('show');
+    }
+  }
+
+  emailElement.addEventListener('input', function() {
+    if(emailElement.validity.valid) {
+      emailElementError.innerHTML = '';
+      emailElement.classList.remove('error');
+      emailElementError.classList.remove('show')
+    } else {
+      emailElement.classList.add('error');
+      emailElementError.classList.add('show');
+      showErrors();
+    }
+  });
+  messageElement.addEventListener('input', function() {
+    if(messageElement.validity.valid) {
+      messageElementError.innerHTML = '';
+      messageElement.classList.remove('error');
+      messageElementError.classList.remove('show');
+    }
+    else {
+      messageElement.classList.add('error');
+      messageElementError.classList.add('show');
+      showErrors();
+    }
+  });
+  formElement.addEventListener('submit', function(event) {
+  if (!emailElement.validity.valid || !messageElement.validity.valid) {
+    showErrors();
+    event.preventDefault();
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-	const bodyEl = document.querySelector("body");
-	const overlayEl = document.getElementById("overlay");
-	const menuEl = document.getElementById("menu");
-	const munuOpenEl = document.getElementById("menu_open");
+  const bodyEl = document.querySelector("body");
+  const overlayEl = document.getElementById("overlay");
+  const menuEl = document.getElementById("menu");
+  const munuOpenEl = document.getElementById("menu_open");
 
-	if (location.pathname == '/index.html'){
-		location.href = '/';
-	}
+  if (location.pathname == '/index.html'){
+    location.href = '/';
+  }
 
-	contactBubbleAnimation();
+  contactBubbleAnimation();
 
-		const freeConsultationForm = document.getElementById("contact_form_kozultace_zdarma");
+  const freeConsultationForm = document.getElementById("contact_form_kozultace_zdarma");
 
-	if(freeConsultationForm) { 
-		const freeConsultationEmail = document.querySelector("#contact_form_kozultace_zdarma #email");
-		const freeConsultationEmailError = document.querySelector("#contact_form_kozultace_zdarma #email + span.error");
-		const freeConsultationMessage = document.querySelector("#contact_form_kozultace_zdarma #message");
-		const freeConsultationMessageError = document.querySelector("#contact_form_kozultace_zdarma #message + span.error");
-		
-		formValidation(freeConsultationEmail, freeConsultationEmailError, freeConsultationMessage, freeConsultationMessageError, freeConsultationForm);
-	}
+  if(freeConsultationForm) {
+    const freeConsultationEmail = document.querySelector("#contact_form_kozultace_zdarma #email");
+    const freeConsultationEmailError = document.querySelector("#contact_form_kozultace_zdarma #email + span.error");
+    const freeConsultationMessage = document.querySelector("#contact_form_kozultace_zdarma #message");
+    const freeConsultationMessageError = document.querySelector("#contact_form_kozultace_zdarma #message + span.error");
 
-	//footer form 
+    formValidation(freeConsultationEmail, freeConsultationEmailError, freeConsultationMessage, freeConsultationMessageError, freeConsultationForm);
+  }
 
-	const footerForm = document.getElementById("contact_form");
+  //footer form
 
-	if(footerForm) {
-		const footerContactEmail = document.querySelector("#contact_form #email");
-		const footerContactEmailError = document.querySelector("#contact_form #email + span.error")
-		const footerContactMessage = document.querySelector("#contact_form #message");
-		const footerContactMessageError = document.querySelector("#contact_form #message + span.error");
+  const footerForm = document.getElementById("contact_form");
 
-		formValidation(footerContactEmail, footerContactEmailError, footerContactMessage, footerContactMessageError, footerForm);
-	}
+  if(footerForm) {
+    const footerContactEmail = document.querySelector("#contact_form #email");
+    const footerContactEmailError = document.querySelector("#contact_form #email + span.error")
+    const footerContactMessage = document.querySelector("#contact_form #message");
+    const footerContactMessageError = document.querySelector("#contact_form #message + span.error");
 
-	//contact form 2 validation
+    formValidation(footerContactEmail, footerContactEmailError, footerContactMessage, footerContactMessageError, footerForm);
+  }
 
-	const contactForm2 = document.getElementById("contact_form2");
+  //contact form 2 validation
 
-	if(contactForm2) {
-		const contactEmail = document.querySelector("#contact_form2 #email");
-		const contactEmailError = document.querySelector("#contact_form2 #email + span.error")
-		const contactMessage = document.querySelector("#contact_form2 #message");
-		const contactMessageError = document.querySelector("#contact_form2 #message + span.error");
-		
-		formValidation(contactEmail, contactEmailError, contactMessage, contactMessageError, contactForm2);
-	}
+  const contactForm2 = document.getElementById("contact_form2");
 
-	//free phone consultation validation
+  if(contactForm2) {
+    const contactEmail = document.querySelector("#contact_form2 #email");
+    const contactEmailError = document.querySelector("#contact_form2 #email + span.error")
+    const contactMessage = document.querySelector("#contact_form2 #message");
+    const contactMessageError = document.querySelector("#contact_form2 #message + span.error");
 
-	const freePhoneConsultationForm = document.getElementById("contact_form_tel_kozultace_zdarma");
-	if(freePhoneConsultationForm) {
-		const phoneConsultationEmail = document.querySelector("#contact_form_tel_kozultace_zdarma #phone");
-		const phoneConsultationEmailError = document.querySelector("#contact_form_tel_kozultace_zdarma #phone + span.error")
-	
-		function showPhoneError() {
-			if(phoneConsultationEmail.validity.valueMissing) {
-				phoneConsultationEmailError.textContent = 'Prosím, zadejte telefon';
-			} else if(phoneConsultationEmail.validity.patternMismatch) {
-				phoneConsultationEmailError.textContent = 'Zadali jste špatně telefon';
-			}
-		}
-		
-		phoneConsultationEmail.addEventListener('input', function() {
-			if(phoneConsultationEmail.validity.valid) {
-				phoneConsultationEmailError.innerHTML = '';
-				phoneConsultationEmail.classList.remove('error');
-				phoneConsultationEmailError.classList.remove('show');
-			}
-			else {
-				phoneConsultationEmail.classList.add('error');
-				phoneConsultationEmailError.classList.add('show');
-				showPhoneError();
-			}
-		});
-		freePhoneConsultationForm.addEventListener('submit', function(event) {
-			if (!phoneConsultationEmail.validity.valid) {
-				showPhoneError();
-				event.preventDefault();
+    formValidation(contactEmail, contactEmailError, contactMessage, contactMessageError, contactForm2);
+  }
 
-				phoneConsultationEmail.classList.add('error');
-				phoneConsultationEmailError.classList.add('show');
-				}
-		});
-	
-	}
+  //free phone consultation validation
 
-	munuOpenEl.addEventListener("click", function openMenu() {
-		const menuCloseElement = document.querySelector("#menu-close");
-		bodyEl.style.overflow = "hidden";
-		overlayEl.classList.value = 'fade-in';
-		menuEl.classList.value = 'fade-in';
-		overlayEl.style.display = "block";
-		menuEl.style.display = "block";
+  const freePhoneConsultationForm = document.getElementById("contact_form_tel_kozultace_zdarma");
+  if(freePhoneConsultationForm) {
+    const phoneConsultationEmail = document.querySelector("#contact_form_tel_kozultace_zdarma #phone");
+    const phoneConsultationEmailError = document.querySelector("#contact_form_tel_kozultace_zdarma #phone + span.error")
 
-		[overlayEl, menuCloseElement].forEach(el => {
-			el.addEventListener('click', function closeMenu() { 
-				overlayEl.classList.value ='fade-out';
-		 		menuEl.classList.value ='fade-out';
-		 		bodyEl.style.overflow = "auto";
-				 setTimeout(() => {
-					overlayEl.style.display ='none';
-		 			menuEl.style.display ='none';
-					}, 400
-				 )
-			})
-		})
-	});
-})
+    function showPhoneError() {
+      if(phoneConsultationEmail.validity.valueMissing) {
+        phoneConsultationEmailError.textContent = 'Prosím, zadejte telefon';
+      } else if(phoneConsultationEmail.validity.patternMismatch) {
+        phoneConsultationEmailError.textContent = 'Zadali jste špatně telefon';
+      }
+    }
+
+    phoneConsultationEmail.addEventListener('input', function() {
+      if(phoneConsultationEmail.validity.valid) {
+        phoneConsultationEmailError.innerHTML = '';
+        phoneConsultationEmail.classList.remove('error');
+        phoneConsultationEmailError.classList.remove('show');
+      }
+      else {
+        phoneConsultationEmail.classList.add('error');
+        phoneConsultationEmailError.classList.add('show');
+        showPhoneError();
+      }
+    });
+    freePhoneConsultationForm.addEventListener('submit', function(event) {
+      if (!phoneConsultationEmail.validity.valid) {
+        showPhoneError();
+        event.preventDefault();
+
+        phoneConsultationEmail.classList.add('error');
+        phoneConsultationEmailError.classList.add('show');
+        }
+    });
+
+  }
+
+  munuOpenEl.addEventListener("click", function openMenu() {
+    const menuCloseElement = document.querySelector("#menu-close");
+    const overlayEl = document.getElementById("overlay");
+    bodyEl.style.overflow = "hidden";
+    overlayEl.classList.value = 'fade-in';
+    menuEl.classList.value = 'fade-in';
+    overlayEl.style.display = "block";
+    menuEl.style.display = "block";
+
+    [overlayEl, menuCloseElement].forEach(function el() {
+      el.addEventListener('click', function closeMenu() {
+        overlayEl.classList.value ='fade-out';
+         menuEl.classList.value ='fade-out';
+         bodyEl.style.overflow = "auto";
+         setTimeout(function () {
+          overlayEl.style.display ='none';
+           menuEl.style.display ='none';
+          }, 400
+         )
+      })
+    });
+  });
+});
 
 
 /** Swipe open/close menu start **/
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-    $(document).bind("touchstart",empezar);
-    $(document).bind("touchend",terminar);
-  }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+  $(document).bind("touchstart",empezar);
+  $(document).bind("touchend",terminar);
+}
 
-  var eancho;
-  var ealto;
-  var sancho;
-  var salto;
-  var mancho;
-  var malto;
-  var stop = 0;
-  var stop2;
-  var mstop;
+var eancho;
+var ealto;
+var sancho;
+var salto;
+var mancho;
+var malto;
+var stop = 0;
+var stop2;
+var mstop;
 
-  function empezar(event){
-    malto = 0;
-  	var touch = event.originalEvent.changedTouches[0];
-  	eancho = touch.pageX;
-  	ealto = touch.pageY;
-  	stop = $(this).scrollTop();
-  }
+function empezar(event){
+  malto = 0;
+  var touch = event.originalEvent.changedTouches[0];
+  eancho = touch.pageX;
+  ealto = touch.pageY;
+  stop = $(this).scrollTop();
+}
 
-  function terminar(event){
-  	var touch = event.originalEvent.changedTouches[0];
-  	stop2 = $(this).scrollTop();
-  	sancho = touch.pageX;
-  	salto = touch.pageY;
-  	mancho = sancho - eancho;
-  	malto = salto - ealto;
-  	mstop = stop - stop2;
-  	if (mstop < 0){
-	    mstop = mstop* -1;
-  	}
-  	if (malto < 0){
-	    malto = malto* -1;
-  	}
-  	if (mancho < 0){
-	    mancho = mancho* -1;
-  	}
-  	malto = malto*3;
-  	if (mancho > malto){
-  	  if (mancho > mstop){
-  	    if (eancho < sancho){
-  	    	$("#overlay, #menu").fadeOut(), event.preventDefault(), event.stopPropagation()
-  	    } else if (sancho < eancho){
-  	    	$("#overlay, #menu").fadeIn(), event.preventDefault(), event.stopPropagation();
-  	    }
-  	  }
-  	}
+function terminar(event){
+  var touch = event.originalEvent.changedTouches[0];
+  stop2 = $(this).scrollTop();
+  sancho = touch.pageX;
+  salto = touch.pageY;
+  mancho = sancho - eancho;
+  malto = salto - ealto;
+  mstop = stop - stop2;
+  if (mstop < 0){
+    mstop = mstop* -1;
   }
-  /** Swipe open/close menu end **/
+  if (malto < 0){
+    malto = malto* -1;
+  }
+  if (mancho < 0){
+    mancho = mancho* -1;
+  }
+  malto = malto*3;
+  if (mancho > malto){
+    if (mancho > mstop){
+      if (eancho < sancho){
+        $("#overlay, #menu").fadeOut(), event.preventDefault(), event.stopPropagation()
+      } else if (sancho < eancho){
+        $("#overlay, #menu").fadeIn(), event.preventDefault(), event.stopPropagation();
+      }
+    }
+  }
+}
+/** Swipe open/close menu end **/
