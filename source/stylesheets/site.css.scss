@@ -253,7 +253,6 @@ $yellow-dark:#dfdb71;
   background: -o-linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
   background: -webkit-linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
   background: linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
-  text-fill-color: transparent;
 }
 
 .text-shadow {
@@ -348,6 +347,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
  -webkit-box-shadow : inset 0 0 6px rgba(0, 0, 0, .3);
+  box-shadow : inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: $grey-dark;
 }
 
@@ -1994,10 +1994,10 @@ body {
   background-position: center;
   height: 100%;
   &--prague {
-    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=50.089990,14.403665&CA&zoom=15&size=440x840&markers=size:mid|50.089990,14.403665&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA'); 
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=50.089990,14.403665&CA&zoom=15&size=440x840&scale=2&markers=size:mid|50.089990,14.403665&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA'); 
   }
   &--brno {
-    background-image: url("https://maps.googleapis.com/maps/api/staticmap?center=49.1976471,16.617709&zoom=15&size=440x840&markers=size:mid|49.197653,16.617851&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"); 
+    background-image: url("https://maps.googleapis.com/maps/api/staticmap?center=49.1976471,16.617709&zoom=15&size=440x840&scale=2&markers=size:mid|49.197653,16.617851&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"); 
   }
 }
 
@@ -4652,7 +4652,8 @@ a.contact-us.inline {
 
 .kinds-of-contacts {
   height: 630px;
-  background-size: cover;
+  padding-bottom: 20px;
+  overflow: hidden;
   width: 100%;
   position: relative;
 
@@ -4660,8 +4661,6 @@ a.contact-us.inline {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: -1;
   }
 
