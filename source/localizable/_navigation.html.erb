@@ -1,9 +1,10 @@
 <nav class="navigation" data-aos="fade-down">
   <%# <div class="nav-back"></div> %>
   <picture>
-    <source loading="lazy" srcset="/images/logo_hand.webp" type="image/webp">
-    <source loading="lazy" srcset="/images/logo_hand.png" type="image/png"> 
-    <img loading="lazy" id="logo" alt="Logo hand" src="/images/logo_hand.png" />
+    <source loading="lazy" srcset="/images/logo_hand.webp" media="(min-width: 861px)" type="image/webp" width="1900" height="130">
+    <source loading="lazy" srcset="/images/logo_hand.webp" media="(max-width: 860px)" type="image/webp" width="1368" height="120">
+    <source loading="lazy" srcset="/images/logo_hand.png" media="(max-width: 860px)" type="image/png" width="1368" height="120"> 
+    <img loading="lazy" id="logo" alt="Logo hand" src="/images/logo_hand.png" width="1900" height="130" />
   </picture>
   <a id="logo_box" href="/" aria-label="úvodní stránka iquest.cz"></a>
   <ul class="navbar">
