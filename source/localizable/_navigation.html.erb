@@ -44,93 +44,39 @@
   </ul>
 </nav>
 <script>
-  $(function () {
-    $('.navigation').data('size', 'big');
-  });
+  const navigationEl = document.querySelector(".navigation");
+  const logoEl = document.getElementById('logo');
+  const navbarElement = document.querySelector('.navbar');
 
-  $(window).scroll(function () {
+  navigationEl.dataset.size = 'big';
+
+  window.addEventListener('scroll', function(){
     if (!window.matchMedia('(max-width: 768px)').matches) {
-      if ($(document).scrollTop() > 50) {
-        if ($('.navigation').data('size') == 'big') {
-          $('.navigation').data('size', 'small');
-
-          $('#logo').stop().animate({
-            height: '65px'
-          }, 600);
-
-          $('a.big > .text').stop().animate({
-            top: '60%'
-          }, 600);
-          $('a.contact-bubble > .text').stop().animate({
-            top: '60%'
-          }, 600);
-
-          $('a.small').stop().animate({
-            bottom: '-0.5vw'
-          }, 600);
-
-          $('#home').stop().animate({
-            bottom: '1.5vw'
-          }, 600);
-          $('#home .text').stop().animate({
-            top: '55%'
-          }, 600);
-          $('.navbar').stop().animate({
-            top: '-65px'
-          }, 600);
+      console.log('big monitor JS')
+      if(window.scrollY > 50) {
+        if (navigationEl.dataset.size === 'big') {
+          navigationEl.dataset.size = 'small';
+          logoEl.classList.add("shrink");
+          navbarElement.classList.add('shrink');
         }
-      } else {
-        if ($('.navigation').data('size') == 'small') {
-          $('.navigation').data('size', 'big');
-
-          $('#logo').stop().animate({
-            height: '130px'
-          }, 600);
-
-          $('a.big > .text').stop().animate({
-            top: '50%'
-          }, 600);
-          $('a.contact-bubble > .text').stop().animate({
-            top: '50%'
-          }, 600);
-
-          $('a.small').stop().animate({
-            bottom: '2vw'
-          }, 600);
-
-          $('#home').stop().animate({
-            bottom: '2vw'
-          }, 600);
-          $('#home .text').stop().animate({
-            top: '50%'
-          }, 600);
-          $('.navbar').stop().animate({
-            top: '50px'
-          }, 600);
+      }
+      else {
+        if (navigationEl.dataset.size === 'small') {
+          navigationEl.dataset.size = 'big';
+          logoEl.classList.remove("shrink");
+          navbarElement.classList.remove('shrink');
         }
       }
     } else {
-      if ($(document).scrollTop() > 30) {
-        if ($('.navigation').data('size') == 'big') {
-          $('.navigation').data('size', 'small');
-
-          $('#logo').stop().animate({
-            height: '65px'
-          }, 300);
-          $('.navigation').stop().animate({
-            height: '65px'
-          }, 1500);
+      if(window.scrollY > 30) { 
+        if(navigationEl.dataset.size === 'big') {
+          navigationEl.dataset.size = 'small';
+          logoEl.classList.add("shrink");
         }
       } else {
-        if ($('.navigation').data('size') == 'small') {
-          $('.navigation').data('size', 'big');
-
-          $('#logo').stop().animate({
-            height: '90px'
-          }, 300);
-          $('.navigation').stop().animate({
-            height: '80px'
-          }, 1);
+        if (navigationEl.dataset.size === 'small') {
+          navigationEl.dataset.size = 'big';
+          logoEl.classList.remove("shrink");
         }
       }
     }
