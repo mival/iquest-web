@@ -87,9 +87,10 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $('.back-fixed').on('mouseenter', function() {
-    $(this).addClass('animated pulse');
-  }).on('mouseleave', function() {
-    $(this).removeClass('animated pulse');
+  document.querySelector('.back-fixed').addEventListener('mouseenter', function() {
+    this.classList.add('animated', 'pulse');
   })
+  document.querySelector('.back-fixed').addEventListener('mouseleave', function() {
+    this.classList.remove('animated', 'pulse');
+ })
 </script>
