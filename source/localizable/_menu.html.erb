@@ -71,6 +71,11 @@
 
     <div class="text-green font-medium" style="margin-right: 40px; font-size: 1.5em; padding-top: 50px; margin-bottom: -10px">iQuest microsites:</div>
     <ul>
+    <% link_to 'https://iquest-konzultace-client.netlify.app/' do %>
+      <li>
+        <%= t('menu.microsite_consultation') %>
+      </li>
+    <% end %>
     <% link_to "https://www.rubyonrailspraha.cz/" do %>
       <li>
         <%= t('menu.microsite_ruby') %>
