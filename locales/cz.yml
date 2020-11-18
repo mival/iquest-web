@@ -3,7 +3,7 @@ cz:
   urls:
     home                       : '/'
     contact                    : '/kontakt/'
-    consultation               : 'https://iquest-konzultace-client.netlify.app/'
+    consultation               : 'https://konzultace.iquest.cz/'
     iquest_way                 : '/iquest-way/'
     why_iquest                 : '/proc-iquest/'
     reference                  : '/reference/'
