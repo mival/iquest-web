@@ -3,6 +3,7 @@ cz:
   urls:
     home                       : '/'
     contact                    : '/kontakt/'
+    consultation               : 'https://iquest-konzultace-client.netlify.app/'
     iquest_way                 : '/iquest-way/'
     why_iquest                 : '/proc-iquest/'
     reference                  : '/reference/'
@@ -81,9 +82,9 @@ cz:
     contact        : 'Kontakt'
     blog           : 'Blog'
     volne_pozice   : 'Přidej se k nám'
+    consultation   : 'Konzultace'
     development    : 'Vývoj webových aplikací'
     mobile_applications : 'Mobilní aplikace nové generace'
-    microsite_consultation : 'Konzultace'
     microsite_ruby      : 'Ruby on Rails Praha'
     microsite_aplikace  : 'Průvodce vývojem aplikací'
     microsite_jeden     : 'Jeden vývoj - jedna aplikace pro Android i iPhone'
