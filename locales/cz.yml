@@ -105,13 +105,14 @@ cz:
         development         : 'Rozsáhlé <br />webové<br />aplikace'
         information_systems : 'Firemní<br />informační<br />systémy <br class="br" /> na míru'
         mobile_applications : 'Mobilní <br />aplikace'
+        progressive_web_apps: 'Progresivní webové aplikace'
+        startups            : 'Startupy'
 
     contact:
       contact_us: 'Kontaktujte nás'
 
 
   kinds_of_products:
-    progressive_web_apps       : 'progresivní webové aplikace'
     reservation_systems        : 'rezervační systémy'
     vendor_portals             : 'prodejní portály'
     crm_systems                : 'CRM systémy'

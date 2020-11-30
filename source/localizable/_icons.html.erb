@@ -1,23 +1,36 @@
 <div class="info icons">
-  <div class="container restyling">
+  <div class="container restyling flex items-center justify-between">
+    <% link_to t('urls.mobile_applications'), :class => 'box', :'data-aos' => 'fade-up' do %>
+      <div class="img-wrap">
+        <img alt="Phone_with_hand_128" src="/images/Go_to_Web_128.png" />
+      </div>
+      <div class="text"><%= t('pages.main.buttons.startups') %></div>
+    <% end  %>
     <% link_to t('urls.development'), :class => 'box', :'data-aos' => 'fade-up' do %>
-          <div class="img-wrap">
+      <div class="img-wrap">
         <img alt="Notebook_and_mouse_cursor_128" src="/images/Notebook_and_mouse_cursor_128.png" />
       </div>
       <div class="text"><%= t('pages.main.buttons.development') %></div>
-        <% end  %>
-        <% link_to t('urls.information_systems'), :class => 'box', :'data-aos' => 'fade-up' do %>
-          <div class="img-wrap">
+    <% end  %>
+    <% link_to t('urls.information_systems'), :class => 'box', :'data-aos' => 'fade-up' do %>
+      <div class="img-wrap">
         <img alt="Go_to_web_128" src="/images/Go_to_Web_128.png" />
       </div>
       <div class="text"><%= t('pages.main.buttons.information_systems') %></div>
-        <% end  %>
-        <% link_to t('urls.mobile_applications'), :class => 'box', :'data-aos' => 'fade-up' do %>
-          <div class="img-wrap">
+    <% end  %>
+    <% link_to t('urls.mobile_applications'), :class => 'box', :'data-aos' => 'fade-up' do %>
+      <div class="img-wrap">
         <img alt="Phone_with_hand_128" src="/images/Phone_with_Hand_128.png" />
       </div>
       <div class="text"><%= t('pages.main.buttons.mobile_applications') %></div>
-        <% end  %>
+    <% end  %>
+
+    <% link_to t('urls.progressive_web_apps'), :class => 'box', :'data-aos' => 'fade-up' do %>
+      <div class="img-wrap">
+        <img alt="Phone_with_hand_128" src="/images/Notebook_and_mouse_cursor_128.png" />
+      </div>
+      <div class="text"><%= t('pages.main.buttons.progressive_web_apps') %></div>
+    <% end  %>
     <div class="clear"></div>
   </div>
 </div>
