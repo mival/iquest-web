@@ -32,8 +32,10 @@ subtitle: Get your new information system designed by experienced professionals.
     <p>iQuest has been creating <b>bespoke software</b> for the customers for more than 14 years. We are able to ensure all stages of <b>information system development</b>, from data collection to software deployment and user training.  Custom software development is a challenge for us, with both advanced and modern technologies and maximum customization for users for the easiest and fastest use. We use a variety of powerful technologies <b>to create information systems</b> (Ember JS, Ruby on Rails, HTML 5).”</p>
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">We are precise in analysis and design</div>
-    <div class="text-green">We develop useful systems</div>
+    <ul>
+      <li class="text-green">We are precise in analysis and design</li>
+      <li class="text-green">We develop useful systems</li>
+    </ul>
   </div>
   <div class="info">
     <div class="box left">
@@ -85,17 +87,10 @@ subtitle: Get your new information system designed by experienced professionals.
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
-  $('.back-fixed').on('mouseenter', function() {
-    $(this).addClass('animated pulse');
-  }).on('mouseleave', function() {
-    $(this).removeClass('animated pulse');
+  document.querySelector('.back-fixed').addEventListener('mouseenter', function() {
+    this.classList.add('animated', 'pulse');
   })
+  document.querySelector('.back-fixed').addEventListener('mouseleave', function() {
+    this.classList.remove('animated', 'pulse');
+ })
 </script>

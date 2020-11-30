@@ -2,7 +2,6 @@
 title: Kontaktujte nás | iQuest s.r.o.
 subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
 ---
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"></script>
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -32,6 +31,7 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
   <div class="col-30vw contact-text">
     <div class="box" data-aos="fade-right">
       <img class="logo" alt="logo iQuest" src="/images/logo_hand.png" />
+      <a id="logo_box" href="/"></a>
       <h1>Kontaktujte nás</h1>
       <table>
         <tr><th colspan=2>Sídlo a centrála Praha</th></tr>
@@ -72,16 +72,23 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
         </tr>
       </table>
       <p class="business-register">Společnost byla zapsána dne 15.11.2003 v obchodním rejstříku vedeném u Městského soudu v Praze, oddíl C., vložka 95959.</p>
-      <form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form2" class="contact-form">
+      <form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form2" class="contact-form" novalidate>
         <input type="hidden" name="_next" value="https://www.iquest.cz/success" />
         <input type="text" name="_gotcha" style="display:none" />
         <table>
           <tr>
             <td><label for="email">E-mail:</label></td>
-            <td><input type="text" name="email" id="email"></tr>
+            <td> 
+              <input type="email" name="email" id="email" required>
+              <span class="error" aria-live="polite"></span>
+            </td>
+          </tr>
           <tr>
             <td><label for="message">Vzkaz:</label></td>
-            <td><textarea name="message" id="message">Dobrý den, &#010;rádi bychom poptali ...&#010;Tel.:&nbsp;</textarea></td>
+            <td>
+              <textarea name="message" id="message" required>Dobrý den, &#010;rádi bychom poptali ...&#010;Tel.:&nbsp;</textarea>
+              <span class="error" aria-live="polite"></span>
+            </td>
           </tr>
           <tr>
             <td></td>
@@ -92,16 +99,16 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
     </div>
   </div>
   <div class="col-35 contact-maps">
-    <div id="map-canvas"></div>
+    <div class="img-google-map img-google-map--prague"></div>
     <div class="img-maps" style="background-image: url('/images/Praha.jpg');">
       <p class="add-img"><span class="town-img">Praha</span><br>
       Sněmovní 9
       <br>118 00 Praha 1
       </p>
-    </div>
+   </div>
   </div>
   <div class="col-35 contact-maps">
-    <div id="map-canvas2"></div>
+    <div class="img-google-map img-google-map--brno"></div>
     <div class="img-maps" style="background-image: url('/images/Brno.png');">
       <p class="add-img">
         <span class="town-img">Brno</span><br>
@@ -112,103 +119,3 @@ subtitle: Máte jakýkoliv dotaz? Kontaktujte nás telefonicky či e-mailem.
 </div>
 
 <%= partial 'footer' %>
-
-<script>
-  var point = {
-    lat: 50.0898397,
-    lng: 14.4037939
-  };
-  var markerSize = {
-    x: 22,
-    y: 40
-  };
-
-  google.maps.Marker.prototype.setLabel = function(label) {
-    this.label = new MarkerLabel({
-      map: this.map,
-      marker: this,
-      text: label
-    });
-    this.label.bindTo('position', this, 'position');
-  };
-
-  var MarkerLabel = function(options) {
-    this.setValues(options);
-    this.span = document.createElement('span');
-    this.span.className = 'map-marker-label';
-  };
-
-  MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
-    onAdd: function() {
-      this.getPanes().overlayImage.appendChild(this.span);
-      var self = this;
-      this.listeners = [
-        google.maps.event.addListener(this, 'position_changed', function() {
-          self.draw();
-        })
-      ];
-    },
-    draw: function() {
-      var text = String(this.get('text'));
-      var position = this.getProjection().fromLatLngToDivPixel(this.get('position'));
-      this.span.innerHTML = text;
-      this.span.style.left = (position.x - (markerSize.x / 2)) - (text.length * 3) + 10 + 'px';
-      this.span.style.top = (position.y - markerSize.y + 40) + 'px';
-    }
-  });
-
-  function initialize() {
-    var myLatLng = new google.maps.LatLng(point.lat, point.lng);
-    var gmap = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 17,
-      center: myLatLng,
-      scrollwheel: false,
-      panControl: false,
-      mapTypeControl: false,
-      streetViewControl: false,
-      zoomControl: true,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.RIGHT_CENTER
-      }
-    });
-    var myMarker = new google.maps.Marker({
-      map: gmap,
-      position: myLatLng,
-      label: 'iQuest s.r.o.',
-      draggable: true
-    });
-  }
-
-  initialize();
-
-  var point2 = {
-    lat: 49.197625,
-    lng: 16.617850
-  };
-
-  function initialize2() {
-    var myLatLng2 = new google.maps.LatLng(point2.lat, point2.lng);
-    var gmap2 = new google.maps.Map(document.getElementById('map-canvas2'), {
-      zoom: 17,
-      center: myLatLng2,
-      scrollwheel: false,
-      panControl: false,
-      mapTypeControl: false,
-      streetViewControl: false,
-      zoomControl: true,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.RIGHT_CENTER
-      }
-    });
-    var myMarker2 = new google.maps.Marker({
-      map: gmap2,
-      position: myLatLng2,
-      label: 'iQuest s.r.o.',
-      draggable: true
-    });
-  }
-
-  initialize2();
-</script>

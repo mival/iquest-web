@@ -732,7 +732,6 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
   var isShowContactButton = false;
   var contact_button = function(current_page){
     if(current_page !== 0 && !isShowContactButton){
-      console.log('da');
       $('#contact_button').removeClass().addClass('contact-bubble fixed bounceIn animated page-' + current_page);
       $('#contact_button').children('[class ^= bubble]').addClass('bounceIn');
       setTimeout(function(){

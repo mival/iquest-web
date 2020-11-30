@@ -274,11 +274,6 @@
     margin-left: 15px;
     margin-right: 15px
   }
-
-  .we-are-the-champions .slick-prev,
-  .we-are-the-champions .slick-next {
-    display: none !important
-  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -381,9 +376,12 @@
 @media screen and (max-width: 860px) {
   .kinds-of-contacts {
     height: 100%;
-    background: #415D71;
     // overflow: auto;
     margin-top: 60px;
+    background: #415D71;
+    .image-map {
+      display: none;
+  }
 
     .container {
       padding: 40px 0;
@@ -517,8 +515,10 @@
 
   .navigation #logo {
     height: 90px;
+    width: 1368px;
     margin-left: -20px;
     padding-top: 30px;
+    transition: all .3s;
   }
 
   .navigation #logo_box {
@@ -588,10 +588,6 @@
 
   .info.icons .container .box img {
     position: static
-  }
-
-  .info.icons .container .box .text {
-    // display: none
   }
 
   #opening .circles {

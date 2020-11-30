@@ -2,26 +2,26 @@
 	<h3 class="text-center" data-aos="fade-up"><%= t('pages.main.examples_of_work') %>:</h3>
 	<div class="circles-box" data-aos="fade-up">
 		<% url = '/en' if I18n.locale == :en %>
-		<%= link_to '', "#{url}/reference/greenswan", :class => 'circle greenswan' %>
-		<%= link_to '', "#{url}/reference/cia-news", :class => 'circle cia-news' %>
-		<%= link_to '', "#{url}/reference/cemio", :class => 'circle cemio' %>
-		<%= link_to '', "#{url}/reference/ignum", :class => 'circle ignum' %>
-		<%= link_to '', "#{url}/reference/modry-andel", :class => 'circle modry-andel' %>
-		<%= link_to '', "#{url}/reference", :class => 'circle domenacz' %>
-		<%= link_to '', "#{url}/reference", :class => 'circle magistra' %>
-		<%= link_to '', "#{url}/reference", :class => 'circle avu' %>
-		<%= link_to '', "#{url}/reference/procare", :class => 'circle procare' %>
-		<%= link_to '', "#{url}/reference/", :class => 'circle chirs' %>
-		<%= link_to '', "#{url}/reference/", :class => 'circle hasbro' %>
-		<%= link_to '', "#{url}/reference/", :class => 'circle impuls' %>
-		<%= link_to '', "#{url}/reference/", :class => 'circle burda' %>
-		<%= link_to '', "#{url}/reference/hipp", :class => 'circle hipp' %>
-		<%= link_to '', "#{url}/reference/assa-abloy", :class => 'circle assa-abloy' %>
-		<%= link_to '', "#{url}/reference/galerie-rudolfinum", :class => 'circle galerie-rudolfinum' %>
-		<%= link_to '', "#{url}/reference/one-click", :class => 'circle one-click' %>
-		<%= link_to '', "#{url}/reference/", :class => 'circle jungheinrich' %>
+		<%= link_to '', "#{url}/reference/greenswan", :class => 'circle greenswan', 'aria-label': "přejít na stránku společnosti greenswan" %>
+		<%= link_to '', "#{url}/reference/cia-news", :class => 'circle cia-news', 'aria-label': "přejít na stránku společnosti cia news" %>
+		<%= link_to '', "#{url}/reference/cemio", :class => 'circle cemio', 'aria-label': "přejít na stránku společnosti cemio" %>
+		<%= link_to '', "#{url}/reference/ignum", :class => 'circle ignum', 'aria-label': "přejít na stránku společnosti ignum" %>
+		<%= link_to '', "#{url}/reference/modry-andel", :class => 'circle modry-andel', 'aria-label': "přejít na stránku společnosti modrá andel" %>
+		<%= link_to '', "#{url}/reference", :class => 'circle domenacz', 'aria-label': "přejít na stránku společnosti greenswan" %>
+		<%= link_to '', "#{url}/reference", :class => 'circle magistra', 'aria-label': "přejít na stránku společnosti greenswan" %>
+		<%= link_to '', "#{url}/reference", :class => 'circle avu', 'aria-label': "přejít na stránku společnosti greenswan" %>
+		<%= link_to '', "#{url}/reference/procare", :class => 'circle procare', 'aria-label': "přejít na stránku společnosti greenswan" %>
+		<%= link_to '', "#{url}/reference/", :class => 'circle chirs', 'aria-label': "přejít na stránku společnosti chirs" %>
+		<%= link_to '', "#{url}/reference/", :class => 'circle hasbro', 'aria-label': "přejít na stránku společnosti hasbro" %>
+		<%= link_to '', "#{url}/reference/", :class => 'circle impuls', 'aria-label': "přejít na stránku společnosti impuls" %>
+		<%= link_to '', "#{url}/reference/", :class => 'circle burda', 'aria-label': "přejít na stránku společnosti burda" %>
+		<%= link_to '', "#{url}/reference/hipp", :class => 'circle hipp', 'aria-label': "přejít na stránku společnosti hipp" %>
+		<%= link_to '', "#{url}/reference/assa-abloy", :class => 'circle assa-abloy', 'aria-label': "přejít na stránku společnosti assa-abloy" %>
+		<%= link_to '', "#{url}/reference/galerie-rudolfinum", :class => 'circle galerie-rudolfinum', 'aria-label': "přejít na stránku společnosti galerie-rudolfinum" %>
+		<%= link_to '', "#{url}/reference/one-click", :class => 'circle one-click', 'aria-label': "přejít na stránku společnosti one-click" %>
+		<%= link_to '', "#{url}/reference/", :class => 'circle jungheinrich', 'aria-label': "přejít na stránku společnosti jungheinrich" %>
 	</div>
-	<% link_to t('urls.reference'), :class => 'more-references text-blue', :'data-aos' => 'fade-up' do %>
+	<% link_to t('urls.reference'), :class => 'more-references text-blue', :'data-aos' => 'fade-up', 'aria-label': "přejít na stránku více referencí" do %>
 		<%= t('pages.main.more_references') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
 	<% end  %>
 </div>

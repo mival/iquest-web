@@ -29,11 +29,13 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
       </ul>
     </p>
     <br>
-    <p>iQuest tvoří  již více než 14 let <b>software na zakázku</b> pro své zákazníky. Jsme schopní zajistit všechny fáze <b>vývoje informačních systémů</b>, od sběru dat po nasazení software a školení uživatele.  Zakázkové <b>programování software</b> je pro nás výzvou, ať už se dokonalých a moderních technologií týká, tak z hlediska maximálního přizpůsobení uživatelům pro co nejsnadnější a nejrychlejší využívání. Pro <b>tvorbu informačních systémů</b> využíváme řadu výkonných technologií (Ember JS, Ruby on Rails, HTML 5).”</p>
+    <p>iQuest tvoří  již více než 17 let <b>software na zakázku</b> pro své zákazníky. Jsme schopní zajistit všechny fáze <b>vývoje informačních systémů</b>, od sběru dat po nasazení software a školení uživatele.  Zakázkové <b>programování software</b> je pro nás výzvou, ať už se dokonalých a moderních technologií týká, tak z hlediska maximálního přizpůsobení uživatelům pro co nejsnadnější a nejrychlejší využívání. Pro <b>tvorbu informačních systémů</b> využíváme řadu výkonných technologií (Ember JS, Ruby on Rails, HTML 5).”</p>
   </div>
   <div class="we-are-the-champions" data-aos="fade-up">
-    <div class="text-green">Jsme precizní v analýze a návrhu</div>
-    <div class="text-green">Vyvíjíme užitečné systémy</div>
+    <ul>
+      <li class="text-green">Jsme precizní v analýze a návrhu</li>
+      <li class="text-green">Vyvíjíme užitečné systémy</li>
+    </ul>
   </div>
   <div class="info">
     <div class="box left">
@@ -85,17 +87,10 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.we-are-the-champions').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true
-    });
-  });
-
-  $('.back-fixed').on('mouseenter', function() {
-    $(this).addClass('animated pulse');
-  }).on('mouseleave', function() {
-    $(this).removeClass('animated pulse');
+  document.querySelector('.back-fixed').addEventListener('mouseenter', function() {
+    this.classList.add('animated', 'pulse');
   })
+  document.querySelector('.back-fixed').addEventListener('mouseleave', function() {
+    this.classList.remove('animated', 'pulse');
+ })
 </script>

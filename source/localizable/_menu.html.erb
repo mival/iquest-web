@@ -115,8 +115,8 @@
 </aside>
 
 <script type="text/javascript">
-  $( window ).resize(menu_change);
-  $( window ).load(menu_change);
+  $( window ).on('resize', menu_change);
+  $( window ).on('load', menu_change);
   function menu_change() {
     if (window.matchMedia('(max-width: 768px)').matches) {
       $('.hide').show();

@@ -1,30 +1,35 @@
 <nav class="navigation" data-aos="fade-down">
   <%# <div class="nav-back"></div> %>
-  <img id="logo" alt="Logo_hand" src="/images/logo_hand.png" />
-  <a id="logo_box" href="/"></a>
+  <picture>
+    <source loading="lazy" srcset="/images/logo_hand.webp" media="(min-width: 861px)" type="image/webp" width="1900" height="130">
+    <source loading="lazy" srcset="/images/logo_hand.webp" media="(max-width: 860px)" type="image/webp" width="1368" height="120">
+    <source loading="lazy" srcset="/images/logo_hand.png" media="(max-width: 860px)" type="image/png" width="1368" height="120"> 
+    <img loading="lazy" id="logo" alt="Logo hand" src="/images/logo_hand.png" width="1900" height="130" />
+  </picture>
+  <a id="logo_box" href="/" aria-label="úvodní stránka iquest.cz"></a>
   <ul class="navbar">
     <li>
-      <% link_to t('urls.home'), :class => 'blue-dark small', id: 'home' do %>
+      <% link_to t('urls.home'), :class => 'blue-dark small', id: 'home', 'aria-label': "úvodní stránka iquest.cz" do %>
         <span class="text"><i class="fa fa-lg fa-home"></i></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.iquest_way'), :class => 'green-dark big' do %>
+      <% link_to t('urls.iquest_way'), :class => 'green-dark big', 'aria-label': "přejít na stránku iquest way"  do %>
         <span class="text nowrap"><%= t('navigation.iquest_way') %></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.why_iquest'), :class => 'green-dark big' do %>
+      <% link_to t('urls.why_iquest'), :class => 'green-dark big', 'aria-label': "přejít na stránku proč iquest" do %>
         <span class="text nowrap"><%= t('navigation.why_iquest') %></span>
       <% end  %>
     </li>
     <li>
-      <% link_to t('urls.reference'), :id => 'nav_reference', :class => 'green-dark big' do %>
+      <% link_to t('urls.reference'), :id => 'nav_reference', :class => 'green-dark big', 'aria-label': "přejít na stránku reference" do %>
         <span class="text nowrap"><%= t('navigation.reference') %></span>
       <% end  %>
     </li>
     <li>
-        <% link_to t('urls.blog'), :class => 'green-dark big' do %>
+        <% link_to t('urls.blog'), :class => 'green-dark big', 'aria-label': "přejít na stránku iquest blogu" do %>
             <span class="text nowrap"><%= t('menu.blog') %></span>
         <% end %>
     </li>
@@ -32,100 +37,46 @@
       <%= partial 'contact_us_bottom' %>
     </li>
     <li>
-      <a id="menu_open" class="blue-dark small" href="#">
+      <a id="menu_open" class="blue-dark small" href="#" aria-label="otevřit menu">
         <span class="text"><i class="fa fa-lg fa-bars"></i></span>
       </a>
     </li>
   </ul>
 </nav>
 <script>
-  $(function () {
-    $('.navigation').data('size', 'big');
-  });
+  const navigationEl = document.querySelector(".navigation");
+  const logoEl = document.getElementById('logo');
+  const navbarElement = document.querySelector('.navbar');
 
-  $(window).scroll(function () {
+  navigationEl.dataset.size = 'big';
+
+  window.addEventListener('scroll', function(){
     if (!window.matchMedia('(max-width: 768px)').matches) {
-      if ($(document).scrollTop() > 50) {
-        if ($('.navigation').data('size') == 'big') {
-          $('.navigation').data('size', 'small');
-
-          $('#logo').stop().animate({
-            height: '65px'
-          }, 600);
-
-          $('a.big > .text').stop().animate({
-            top: '60%'
-          }, 600);
-          $('a.contact-bubble > .text').stop().animate({
-            top: '60%'
-          }, 600);
-
-          $('a.small').stop().animate({
-            bottom: '-0.5vw'
-          }, 600);
-
-          $('#home').stop().animate({
-            bottom: '1.5vw'
-          }, 600);
-          $('#home .text').stop().animate({
-            top: '55%'
-          }, 600);
-          $('.navbar').stop().animate({
-            top: '-65px'
-          }, 600);
+      console.log('big monitor JS')
+      if(window.scrollY > 50) {
+        if (navigationEl.dataset.size === 'big') {
+          navigationEl.dataset.size = 'small';
+          logoEl.classList.add("shrink");
+          navbarElement.classList.add('shrink');
         }
-      } else {
-        if ($('.navigation').data('size') == 'small') {
-          $('.navigation').data('size', 'big');
-
-          $('#logo').stop().animate({
-            height: '130px'
-          }, 600);
-
-          $('a.big > .text').stop().animate({
-            top: '50%'
-          }, 600);
-          $('a.contact-bubble > .text').stop().animate({
-            top: '50%'
-          }, 600);
-
-          $('a.small').stop().animate({
-            bottom: '2vw'
-          }, 600);
-
-          $('#home').stop().animate({
-            bottom: '2vw'
-          }, 600);
-          $('#home .text').stop().animate({
-            top: '50%'
-          }, 600);
-          $('.navbar').stop().animate({
-            top: '50px'
-          }, 600);
+      }
+      else {
+        if (navigationEl.dataset.size === 'small') {
+          navigationEl.dataset.size = 'big';
+          logoEl.classList.remove("shrink");
+          navbarElement.classList.remove('shrink');
         }
       }
     } else {
-      if ($(document).scrollTop() > 30) {
-        if ($('.navigation').data('size') == 'big') {
-          $('.navigation').data('size', 'small');
-
-          $('#logo').stop().animate({
-            height: '65px'
-          }, 300);
-          $('.navigation').stop().animate({
-            height: '65px'
-          }, 1500);
+      if(window.scrollY > 30) { 
+        if(navigationEl.dataset.size === 'big') {
+          navigationEl.dataset.size = 'small';
+          logoEl.classList.add("shrink");
         }
       } else {
-        if ($('.navigation').data('size') == 'small') {
-          $('.navigation').data('size', 'big');
-
-          $('#logo').stop().animate({
-            height: '90px'
-          }, 300);
-          $('.navigation').stop().animate({
-            height: '80px'
-          }, 1);
+        if (navigationEl.dataset.size === 'small') {
+          navigationEl.dataset.size = 'big';
+          logoEl.classList.remove("shrink");
         }
       }
     }

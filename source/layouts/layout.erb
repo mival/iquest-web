@@ -1,10 +1,10 @@
 <!doctype html>
-<html>
+<html lang="cs">
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta property="og:image" content="/images/og.jpg" />
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5" name="viewport">
     <meta name="description" content="<%= current_page.data.subtitle || I18n.t('default_meta_descr') %>">
     <meta name="p:domain_verify" content="3ae4374509004454806a9b1b54bed401"/>
     <!-- Use title if it's in the page YAML frontmatter -->
@@ -12,10 +12,11 @@
 
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="preload" href="/fonts/SupriaSans-Light.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/SupriaSans-Medium.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Raleway-Thin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js" ></script>
 
@@ -64,8 +65,6 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
