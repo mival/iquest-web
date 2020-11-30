@@ -3,6 +3,7 @@ cz:
   urls:
     home                       : '/'
     contact                    : '/kontakt/'
+    consultation               : 'https://konzultace.iquest.cz/'
     iquest_way                 : '/iquest-way/'
     why_iquest                 : '/proc-iquest/'
     reference                  : '/reference/'
@@ -81,6 +82,7 @@ cz:
     contact        : 'Kontakt'
     blog           : 'Blog'
     volne_pozice   : 'Přidej se k nám'
+    consultation   : 'Konzultace'
     development    : 'Vývoj webových aplikací'
     mobile_applications : 'Mobilní aplikace nové generace'
     microsite_ruby      : 'Ruby on Rails Praha'
@@ -94,7 +96,7 @@ cz:
   pages:
     main:  # Uvodni stranka.
       title                 : 'Měníme myšlenky v software'
-      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 16 let.'
+      sub_title             : 'Tvoříme webové systémy a mobilní aplikace.<br/>Již přes 17 let.'
       examples_of_work      : 'Příklady naší práce'
       more_references       : 'Více referencí'
       our_main_echnologies  : 'Naše hlavní technologie'
