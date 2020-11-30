@@ -374,7 +374,7 @@ body {
   width: 100% !important;
   z-index: 2;
   #logo {
-    height:130px; 
+    height:130px;
     width:1976px;
     transition: all 0.6s;
     &.shrink {
@@ -491,7 +491,7 @@ body {
         bottom: -0.5vw;
         .text {
           top: 50%;
-        } 
+        }
         &#home {
           bottom: 1.5vw;
           .text {
@@ -1996,7 +1996,7 @@ body {
 }
 
 [class*='kontakt'] #logo_box,
-[class*='contact'] #logo_box { 
+[class*='contact'] #logo_box {
   top: 30px;
   position: absolute;
 }
@@ -2027,10 +2027,10 @@ body {
   background-position: center;
   height: 100%;
   &--prague {
-    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=50.089990,14.403665&CA&zoom=15&size=440x840&scale=2&markers=size:mid|50.089990,14.403665&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA'); 
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=50.089990,14.403665&CA&zoom=15&size=440x840&scale=2&markers=size:mid%7C50.089990,14.403665&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA&signature=RXE6QanGqosS2Quw71MLj7DS_hY=');
   }
   &--brno {
-    background-image: url("https://maps.googleapis.com/maps/api/staticmap?center=49.1976471,16.617709&zoom=15&size=440x840&scale=2&markers=size:mid|49.197653,16.617851&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"); 
+    background-image: url("https://maps.googleapis.com/maps/api/staticmap?center=49.1976471,16.617709&zoom=15&size=440x840&scale=2&markers=size:mid%7C49.197653,16.617851&key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA&signature=qv1bHd4z7L8XgJZcsAk_wU3twZ0=");
   }
 }
 
