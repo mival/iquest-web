@@ -273,6 +273,18 @@ b {
   display: table !important;
 }
 
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .valign .middle {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -814,17 +826,6 @@ body {
   padding: 5px 10px;
 }
 
-.tags .offset.mobile_applications {
-  margin-top: 20px;
-}
-
-.tags .offset.mobile_applications .tag {
-  background-color: $orange-dark;
-  &:hover {
-    background-color: $green-dark;
-  }
-}
-
 .tags .contact-bubble {
   margin: 20px auto 30px;
 }
@@ -992,7 +993,7 @@ body {
   float: left;
   line-height: 130%;
   position: relative;
-  width: 33.33%
+  width: 200px;
 }
 
 .info.icons .container .box img {
