@@ -429,12 +429,12 @@
     margin-left: 0%;
   }
 
-  .restyling {
+  .icons-container {
     margin-top: 0px;
     padding-bottom: 40px;
   }
 
-  .restyling .text {
+  .icons-container .text {
     text-align: center;
   }
 
@@ -613,15 +613,7 @@
   #opening .reference .circles-box .circle:nth-child(even) {
     top: 0
   }
-
-  #opening .reference .more-references {
-    margin-top: 30px
-  }
-
-  #opening .our-technology .more-technology {
-    margin-top: 40px
-  }
-
+  
   #more_than_10_years {
     background-size: auto 100%;
     background-position: right
@@ -1136,7 +1128,7 @@
     margin: 0 0 50px
   }
 
-  .restyling .img-wrap {
+  .icons-container .img-wrap {
     width: 80px;
     height: 80px;
   }
@@ -1240,7 +1232,7 @@
 }
 
 @media screen and (max-height: 700px) and (min-width: 768px) {
-  .restyling {
+  .icons-container {
     a.box:nth-child(2) .text {
       margin-top: 6px;
     }
@@ -1339,9 +1331,5 @@
   .contact-text {
     height: 100vh;
     overflow-y: auto;
-  }
-
-  .info.icons {
-    margin-bottom: 125px;
   }
 }

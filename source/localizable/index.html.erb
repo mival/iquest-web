@@ -39,12 +39,14 @@ redirect_url: '/'
 	<div class="title inner-center">
 		<h1 class="title1 text-center" data-aos="fade-up"><%= t('pages.main.title') %></h1>
 		<h2 class="title2 text-center" data-aos="fade-up"><%= t('pages.main.sub_title') %></h2>
-		<%= partial 'icons' %>
 	</div>
-
-	<div class="clear"></div>
-
-	<%= partial 'kinds_of_products' %>
+	<div class="main-container">
+		<svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wavy-background">
+			<path d="M-23.14,0.50 C185.66,33.05 314.33,-36.02 513.54,29.11 L526.52,168.25 L0.00,150.00 Z" style="stroke: none;"></path>
+		</svg>
+		<%= partial 'icons' %>
+		<%= partial 'kinds_of_products' %>
+	</div>
 
 	<%= partial 'references' %>
 

@@ -13,19 +13,20 @@ $deliver:#009482;
 $process:#00AFAC;
 
 // Design manual -> to colors
-$blue: $connect;
-$dark-blue: $process;
-$green-dark: #397d7d;
+$light-blue: $connect;
+$blue-dark: $process;
+$green-dark: $deliver;
 $yellow: $analyze;
 
 // Mod colors
-$blue-dark:#4590af;
 $black-light: #525252;
-$green: #9ed8cc;
-$grey-dark: #b7b7b7;
-$orange-dark:#f1b769;
+$dark-gray: #494f5c;
+$bright-orange: #f18c4f;
 $orange:#fdd7a8;
 $yellow-dark:#dfdb71;
+$blue: #00d6cf;
+$green: #00ceb3;
+$border-radius: 12px;
 
 
 @import "normalize.css";
@@ -90,8 +91,8 @@ $yellow-dark:#dfdb71;
 }
 
 .orange-dark {
-  background-color: $orange-dark;
-  @include hover($orange-dark);
+  background-color: $bright-orange;
+  @include hover($bright-orange);
 }
 
 .blue {
@@ -123,7 +124,7 @@ $yellow-dark:#dfdb71;
 }
 
 .text-orange {
-  color: $orange-dark;
+  color: $bright-orange;
 }
 
 .text-blue {
@@ -148,7 +149,7 @@ $yellow-dark:#dfdb71;
   }
 
   .box2 {
-    background-color: #f1b769;
+    background-color: $bright-orange;
   }
 
   .box3 {
@@ -227,16 +228,6 @@ $yellow-dark:#dfdb71;
   zoom: 1;
 }
 
-.text-gradient {
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background: -o-linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
-  background: -webkit-linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
-  background: linear-gradient(left, #ecde74, #fbb55d, #67c2af, #6ab3e4);
-}
-
 .text-shadow {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
@@ -267,6 +258,10 @@ b {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .valign .middle {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -278,10 +273,9 @@ a {
 }
 
 h1,
-h2,
-h3 {
-  font-family: Raleway-Medium;
-  font-weight: normal;
+h2 {
+  font-family: Raleway-Light;
+  font-weight: lighter;
   line-height: 120%;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -294,15 +288,15 @@ h3 b {
 }
 
 h1 {
-  font-size: 1.7vw;
+  font-size: 3.75rem
 }
 
 h2 {
-  font-size: 1.3vw;
+  font-size: 2.81rem;
 }
 
 h3 {
-  font-size: 1.2vw;
+  font-size: 1.7rem;
 }
 
 p,
@@ -342,7 +336,7 @@ body {
 ::-webkit-scrollbar-thumb {
  -webkit-box-shadow : inset 0 0 6px rgba(0, 0, 0, .3);
   box-shadow : inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: $grey-dark;
+  background-color: $bright-orange;
 }
 
 .wrapper-center {
@@ -524,7 +518,7 @@ body {
 
 .navigation .navbar li.back a .fa,
 .navigation .navbar li.close a .fa {
-  color: #4590af
+  color: $blue-dark
 }
 
 #menu .lang {
@@ -576,7 +570,7 @@ body {
 
 .navigation.inverse .navbar li a {
   background-color: white;
-  color: #4590af;
+  color: $blue-dark;
 }
 
 .thumbs .thumb {
@@ -718,7 +712,7 @@ body {
 
 .page-nav {
   background-color: white;
-  border-bottom: 1px solid #4590af;
+  border-bottom: 1px solid $blue-dark;
   display: inline-block;
   left: 0;
   padding: 0 35px;
@@ -728,13 +722,13 @@ body {
 }
 
 .page-nav .item {
-  color: #4590af;
+  color: $blue-dark;
   display: table-cell;
   vertical-align: middle;
 }
 
 .page-nav .item.active {
-  border-bottom: 3px solid #4590af;
+  border-bottom: 3px solid $blue-dark;
 }
 
 .page-nav .item.active .box {
@@ -775,37 +769,41 @@ body {
 }
 
 .tags {
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
   padding: 10px 0 15px;
   text-align: center;
 }
 
 .tags h3 a {
-  color: $orange-dark;
+  color: $bright-orange;
 
   &:hover {
-    color: #4590af;
+    color: $blue-dark;
   }
 }
 
 .tags .offset {
   margin: 0 auto;
   max-width: 1143px;
+  padding-bottom: 100px;
 }
 
 .tags .offset a:hover .tag,
 .tag:hover {
-  background-color: $green-dark;
   color: white;
 }
 
 .tag {
-  border-radius: 3px;
-  color: $black-light;
+  border-radius: $border-radius;
+  color: white;
+  border: 1px solid $bright-orange;
   display: inline-block;
-  margin-top: 5px;
-  padding: 5px 10px;
+  margin-top: 15px;
+  margin-right: 12px;
+  padding: 6px 21px 12px;
+  i {
+    margin-right: 0.7rem;
+    font-size: 2rem;
+  }
 }
 
 .tags .contact-bubble {
@@ -826,14 +824,6 @@ body {
       display: inline-block;
       float: none;
     }
-  }
-
-  .more-technology {
-    display: block;
-    font-family: Raleway-Medium;
-    font-size: 17px;
-    margin-top: 50px;
-    text-align: center;
   }
 }
 
@@ -940,7 +930,7 @@ body {
 }
 
 #opening>.title {
-  padding-top: 200px;
+  padding-top: 326px;
   z-index: 1
 }
 
@@ -964,12 +954,45 @@ body {
   line-height: 60px;
 }
 
+.main-container {
+  margin: 137px 0;
+  padding: 0 20%;
+  position: relative;
+  .wavy-background {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    width: 100%;
+    height: 73%;
+    path {
+     fill:  rgba($dark-gray, 0.8);
+    }
+  }
+}
+
 .info.icons {
-  margin: 165px 25% 0
+  .container {
+    padding: 100px 0 60px;
+    a:first-child {
+      margin-top: 42px;
+    }
+    a:nth-child(2) {
+      margin-top: 32px;
+    }
+    a:nth-child(3) {
+      margin-top: 16px;
+    }
+    a:nth-child(4) {
+      margin-top: 9px;
+    }
+    a:nth-child(5) {
+      margin-top: 15px;
+    }
+  }
 }
 
 .info.icons .container .box {
-  color: #4590af;
+  color: $blue-dark;
   font-size: 19px;
   font-weight: lighter;
   float: left;
@@ -1129,17 +1152,22 @@ body {
 #opening .our-technology,
 #opening .reference,
 #opening .we-are-the-champions {
-  margin-top: 125px
+  margin-top: 180px;
+  h2 {
+    margin-bottom: 64px;
+  }
+  h3 {
+    margin-top: 2.5rem;
+    i {
+      margin-left: 0.7rem;
+    }
+  }
 }
 
 .reference-text {
   margin: 0 auto;
   max-width: 400px;
   display: block;
-}
-
-.reference {
-  margin-top: 125px
 }
 
 .reference .circles-box {
@@ -1258,14 +1286,6 @@ body {
   background-image: url("/images/Refs/jungheinrich.svg");
 }
 
-.reference .more-references {
-  display: block;
-  font-family: Raleway-Medium;
-  font-size: 17px;
-  margin-top: 35px;
-  text-align: center;
-}
-
 #more_than_10_years {
   background-image: url(../images/iquest_way_back.jpg);
   background-size: 100% 100%;
@@ -1328,7 +1348,7 @@ body {
 }
 
 .page .logo-content .info h1 {
-  color: #4590af;
+  color: $blue-dark;
   margin: 0 0 10px
 }
 
@@ -1666,7 +1686,7 @@ body {
 .logo-circles .logo-circles-5 .circle-3 {
   top: 46.6%;
   left: 13%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-4 {
@@ -1696,7 +1716,7 @@ body {
 .logo-circles .logo-circles-5 .circle-8 {
   top: 75%;
   left: 19%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-9 {
@@ -1732,7 +1752,7 @@ body {
 .logo-circles .logo-circles-5 .circle-14 {
   top: 2.5%;
   left: 33.9%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-15 {
@@ -1762,7 +1782,7 @@ body {
 .logo-circles .logo-circles-5 .circle-19 {
   top: 64.1%;
   left: 25.3%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-20 {
@@ -1786,7 +1806,7 @@ body {
 .logo-circles .logo-circles-5 .circle-23 {
   top: 55.4%;
   left: 33%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-24 {
@@ -1810,7 +1830,7 @@ body {
 .logo-circles .logo-circles-5 .circle-27 {
   top: 47.9%;
   left: 45.2%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-28 {
@@ -1828,7 +1848,7 @@ body {
 .logo-circles .logo-circles-5 .circle-30 {
   top: 66%;
   left: 50.9%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-31 {
@@ -1840,13 +1860,13 @@ body {
 .logo-circles .logo-circles-5 .circle-32 {
   top: 65.5%;
   left: 56.5%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-33 {
   top: 57.9%;
   left: 60.3%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-34 {
@@ -1864,7 +1884,7 @@ body {
 .logo-circles .logo-circles-5 .circle-36 {
   top: 47.1%;
   left: 66.3%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-37 {
@@ -1894,7 +1914,7 @@ body {
 .logo-circles .logo-circles-5 .circle-41 {
   top: 69.6%;
   left: 61.8%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-42 {
@@ -1906,7 +1926,7 @@ body {
 .logo-circles .logo-circles-5 .circle-43 {
   top: 69.1%;
   left: 73.2%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-44 {
@@ -1954,7 +1974,7 @@ body {
 .logo-circles .logo-circles-5 .circle-51 {
   top: 44.3%;
   left: 80.6%;
-  background-color: #9ed8cc
+  background-color: $blue
 }
 
 .logo-circles .logo-circles-5 .circle-52 {
@@ -2161,15 +2181,15 @@ body {
 
     button {
       border: none;
-      border-radius: 3px;
-      background-color: #F1B769;
+      border-radius: $border-radius;
+      background-color: $bright-orange;
       color: white;
       padding: 6px 15px;
       margin: 5px 0 0 25%;
       white-space: nowrap;
 
       &:hover {
-        background-color: #4590AF;
+        background-color: $blue-dark;
       }
     }
   }
@@ -2446,7 +2466,7 @@ body {
 }
 
 [class*='reference'] .desktop .info b {
-  color: #4590af;
+  color: $blue-dark;
 }
 
 .page-scroll-show {
@@ -2530,14 +2550,14 @@ body.posa .page-scroll-show .header {
 }
 
 .page-scroll-show .content .skills li a:hover {
-  border-color: #4590AF;
+  border-color: $blue-dark;
 }
 
 .page-scroll-show .content .page-scroll-left,
 .page-scroll-show .content .page-scroll-right {
   background-color: white;
   border-radius: 50%;
-  color: #4590af;
+  color: $blue-dark;
   position: absolute;
   top: 165px;
 }
@@ -2861,7 +2881,7 @@ ul.breadcrumb {
   }
 
   a {
-    color: #4590af;
+    color: $blue-dark;
   }
 }
 
@@ -2917,7 +2937,7 @@ ul.breadcrumb {
 .what-we-do .info p a,
 .what-we-do .what-is p a,
 .what-we-do .info ul li a {
-  color: #4590af;
+  color: $blue-dark;
 }
 
 .what-we-do .info .box {
@@ -3391,7 +3411,6 @@ ul.breadcrumb {
 }
 
 .cards {
-  background: rgba(171, 212, 240, 0.5);
   display: inline-block;
   padding: 20px 20px 20px 250px;
   position: relative;
@@ -3434,8 +3453,9 @@ ul.breadcrumb {
 }
 
 .cards .card.half {
-  height: 168px;
-  width: 204px;
+  border-radius: $border-radius;
+  height: 230px;
+  width: 310px;
 }
 
 .cards .card .content {
@@ -3515,10 +3535,10 @@ ul.breadcrumb {
 }
 
 .cards .card .title {
-  background-color: white;
-  border-top: 1px solid #DADADA;
+  background-color: $dark-gray;
+  color: white;
   bottom: 0;
-  height: 19px;
+  font-size: 1.2rem;
   left: 0;
   padding: 13px;
   position: absolute;
@@ -3548,12 +3568,12 @@ ul.breadcrumb {
   background-color: white;
   border-radius: 50%;
   border: 1px solid white;
-  color: #4590af;
+  color: $blue-dark;
   padding: 0 3px;
 }
 
 .footer {
-  background-color: #103946;
+  background-color: $dark-gray;
   color: white;
   font-size: 14px;
   line-height: 150%;
@@ -3561,11 +3581,11 @@ ul.breadcrumb {
   text-align: left;
 
   .fa-stack-1x {
-    color: #103946 !important;
+    color: $dark-gray !important;
   }
 
   .fa-github {
-    color: #103946 !important;
+    color: $dark-gray !important;
   }
 
   .fa-stack-2x {
@@ -3724,7 +3744,7 @@ ul.breadcrumb {
 
       .inner form button[type="submit"] {
         background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 3px;
+        border-radius: $border-radius;
         border: 1px solid rgba(255, 255, 255, 0.3);
         color: white;
         margin: 5px 0 0 25%;
@@ -3740,7 +3760,7 @@ ul.breadcrumb {
 
 .copyright {
   background-color: #d5eaf8 !important;
-  color: #103946;
+  color: $dark-gray;
   font-size: 1.1em;
   font-weight: 900;
   margin: 30px -20px -20px;
@@ -3941,7 +3961,7 @@ ul.breadcrumb {
 .go-facebook i {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  background-color: #4590af;
+  background-color: $blue-dark;
   border-radius: 50%;
   color: white;
   font-size: 28px;
@@ -4046,7 +4066,7 @@ ul.breadcrumb {
     }
 
     a {
-      color: #4590af;
+      color: $blue-dark;
       float: right;
       padding-right: 20px;
       text-decoration: underline;
@@ -4060,7 +4080,7 @@ ul.breadcrumb {
 
 .mobilni-aplikace-nove-generace {
   a:hover div.text {
-    color: #4590af;
+    color: $blue-dark;
   }
 
   .multi-platform {
@@ -4086,7 +4106,7 @@ ul.breadcrumb {
       }
 
       &.one-application {
-        color: #4590af;
+        color: $blue-dark;
         font-size: 35px;
       }
     }
@@ -4115,9 +4135,8 @@ ul.breadcrumb {
   .img-wrap {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    background-color: #4590af;
+    background-color: $blue-dark;
     border-radius: 50%;
-    border: 2px solid #4590af;
     box-sizing: border-box;
     display: inline-block;
     height: 55px;
@@ -4254,14 +4273,14 @@ ul.breadcrumb {
 
       a {
         h3:hover {
-          color: $orange-dark;
+          color: $bright-orange;
         }
       }
 
       a.more {
         align-items: center;
-        background-color: $orange-dark;
-        border-radius: 3px;
+        background-color: $bright-orange;
+        border-radius: $border-radius;
         color: white;
         display: flex;
         font-weight: 900;
@@ -4273,7 +4292,7 @@ ul.breadcrumb {
       }
 
       a.more:hover {
-        background-color: #4590af;
+        background-color: $blue-dark;
       }
 
       .img-wrapper {
@@ -4357,7 +4376,7 @@ a.contact-bubble {
   }
 
   div.bubble-3 {
-    background-color: #3E819D;
+    background-color: $blue-dark;
     border-radius: 50%;
     box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, .2);
     height: 30px;
@@ -4377,7 +4396,7 @@ a.contact-bubble {
   background: white;
   border-radius: 30px;
   bottom: 24px;
-  color: #4590af;
+  color: $blue-dark;
   padding: 12px 20px;
   position: absolute;
   right: 34px;
@@ -4388,13 +4407,13 @@ a.contact-bubble {
   }
 
   &:hover {
-    background-color: #4590af;
+    background-color: $blue-dark;
     color: white;
   }
 }
 
 .contact-us.orange {
-  background-color: $orange-dark;
+  background-color: $bright-orange;
   color: white;
 }
 
@@ -4403,7 +4422,7 @@ a.contact-bubble {
 }
 
 .contact-us.green {
-  background-color: $green-dark;
+  background-color: #397D7D;
   color: white;
 }
 
@@ -4413,7 +4432,7 @@ a.contact-bubble {
 }
 
 .contact-us.invert-color {
-  background-color: #4590af;
+  background-color: $blue-dark;
   color: white;
 }
 
@@ -4440,40 +4459,40 @@ a.contact-us.inline {
   position: inherit;
 }
 
-.restyling .box {
+.icons-container .box {
   text-align: center;
 }
 
-.restyling .text {
-  color: black;
+.icons-container .text {
+  color: white;
   font-family: Raleway-Light;
   font-weight: 600;
   margin-top: 8px;
   padding-left: 0 !important;
 }
 
-.restyling .text .br {
+.icons-container .text .br {
   display: none;
 }
 
-.restyling {
+.icons-container {
   margin-top: -68px;
 }
 
-.restyling a:hover div.text {
+.icons-container a:hover div.text {
   color: darken($blue-dark, 10%);
 }
 
-.restyling .img-wrap {
+.icons-container .img-wrap {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   background-color: $blue-dark;
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
-  height: 110px;
+  height: 100px;
   padding: 20px;
-  width: 110px;
+  width: 100px;
 
   img {
     max-height: 80px !important;
@@ -4511,11 +4530,11 @@ a.contact-us.inline {
       background-color: #409184;
 
       &:hover {
-        background-color: $orange-dark;
+        background-color: $bright-orange;
       }
 
       .bubble-1 {
-        background-color: #9ED8CC;
+        background-color: $blue;
       }
     }
 
@@ -4534,6 +4553,7 @@ a.contact-us.inline {
 }
 
 .steps {
+  margin-top: 150px;
   background: url(../images/bubbles.png) center top 27px no-repeat, url(../images/curve.png) center no-repeat;
   height: 240px;
   margin-bottom: 30px;
@@ -4564,11 +4584,11 @@ a.contact-us.inline {
             color: #343434;
 
             &:before {
-              background: #f1b769 url(../images/market-analysis-icon.png) center no-repeat;
+              background: $bright-orange url(../images/market-analysis-icon.png) center no-repeat;
             }
 
             strong {
-              background-color: #f1b769;
+              background-color: $bright-orange;
             }
           }
         }
@@ -4655,7 +4675,6 @@ a.contact-us.inline {
 }
 
 .contact-button {
-  border-radius: 3px;
   bottom: -38px;
   color: white;
   display: block;
@@ -4668,13 +4687,13 @@ a.contact-us.inline {
 
 .kinds-of-contacts {
   height: 630px;
-  padding-bottom: 20px;
   overflow: hidden;
   width: 100%;
   position: relative;
 
   .image-map {
     position: absolute;
+    opacity: 0.9;
     top: 0;
     left: 0;
     z-index: -1;
@@ -4689,14 +4708,14 @@ a.contact-us.inline {
 
     button[type=submit],
     a.submit {
-      background-color: #f1b769;
-      border-radius: 3px;
+      background-color: $bright-orange;
+      border-radius: $border-radius;
       border: none;
       clear: both;
       color: #fff;
       display: inline-block;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       height: 44px;
       line-height: 44px;
       min-width: 180px;
@@ -4707,11 +4726,11 @@ a.contact-us.inline {
       text-overflow: ellipsis;
 
       &:hover {
-        background-color: #4590AF;
+        background: darkblue;
       }
     }
 
-    .row {
+    .row { 
       display: flex;
       align-items: stretch;
       width: 100%;
@@ -4755,7 +4774,7 @@ a.contact-us.inline {
 
         .cont {
           background-color: #fff;
-          border-radius: 12px;
+          border-radius: $border-radius;
           box-shadow: 0px 0px 50px rgba(0, 0, 0, .1);
           box-sizing: border-box;
           display: flex;
@@ -4903,7 +4922,7 @@ a.contact-us.inline {
     }
 
     a {
-      color: #4590AF;
+      color: $blue-dark;
 
       &:hover {
         color: #418F8F;
@@ -4935,9 +4954,8 @@ a.contact-us.inline {
       padding-top: 70px;
       position: relative;
     }
-
     a {
-      color: #4590af;
+      color: $blue-dark;
 
       &.contact-us {
         clear: both;

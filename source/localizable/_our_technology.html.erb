@@ -1,5 +1,5 @@
 <div class="our-technology">
-  <h3 class="text-center" data-aos="fade-up"><%= t('pages.main.our_main_echnologies') %>:</h3>
+  <h2 class="text-center" data-aos="fade-up"><%= t('pages.main.our_main_echnologies') %>:</h2>
   <div class="cards">
     <% url = I18n.locale == :en ? '/en/technology' : '/technologie' %>
     <% link_to "#{url}/ruby-on-rails", :class => 'card half', :'data-aos' => 'fade-up' do %>
@@ -39,7 +39,7 @@
       </div>
     <% end %>
   </div>
-  <% link_to t('urls.technology'), :class => 'more-technology text-blue', :'data-aos' => 'fade-up' do %>
-    <%= t('pages.main.more_about_technology') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
+  <% link_to t('urls.technology'), :class => 'text-center', :'data-aos' => 'fade-up' do %>
+  <h3 class='text-green'><%= t('pages.main.more_about_technology') %> <i class="fa text-green fa-arrow-circle-right"></i></h3>
   <% end %>
 </div>
