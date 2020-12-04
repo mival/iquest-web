@@ -50,8 +50,6 @@ redirect_url: '/'
 
 	<%= partial 'references' %>
 
-	<%= partial 'our_technology' %>
-
 	<div class="steps">
 		<div class="container">
 			<div class="row">
@@ -70,13 +68,13 @@ redirect_url: '/'
 			</div>
 		</div>
 	</div>
+
+	<%= partial 'our_technology' %>
+
 	<div class="kinds-of-contacts">
-		<picture>
-			<source loading="lazy" class="image-map" srcset="../images/map_bg.webp" type="image/webp" media="(min-width: 861px)" width="1700" height="630">
-			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.webp" type="image/webp" media="(max-width: 860px)" width="860" height="80">  
-			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.png" type="image/png" media="(max-width: 860px)" width="860" height="80">  
-			<img loading="lazy" class="image-map" alt="Logo hand" src="../images/map_bg.png" width="1700" height="630" />
-		</picture>
+		<svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wavy-background">
+			<path d="M-252.54,-26.14 C312.36,38.97 46.56,-18.25 636.84,9.38 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path>
+		</svg>
 		<div class="container">
 			<div class="row">
 				<div class="col col1">
@@ -111,7 +109,7 @@ redirect_url: '/'
 							<span class="sub-title city">Brno:</span>
 							<span class="sub-title">Cejl 494/25, Brno</span>
 						</div>
-						<div><a href="/kontakt" class="submit">ZOBRAZIT MAPU</a></div>
+						<div class='flex justify-center'><a href="/kontakt" class="submit">ZOBRAZIT MAPU</a></div>
 					</div>
 				</div>
 				<div class="col col3">
@@ -120,7 +118,7 @@ redirect_url: '/'
 							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
 							<input type="text" name="_gotcha" style="display:none" />
 							<input type="text" name="tema" value="Zavolejte mě prosím." style="display:none" />
-							<div class="shadow">
+							<div>
 								<h4>Zavolejte nám</h4>
 								<span class="sub-title"><a href="tel:+420777314768" aria-label="zavolejte nám">+ 420 777 314 768</a></span>
 								<a href="tel:+420777314768" class="call-us fa fa-phone" aria-label="zavolejte nám"></a>

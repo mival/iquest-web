@@ -27,6 +27,7 @@ $yellow-dark:#dfdb71;
 $blue: #00d6cf;
 $green: #00ceb3;
 $border-radius: 12px;
+$cerculean: #4590af;
 
 
 @import "normalize.css";
@@ -273,7 +274,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: Raleway-Light;
   font-weight: lighter;
   line-height: 120%;
@@ -794,8 +796,11 @@ body {
 
 .tag {
   border-radius: $border-radius;
+  border: 2px solid $bright-orange;
   color: white;
-  border: 1px solid $bright-orange;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+  background-color: $bright-orange;;
   display: inline-block;
   margin-top: 15px;
   margin-right: 12px;
@@ -803,6 +808,10 @@ body {
   i {
     margin-right: 0.7rem;
     font-size: 2rem;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $bright-orange;
   }
 }
 
@@ -954,23 +963,39 @@ body {
   line-height: 60px;
 }
 
-.main-container {
-  margin: 137px 0;
-  padding: 0 20%;
-  position: relative;
-  .wavy-background {
-    position: absolute;
-    left: 0;
-    top: 160px;
-    width: 100%;
-    height: 73%;
-    path {
-     fill:  rgba($dark-gray, 0.8);
-    }
+.wavy-background {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 100%;
+  height: 73%;
+  path {
+   fill:  rgba($dark-gray, 0.8);
   }
 }
 
+.kinds-of-contacts {
+  background: url(../images/curve6.png) center no-repeat;
+  background-size: 100%;
+  .wavy-background {
+    z-index: -1;
+  height: 100%;
+  top: 40px;  
+  path {
+    fill:  $dark-gray;
+   }
+  }
+}
+
+.main-container {
+  margin: 137px 0;
+  padding: 0 5%;
+  position: relative;
+}
+
 .info.icons {
+  max-width: 850px;
+  margin: auto;
   .container {
     padding: 100px 0 60px;
     a:first-child {
@@ -992,7 +1017,6 @@ body {
 }
 
 .info.icons .container .box {
-  color: $blue-dark;
   font-size: 19px;
   font-weight: lighter;
   float: left;
@@ -1008,10 +1032,6 @@ body {
   height: 95%;
   max-width: 95px;
   max-height: 95px
-}
-
-.info.icons .container .box .text {
-  padding-left: 40%
 }
 
 .parallax__group {
@@ -3575,10 +3595,10 @@ ul.breadcrumb {
 .footer {
   background-color: $dark-gray;
   color: white;
-  font-size: 14px;
+  overflow: hidden;
   line-height: 150%;
-  padding: 40px 20px 20px;
-  text-align: left;
+  padding: 20px 0;
+  width: 100%;
 
   .fa-stack-1x {
     color: $dark-gray !important;
@@ -3680,20 +3700,19 @@ ul.breadcrumb {
   }
 
   .container {
-    margin: 0 auto;
-    max-width: 1150px;
-
-    .title {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      margin-bottom: 20px;
-      padding-bottom: 5px;
-    }
-
     .offset {
-      padding: 0 30px 30px;
+      box-sizing: border-box;
+      padding: 0 95px;
+      margin: auto;
+
+      .col-33:last-child {
+        color: $blue;
+      }
 
       .inner {
-        padding-left: 15px;
+        p {
+          margin: 5px 0;    
+        }
       }
 
       .inner ul {
@@ -3913,29 +3932,30 @@ ul.breadcrumb {
   }
 }
 
+.c-facebook:hover {
+  color: $yellow;
+}
+
+.c-twitter:hover {
+  color: $bright-orange;
+}
+
+.c-linkedin:hover {
+  color: $blue;
+}
+
 .c-facebook,
 .c-twitter,
 .c-linkedin {
-  font-size: 25px;
-  margin-right: 10px;
+  color: white;
+  font-size: 28px;
+  margin-right: 15px;
   transition: all .2s ease-in;
 
   &:hover .fa {
     transform: scale(1.2);
     transition: all .2s ease-in;
   }
-}
-
-.c-facebook:hover {
-  color: #3b5998;
-}
-
-.c-twitter:hover {
-  color: #4099FF;
-}
-
-.c-linkedin:hover {
-  color: #0077B5;
 }
 
 .go-home,
@@ -4468,7 +4488,6 @@ a.contact-us.inline {
   font-family: Raleway-Light;
   font-weight: 600;
   margin-top: 8px;
-  padding-left: 0 !important;
 }
 
 .icons-container .text .br {
@@ -4477,10 +4496,6 @@ a.contact-us.inline {
 
 .icons-container {
   margin-top: -68px;
-}
-
-.icons-container a:hover div.text {
-  color: darken($blue-dark, 10%);
 }
 
 .icons-container .img-wrap {
@@ -4708,11 +4723,10 @@ a.contact-us.inline {
 
     button[type=submit],
     a.submit {
-      background-color: $bright-orange;
+      background-color: white;
       border-radius: $border-radius;
-      border: none;
+      border: 2px solid white;
       clear: both;
-      color: #fff;
       display: inline-block;
       font-size: 16px;
       font-weight: 600;
@@ -4724,10 +4738,6 @@ a.contact-us.inline {
       padding: 0 14px;
       text-align: center;
       text-overflow: ellipsis;
-
-      &:hover {
-        background: darkblue;
-      }
     }
 
     .row { 
@@ -4744,17 +4754,44 @@ a.contact-us.inline {
 
         &.col1 {
           text-align: left;
+          .cont {
+            background-color: $bright-orange;
+            button {
+              color: $bright-orange;
+              &:hover {
+                background-color: $bright-orange;
+                color: white;
+              }
+            }
+          }
         }
 
         &.col2 {
           text-align: center;
+          .cont {
+            background-color: $green-dark;
+            a {
+              color: $green-dark;
+              box-sizing: border-box;
+              &:hover {
+                background-color: $green-dark;
+                color: white;
+              }
+            }
+          }
         }
 
         &.col3 {
           text-align: right;
-
           .cont {
-            padding: 0;
+            background-color: $cerculean;
+            button {
+              color: $cerculean;
+              &:hover {
+                background-color: $cerculean;
+                color: white;
+              }
+            }
           }
 
           input {
@@ -4773,9 +4810,8 @@ a.contact-us.inline {
         }
 
         .cont {
-          background-color: #fff;
+          color: white;
           border-radius: $border-radius;
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, .1);
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
@@ -4800,12 +4836,10 @@ a.contact-us.inline {
 
           .sub-cont {
             display: block;
-            padding: 0 24px 30px 24px;
+            padding: 28px 24px 0 24px;
 
             label {
               display: inline-block;
-              font-size: 16px;
-              font-weight: 100;
               line-height: 18px;
               margin: 20px 0 16px;
             }
@@ -4819,7 +4853,6 @@ a.contact-us.inline {
           }
 
           span.sub-title {
-            color: #424242;
             display: block;
             font-size: 20px;
             font-weight: 100;
@@ -4833,7 +4866,6 @@ a.contact-us.inline {
             border-radius: 6px;
             border: 1px solid transparent;
             border: none;
-            box-shadow: inset 0 3px 7px rgba(0, 0, 0, .1);
             box-sizing: border-box;
             display: block;
             font-weight: 100;
@@ -4863,35 +4895,21 @@ a.contact-us.inline {
             min-width: 100%;
           }
 
-          .shadow {
-            border-radius: 12px;
-            box-shadow: 0 0 50px rgba(0, 0, 0, .1);
-            margin-bottom: 47px;
-            padding: 44px 24px 40px 24px;
-            position: relative;
-
-            a.call-us {
-              background-color: $blue-dark;
-              border-radius: 50%;
-              bottom: -50px;
-              color: #fff;
-              font-size: 60px;
-              height: 100px;
-              left: 50%;
-              line-height: 108px;
-              margin-left: -50px;
-              position: absolute;
-              width: 100px;
-
-              &:hover {
-                background-color: $green-dark;
-              }
-
-              &.mobile {
-                display: none;
-              }
+          a.call-us {
+            background-color: white;
+            border-radius: 50%;
+            color: $cerculean;
+            font-size: 60px;
+            height: 100px;
+            left: 50%;
+            line-height: 108px;
+            width: 100px;
+            &:hover {
+              background-color: $green-dark;
             }
-
+            &.mobile {
+              display: none;
+            }
           }
         }
       }
