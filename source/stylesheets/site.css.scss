@@ -132,10 +132,6 @@ $cerculean: #4590af;
   color: darken($blue-dark, 10%);
 }
 
-.text-green {
-  color: $green-dark;
-}
-
 // Test "why iquest" page with animation - currently not used
 .test {
   height: 100vh;
@@ -974,19 +970,6 @@ body {
   }
 }
 
-.kinds-of-contacts {
-  background: url(../images/curve6.png) center no-repeat;
-  background-size: 100%;
-  .wavy-background {
-    z-index: -1;
-  height: 100%;
-  top: 40px;  
-  path {
-    fill:  $dark-gray;
-   }
-  }
-}
-
 .main-container {
   margin: 137px 0;
   padding: 0 5%;
@@ -1437,7 +1420,7 @@ body {
   opacity: 0.6
 }
 
-.page .logo-content .iqw-nav .initial:not(.active).text-green {
+.page .logo-content .iqw-nav .initial:not(.active).text-orange {
   opacity: 0.35
 }
 
@@ -3277,7 +3260,10 @@ ul.breadcrumb {
 }
 
 .webove-aplikace-na-miru .what-we-do header {
-  background-image: url("/images/web_application_development_back.jpg")
+  background-image: url("/images/web_application_development_back.jpg");
+  background-size: contain;
+  background-color: $cerculean;
+  background-blend-mode: multiply;
 }
 
 .priklady-systemu {
@@ -4705,16 +4691,16 @@ a.contact-us.inline {
   overflow: hidden;
   width: 100%;
   position: relative;
-
-  .image-map {
-    position: absolute;
-    opacity: 0.9;
-    top: 0;
-    left: 0;
+  background: url(../images/curve6.png) center no-repeat;
+  background-size: 100%;
+  .wavy-background {
     z-index: -1;
-    width: 100%;
+  height: 100%;
+  top: 40px;  
+  path {
+    fill:  $dark-gray;
+   }
   }
-
   .container {
     box-sizing: border-box;
     margin: 0 auto;
@@ -4748,7 +4734,6 @@ a.contact-us.inline {
       .col {
         box-sizing: border-box;
         padding: 0 22px;
-        text-align: center;
         vertical-align: top;
         width: 33.333%;
 
@@ -4898,6 +4883,7 @@ a.contact-us.inline {
           a.call-us {
             background-color: white;
             border-radius: 50%;
+            border: 2px solid white;
             color: $cerculean;
             font-size: 60px;
             height: 100px;
@@ -4905,7 +4891,8 @@ a.contact-us.inline {
             line-height: 108px;
             width: 100px;
             &:hover {
-              background-color: $green-dark;
+              background-color: transparent;
+              color: white;
             }
             &.mobile {
               display: none;

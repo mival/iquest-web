@@ -54,15 +54,15 @@
 
 @media screen and (max-width: 1600px) {
   h1 {
-    font-size: 1.9vw
+    font-size: 3.2rem;
   }
 
   h2 {
-    font-size: 1.5vw
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 1.4vw
+    font-size: 1.5rem;
   }
 
   p,
@@ -107,16 +107,17 @@
 }
 
 @media screen and (max-width: 1400px) {
+
   h1 {
-    font-size: 2.1vw
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.7vw
+    font-size: 2.3rem;
   }
 
   h3 {
-    font-size: 1.6vw
+    font-size: 1.5rem
   }
 
   p,
@@ -132,10 +133,6 @@
     font-size: 1.3vw
   }
 
-  .info.icons {
-    margin-left: 20%;
-    margin-right: 20%
-  }
 
   .info.icons .container .box {
     font-size: 17px
@@ -162,18 +159,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 2.3vw
-  }
-
-  h2 {
-    font-size: 1.9vw
-  }
-
-  h3 {
-    font-size: 1.8vw
-  }
-
   p,
   ul {
     font-size: 1.7vw
@@ -191,6 +176,10 @@
     font-size: 4.5vw
   }
 
+  #opening .our-technology, #opening .reference, #opening .we-are-the-champions {
+    margin-top: 120px;
+  }
+
   .page .initial.curve {
     font-size: 2vw
   }
@@ -206,11 +195,6 @@
 
   .page .logo-content .iqw-nav .initial .text {
     font-size: 1.5vw
-  }
-
-  .info.icons {
-    margin-left: 17%;
-    margin-right: 17%
   }
 
   .title .info.icons .container .box {
@@ -280,6 +264,11 @@
     .cont {
       width: 100% !important;
     }
+    .container {
+      button[type=submit], a.submit {
+        min-width: 150px;
+      }
+    }
   }
 }
 
@@ -294,15 +283,15 @@
   }
 
   h1 {
-    font-size: 2.5vw
+    font-size: 2.8rem
   }
 
   h2 {
-    font-size: 2.1vw
+    font-size: 2.1rem;
   }
 
   h3 {
-    font-size: 2vw
+    font-size: 1.5rem;
   }
 
   p,
@@ -316,6 +305,17 @@
 
   #opening .title .title2 {
     font-size: 3.6vw
+  }
+
+  #opening {
+    .tag {
+      font-size: 1rem;
+      padding: 6px 12px 7px;
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
   }
 
   #more_than_10_years .title .title1 {
@@ -340,12 +340,10 @@
   }
 
   .info.icons {
-    margin-left: 12%;
-    margin-right: 12%
-  }
-
-  .info.icons .container .box {
+    max-width: 610px;
+    .container .box {
     font-size: 15px
+    }
   }
 
   [class*='why-iquest'] .content .pillar p,
@@ -371,21 +369,16 @@
 @media screen and (max-width: 860px) {
   .kinds-of-contacts {
     height: 100%;
-    // overflow: auto;
     margin-top: 60px;
-    background: #415D71;
-    .image-map {
-      display: none;
-  }
-
     .container {
       padding: 40px 0;
+      padding: 135px 0 40px;
 
       .row {
-        display: block !important;
+        flex-direction: column;
+        align-items: center;
 
         .col {
-          display: block !important;
           margin: 0 auto;
           width: 80%;
           margin-top: 24px;
@@ -444,18 +437,6 @@
 
   [class*='reference'] .desktop {
     display: none;
-  }
-
-  h1 {
-    font-size: 21px
-  }
-
-  h2 {
-    font-size: 18px
-  }
-
-  h3 {
-    font-size: 18px
   }
 
   p,
@@ -1147,82 +1128,10 @@
       background-size: 50vh;
     }
   }
-}
 
-@media screen and (max-width: 580px) {
-  .contact-telefon {
-    display: none;
-  }
-
-  .what-we-do .benefits .box {
-    width: 100%;
-  }
-
-  a.contact-bubble.fixed {
-    width: 60px;
-    height: 60px;
-    left: 50%;
-    bottom: 24px;
-    margin-left: -30px;
-
-    &>div,
-    & .text {
-      display: none !important;
-    }
-
-    & .icon {
-      padding-top: 4px;
-      display: table-cell;
-      font-size: 24px;
-    }
-  }
-
-  .iquest-way {
-    a.contact-bubble {
-      &.page-5 {
-        background-color: #EFAC52;
-      }
-    }
-  }
-
-  .success .success-icon {
-    font-size: 60px;
-  }
-
-  .success>.page-offset {
-    padding: 128px 50px 20px;
-  }
-
-  .success>.page-offset>.title h1 {
-    margin-top: 36px;
-    font-size: 40px;
-  }
-
-  .kinds-of-contacts {
-    .container {
-      .col {
-        width: 100% !important;
-      }
-    }
-  }
-
-  .x404 {
-    .container {
-      padding: 140px 40px 0 40px;
-      background-position: center bottom;
-      background-size: 100vw;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      font-size: 5em !important;
-    }
-
-    h1,
-    h2 {
-      width: 100%;
-      text-align: center;
-    }
+  .contact-text {
+    height: 100vh;
+    overflow-y: auto;
   }
 }
 
@@ -1322,9 +1231,79 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .contact-text {
-    height: 100vh;
-    overflow-y: auto;
+@media screen and (max-width: 580px) {
+  .contact-telefon {
+    display: none;
+  }
+
+  .what-we-do .benefits .box {
+    width: 100%;
+  }
+
+  a.contact-bubble.fixed {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    bottom: 24px;
+    margin-left: -30px;
+
+    &>div,
+    & .text {
+      display: none !important;
+    }
+
+    & .icon {
+      padding-top: 4px;
+      display: table-cell;
+      font-size: 24px;
+    }
+  }
+
+  .iquest-way {
+    a.contact-bubble {
+      &.page-5 {
+        background-color: #EFAC52;
+      }
+    }
+  }
+
+  .success .success-icon {
+    font-size: 60px;
+  }
+
+  .success>.page-offset {
+    padding: 128px 50px 20px;
+  }
+
+  .success>.page-offset>.title h1 {
+    margin-top: 36px;
+    font-size: 40px;
+  }
+
+  .kinds-of-contacts {
+    .container {
+      .col {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .x404 {
+    .container {
+      padding: 140px 40px 0 40px;
+      background-position: center bottom;
+      background-size: 100vw;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 5em !important;
+    }
+
+    h1,
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
