@@ -410,7 +410,6 @@
   .social-icons {
     padding-bottom: 25px !important;
     display: flex;
-    /* text-align: center !important; */
   }
 
   .col-offset-40 {
@@ -516,10 +515,6 @@
 
   .navigation .navbar li.close {
     margin-right: -10px
-  }
-
-  #opening {
-    padding-bottom: 75px
   }
 
   #opening address {
@@ -1045,7 +1040,11 @@
 
   footer.footer .container .offset {
     padding-left: 0;
-    padding-right: 0
+    padding-right: 0;
+    .col-33 {
+      text-align: center!important;
+      margin-bottom: 40px;
+    }
   }
 
   .not-only-money>.page-offset {
@@ -1186,50 +1185,11 @@
       bottom: 6px;
     }
   }
-}
-
-@media screen and (max-height: 700px) {
   #presentation .logo-content .info {
     display: none;
   }
 }
 
-@media screen and (max-height: 500px) {
-  #opening address {
-    font-size: 17px;
-    padding-top: 95px
-  }
-
-  #opening .title .title1 {
-    font-size: 25px !important;
-    margin-bottom: 10px
-  }
-
-  #opening .title .title2 {
-    font-size: 18px !important;
-  }
-
-  #more_than_10_years .title .title1 {
-    font-size: 22px !important;
-  }
-
-  [class*='why-iquest'] .content .pillar:not(.active) h2,
-  [class*='proc-iquest'] .content .pillar:not(.active) h2 {
-    display: none
-  }
-
-  [class*='contact'] .box table {
-    font-size: 15px
-  }
-
-  [class*='contact'] .box table tr td:first-child {
-    font-size: 14px
-  }
-
-  [class*='contact'] .box p {
-    font-size: 13px
-  }
-}
 
 @media screen and (max-width: 580px) {
   .contact-telefon {
@@ -1305,5 +1265,42 @@
       width: 100%;
       text-align: center;
     }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #opening address {
+    font-size: 17px;
+    padding-top: 95px
+  }
+
+  #opening .title .title1 {
+    font-size: 25px !important;
+    margin-bottom: 10px
+  }
+
+  #opening .title .title2 {
+    font-size: 18px !important;
+  }
+
+  #more_than_10_years .title .title1 {
+    font-size: 22px !important;
+  }
+
+  [class*='why-iquest'] .content .pillar:not(.active) h2,
+  [class*='proc-iquest'] .content .pillar:not(.active) h2 {
+    display: none
+  }
+
+  [class*='contact'] .box table {
+    font-size: 15px
+  }
+
+  [class*='contact'] .box table tr td:first-child {
+    font-size: 14px
+  }
+
+  [class*='contact'] .box p {
+    font-size: 13px
   }
 }

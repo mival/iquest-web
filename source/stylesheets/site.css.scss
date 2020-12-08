@@ -596,31 +596,32 @@ body {
 }
 
 #menu {
-  background: white;
+  background: $dark-gray;
+  color: $orange;
   bottom: 0;
   display: none;
   overflow-y: auto;
   padding-top: 40px;
   position: fixed;
   right: 0;
-  text-align: right;
+  text-align: left;
   top: 0;
-  width: 280px;
+  width: 340px;
   z-index: 10;
 }
 
 #menu #menu-close {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 2em;
   margin: 0 30px;
   padding: 0 10px;
 }
 
 #menu #menu-close img {
-  margin-left: 7px;
-  position: relative;
-  top: -1px;
+  width: 25px;
 }
 
 #menu ul {
@@ -631,9 +632,7 @@ body {
 }
 
 #menu ul a {
-  border-top: solid #e8f1f1;
   display: block;
-  text-decoration: none;
 }
 
 #menu ul:last-child {
@@ -643,7 +642,13 @@ body {
 }
 
 #menu ul a li {
-  margin-right: 40px;
+  margin: 0 20px;
+  padding: 5px 20px;
+  &:hover {
+    background: linear-gradient(90deg, $yellow-dark, $bright-orange);
+    color: black;
+    border-radius: $border-radius;
+  }
 }
 
 .page {
@@ -4141,7 +4146,7 @@ ul.breadcrumb {
   .img-wrap {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    background-color: $blue-dark;
+    background: $blue-dark;
     border-radius: 50%;
     box-sizing: border-box;
     display: inline-block;
@@ -4367,7 +4372,7 @@ a.contact-bubble {
   }
 
   div.bubble-2 {
-    background-color: #8DBCBC;
+    background-color: $green-dark;
     border-radius: 50%;
     height: 20px;
     line-height: 16px;
@@ -4487,7 +4492,7 @@ a.contact-us.inline {
 .icons-container .img-wrap {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  background-color: $blue-dark;
+  background: linear-gradient($green-dark, $blue-dark);
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
