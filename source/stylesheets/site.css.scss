@@ -12,6 +12,7 @@ $connect:#73CFE9;
 $deliver:#009482;
 $process:#00AFAC;
 
+
 // Design manual -> to colors
 $light-blue: $connect;
 $blue-dark: $process;
@@ -3266,7 +3267,7 @@ ul.breadcrumb {
 
 .webove-aplikace-na-miru .what-we-do header {
   background-image: url("/images/web_application_development_back.jpg");
-  background-size: contain;
+  background-size: cover;
   background-color: $cerculean;
   background-blend-mode: multiply;
 }
@@ -5010,5 +5011,13 @@ a.contact-us.inline {
 
   .circle {
     max-width: 250px;
+  }
+}
+
+.subpage-intro {
+  .image-container {
+    .smartphone-image {
+      width: 500px;
+    }
   }
 }
