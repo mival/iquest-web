@@ -20,6 +20,7 @@ $yellow: $analyze;
 
 // Mod colors
 $black-light: #525252;
+$middle-gray: #7f8f9c;
 $dark-gray: #494f5c;
 $bright-orange: #f18c4f;
 $orange: #fdd7a8;
@@ -3291,8 +3292,8 @@ ul.breadcrumb {
 .webove-aplikace-na-miru .what-we-do header {
   background-image: url("/images/web_application_development_back.jpg");
   background-size: cover;
-  background-color: $cerculean;
-  background-blend-mode: multiply;
+  background-color: $middle-gray;
+  background-blend-mode: exclusion;
 }
 
 .priklady-systemu {
@@ -5092,36 +5093,37 @@ a.contact-us.inline {
   }
   .col-60.image-container {
     .smartphone-image {
-      max-width: 520px;
+      width: 57%;
+      max-width: 650px;
       position: absolute;
       z-index: 1;
       &:nth-child(1) {
-        top: 35px;
-        left: -90px;
+        top: 5%;
+        left: -15%;
       }
       &:nth-child(2) {
-        top: -78px;
-        left: 120px;
+        top: -16%;
+        left: 8%;
       }
       &:nth-child(3) {
-        top: 260px;
-        left: -1px;
+        top: 48%;
+        left: -2%;
       }
       &:nth-child(4) {
-        top: 145px;
-        left: 198px;
+        top: 26%;
+        left: 20%;
       }
       &:nth-child(5) {
-        top: 34px;
-        left: 403px;
+        top: 3%;
+        left: 42%;
       }
       &:nth-child(6) {
-        top: 382px;
-        left: 213px;
+        top: 73%;
+        left: 22%;
       }
       &:nth-child(7) {
-        top: 275px;
-        left: 423px;
+        top: 51%;
+        left: 45%;
       }
       &:nth-child(8) {
         top: 161px;
@@ -5134,9 +5136,10 @@ a.contact-us.inline {
 .subpage-points {
   margin-bottom: 280px;
   padding: 220px 0 720px;
-  background-color: #7f8f9c;
+  background-color: $middle-gray;
   width: 100%;
   ul {
+    padding-top: 100px;
     color: white;
     list-style: none;
     width: 70%;
@@ -5163,4 +5166,55 @@ a.contact-us.inline {
 
 .subpage-our-technology {
   margin-top: -400px;
+}
+.i-want-to-know-more {
+  vertical-align: middle;
+  padding-left: 50px;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+}
+
+.i-want-to-know-more:hover,
+.i-want-to-know-more:active,
+.i-want-to-know-more:focus {
+  color: #000;
+  text-decoration: none;
+}
+.i-want-to-know-more:before,
+.i-want-to-know-more:after {
+  content: "";
+  width: 35px;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  transition: opacity 0.2s linear;
+}
+.i-want-to-know-more:before {
+  opacity: 1;
+  background-image: url(../images/icon-view-more.png);
+}
+.i-want-to-know-more:after {
+  opacity: 0;
+  background-image: url(../images/icon-view-more-hover.png);
+}
+.i-want-to-know-more:hover:before,
+.i-want-to-know-more:active:before,
+.i-want-to-know-more:focus:before {
+  opacity: 0;
+}
+.i-want-to-know-more:hover:after,
+.i-want-to-know-more:active:after,
+.i-want-to-know-more:focus:after {
+  opacity: 1;
+}
+.i-want-to-know-more span {
+  vertical-align: middle;
+  transition: transform 0.2s linear;
 }

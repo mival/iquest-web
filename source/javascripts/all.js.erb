@@ -241,6 +241,19 @@ document.addEventListener("DOMContentLoaded", function() {
       })
     });
   });
+  const scrollLink = document.querySelector(".scroll-link");
+  scrollLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  console.log('href', document.querySelector(href));
+  const viewportOffset = document.querySelector(href).getBoundingClientRect();
+  const offsetTop = viewportOffset.top;
+  console.log('offsetTop', offsetTop);
+  scrollTo({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+});
 });
 
 
