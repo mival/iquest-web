@@ -5052,6 +5052,10 @@ a.contact-us.inline {
   transform: skewY(-9deg);
 }
 
+.subpage {
+  overflow: hidden;
+}
+
 .subpage-intro {
   height: calc(100vh - #{$header-height});
   overflow-x: hidden;
@@ -5098,32 +5102,32 @@ a.contact-us.inline {
       position: absolute;
       z-index: 1;
       &:nth-child(1) {
-        top: 5%;
-        left: -15%;
+        top: -12%;
+        left: 6%;
       }
       &:nth-child(2) {
-        top: -16%;
-        left: 8%;
+        top: -42%;
+        left: 25%;
       }
       &:nth-child(3) {
-        top: 48%;
-        left: -2%;
+        top: 42%;
+        left: 19%;
       }
       &:nth-child(4) {
-        top: 26%;
-        left: 20%;
+        top: 12%;
+        left: 37%;
       }
       &:nth-child(5) {
-        top: 3%;
-        left: 42%;
+        top: -17%;
+        left: 56%;
       }
       &:nth-child(6) {
-        top: 73%;
-        left: 22%;
+        top: 62%;
+        left: 45%;
       }
       &:nth-child(7) {
-        top: 51%;
-        left: 45%;
+        top: 30%;
+        left: 66%;
       }
       &:nth-child(8) {
         top: 161px;
@@ -5134,21 +5138,24 @@ a.contact-us.inline {
 }
 
 .subpage-points {
-  margin-bottom: 280px;
-  padding: 220px 0 720px;
   background-color: $middle-gray;
   width: 100%;
+  position: relative;
+  padding-top: 25px;
+  margin-top: 305px;
+  height: 1300px;
   ul {
-    padding-top: 100px;
     color: white;
     list-style: none;
     width: 70%;
     margin: auto;
-    li {
-      margin-top: 120px;
-      .numbers {
-        width: 120px;
-      }
+    position: absolute;
+    left: 46%;
+    transform: translateX(-50%);
+    top: -140px;
+    li .numbers {
+      margin-right: 40px;
+      width: 120px;
       div {
         padding-left: 70px;
         p {
@@ -5156,17 +5163,41 @@ a.contact-us.inline {
         }
       }
     }
+    li:not(:first-child) {
+      margin-top: 120px;
+    }
+  }
+  &:before {
+    content: "";
+    background-color: $middle-gray;
+    height: 55vw;
+    z-index: -1;
+    position: absolute;
+    top: -27vw;
+    transform: skewY(-28deg);
+    width: 100%;
+  }
+    &:after {
+    content: "";
+    background-color: $middle-gray;
+    height: 50vw;
+    z-index: -1;
+    position: absolute;
+    bottom: -12vw;
+    transform: skewY(11.77deg);
+    width: 100%;
   }
 }
 
-.subpage-reference {
-  padding: 200px 0 500px;
-  margin-top: -847px;
+.subpage-numbers {
+  margin-top: 120px;
 }
 
-.subpage-our-technology {
-  margin-top: -400px;
+.subpage-reference {
+  margin-top: 500px;
+  margin-bottom: 135px;
 }
+
 .i-want-to-know-more {
   vertical-align: middle;
   padding-left: 50px;
