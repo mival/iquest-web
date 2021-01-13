@@ -6,6 +6,32 @@
   }
 }
 
+@mixin spaces($from, $to) {
+  @each $dir-key, $dir-val in (a: all, b: bottom, l: left, r: right, t: top) {
+    @for $i from $from through $to {
+      @each $type in ((abbr: m, name: margin), (abbr: p, name: padding)) {
+        $type-abbr: map-get($type, abbr);
+        $type-name: map-get($type, name);
+        $value: #{$i / 4}#{if($i == 0, '', 'em')};
+
+        @if not($type-abbr == p and $i < 0) {
+          @if $dir-key == a {
+            .#{$type-abbr}-#{$i} {
+              #{$type-name}: $value;
+            }
+          } @else {
+            .#{$type-abbr}-#{$dir-key}-#{$i} {
+              #{$type-name}-#{$dir-val}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include spaces(-2, 10);
+
 // Design manual
 $analyze: #f2e999;
 $connect: #73cfe9;
@@ -30,7 +56,15 @@ $green: #00ceb3;
 $border-radius: 12px;
 $cerculean: #4590af;
 
-$header-height: 350px;
+//css variables
+:root {
+  --dark-gray: #494f5c;
+  --middle-gray: #7f8f9c;
+  --blue: #00d6cf;
+  --green: #00ceb3;
+  --space-for-navbar: 350px;
+}
+
 
 @import "normalize.css";
 @import "animate.css";
@@ -38,6 +72,7 @@ $header-height: 350px;
 @import "remodal.css";
 @import "remodal-default-theme.css";
 @import "layout.css";
+@import "subpage.css";
 @import "pf2018.css";
 
 @font-face {
@@ -379,7 +414,7 @@ body {
   right: 0;
   top: 0;
   width: 100% !important;
-  z-index: 2;
+  z-index: 4;
   #logo {
     height: 130px;
     width: 1976px;
@@ -2783,14 +2818,6 @@ body.posa .page-scroll-show .header {
   margin: 30px 0 0 0;
 }
 
-.what-we-do header {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center top;
-  box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.05);
-  height: $header-height;
-}
-
 .what-we-do > .title {
   padding: 100px 0 75px;
   position: relative;
@@ -2900,61 +2927,6 @@ body.posa .page-scroll-show .header {
 
   .orange-dark + p {
     color: #c39351;
-  }
-}
-
-ul.breadcrumb {
-  font-size: 15px !important;
-  margin: 200px 60px 10px;
-  padding: 0 0 30px;
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: $blue-dark;
-  }
-}
-
-.reference:not(.reference_index),
-.technologie:not(.technologie_index) {
-  .breadcrumb {
-    margin-top: 20px;
-    position: relative;
-    top: 352px;
-  }
-}
-
-.priklady-systemu,
-.webove-aplikace-na-miru,
-.firemni-informacni-systemy-na-miru,
-.mobilni-aplikace-nove-generace,
-.podnikove-mobilni-aplikace,
-.verejne-mobilni-aplikace {
-  .breadcrumb {
-    margin-top: 20px;
-    position: absolute;
-    top: 352px;
-    z-index: 2;
-  }
-}
-
-.iquest-way {
-  .breadcrumb {
-    margin-top: 20px;
-    position: absolute;
-    top: 130px;
-    z-index: 100;
-  }
-}
-
-.contact,
-.index,
-.proc-iquest {
-  .breadcrumb {
-    display: none;
   }
 }
 
@@ -3287,13 +3259,6 @@ ul.breadcrumb {
 .mobile-h3 {
   font-size: 33px !important;
   padding-top: 33px;
-}
-
-.webove-aplikace-na-miru .what-we-do header {
-  background-image: url("/images/web_application_development_back.jpg");
-  background-size: cover;
-  background-color: $middle-gray;
-  background-blend-mode: exclusion;
 }
 
 .priklady-systemu {
@@ -5050,152 +5015,6 @@ a.contact-us.inline {
 
 .scew-right-restore {
   transform: skewY(-9deg);
-}
-
-.subpage {
-  overflow: hidden;
-}
-
-.subpage-intro {
-  height: calc(100vh - #{$header-height});
-  overflow-x: hidden;
-  .col-40,
-  .col-60 {
-    height: 100%;
-  }
-  .col-40 {
-    h1 {
-      position: absolute;
-      top: 25%;
-      left: 60px;
-      right: -113px;
-      z-index: 3;
-    }
-    .buttons-container {
-      bottom: 8%;
-      left: 60px;
-      position: absolute;
-      .button {
-        text-transform: uppercase;
-        background: linear-gradient(90deg, $blue, $green);
-        border: 2px solid $green;
-        color: white;
-        z-index: 1;
-        cursor: pointer;
-        border-radius: 41px;
-        padding: 20px 32px;
-        &:hover {
-          color: black;
-          border: 2px solid black;
-          background: white;
-        }
-        &:not(:last-child) {
-          margin-right: 20px;
-        }
-      }
-    }
-  }
-  .col-60.image-container {
-    .smartphone-image {
-      width: 57%;
-      max-width: 650px;
-      position: absolute;
-      z-index: 1;
-      &:nth-child(1) {
-        top: -12%;
-        left: 6%;
-      }
-      &:nth-child(2) {
-        top: -42%;
-        left: 25%;
-      }
-      &:nth-child(3) {
-        top: 42%;
-        left: 19%;
-      }
-      &:nth-child(4) {
-        top: 12%;
-        left: 37%;
-      }
-      &:nth-child(5) {
-        top: -17%;
-        left: 56%;
-      }
-      &:nth-child(6) {
-        top: 62%;
-        left: 45%;
-      }
-      &:nth-child(7) {
-        top: 30%;
-        left: 66%;
-      }
-      &:nth-child(8) {
-        top: 161px;
-        right: -134px;
-      }
-    }
-  }
-}
-
-.subpage-points {
-  background-color: $middle-gray;
-  width: 100%;
-  position: relative;
-  padding-top: 25px;
-  margin-top: 305px;
-  height: 1300px;
-  ul {
-    color: white;
-    list-style: none;
-    width: 70%;
-    margin: auto;
-    position: absolute;
-    left: 46%;
-    transform: translateX(-50%);
-    top: -140px;
-    li .numbers {
-      margin-right: 40px;
-      width: 120px;
-      div {
-        padding-left: 70px;
-        p {
-          font-family: Raleway-Light;
-        }
-      }
-    }
-    li:not(:first-child) {
-      margin-top: 120px;
-    }
-  }
-  &:before {
-    content: "";
-    background-color: $middle-gray;
-    height: 55vw;
-    z-index: -1;
-    position: absolute;
-    top: -27vw;
-    transform: skewY(-28deg);
-    width: 100%;
-  }
-    &:after {
-    content: "";
-    background-color: $middle-gray;
-    height: 50vw;
-    z-index: -1;
-    position: absolute;
-    bottom: -12vw;
-    transform: skewY(11.77deg);
-    width: 100%;
-  }
-}
-
-.subpage-numbers {
-  margin-top: 120px;
-}
-
-.subpage-reference {
-  margin-top: 500px;
-  margin-bottom: 135px;
 }
 
 .i-want-to-know-more {

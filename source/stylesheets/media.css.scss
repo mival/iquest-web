@@ -20,12 +20,6 @@
     height: 18.3vw
   }
 
-  .what-we-do header {
-    background-size: 100%;
-    height: 18vw
-  }
-
-
 .subpage-intro {
   height: calc(100vh - 18vw);
 }
@@ -40,7 +34,6 @@
 }
 
 @media screen and (min-width: 1450px) {
-  .webove-aplikace-na-miru .navigation,
   .firemni-informacni-systemy-na-miru .navigation,
   .podnikove-mobilni-aplikace .navigation {
     height: 130px
@@ -127,31 +120,35 @@
           left: -27%;
         }
         .smartphone-image:nth-child(2) {
-          top: -31%;
-          left: 5%;
+          top: -28%;
+          left: 2%;
         }
         .smartphone-image:nth-child(3) {
-          top: 26%;
-          left: -12%;
+          top: 32%;
+          left: -43%;
         }
         .smartphone-image:nth-child(4) {
-          top: 7%;
-          left: 19%;
+          top: 16%;
+          left: -13%;
         }
         .smartphone-image:nth-child(5) {
-          top: -12%;
-          left: 50%;
+          top: 0%;
+          left: 18%;
         }
         .smartphone-image:nth-child(6) {
-          top: 59%;
-          left: 6%;
+          top: -16%;
+          left: 48%;
         }
         .smartphone-image:nth-child(7) {
-          top: 40%;
-          left: 36%;
+          top: 44%;
+          left: 6%;
+        }
+        .smartphone-image:nth-child(8) {
+          top: 28%;
+          right: -15%;
         }
         .smartphone-image {
-          width: 78%;
+          width: 76%;
         }
       }
     }
@@ -170,7 +167,6 @@
 }
 
 @media screen and (max-width: 1400px) {
-
   h1 {
     font-size: 3rem;
   }
@@ -222,11 +218,11 @@
 
   //subpage
 
-  .subpage-intro {
-    div:first-child .buttons-container .button {
-      padding: 9px 18px;
-    }
+  .subpage-buttons-container .button {
+    padding: 9px 18px;
+  }
 
+  .subpage-intro {
     div:nth-child(2) {
       &.image-container {
         .smartphone-image:nth-child(1) {
@@ -238,24 +234,28 @@
           left: 2%;
         }
         .smartphone-image:nth-child(3) {
-          top: 22%;
-          left: -10%;
+          top: 32%;
+          left: -43%;
         }
         .smartphone-image:nth-child(4) {
-          top: 6%;
-          left: 20%;
+          top: 16%;
+          left: -13%;
         }
         .smartphone-image:nth-child(5) {
-          top: -10%;
-          left: 50%;
+          top: 0%;
+          left: 18%;
         }
         .smartphone-image:nth-child(6) {
-          top: 56%;
-          left: 6%;
+          top: -16%;
+          left: 48%;
         }
         .smartphone-image:nth-child(7) {
-          top: 40%;
-          left: 36%;
+          top: 44%;
+          left: 6%;
+        }
+        .smartphone-image:nth-child(8) {
+          top: 28%;
+          right: -15%;
         }
       }
     }
@@ -371,27 +371,30 @@
 
   //subpage
 
-  .subpage-intro {
-    div:first-child {
-        .buttons-container {
-          font-size: 0.9rem;
-          .button:not(:last-child) {
-            margin-right: 10px;
-          }
-          .button {
-            padding: 7px 12px;
-          }
-          .i-want-to-know-more {
-            padding-left: 40px;
-            font-size: 1.1rem;
-            &:before {
-              background-size: 1.8rem;
-              background-position: center;
-            }
-          }
-        }
+  .subpage-buttons-container {
+    font-size: 0.9rem;
+    .button:not(:last-child) {
+      margin-right: 10px;
     }
+    .button {
+      padding: 7px 12px;
+    }
+    .i-want-to-know-more {
+      padding-left: 40px;
+      font-size: 1.1rem;
+      &:before {
+        background-size: 1.8rem;
+        background-position: center;
+      }
+    }
+  }
 
+  .subpage-intro {
+    div:first-child .header-text {
+      h2 {
+        font-size: 2rem;
+      }
+    }
     div:nth-child(2) {
       &.image-container {
         .smartphone-image:nth-child(1) {
@@ -403,24 +406,28 @@
           left: 4%;
         }
         .smartphone-image:nth-child(3) {
-          top: 18%;
-          left: -10%;
+          top: 19%;
+          left: -35%;
         }
         .smartphone-image:nth-child(4) {
-          top: 5%;
-          left: 20%;
+          top: 6%;
+          left: -5%;
         }
         .smartphone-image:nth-child(5) {
-          top: -8%;
-          left: 50%;      
+          top: -7%;
+          left: 25%;   
         }
         .smartphone-image:nth-child(6) {
-          top: 49%;
-          left: 6%;
+          top: -20%;
+          left: 55%;
         }
         .smartphone-image:nth-child(7) {
-          top: 35%;
-          left: 37%;
+          top: 29%;
+          left: 8%;
+        }
+        .smartphone-image:nth-child(8) {
+          top: 16%;
+          right: -14%;
         }
       }
     }
@@ -552,35 +559,43 @@
 
   //subpage 
 
+  .subpage-buttons-container {
+    font-size: 0.9rem;
+    .button:not(:last-child) {
+      margin-right: 10px;
+    }
+    .button {
+      padding: 7px 12px;
+    }
+    .i-want-to-know-more {
+      padding-left: 40px;
+      font-size: 1.1rem;
+      &:before {
+        background-size: 1.8rem;
+        background-position: center;
+      }
+    }
+  }
+
   .subpage-intro {
     div:first-child {
+      .subpage-buttons-container {
+        left: 20px;
+      }
       width: 60% !important;
       .back-fixed {
         left: 20px;
       }
-      h1 {
-        font-size: 1.8rem;
+      .header-text {
         top: 10%;
         left: 20px;
-      }
-        .buttons-container {
-          left: 20px;
-          font-size: 0.9rem;
-          .button:not(:last-child) {
-            margin-right: 10px;
-          }
-          .button {
-            padding: 7px 12px;
-          }
-          .i-want-to-know-more {
-            padding-left: 40px;
-            font-size: 1.1rem;
-            &:before {
-              background-size: 1.8rem;
-              background-position: center;
-            }
-          }
+        h1 {
+          font-size: 1.8rem;
         }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
     }
     div:nth-child(2) {
       width: 40% !important;
@@ -589,32 +604,36 @@
           width: 100%;
         }
         .smartphone-image:nth-child(1) {
-          top: 23%;
-          left: -55%;
+          top: 5%;
+          left: -77%;
         }
         .smartphone-image:nth-child(2) {
-          top: 12%;
-          left: -16%;
+          top: -6%;
+          left: -38%;
         }
         .smartphone-image:nth-child(3) {
-          top: 44%;
-          left: -35%;
+          top: 31%;
+          left: -87%;
         }
         .smartphone-image:nth-child(4) {
-          top: 33%;
-          left: 5%;
+          top: 21%;
+          left: -46%;
         }
         .smartphone-image:nth-child(5) {
-          top: 22%;
-          left: 44%;  
+          top: 11%;
+          left: -8%;
         }
         .smartphone-image:nth-child(6) {
-          top: 65%;
-          left: -23%;
+          top: 1%;
+          left: 30%;
         }
         .smartphone-image:nth-child(7) {
-          top: 55%;
-          left: 16%;
+          top: 41%;
+          left: -33%;
+        }
+        .smartphone-image:nth-child(8) {
+          top: 31%;
+          right: -6%;
         }
       }
     }
@@ -903,10 +922,6 @@
     overflow-x: hidden
   }
 
-  .breadcrumb {
-    display: none !important;
-  }
-
   .page .logo-content .iqw-nav .initial {
     width: 100%
   }
@@ -1141,12 +1156,6 @@
 
   .page-offset ul {
     font-size: 17px
-  }
-
-  .what-we-do header {
-    background-position: none;
-    height: auto;
-    display: none
   }
 
   .what-we-do .title h1 {
@@ -1403,7 +1412,32 @@
   }
 
   //subpage 
+
+  .subpage-buttons-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    font-size: 0.9rem;
+    .button:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .button {
+      padding: 11px 29px;
+    }
+    .i-want-to-know-more {
+      padding-left: 40px;
+      font-size: 1.1rem;
+      &:before {
+        background-size: 1.8rem;
+        background-position: center;
+      }
+    }
+  }
+
   .subpage-intro {
+    margin-top: var(--space-for-navbar) / 2;
     height: auto;
     div:first-child {
       width: 100% !important;
@@ -1411,35 +1445,13 @@
       .back-fixed {
         left: 10px;
       }
-      h1 {
+      .header-text {
         position: relative;
         padding-top: 120px;
         text-align: center;
         left: 0;
         margin-bottom: 26px;
       }
-        .buttons-container {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          left: 0;
-          font-size: 0.9rem;
-          .button:not(:last-child) {
-            margin-right: 0;
-            margin-bottom: 15px;
-          }
-          .button {
-            padding: 11px 29px;
-          }
-          .i-want-to-know-more {
-            padding-left: 40px;
-            font-size: 1.1rem;
-            &:before {
-              background-size: 1.8rem;
-              background-position: center;
-            }
-          }
-        }
     }
     div:nth-child(2) {
       width: 100% !important;
