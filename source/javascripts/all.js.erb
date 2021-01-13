@@ -245,10 +245,9 @@ document.addEventListener("DOMContentLoaded", function() {
   scrollLink.addEventListener("click", function(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
-  console.log('href', document.querySelector(href));
   const viewportOffset = document.querySelector(href).getBoundingClientRect();
-  const offsetTop = viewportOffset.top;
-  console.log('offsetTop', offsetTop);
+  const PADDING = 40;
+  const offsetTop = viewportOffset.top - PADDING;
   scrollTo({
     top: offsetTop,
     behavior: "smooth"
