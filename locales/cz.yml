@@ -13,6 +13,7 @@ cz:
     development                : '/webove-aplikace-na-miru/'
     information_systems        : '/firemni-informacni-systemy-na-miru/'
     mobile_applications        : '/mobilni-aplikace-nove-generace/'
+    startups                   : '/startups/'
     mobilni_aplikace           : '/podnikove-mobilni-aplikace/'
     verejne_aplikace           : '/verejne-mobilni-aplikace/'
     blog                       : 'http://blog.iquest.cz/'
