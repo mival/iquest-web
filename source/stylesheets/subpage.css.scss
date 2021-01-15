@@ -161,17 +161,12 @@ $subpage-margin-lg: 60px;
     position: relative;
     padding-top: 25px;
     margin-top: 305px;
-    height: 1300px;
     z-index: 2;
     .subpage-numbers {
       color: white;
       list-style: none;
       width: 70%;
       margin: auto;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: -157px;
       li .numbers {
         margin-right: 40px;
         width: 120px;

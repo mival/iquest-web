@@ -155,7 +155,6 @@
   }
 
   .subpage-points{ 
-    height: 1380px;
     .subpage-numbers {
     top: -80px;
     }
@@ -266,7 +265,6 @@
     }
   }
   .subpage-points {
-    height: 1500px;
     .subpage-numbers li .numbers {
       margin-right: 30px;
       width: 97px;
@@ -701,7 +699,6 @@
   }
   .subpage-points {
     margin-top: 196px;
-    height: 1380px;
     .subpage-numbers {
       top: 50px;
       width: 88%;
@@ -1568,12 +1565,15 @@
           top: 59%;
           left: 36%;
         }
+        .smartphone-image:nth-child(8) {
+          top: 68%;
+          right: 53%;
+        }
       }
     }
   }
   .subpage-points {
     margin-top: 48px;
-    height: 2135px;
     .subpage-numbers {
       top: -30px;
       padding-left: 0;
@@ -1594,9 +1594,17 @@
   }
   .subpage-reference {
     margin-top: 525px;
-    margin-bottom: 70px;
+    max-height: 650px;
     & > div .reference:before {
       top: -40%;
+    }
+  }
+  .subpage-more-information {
+    padding: 67% 0 20%;
+    .subpage-buttons-container {
+      .button:not(:last-child) {
+        margin-right: 2px;
+      }
     }
   }
 }
@@ -1654,23 +1662,6 @@
   }
   #presentation .logo-content .info {
     display: none;
-  }
-
-  .subpage-more-information  {
-    padding: 23% 0 20%;
-    &:before {
-      top: -26%;
-    }
-    .subpage-buttons-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .button {
-        margin-right: 0;
-        margin-top: 1.5rem;
-      }
-    }
   }
 }
 
@@ -1754,49 +1745,51 @@
   //subpage 
   .subpage-intro {
     div:nth-child(2).image-container {
-      height: 650px;
+      height: 936px;
       .smartphone-image {
-        width: 85%;
+        width: 75%;
       }
       .smartphone-image:nth-child(1) {
-       top: 2%;
-       left: 21%;
+        top: 0%;
+        left: 25%;
       }
       .smartphone-image:nth-child(2) {
-       top: 15%;
-       left: -11%;
+        top: 9%;
+        left: -6%;
       }
       .smartphone-image:nth-child(3) {
-       top: 22%;
-       left: 39%;
+        top: 16%;
+        left: 44%;
       }
       .smartphone-image:nth-child(4) {
-       top: 33%;
-       left: 1%;
+        top: 25%;
+        left: 12%;
       }
       .smartphone-image:nth-child(5) {
-       top: 42%;
-       left: 45%;
+        top: 40%;
+        left: 27%;
       }
       .smartphone-image:nth-child(6) {
-       top: 52%;
-       left: 10%;
+        top: 49%;
+        left: -4%;
       }
       .smartphone-image:nth-child(7) {
-       top: 71%;
-       left: 16%;
+        top: 59%;
+        left: 32%;
+      }
+      .smartphone-image:nth-child(8) {
+        top: 70%;
+        right: 25%;
       }
     }
   }
-  .subpage-points {
-    height: 2693px;
-  }
   .subpage-reference {
-    margin-top: 735px;
-    margin-bottom: 530px;
+    margin-top: 580px;
+    margin-bottom: -3px;
+    max-height: 671px;
     & > div .reference {
       &:before {
-        top: -26%;
+        top: -40%;
       }
       &:after {
         top: 102%;
@@ -1804,6 +1797,7 @@
     }
   }
   .subpage-more-information  {
+    padding: 25% 0 20%;
     &:before {
       top: -26%;
     }
@@ -1854,5 +1848,81 @@
 
   [class*='contact'] .box p {
     font-size: 13px
+  }
+}
+
+//subpage media 
+
+@media screen and (max-width: 550px) {
+  .subpage-intro {
+    div.image-container:nth-child(2) .smartphone-image {
+      width: 85%;
+      &:nth-child(8) {
+        top: 68%;
+        right: 17%;
+     }
+    }
+  }
+
+  .subpage-points {
+    .subpage-numbers {
+      li .numbers {
+      width: 50px;
+      }
+      &:after {
+        top: 102%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 460px) {
+
+}
+
+@media screen and (max-width: 432px) {
+  .subpage-intro div.image-container:nth-child(2) .smartphone-image {
+    width: 100%;
+    &:nth-child(2) {
+      top: 7%;
+      left: -15%;
+    }
+    &:nth-child(3) {
+      top: 14%;
+      left: 25%;
+    }
+    &:nth-child(4) {
+      top: 22%;
+      left: -20%;
+    }
+    &:nth-child(5) {
+      top: 31%;
+      left: 22%;
+    }
+    &:nth-child(6) {
+      top: 38%;
+      left: -18%;
+    }
+    &:nth-child(7) {
+      top: 54%;
+      left: -17%;
+    }
+    &:nth-child(8) {
+      top: 46%;
+      left: 26%;
+    }
+  }
+
+  .subpage-reference {
+    margin-top: 690px;
+    max-height: 920px;
+    & > div .reference:before {
+      top: -24%;
+    }
+  }
+
+  .subpage-more-information {
+    padding: 47% 0 20%;
   }
 }
