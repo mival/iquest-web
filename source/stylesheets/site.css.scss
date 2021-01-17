@@ -62,7 +62,7 @@ $cerculean: #4590af;
   --middle-gray: #7f8f9c;
   --blue: #00d6cf;
   --green: #00ceb3;
-  --space-for-navbar: 350px;
+  --space-for-navbar: 250px;
 }
 
 
@@ -847,11 +847,6 @@ body {
   padding-bottom: 100px;
 }
 
-.tags .offset a:hover .tag,
-.tag:hover {
-  color: white;
-}
-
 .tag {
   border-radius: $border-radius;
   border: 2px solid $bright-orange;
@@ -997,7 +992,9 @@ body {
 }
 
 #opening > .title {
-  padding-top: 326px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
 }
 
@@ -1009,13 +1006,13 @@ body {
 }
 
 #opening > .title .title1 {
-  font-size: 70px !important;
-  margin-top: 0;
+  font-size: 70px;
+  margin-top: auto;
   margin-bottom: 1%;
 }
 
 #opening > .title .title2 {
-  font-size: 45px !important;
+  font-size: 45px;
   margin-top: -6px;
   margin-bottom: 0;
   line-height: 60px;
@@ -1024,16 +1021,16 @@ body {
 .wavy-background {
   position: absolute;
   left: 0;
-  top: 160px;
+  top: 40%;
   width: 100%;
-  height: 73%;
+  height: 60%;
   path {
     fill: rgba($dark-gray, 0.8);
   }
 }
 
 .main-container {
-  margin: 137px 0;
+  height: 40vh;
   padding: 0 5%;
   position: relative;
 }
@@ -1042,7 +1039,7 @@ body {
   max-width: 850px;
   margin: auto;
   .container {
-    padding: 100px 0 60px;
+    padding-top: 9%;
     a:first-child {
       margin-top: 42px;
     }
@@ -1062,12 +1059,14 @@ body {
 }
 
 .info.icons .container .box {
-  font-size: 19px;
   font-weight: lighter;
   float: left;
   line-height: 130%;
   position: relative;
-  width: 200px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info.icons .container .box img {
@@ -1217,7 +1216,7 @@ body {
 #opening .our-technology,
 #opening .reference,
 #opening .we-are-the-champions {
-  margin-top: 180px;
+  margin-top: 7%;
   h2 {
     margin-bottom: 64px;
   }
@@ -4465,10 +4464,6 @@ a.contact-us.inline {
 
 .icons-container .text .br {
   display: none;
-}
-
-.icons-container {
-  margin-top: -68px;
 }
 
 .icons-container .img-wrap {

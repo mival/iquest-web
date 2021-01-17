@@ -116,36 +116,36 @@
       width: 50% !important;
       &.image-container {
         .smartphone-image:nth-child(1) {
-          top: -12%;
-          left: -27%;
+          top: 3%;
+          left: -37%;
         }
         .smartphone-image:nth-child(2) {
-          top: -28%;
-          left: 2%;
+          top: -14%;
+          left: -7%;
         }
         .smartphone-image:nth-child(3) {
-          top: 32%;
+          top: 44%;
           left: -43%;
         }
         .smartphone-image:nth-child(4) {
-          top: 16%;
+          top: 27%;
           left: -13%;
         }
         .smartphone-image:nth-child(5) {
-          top: 0%;
-          left: 18%;
+          top: 10%;
+          left: 17%;
         }
         .smartphone-image:nth-child(6) {
-          top: -16%;
-          left: 48%;
+          top: -7%;
+          left: 47%;
         }
         .smartphone-image:nth-child(7) {
-          top: 44%;
+          top: 60%;
           left: 6%;
         }
         .smartphone-image:nth-child(8) {
-          top: 28%;
-          right: -15%;
+          top: 43%;
+          right: -11%;
         }
         .smartphone-image {
           width: 76%;
@@ -230,36 +230,36 @@
     div:nth-child(2) {
       &.image-container {
         .smartphone-image:nth-child(1) {
-          top: -12%;
-          left: -27%;
+          top: 9%;
+          left: -42%;
         }
         .smartphone-image:nth-child(2) {
-          top: -28%;
-          left: 2%;
+          top: -7%;
+          left: -10%;
         }
         .smartphone-image:nth-child(3) {
-          top: 32%;
-          left: -43%;
+          top: 52%;
+          left: -51%;
         }
         .smartphone-image:nth-child(4) {
-          top: 16%;
-          left: -13%;
+          top: 35%;
+          left: -19%;
         }
         .smartphone-image:nth-child(5) {
-          top: 0%;
-          left: 18%;
+          top: 19%;
+          left: 13%;
         }
         .smartphone-image:nth-child(6) {
-          top: -16%;
-          left: 48%;
+          top: 4%;
+          left: 45%;
         }
         .smartphone-image:nth-child(7) {
-          top: 44%;
-          left: 6%;
+          top: 65%;
+          left: -4%;
         }
         .smartphone-image:nth-child(8) {
-          top: 28%;
-          right: -15%;
+          top: 49%;
+          right: -4%;
         }
       }
     }
@@ -401,7 +401,7 @@
         .i-want-to-know-more {
           padding-left: 40px;
           font-size: 1.1rem;
-          &:before {
+          &:before, &:after {
             background-size: 1.8rem;
             background-position: center;
           }
@@ -417,36 +417,36 @@
     div:nth-child(2) {
       &.image-container {
         .smartphone-image:nth-child(1) {
-          top: -12%;
-          left: -27%;
+          top: 2%;
+          left: -45%;
         }
         .smartphone-image:nth-child(2) {
-          top: -26%;
-          left: 4%;
+          top: -12%;
+          left: -14%;
         }
         .smartphone-image:nth-child(3) {
-          top: 19%;
-          left: -35%;
+          top: 42%;
+          left: -56%;      
         }
         .smartphone-image:nth-child(4) {
-          top: 6%;
-          left: -5%;
+          top: 28%;
+          left: -25%;
         }
         .smartphone-image:nth-child(5) {
-          top: -7%;
-          left: 25%;   
+          top: 15%;
+          left: 5%;
         }
         .smartphone-image:nth-child(6) {
-          top: -20%;
-          left: 55%;
+          top: 1%;
+          left: 36%;
         }
         .smartphone-image:nth-child(7) {
-          top: 29%;
-          left: 8%;
+          top: 54%;
+          left: -9%;
         }
         .smartphone-image:nth-child(8) {
-          top: 16%;
-          right: -14%;
+          top: 40%;
+          right: 2%;
         }
       }
     }
@@ -489,6 +489,21 @@
     line-height: 40px;
   }
 
+  #opening {
+    .tag {
+      font-size: 1rem;
+      padding: 6px 12px 7px;
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #more_than_10_years .title .title1 {
+    font-size: 5vw
+  }
+
   h1 {
     font-size: 2.8rem
   }
@@ -504,29 +519,6 @@
   p,
   ul {
     font-size: 1.9vw
-  }
-
-  #opening .title .title1 {
-    font-size: 5.7vw
-  }
-
-  #opening .title .title2 {
-    font-size: 3.6vw
-  }
-
-  #opening {
-    .tag {
-      font-size: 1rem;
-      padding: 6px 12px 7px;
-      i {
-        margin-right: 0.5rem;
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  #more_than_10_years .title .title1 {
-    font-size: 5vw
   }
 
   .page .offset {
@@ -546,11 +538,12 @@
     font-size: 1.7vw
   }
 
-  .info.icons {
-    max-width: 610px;
-    .container .box {
+  .info.icons .container {
+    padding-top: 10%;
+  }
+
+  .info.icons .container .box {
     font-size: 15px
-    }
   }
 
   [class*='why-iquest'] .content .pillar p,
@@ -575,15 +568,14 @@
   .subpage-intro {
     div:first-child {
       .subpage-buttons-container {
-        left: 20px;
+        margin-left: 20px;
       }
       width: 60% !important;
       .back-fixed {
         left: 20px;
       }
       .header-text {
-        top: 10%;
-        left: 20px;
+        margin-left: 20px;
         h1 {
           font-size: 1.8rem;
         }
@@ -844,7 +836,7 @@
 
   .navigation {
     height: 80px;
-    z-index: 3
+    z-index: 4;
   }
 
   .navigation #logo {
@@ -882,11 +874,6 @@
     padding-top: 10px;
   }
 
-  #opening>.title {
-    padding-top: 140px;
-    padding-bottom: 30px
-  }
-
   #opening>.title .title1,
   #opening>.title .title2 {
     padding: 0 15px
@@ -906,9 +893,8 @@
   }
 
   .info.icons {
-    margin-top: 20px !important;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .info.icons .container .box {
@@ -1623,18 +1609,6 @@
         max-height: 64px !important;
       }
     }
-
-    .text {
-      text-align: left;
-      margin-left: 14px;
-      float: left;
-      margin-top: 16px;
-      box-sizing: border-box;
-
-      .br {
-        display: inherit;
-      }
-    }
   }
 }
 
@@ -1667,6 +1641,33 @@
 
 
 @media screen and (max-width: 580px) {
+
+  //opening
+
+  .main-container {
+    height: auto;
+    margin-top: 10rem;
+    background-color: var(--dark-gray);
+    opacity: .9;
+    .wavy-background {
+      display: none;
+    }
+  }
+  .info.icons .container {
+    flex-direction: column;
+    align-items: center;
+    .box {
+      margin-top: 1rem !important;
+    }
+  }
+
+  .icons-container .img-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  // end of opening
+
   .contact-telefon {
     display: none;
   }

@@ -51,19 +51,16 @@ $subpage-margin-lg: 60px;
       height: 100%;
     }
     .col-40 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .header-text {
-        position: absolute;
-        top: 10%;
-        left: $subpage-margin-lg;
-        right: -113px;
-        z-index: 3;
+        padding-top: 50px;
+        margin-left: $subpage-margin-lg;
       }
       .subpage-buttons-container {
-        bottom: 8%;
-        left: $subpage-margin-lg;
-        position: absolute;
-
-        // TODO: why doesnt work
+        margin-left: $subpage-margin-lg;
+        margin-bottom: 25px;
 
         .i-want-to-know-more {
           vertical-align: middle;
@@ -116,40 +113,40 @@ $subpage-margin-lg: 60px;
     .col-60.image-container {
       .smartphone-image {
         width: 57%;
-        max-width: 650px;
+        max-width: 610px;
         position: absolute;
         z-index: 1;
         &:nth-child(1) {
-          top: -12%;
-          left: 6%;
+          top: 7%;
+          left: 4%
         }
         &:nth-child(2) {
-          top: -37%;
+          top: -9%;
           left: 26%;
         }
         &:nth-child(3) {
           top: 55%;
-          left: -2%;
+          left: -4%;
         }
         &:nth-child(4) {
-          top: 31%;
-          left: 18%;
+          top: 39%;
+          left: 19%;      
         }
         &:nth-child(5) {
-          top: 6%;
-          left: 39%;
+          top: 23%;
+          left: 41%;
         }
         &:nth-child(6) {
-          top: -19%;
-          left: 60%;      
+          top: 6%;
+          left: 63%;   
         }
         &:nth-child(7) {
           top: 66%;
           left: 33%;
         }
         &:nth-child(8) {
-          top: 36%;
-          right: -10%;
+          top: 50%;
+          right: -13%;
         }
       }
     }
