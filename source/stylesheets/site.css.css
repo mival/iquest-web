@@ -9692,49 +9692,49 @@ html.remodal-is-locked body .navigation .navbar {
   position: absolute;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container {
   width: 57%;
   max-width: 650px;
   position: absolute;
   z-index: 1;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(1) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(2) {
   top: -12%;
   left: 6%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(2) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(2) {
   top: -37%;
   left: 26%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(3) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(4) {
   top: 55%;
   left: -2%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(4) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(5) {
   top: 31%;
   left: 18%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(5) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(6) {
   top: 6%;
   left: 39%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(6) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(7) {
   top: -19%;
   left: 60%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(7) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(8) {
   top: 66%;
   left: 33%;
 }
 
-.subpage-intro .col-60.image-container .smartphone-image:nth-child(8) {
+.subpage-intro .col-60.intro-image-container .smartphone-image-container:nth-child(9) {
   top: 36%;
   right: -10%;
 }
@@ -11084,15 +11084,15 @@ body {
   margin-top: 32px;
 }
 
-.info.icons .container a:nth-child(3) {
+.info.icons .container a:nth-child(4) {
   margin-top: 16px;
 }
 
-.info.icons .container a:nth-child(4) {
+.info.icons .container a:nth-child(5) {
   margin-top: 9px;
 }
 
-.info.icons .container a:nth-child(5) {
+.info.icons .container a:nth-child(6) {
   margin-top: 15px;
 }
 

@@ -46,21 +46,28 @@ $subpage-margin-lg: 60px;
     height: calc(100vh - #{var(--space-for-navbar)});
     margin-top: var(--space-for-navbar);
     overflow-x: hidden;
-    .col-40,
-    .col-60 {
+    .intro-text-container {
       height: 100%;
-    }
-    .col-40 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       .header-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35vw;
         padding-top: 50px;
         margin-left: $subpage-margin-lg;
+        z-index: 2;
       }
       .subpage-buttons-container {
         margin-left: $subpage-margin-lg;
         margin-bottom: 25px;
+        z-index: 2;
+        position: absolute;
+        width: 35vw;
+        min-width: 580px;
+        bottom: 0;
 
         .i-want-to-know-more {
           vertical-align: middle;
@@ -110,44 +117,53 @@ $subpage-margin-lg: 60px;
         }
       }
     }
-    .col-60.image-container {
-      .smartphone-image {
-        width: 57%;
-        max-width: 610px;
+    .intro-image-container {
+      position: absolute;
+      right: -7%;
+      bottom: -15%;
+      .intro-image-container-in {
+        padding-top: 70.341207349081364829396325459318%;
+      }
+      .smartphone-image-container {
         position: absolute;
         z-index: 1;
-        &:nth-child(1) {
-          top: 7%;
-          left: 4%
+        width: 40%;
+        img {
+          transform: translate(-8%, 1%);
+          width: 113%;
         }
-        &:nth-child(2) {
-          top: -9%;
-          left: 26%;
-        }
-        &:nth-child(3) {
-          top: 55%;
-          left: -4%;
-        }
-        &:nth-child(4) {
-          top: 39%;
-          left: 19%;      
-        }
-        &:nth-child(5) {
-          top: 23%;
-          left: 41%;
-        }
-        &:nth-child(6) {
-          top: 6%;
-          left: 63%;   
-        }
-        &:nth-child(7) {
-          top: 66%;
-          left: 33%;
-        }
-        &:nth-child(8) {
-          top: 50%;
-          right: -13%;
-        }
+          &:nth-child(2) {
+            left: 10%;
+            top: 59.5%;
+          }
+          &:nth-child(3) {
+            top: 14.5%;
+            left: 0%; 
+          }
+          &:nth-child(4) {    
+            top: 0%;
+            left: 18%;
+          }
+          &:nth-child(5) {
+            top: 45%;
+            left: 28.4%;
+          }
+          &:nth-child(6) {
+            top: 30.5%;
+            right: 13.6%;
+          }
+          &:nth-child(7) {
+            top: 16%;
+            right: -4%;
+          }
+          &:nth-child(8) {
+            bottom: -21.4%;
+            left: 57.6%;
+          }
+          &:nth-child(9) {
+            bottom: -7%;
+            right: -16%;
+          }
       }
     }
 }
