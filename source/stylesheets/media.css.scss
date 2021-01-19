@@ -420,7 +420,7 @@
   }
 
   .info.icons .container {
-    padding-top: 10%;
+    padding-top: 20%;
   }
 
   .info.icons .container .box {
@@ -1355,20 +1355,44 @@
   }
 }
 
+@media screen and (max-height: 800px) {
+  .info.icons .container {
+    padding-top: 10%;
+  } 
+}
+
 @media screen and (max-height: 700px) and (min-width: 768px) {
-  .icons-container {
-    a.box:nth-child(2) .text {
-      margin-top: 6px;
+
+
+  #opening > .title {
+    height: 70vh;
+  }
+
+  .main-container {
+    height: 30vh;
+    .wavy-background {
+      top: 20%;
     }
-
-    .img-wrap {
-      float: left;
-
+  }
+  .info.icons .container {
+    padding-top: 3%;
+  }
+  .info .icons-container {
+      a.box {
+        flex-direction: row !important;
+        .text {
+          padding-left: 10px;
+          text-align: start;
+        }
+        &:not(:last-child) {
+          margin-right: 15px;
+          
+        }
+      }
       img {
         max-width: 64px !important;
         max-height: 64px !important;
       }
-    }
   }
 }
 
