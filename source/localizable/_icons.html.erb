@@ -1,11 +1,5 @@
 <div class="info icons">
   <div class="container icons-container flex justify-between">
-    <% link_to t('urls.startups'), :class => 'box', :'data-aos' => 'fade-up' do %>
-      <div class="img-wrap">
-        <img alt="Phone_with_hand_128" src="/images/Go_to_Web_128.png" />
-      </div>
-      <div class="text"><%= t('pages.main.buttons.startups') %></div>
-    <% end  %>
     <% link_to t('urls.development'), :class => 'box', :'data-aos' => 'fade-up' do %>
       <div class="img-wrap">
         <img alt="Notebook_and_mouse_cursor_128" src="/images/Notebook_and_mouse_cursor_128.png" />
@@ -30,6 +24,12 @@
         <img alt="Phone_with_hand_128" src="/images/Notebook_and_mouse_cursor_128.png" />
       </div>
       <div class="text"><%= t('pages.main.buttons.progressive_web_apps') %></div>
+    <% end  %>
+    <% link_to t('urls.startups'), :class => 'box', :'data-aos' => 'fade-up' do %>
+      <div class="img-wrap">
+        <img alt="Phone_with_hand_128" src="/images/Go_to_Web_128.png" />
+      </div>
+      <div class="text"><%= t('pages.main.buttons.startups') %></div>
     <% end  %>
   </div>
 </div>

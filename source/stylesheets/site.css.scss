@@ -180,6 +180,10 @@ $cerculean: #4590af;
   color: darken($blue-dark, 10%);
 }
 
+.text-cerculean {
+  color: $cerculean;
+}
+
 // Test "why iquest" page with animation - currently not used
 .test {
   height: 100vh;
@@ -283,6 +287,10 @@ b {
   font-weight: normal;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
 .hidden {
   display: none;
 }
@@ -351,6 +359,10 @@ h2 {
 
 h3 {
   font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.4rem;
 }
 
 p,
@@ -1021,7 +1033,7 @@ body {
 .wavy-background {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 54%;
   width: 100%;
   height: 140%;
   path {
@@ -1039,7 +1051,7 @@ body {
   max-width: 900px;
   margin: auto;
   .container {
-    padding-top: 17%;
+    padding-top: 20%;
     a:first-child {
       margin-top: 42px;
     }
@@ -1411,12 +1423,13 @@ body {
   width: 100%;
 }
 
-.page .logo-content .info h1 {
-  color: $blue-dark;
+.page .logo-content .info h3 {
+  color: $cerculean;
   margin: 0 0 10px;
+  font-weight: bold;
 }
 
-.page .logo-content .info h2 {
+.page .logo-content .info h4 {
   font-family: Raleway-Light;
   font-weight: lighter;
   opacity: 0.8;
@@ -2310,10 +2323,10 @@ body {
     background-color 0.5s;
 }
 
-[class*="why-iquest"] .content .pillar h1,
-[class*="proc-iquest"] .content .pillar h1,
 [class*="why-iquest"] .content .pillar h2,
 [class*="proc-iquest"] .content .pillar h2,
+[class*="why-iquest"] .content .pillar h3,
+[class*="proc-iquest"] .content .pillar h3,
 [class*="why-iquest"] .content .pillar p,
 [class*="proc-iquest"] .content .pillar p,
 [class*="why-iquest"] .content .pillar ul,
@@ -3358,10 +3371,6 @@ body.posa .page-scroll-show .header {
   background-position: 50%;
 }
 
-.firemni-informacni-systemy-na-miru .what-we-do header {
-  background-image: url("/images/corporate_information_systems_back.jpg");
-}
-
 .podnikove-mobilni-aplikace .what-we-do header {
   background-image: url("/images/podnikove_mobile_applications_back2.jpg");
 }
@@ -4272,6 +4281,7 @@ body.posa .page-scroll-show .header {
       a.more {
         align-items: center;
         background-color: $bright-orange;
+        border: 2px solid $bright-orange;
         border-radius: $border-radius;
         color: white;
         display: flex;
@@ -4284,7 +4294,8 @@ body.posa .page-scroll-show .header {
       }
 
       a.more:hover {
-        background-color: $blue-dark;
+        background-color: transparent;
+        color: $bright-orange;
       }
 
       .img-wrapper {

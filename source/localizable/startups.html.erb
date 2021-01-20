@@ -18,8 +18,6 @@ subtitle: Tvoříme robustní webové aplikace pro malé firmy i nadnárodní ko
             </h2>
         </div>
         <div class='flex subpage-buttons-container items-center'>
-          <a class="button">Pro firmu</a>
-          <a class="button">Pro startup</a>
           <a href="#subpage-numbers" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
         </div>
       </div>
@@ -87,9 +85,13 @@ subtitle: Tvoříme robustní webové aplikace pro malé firmy i nadnárodní ko
   </div>
   <div class="subpage-more-information bg-stretch">
     <div class="subpage-buttons-container" data-aos="fade-right">
-      <a href="" class='button'>Proč vybrat iQuest?</a>
-      <a href="" class='button'>Reference</a>
-      <a href="" class='button'>Kontaktujte nás</a>
+      <% link_to t('urls.why_iquest'), :class => 'button', 'aria-label': "přejít na stránku proč iquest" do %>
+        Proč vybrat iQuest?
+      <% end %>
+      <% link_to t('urls.reference'), :class => 'button', 'aria-label': "přejít na stránku více referencí" do %>
+        Reference
+      <% end  %>
+      <a href="/kontakt" aria-label="Kontaktujte nás" class='button'>Kontaktujte nás</a>
     </div>
   </div>
   <!-- <div class="subpage-our-technology">

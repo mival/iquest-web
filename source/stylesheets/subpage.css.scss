@@ -11,8 +11,11 @@ $subpage-margin-lg: 60px;
 
 .subpage {
     overflow: hidden;
+    max-width: 2500px;
+    margin: auto;
     .back-fixed {
       top: 0;
+      z-index: 3;
     }
   }
 
@@ -120,7 +123,7 @@ $subpage-margin-lg: 60px;
     .intro-image-container {
       position: absolute;
       right: -7%;
-      bottom: -15%;
+      top: 0;
       .intro-image-container-in {
         padding-top: 70.341207349081364829396325459318%;
       }
