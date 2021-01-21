@@ -869,7 +869,7 @@ body {
   display: inline-block;
   margin-top: 15px;
   margin-right: 12px;
-  padding: 6px 21px 12px;
+  padding: 9px 21px;
   i {
     margin-right: 0.7rem;
     font-size: 2rem;
@@ -1035,7 +1035,7 @@ body {
   left: 0;
   top: 54%;
   width: 100%;
-  height: 140%;
+  height: 120%;
   path {
     fill: rgba($dark-gray, 0.8);
   }
@@ -2831,19 +2831,9 @@ body.posa .page-scroll-show .header {
 }
 
 .what-we-do > .title {
-  padding: 100px 0 75px;
+  margin-top: var(--space-for-navbar);
   position: relative;
   text-align: center;
-}
-
-.what-we-do-app > .title {
-  padding: 40px 0 0 !important;
-  position: relative;
-  text-align: center;
-}
-
-.what-we-do-app .info {
-  margin: 40px 20% 0 !important;
 }
 
 .what-we-do > .title h1 {
@@ -3289,100 +3279,6 @@ body.posa .page-scroll-show .header {
   }
 }
 
-.en_systems_reservation-systems .what-we-do header,
-.priklady-systemu_rezervacni-systemy .what-we-do header {
-  background-image: url("/images/app_kinds/reservation_systems.jpg");
-  background-position: left top;
-}
-
-.en_systems_vendor-portals .what-we-do header,
-.priklady-systemu_prodejni-portaly .what-we-do header {
-  background-image: url("/images/app_kinds/sale_portals.jpg");
-}
-
-.en_systems_crm-systems .what-we-do header,
-.priklady-systemu_crm-systemy .what-we-do header {
-  background-image: url("/images/app_kinds/crm.jpg");
-  background-position: left top;
-}
-
-.en_systems_web-dispatching .what-we-do header,
-.priklady-systemu_webove-dispecinky .what-we-do header {
-  background-image: url("/images/app_kinds/web_dispatching.jpg");
-}
-
-.en_systems_information-portals .what-we-do header,
-.priklady-systemu_informacni-portaly .what-we-do header {
-  background-image: url("/images/app_kinds/information_portals.jpg");
-}
-
-.en_systems_people-organization .what-we-do header,
-.priklady-systemu_organizace-lidi .what-we-do header {
-  background-image: url("/images/app_kinds/people_organization.jpg");
-}
-
-.en_systems_communication-applications .what-we-do header,
-.priklady-systemu_komunikacni-aplikace .what-we-do header {
-  background-image: url("/images/app_kinds/communication_applications.jpg");
-  background-position: left top;
-}
-
-.en_systems_ordering-systems .what-we-do header,
-.priklady-systemu_objednavkove-systemy .what-we-do header {
-  background-image: url("/images/app_kinds/order_systems.jpg");
-  background-position: left top;
-}
-
-.en_systems_databases .what-we-do header,
-.priklady-systemu_databaze .what-we-do header {
-  background-image: url("/images/app_kinds/databases.jpg");
-}
-
-.en_systems_order-management .what-we-do header,
-.priklady-systemu_sprava-zakazek .what-we-do header {
-  background-image: url("/images/app_kinds/order_management.jpg");
-}
-
-.en_systems_facebook-applications .what-we-do header,
-.priklady-systemu_facebook-aplikace .what-we-do header {
-  background-image: url("/images/app_kinds/facebook_applications.jpg");
-}
-
-.en_systems_b2b-b2c-portals .what-we-do header,
-.priklady-systemu_b2b-b2c-portaly .what-we-do header {
-  background-image: url("/images/app_kinds/b2b-b2c-portaly.jpg");
-}
-
-.en_systems_intranets .what-we-do header,
-.priklady-systemu_intranety .what-we-do header {
-  background-image: url("/images/app_kinds/Intranet_main.jpg");
-  background-position: 50%;
-}
-
-.en_systems_erp-systems .what-we-do header,
-.priklady-systemu_erp-systemy .what-we-do header {
-  background-image: url("/images/app_kinds/erp_main.jpg");
-  background-position: 50%;
-}
-
-.en_systems_others .what-we-do header,
-.priklady-systemu_ostatni .what-we-do header {
-  background-image: url("/images/app_kinds/ostatni_main.jpg");
-  background-position: 50%;
-}
-
-.podnikove-mobilni-aplikace .what-we-do header {
-  background-image: url("/images/podnikove_mobile_applications_back2.jpg");
-}
-
-.verejne-mobilni-aplikace .what-we-do header {
-  background-image: url("/images/verejne_mobile_applications_back2.jpg");
-}
-
-.verejne-mobilni-aplikace .what-we-do header {
-  background-image: url("/images/verejne_mobile_applications_back2.jpg");
-}
-
 .fancybox-skin {
   padding: 0 !important;
 }
@@ -3562,6 +3458,7 @@ body.posa .page-scroll-show .header {
   opacity: 0.5;
   position: absolute;
   top: 25px;
+  z-index: 3;
   transition: opacity 0.25s;
 }
 

@@ -15,7 +15,7 @@
   .page-scroll-show .header {
     height: 18.3vw;
   }
-  .subpage-intro {
+  .subpage-header {
     height: calc(100vh - 18vw);
   }
   .what-we-do .info,
@@ -83,45 +83,45 @@
   .page-offset ul {
     font-size: 1.15vw;
   }
-  .subpage-intro div:first-child {
+  .subpage-header div:first-child {
     width: 50% !important;
   }
-  .subpage-intro div:nth-child(2) {
+  .subpage-header div:nth-child(2) {
     width: 50% !important;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -12%;
     left: -27%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -28%;
     left: 2%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 32%;
     left: -43%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 16%;
     left: -13%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 0%;
     left: 18%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: -16%;
     left: 48%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 44%;
     left: 6%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
     top: 28%;
     right: -15%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 76%;
   }
   .subpage-points {
@@ -179,35 +179,35 @@
   .subpage-buttons-container .button {
     padding: 9px 18px;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -12%;
     left: -27%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -28%;
     left: 2%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 32%;
     left: -43%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 16%;
     left: -13%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 0%;
     left: 18%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: -16%;
     left: 48%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 44%;
     left: 6%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
     top: 28%;
     right: -15%;
   }
@@ -309,55 +309,55 @@
     margin-left: 15px;
     margin-right: 15px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container {
+  .subpage-header div:first-child .subpage-buttons-container {
     font-size: 0.9rem;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .button:not(:last-child) {
+  .subpage-header div:first-child .subpage-buttons-container .button:not(:last-child) {
     margin-right: 10px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .button {
+  .subpage-header div:first-child .subpage-buttons-container .button {
     padding: 7px 12px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .i-want-to-know-more {
+  .subpage-header div:first-child .subpage-buttons-container .i-want-to-know-more {
     padding-left: 40px;
     font-size: 1.1rem;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .i-want-to-know-more:before {
+  .subpage-header div:first-child .subpage-buttons-container .i-want-to-know-more:before {
     background-size: 1.8rem;
     background-position: center;
   }
-  .subpage-intro div:first-child .header-text h2 {
+  .subpage-header div:first-child .header-text h2 {
     font-size: 2rem;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -12%;
     left: -27%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -26%;
     left: 4%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 19%;
     left: -35%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 6%;
     left: -5%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: -7%;
     left: 25%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: -20%;
     left: 55%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 29%;
     left: 8%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
     top: 16%;
     right: -14%;
   }
@@ -456,117 +456,117 @@
   .page-offset ul {
     font-size: 1.75vw;
   }
-  .subpage-intro div:first-child {
+  .subpage-header div:first-child {
     width: 60% !important;
   }
-  .subpage-intro div:first-child .subpage-buttons-container {
+  .subpage-header div:first-child .subpage-buttons-container {
     left: 20px;
   }
-  .subpage-intro div:first-child .back-fixed {
+  .subpage-header div:first-child .back-fixed {
     left: 20px;
   }
-  .subpage-intro div:first-child .header-text {
+  .subpage-header div:first-child .header-text {
     top: 10%;
     left: 20px;
   }
-  .subpage-intro div:first-child .header-text h1 {
+  .subpage-header div:first-child .header-text h1 {
     font-size: 1.8rem;
   }
-  .subpage-intro div:first-child .header-text h2 {
+  .subpage-header div:first-child .header-text h2 {
     font-size: 1.5rem;
   }
-  .subpage-intro div:nth-child(2) {
+  .subpage-header div:nth-child(2) {
     width: 40% !important;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 100%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 5%;
     left: -77%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -6%;
     left: -38%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 31%;
     left: -87%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 21%;
     left: -46%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 11%;
     left: -8%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: 1%;
     left: 30%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 41%;
     left: -33%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
     top: 31%;
     right: -6%;
   }
-  .subpage-intro div:first-child {
+  .subpage-header div:first-child {
     width: 60% !important;
   }
-  .subpage-intro div:first-child .subpage-buttons-container {
+  .subpage-header div:first-child .subpage-buttons-container {
     left: 20px;
   }
-  .subpage-intro div:first-child .back-fixed {
+  .subpage-header div:first-child .back-fixed {
     left: 20px;
   }
-  .subpage-intro div:first-child .header-text {
+  .subpage-header div:first-child .header-text {
     top: 10%;
     left: 20px;
   }
-  .subpage-intro div:first-child .header-text h1 {
+  .subpage-header div:first-child .header-text h1 {
     font-size: 1.8rem;
   }
-  .subpage-intro div:first-child .header-text h2 {
+  .subpage-header div:first-child .header-text h2 {
     font-size: 1.5rem;
   }
-  .subpage-intro div:nth-child(2) {
+  .subpage-header div:nth-child(2) {
     width: 40% !important;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 100%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 5%;
     left: -77%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: -6%;
     left: -38%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 31%;
     left: -87%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 21%;
     left: -46%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 11%;
     left: -8%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: 1%;
     left: 30%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 41%;
     left: -33%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(9) {
     top: 31%;
     right: -6%;
   }
@@ -1221,18 +1221,18 @@
     height: 100vh;
     overflow-y: auto;
   }
-  .subpage-intro {
+  .subpage-header {
     margin-top: var(--space-for-navbar)/2;
     height: auto;
   }
-  .subpage-intro div:first-child {
+  .subpage-header div:first-child {
     width: 100% !important;
     height: auto;
   }
-  .subpage-intro div:first-child .back-fixed {
+  .subpage-header div:first-child .back-fixed {
     left: 10px;
   }
-  .subpage-intro div:first-child .header-text {
+  .subpage-header div:first-child .header-text {
     position: relative;
     padding-top: 120px;
     text-align: center;
@@ -1240,7 +1240,7 @@
     height: auto;
     margin-bottom: 26px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container {
+  .subpage-header div:first-child .subpage-buttons-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1252,53 +1252,53 @@
     left: 0;
     font-size: 0.9rem;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .button:not(:last-child) {
+  .subpage-header div:first-child .subpage-buttons-container .button:not(:last-child) {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .button {
+  .subpage-header div:first-child .subpage-buttons-container .button {
     padding: 11px 29px;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .i-want-to-know-more {
+  .subpage-header div:first-child .subpage-buttons-container .i-want-to-know-more {
     padding-left: 40px;
     font-size: 1.1rem;
   }
-  .subpage-intro div:first-child .subpage-buttons-container .i-want-to-know-more:before {
+  .subpage-header div:first-child .subpage-buttons-container .i-want-to-know-more:before {
     background-size: 1.8rem;
     background-position: center;
   }
-  .subpage-intro div:nth-child(2) {
+  .subpage-header div:nth-child(2) {
     width: 100% !important;
     height: 690px;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 60%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 1%;
     left: 20%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 21%;
     left: -2%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 16%;
     left: 54%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 49%;
     left: 0%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 32%;
     left: 28%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: 43%;
     left: 61%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 59%;
     left: 36%;
   }
@@ -1461,37 +1461,37 @@
     width: 100%;
     text-align: center;
   }
-  .subpage-intro div:nth-child(2).intro-image-container {
+  .subpage-header div:nth-child(2).intro-image-container {
     height: 650px;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 85%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 2%;
     left: 21%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(2) {
     top: 15%;
     left: -11%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(4) {
     top: 22%;
     left: 39%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(5) {
     top: 33%;
     left: 1%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(6) {
     top: 42%;
     left: 45%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(7) {
     top: 52%;
     left: 10%;
   }
-  .subpage-intro div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
+  .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container:nth-child(8) {
     top: 71%;
     left: 16%;
   }

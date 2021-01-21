@@ -294,7 +294,7 @@
 
   //subpage
 
-  .subpage-intro {
+  .subpage-header {
     .intro-text-container {
       .subpage-buttons-container {
         font-size: 0.9rem;
@@ -437,7 +437,7 @@
 
   //subpage
 
-  .subpage-intro {
+  .subpage-header {
     .intro-text-container {
       .subpage-buttons-container {
         margin-left: 20px;
@@ -1255,7 +1255,7 @@
   }
 
   //subpage 
-  .subpage-intro {
+  .subpage-header {
     margin-top: var(--space-for-navbar) / 2;
     height: auto;
     .intro-text-container {
@@ -1596,7 +1596,7 @@
 //subpage media 
 
 @media screen and (max-width: 550px) {
-  .subpage-intro {
+  .subpage-header {
 
   }
 

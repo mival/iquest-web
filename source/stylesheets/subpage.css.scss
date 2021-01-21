@@ -15,14 +15,8 @@ $subpage-margin-lg: 60px;
     margin: auto;
     .back-fixed {
       top: 0;
-      z-index: 3;
     }
   }
-
-.subpage-header {
-  z-index: 3;
-  position: relative;
-}
 
 .subpage-buttons-container {
   .button {
@@ -45,10 +39,12 @@ $subpage-margin-lg: 60px;
   }
 }
   
-.subpage-intro {
+.subpage-header {
     height: calc(100vh - #{var(--space-for-navbar)});
     margin-top: var(--space-for-navbar);
     overflow-x: hidden;
+    z-index: 3;
+    position: relative;
     .intro-text-container {
       height: 100%;
       display: flex;
