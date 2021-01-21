@@ -30,6 +30,15 @@
   }
 }
 
+@mixin dots {
+  content:"";
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  margin-top: 0;
+  width: 2px;
+}
+
 @include spaces(-2, 10);
 
 // Design manual
@@ -64,6 +73,8 @@ $cerculean: #4590af;
   --green: #00ceb3;
   --space-for-navbar: 250px;
 }
+
+$space-lg: 60px;
 
 
 @import "normalize.css";
@@ -184,6 +195,14 @@ $cerculean: #4590af;
   color: $cerculean;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.border-radius {
+  border-radius: $border-radius;
+}
+
 // Test "why iquest" page with animation - currently not used
 .test {
   height: 100vh;
@@ -281,13 +300,12 @@ $cerculean: #4590af;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.font-medium,
-b {
+.font-medium {
   font-family: Raleway-Medium;
   font-weight: normal;
 }
 
-.font-bold {
+.font-bold, b {
   font-weight: bold;
 }
 
@@ -2179,7 +2197,7 @@ body {
 }
 
 [class*="contact"] .box .logo {
-  margin-left: -60px;
+  margin-left: -$space-lg;
 }
 
 [class*="contact"] .box h1 {
@@ -2833,24 +2851,54 @@ body.posa .page-scroll-show .header {
 .what-we-do > .title {
   margin-top: var(--space-for-navbar);
   position: relative;
-  text-align: center;
+  text-align: start;
+  padding: 70px $space-lg 0px;
 }
 
-.what-we-do > .title h1 {
-  font-family: Raleway-Light;
-  font-size: 55px;
-}
+.what-we-do .info-container {
+  background-color: var(--middle-gray);
+  padding: 0.5rem 0 12rem;
+  margin: 12rem 0;
+  transform: skewY(-12deg);
+  color: white;
+  .info-container--skew-restore {
+    transform: skewY(12deg);
+  }
 
-.what-we-do > .title h2 {
-  font-family: Raleway-Light;
-  font-size: 35px;
-  line-height: 140%;
-}
-
-.what-we-do h3 {
-  font-size: 23px;
-  line-height: 140%;
-  text-align: center;
+  h3 {
+    padding: 0 $space-lg;
+  }
+  ul {
+    padding-left: 1.2rem;
+  }
+  .contact-button {
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+      color: black;
+      background-color: white;
+      line-height: 60px;
+      padding: 0 40px;
+      display: inline-block;
+      border-radius: 41px;
+      position: relative;
+      text-transform: uppercase;
+      &:hover {
+        background: linear-gradient(to right, $blue 0%, $green 100%);
+        color: white;
+      }
+  }
+  &:before {
+    @include dots;
+    height: 15vh;
+    bottom: 0;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAG0lEQVR42mL6DwVMDFDAAsSMIAZcZEAYAAEGAKyECB6X8Cx+AAAAAElFTkSuQmCC);
+  }
+  &:after {
+    @include dots;
+    height: 15vh;
+    bottom: -15vh;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAH0lEQVR42mLx9I/+zwAETAxQwPj/P1gAITIgDIAAAwC9QwUTYvKcrwAAAABJRU5ErkJggg==);
+  }
 }
 
 .what-we-do .what-is {
@@ -2959,7 +3007,8 @@ body.posa .page-scroll-show .header {
 .what-we-do .info .box img {
   position: absolute;
   vertical-align: middle;
-  width: 350px;
+  width: 425px;
+  border-radius: 0;
 }
 
 .what-we-do .info .box p,
@@ -2974,28 +3023,37 @@ body.posa .page-scroll-show .header {
 
 .what-we-do .info .box.left img {
   left: 0;
-  width: 310px;
 }
 
 .what-we-do .info .box.left .offset {
-  padding-left: 350px;
+  padding-left: 500px;
 }
 
 .what-we-do .info .box.right img {
   right: 0;
-  width: 330px;
 }
 
 .what-we-do .info .box.right .offset {
-  padding-right: 350px;
+  padding-right: 500px;
 }
 
 .what-we-do .info .box a.contact-bubble {
-  margin-top: 60px;
+  margin-top: $space-lg;
 }
 
 .what-we-do .icons {
   overflow: hidden;
+}
+
+.what-we-do+.icons .icons-container.container  {
+  padding-top: 0;
+  padding-bottom: 70px;
+  a {
+    margin-top: 0;
+  }
+  .text {
+    color: black;
+  }
 }
 
 .volne-offset {
@@ -3274,7 +3332,7 @@ body.posa .page-scroll-show .header {
     }
 
     .tags {
-      margin-top: 60px;
+      margin-top: $space-lg;
     }
   }
 }
@@ -3454,7 +3512,7 @@ body.posa .page-scroll-show .header {
 .back-fixed {
   -o-transition: opacity 0.25s;
   -webkit-transition: opacity 0.25s;
-  left: 60px;
+  left: $space-lg;
   opacity: 0.5;
   position: absolute;
   top: 25px;
@@ -4567,17 +4625,6 @@ a.contact-us.inline {
 
 .cont2 {
   margin-top: 20px;
-}
-
-.contact-button {
-  bottom: -38px;
-  color: white;
-  display: block;
-  margin: 5px auto;
-  padding: 10px 10px;
-  position: relative;
-  text-align: center;
-  width: 240px;
 }
 
 .kinds-of-contacts {

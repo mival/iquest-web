@@ -217,6 +217,10 @@
     margin-top: 120px;
   }
 
+  .tags {
+    padding: 0 20px;
+  }
+
   .page .initial.curve {
     font-size: 2vw
   }
@@ -533,6 +537,21 @@
     width: 100%;
   }
 
+  .what-we-do > .title { 
+    padding: 0 10px;
+  }
+
+  .what-we-do .info-container {
+     h3 {
+      text-align: start;
+      padding: 0 35px;
+    }
+    .contact-button {
+      padding: 0 25px;
+      letter-spacing: 2px;
+      font-size: 1rem;
+    }
+  }
   .social-icons {
     padding-bottom: 25px !important;
     display: flex;
