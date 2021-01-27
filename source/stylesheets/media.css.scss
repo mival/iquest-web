@@ -19,8 +19,7 @@
   .page-scroll-show .header {
     height: 18.3vw
   }
-  .what-we-do .info,
-  .what-we-do .what-is {
+  .info-container {
     margin: 100px auto 0;
     width: 1143px;
   }
@@ -213,7 +212,7 @@
     font-size: 4.5vw
   }
 
-  #opening .our-technology, #opening .reference, #opening .we-are-the-champions {
+  #opening .our-technology, #opening .reference {
     margin-top: 120px;
   }
 
@@ -276,26 +275,6 @@
     height: 168px
   }
 
-  .what-we-do .info .box img {
-    position: static
-  }
-
-  .what-we-do .info .box.left .offset {
-    padding-left: 0;
-    margin-top: 30px
-  }
-
-  .what-we-do .info .box.right .offset {
-    padding-right: 0
-  }
-
-  .we-are-the-champions {
-    width: auto;
-    margin-left: 15px;
-    margin-right: 15px
-  }
-
-
   //subpage
 
   .subpage-header {
@@ -337,17 +316,27 @@
 }
 
 @media screen and (max-width: 1140px) {
-  .what-we-do .benefits .box {
-    width: 50%;
-  }
-
   .kinds-of-contacts {
-    .cont {
-      width: 100% !important;
-    }
     .container {
       button[type=submit], a.submit {
         min-width: 150px;
+      }
+      .cont {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .what-we-do {
+    .info .box {
+      &.left img {
+        padding-right: 3%;
+      }
+      &.right img {
+        padding-left: 3%;
+      }
+      ul li {
+        line-height: 150%;
       }
     }
   }
@@ -388,6 +377,10 @@
 
   h3 {
     font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
   }
 
   p,
@@ -437,6 +430,43 @@
 
   .page-offset ul {
     font-size: 1.75vw
+  }
+
+  .what-we-do {
+    & > .title {
+      padding: 70px var(--space-sm) 0px;
+      text-align: center;
+    }
+    .back-fixed {
+      left: var(--space-sm)
+    }
+    .info-container {
+      padding: 6rem 0;
+      margin: 6rem 0;
+      .what-is h2 {
+        text-align: center;
+      }
+      .info h2 {
+        text-align: start;
+      }
+      .info-container--skew-restore {
+        padding: 0 var(--space-sm);
+      }
+    }
+    .info .box {
+      overflow: hidden;
+      &.right, &.left {
+        flex-direction: column;
+        img {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 5rem;
+          width: 60%;
+          margin-left: auto;
+          object-position: right;
+        }
+      }
+    }
   }
 
   //subpage
@@ -533,24 +563,17 @@
 }
 
 @media screen and (max-width: 768px) {
-  .what-we-do .benefits .box {
-    width: 100%;
+
+  h1 {
+    font-size: 2.8rem;
   }
 
-  .what-we-do > .title { 
-    padding: 0 10px;
+  h2 {
+    font-size: 2.1rem;
   }
 
-  .what-we-do .info-container {
-     h3 {
-      text-align: start;
-      padding: 0 35px;
-    }
-    .contact-button {
-      padding: 0 25px;
-      letter-spacing: 2px;
-      font-size: 1rem;
-    }
+  h3 {
+    font-size: 1.5rem;
   }
   .social-icons {
     padding-bottom: 25px !important;
@@ -710,8 +733,7 @@
   }
 
   #opening .our-technology,
-  #opening .reference,
-  #opening .we-are-the-champions {
+  #opening .reference {
     margin-top: 75px
   }
 
@@ -1020,57 +1042,12 @@
     font-size: 17px
   }
 
-  .what-we-do .title h1 {
-    font-family: Raleway-Light;
-    font-size: 37px;
-    font-weight: bold;
-    line-height: 115%;
-    margin: 90px 0 25px;
-    padding-left: 15px;
-    padding-right: 15px
-  }
-
-  .what-we-do .title h2 {
-    font-family: Raleway-Light;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 130%;
-    opacity: 0.7;
-    padding-left: 15px;
-    padding-right: 15px
-  }
-
   .what-we-do .title {
     overflow: hidden;
   }
 
-  .what-we-do .what-is,
-  .what-we-do .info {
-    margin: 0 25px 0 !important;
-  }
-
-  .what-we-do .icons {
-    margin-left: 0px !important;
-  }
-
   .what-we-do .v-center {
     display: block !important;
-  }
-
-  .what-we-do .what-is .box.left img,
-  .what-we-do .what-is .box.right img,
-  .what-we-do .info .box.left img,
-  .what-we-do .info .box.right img {
-    width: 100%
-  }
-
-  .what-we-do .info .box ul {
-    padding-left: 17px;
-
-    li {
-      font-size: 17px;
-      line-height: 120%;
-    }
   }
 
   .back-fixed {
@@ -1273,6 +1250,29 @@
     overflow-y: auto;
   }
 
+  .what-we-do {
+    & > .title {
+      margin-top: 12%;
+    }
+    .info-container {
+      .contact-button {
+        padding: 0 25px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+      }
+    }
+    .info .box {
+      &.right, &.left {
+        img {
+          padding-bottom: 3rem;
+          width: 100%;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+
   //subpage 
   .subpage-header {
     margin-top: var(--space-for-navbar) / 2;
@@ -1440,7 +1440,17 @@
 
 @media screen and (max-width: 580px) {
 
-  //opening
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 
   .main-container {
     height: auto;
@@ -1466,14 +1476,8 @@
     height: 120px;
   }
 
-  // end of opening
-
   .contact-telefon {
     display: none;
-  }
-
-  .what-we-do .benefits .box {
-    width: 100%;
   }
 
   a.contact-bubble.fixed {
@@ -1540,6 +1544,13 @@
     h2 {
       width: 100%;
       text-align: center;
+    }
+  }
+
+  .what-we-do {
+    .info-container {
+      padding: 4rem 0;
+      margin: 4rem 0;
     }
   }
 

@@ -9,33 +9,34 @@ subtitle: Chcete mít všechny potřebné informace k zakázkám přístupné p�
     </div>
     <h1 data-aos="fade-up">Správa zakázek</h1>
   </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Jednoduše pořádek. V poptávkách, nabídkách, objednávkách, dodacích a předávacích protokolech. A navíc, chcete mít všechny potřebné informace k zakázkám přístupné přes internet a mobilní aplikaci?</h3>
-    <p data-aos="fade-up">Nechte nás zanalyzovat vaše potřeby, procesy a data. Navrhneme optimální řešení.</p>
-  </div>
-
-  <div class="info">
-    <div class="box left">
-      <img alt="software pro správu zakázek" src="/images/app_kinds/order_management_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>Kdy potřebujete správu na míru?</b></p>
-        <ul>
-          <li>Chcete sdílet informace přes zabezpečený web a mobil.</li>
-          <li>Potřebujete svá data zpřístupnit lidem v terénu.</li>
-          <li>Máte více poboček a chcete sdílet data o zakázkách.</li>
-          <li>Excel je stále vaším hlavním nástrojem pro evidenci dat a už to nestačí.</li>
-          <li>Rádi byste svěřili uspořádání svých dat profesionálním analytikům.</li>
-        </ul>
-        <p><a href="/kontakt">Rádi vymyslíme řešení právě pro vás.</a></p>
+  <div class="info-container">
+    <div class="info-container--skew-restore container">
+      <div class="what-is m-b-10 text-center">
+        <h2 data-aos="fade-up">Jednoduše pořádek. V poptávkách, nabídkách, objednávkách, dodacích a předávacích protokolech. A navíc, chcete mít všechny potřebné informace k zakázkám přístupné přes internet a mobilní aplikaci?</h2>
+        <h3 data-aos="fade-up">Nechte nás zanalyzovat vaše potřeby, procesy a data. Navrhneme optimální řešení.</h3>
       </div>
+      <div class="info">
+        <div class="box left">
+          <img alt="software pro správu zakázek" src="/images/app_kinds/order_management_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>Kdy potřebujete správu na míru?</h3>
+            <ul>
+              <li>Chcete sdílet informace přes zabezpečený web a mobil.</li>
+              <li>Potřebujete svá data zpřístupnit lidem v terénu.</li>
+              <li>Máte více poboček a chcete sdílet data o zakázkách.</li>
+              <li>Excel je stále vaším hlavním nástrojem pro evidenci dat a už to nestačí.</li>
+              <li>Rádi byste svěřili uspořádání svých dat profesionálním analytikům.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center button-row"><%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button' %></div>
     </div>
   </div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

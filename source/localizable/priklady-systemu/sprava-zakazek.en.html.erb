@@ -9,33 +9,34 @@ subtitle: Do you want to have all the needed order information using internet an
     </div>
     <h1 data-aos="fade-up">Order management</h1>
   </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Simply order. In demands, supplies, orders, delivery and transfer protocols. What's more? Do you want to have all needed information for management available through internet and mobile application?</h3>
-    <p data-aos="fade-up">Let us analyze your needs, processes and data. We will design optimal solution.</p>
-  </div>
-
-  <div class="info">
-    <div class="box left">
-      <img alt="software pro správu zakázek" src="/images/app_kinds/order_management_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>When do you need customized administration?</b></p>
-        <ul>
-          <li>You want to share information through secure web and mobile.</li>
-          <li>You need to make your data accessible for people in the field.</li>
-          <li>You have more branches and want to share orders data.</li>
-          <li>Excel is still your primary tool for data keeping and it isn't enough.</li>
-          <li>You would like to entrust your data arrangement to professional analysts.</li>
-        </ul>
-        <p><a href="/kontakt">We will be glad to come up with solution just for you.</a></p>
+  <div class="info-container">
+    <div class="info-container--skew-restore container">
+      <div class="what-is m-b-10 text-center">
+        <h2 data-aos="fade-up">Simply order. In demands, supplies, orders, delivery and transfer protocols. What's more? Do you want to have all needed information for management available through internet and mobile application?</h2>
+        <h3 data-aos="fade-up">Let us analyze your needs, processes and data. We will design optimal solution.</h3>
       </div>
+      <div class="info">
+        <div class="box left">
+          <img alt="software pro správu zakázek" src="/images/app_kinds/order_management_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>When do you need customized administration?</h3>
+            <ul>
+              <li>You want to share information through secure web and mobile.</li>
+              <li>You need to make your data accessible for people in the field.</li>
+              <li>You have more branches and want to share orders data.</li>
+              <li>Excel is still your primary tool for data keeping and it isn't enough.</li>
+              <li>You would like to entrust your data arrangement to professional analysts.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center button-row"><%= link_to "Contact us", t('urls.contact'), :class => 'contact-button' %></div>
     </div>
   </div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">
