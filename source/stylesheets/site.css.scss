@@ -362,10 +362,16 @@ h3 {
   margin-top: 15px;
 }
 
+h4 {
+  line-height: 120%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
 h1 b,
 h2 b,
 h3 b {
-  font-weight: lighter;
+  font-weight: 600;
 }
 
 h1 {
@@ -2185,6 +2191,7 @@ body {
 
 [class*="contact"] .box h1 {
   font-size: 1.7em;
+  font-weight: 600;
 }
 
 [class*="contact"] .box table {
@@ -2197,11 +2204,13 @@ body {
 [class*="contact"] .box table tr td {
   line-height: 135%;
   padding: 5px 8px;
+  font-family: Raleway-light;
   vertical-align: top;
 }
 
 [class*="contact"] .box table tr td:first-child {
   font-family: Raleway-Medium;
+  font-weight: 600;
   font-size: 15px;
   text-align: right;
   width: 100px;
@@ -2267,7 +2276,7 @@ body {
       white-space: nowrap;
 
       &:hover {
-        background-color: $blue-dark;
+        background-color: $dark-gray;
       }
     }
   }
@@ -3521,9 +3530,8 @@ body.posa .page-scroll-show .header {
   }
 
   .container {
-    .offset {
       box-sizing: border-box;
-      padding: 0 95px;
+      padding: 0 25px;
       margin: auto;
 
       .inner {
@@ -3586,7 +3594,6 @@ body.posa .page-scroll-show .header {
         margin: 5px 0 0 25%;
         padding: 5px 15px;
       }
-    }
   }
 }
 

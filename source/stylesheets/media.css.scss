@@ -46,17 +46,19 @@
 
 @media screen and (max-width: 1600px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   h3 {
     font-size: 1.5rem;
   }
-
+  h4 {
+    font-size: 1.3rem;
+  }
   p,
   ul {
     font-size: 1.3vw
@@ -125,7 +127,7 @@
   }
 
   h3 {
-    font-size: 1.5rem
+    font-size: 1.4rem
   }
 
   p,
@@ -171,9 +173,14 @@
     padding: 9px 18px;
   }
   .subpage-points {
-    .subpage-numbers li .numbers {
-      margin-right: 30px;
-      width: 97px;
+    .subpage-numbers {
+      &:after {
+        height: 150px;
+      }
+       li .numbers {
+        margin-right: 30px;
+        width: 97px;
+       }
     }
   }
   .subpage-reference {
@@ -185,7 +192,8 @@
         top: 107%;
       }
       &:before {
-        top: -80%;
+        top: -170px;
+        height: 170px;
       }
     }
   }
@@ -305,10 +313,7 @@
     }
   }
   .subpage-reference {
-    margin-top: 440px;
-    & > div .reference:before {
-      top: -58%;
-    }
+    margin-top: 400px;
   }
   .subpage-more-information {
     padding: 30% 0 10%;
@@ -376,11 +381,11 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   p,
@@ -452,6 +457,13 @@
       .info-container--skew-restore {
         padding: 0 var(--space-sm);
       }
+      &:before {
+        height: 7.5vh;
+      }
+      &:after {
+        height: 7.5vh;
+        bottom: -8vh;
+      }
     }
     .info .box {
       overflow: hidden;
@@ -509,14 +521,9 @@
     }
   }
   .subpage-reference {
-    margin-top: 425px;
+    margin-top: 375px;
     margin-bottom: -9rem;
     max-height: 465px;
-    & > div .reference {
-      &:before {
-      top: -60%;
-      }
-    }
   }
   .subpage-more-information {
     padding: 50% 0 20%;
@@ -563,17 +570,16 @@
 }
 
 @media screen and (max-width: 768px) {
-
   h1 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
   }
 
   h2 {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .social-icons {
     padding-bottom: 25px !important;
@@ -1155,7 +1161,7 @@
     }
   }
 
-  footer.footer .container .offset {
+  footer.footer .container {
     padding-left: 0;
     padding-right: 0;
     .col-33 {
@@ -1272,6 +1278,15 @@
     }
   }
 
+  .technologie {
+    text-align: center;
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
 
   //subpage 
   .subpage-header {
@@ -1328,6 +1343,7 @@
   }
   .subpage-points {
     margin-top: 48px;
+    padding-bottom: 40px;
     .subpage-numbers {
       top: -30px;
       padding-left: 0;
@@ -1344,14 +1360,14 @@
       li:not(:first-child) {
         margin-top: 40px;
       }
+      &:after {
+        top: 100%;
+      }
     }
   }
   .subpage-reference {
-    margin-top: 525px;
+    margin-top: 365px;
     max-height: 650px;
-    & > div .reference:before {
-      top: -40%;
-    }
   }
   .subpage-more-information {
     padding: 67% 0 20%;
@@ -1360,6 +1376,12 @@
         margin-right: 2px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .subpage-reference {
+    margin-top: 425px;
   }
 }
 
@@ -1549,29 +1571,32 @@
 
   .what-we-do {
     .info-container {
-      padding: 4rem 0;
-      margin: 4rem 0;
+      &:before {
+        height: 7.5vh;
+      }
+      &:after {
+        height: 7.5vh;
+        bottom: -8vh;
+      }
     }
   }
 
   //subpage 
   .subpage-reference {
-    margin-top: 580px;
     margin-bottom: -3px;
     max-height: 671px;
     & > div .reference {
-      &:before {
-        top: -40%;
-      }
       &:after {
         top: 102%;
+        height: 90px;
       }
     }
   }
   .subpage-more-information  {
-    padding: 25% 0 20%;
+    padding: 30% 0 20%;
     &:before {
-      top: -26%;
+      top: 13%;
+      height: 90px;
     }
     .subpage-buttons-container {
       display: flex;
@@ -1626,34 +1651,67 @@
 //subpage media 
 
 @media screen and (max-width: 550px) {
-  .subpage-header {
-
+  [class*="why-iquest"] .content, [class*="proc-iquest"] .content {
+    position: static;
+    .pillar {
+      min-height: 25vh;
+      position: static;
+      padding-bottom: 60px;
+      &.active {
+        position: absolute;
+        height: 100vh;
+      }
+    }
+    .pillar.pillar-3 {
+      background-image: none;
+    }
+    .to-home {
+      display: none;
+    }
   }
-
   .subpage-points {
     .subpage-numbers {
       li .numbers {
       width: 50px;
       }
       &:after {
-        top: 102%;
+        top: 99%;
       }
     }
   }
+  .page .scroll-content {
+    height: unset;
+  }
+  .page {
+    position: static;
+    top: unset !important;
+    .offset {
+      margin-top: unset;
+      margin-right: 0;
+      position: static;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      text-align: center;
+      ul {
+        text-align: start;
+      }
+    }
+  }
+
+  #we_connect_techno.page .offset {
+    margin-bottom: 0;
+}
 }
 
-
-@media screen and (max-width: 460px) {
-
+@media screen and (max-width: 420px) {
+  .subpage-reference {
+    max-height: 925px;
+  }
 }
 
 @media screen and (max-width: 432px) {
   .subpage-reference {
-    margin-top: 690px;
-    max-height: 920px;
-    & > div .reference:before {
-      top: -24%;
-    }
+    margin-top: 650px;
   }
 
   .subpage-more-information {
