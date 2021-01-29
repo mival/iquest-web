@@ -307,7 +307,7 @@ $space-lg: 60px;
 }
 
 .font-bold, b {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hidden {
@@ -382,6 +382,10 @@ h3 {
 
 h4 {
   font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.1rem;
 }
 
 p,
@@ -2836,8 +2840,8 @@ body.posa .page-scroll-show .header {
 
 .what-we-do .info-container {
   background-color: var(--middle-gray);
-  padding: 12rem 0;
-  margin: 12rem 0;
+  padding: 12em 0;
+  margin: 10rem 0;
   transform: skewY(-12deg);
   color: white;
   width: 100%;
@@ -3239,25 +3243,25 @@ body.posa .page-scroll-show .header {
 
 .cards {
   display: inline-block;
-  padding: 20px 20px 20px 250px;
+  padding: 20px 20px 20px 300px;
   position: relative;
 }
 
 .cards .info {
   bottom: 0;
-  color: #3a5465;
   float: left;
   left: 0;
-  line-height: 150%;
+  line-height: 170%;
   opacity: 0.9;
-  padding: 25px;
+  font-family: Raleway-Light;
   position: absolute;
   top: 0;
-  width: 190px;
+  width: 250px;
 }
 
 .cards .card {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: $border-radius;
   cursor: pointer;
   float: left;
   height: 346px;
@@ -3279,8 +3283,16 @@ body.posa .page-scroll-show .header {
   transform: scale(1.1);
 }
 
+.technologie {
+  .cards .card.half { 
+    height: 168px;
+    width: 204px;
+  }
+}
+
 .cards .card.half {
-  border-radius: $border-radius;
+  height: 168px;
+  width: 204px;
   height: 230px;
   width: 310px;
 }
@@ -3288,7 +3300,7 @@ body.posa .page-scroll-show .header {
 .cards .card .content {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 50%;
   bottom: 45px;
   left: 0;
   position: absolute;
@@ -3296,68 +3308,69 @@ body.posa .page-scroll-show .header {
   top: 0;
 
   &.ruby-on-rails {
-    background-image: url("/images/Technology/ruby-on-rails.jpg");
+    background-image: url("/images/Technology/ruby-on-rails.svg");
+    background-size: 70%;
   }
 
   &.react {
     background-color: #2a2c2e;
     background-image: url("/images/Technology/react.svg");
-    background-size: 40%;
   }
 
   &.react-native {
     background-color: white;
     background-image: url("/images/Technology/react.svg");
-    background-size: 40%;
   }
 
   &.emberjs {
-    background-image: url("/images/Technology/emberjs.jpg");
+    background-image: url("/images/Technology/ember.svg");
   }
 
   &.postgresql {
-    background-image: url("/images/Technology/postgresql.jpg");
+    background-image: url("/images/Technology/postgresql.svg");
   }
 
   &.firebase {
-    background-image: url("/images/Technology/firebase.png");
-    background-color: #fff;
+    background-image: url("/images/Technology/firebase.svg");
+    background-size: 40%;
   }
 
   &.elastic {
-    background-image: url("/images/Technology/elastic.jpg");
+    background-image: url("/images/Technology/elastic.svg");
   }
 
   &.html5 {
-    background-image: url("/images/Technology/html5.jpg");
+    background-image: url("/images/Technology/html5.svg");
+    background-size: 35%;
   }
 
   &.bootstrap {
-    background-image: url("/images/Technology/bootstrap.jpg");
+    background-image: url("/images/Technology/bootstrap.svg");
   }
 
   &.sass {
-    background-image: url("/images/Technology/sass.jpg");
+    background-image: url("/images/Technology/sass.svg");
   }
 
   &.git {
-    background-image: url("/images/Technology/git.jpg");
+    background-image: url("/images/Technology/git.svg");
   }
 
   &.heroku {
-    background-image: url("/images/Technology/heroku.jpg");
+    background-image: url("/images/Technology/heroku.svg");
   }
 
   &.rabbitmq {
-    background-image: url("/images/Technology/rabbitmq.jpg");
+    background-image: url("/images/Technology/rabbitmq.svg");
+    background-size: 40%;
   }
 
   &.newrelic {
-    background-image: url("/images/Technology/newrelic.jpg");
+    background-image: url("/images/Technology/newrelic.svg");
   }
 
   &.cordova {
-    background-image: url("/images/Technology/cordova.jpg");
+    background-image: url("/images/Technology/cordova.svg");
   }
 }
 
@@ -3374,7 +3387,7 @@ body.posa .page-scroll-show .header {
 }
 
 .technologie .page-offset:not(.page-scroll-show) {
-  padding-top: 160px;
+  padding-top: 250px;
 }
 
 .back-fixed {
