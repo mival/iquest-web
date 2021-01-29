@@ -861,7 +861,8 @@ body {
 }
 
 .panel {
-  background-color: rgba(171, 212, 240, 0.5);
+  background-color: $dark-gray;
+  color: white;
   padding: 5px 20px 15px;
 }
 
