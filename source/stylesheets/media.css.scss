@@ -80,15 +80,6 @@
     font-size: 1.15vw
   }
 
-  .what-we-do .info-container {
-    &::before {
-      height: 50vh;
-    }
-    &::after {
-      height: 40vh;
-    }
-  }
-
   // subpage
 
   .subpage-points{ 
@@ -437,9 +428,6 @@
       }
       .info h2 {
         text-align: start;
-      }
-      &:after {
-        bottom: -12vh;
       }
       .info-container__content {
         padding: 0 var(--space-sm);

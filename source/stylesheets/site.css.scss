@@ -2843,22 +2843,21 @@ body.posa .page-scroll-show .header {
     height: 30vw;
     z-index: -1;
     position: absolute;
-    top: -16vw;
+    bottom: 100%;
     left: 0;
     background-color: var(--middle-gray);
-    transform: skewY(-14deg);
     width: 100%;
+    background: linear-gradient(-14deg, var(--middle-gray) 50%,rgba(255,255,255,1) 50.1%);
   }
   &::after {
     content: "";
     height: 20vw;
     z-index: -1;
     position: absolute;
-    bottom: -22vh;
     left: 0;
     background-color: var(--middle-gray);
-    transform: skewY(10deg);
     width: 100%;
+    background: linear-gradient(10deg, rgba(255,255,255,1) 50.1%, var(--middle-gray) 50%);
   }
 }
 
