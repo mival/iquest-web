@@ -992,13 +992,12 @@ body {
 }
 
 #opening address {
-  color: black;
   font-size: 21px;
   font-style: normal;
   width: 100%;
   position: absolute;
   padding-top: 15px;
-  z-index: 2;
+  z-index: 4;
 }
 
 #opening address .fa {
@@ -1046,7 +1045,7 @@ body {
   left: 0;
   top: 54%;
   width: 100%;
-  height: 120%;
+  height: 130%;
   path {
     fill: rgba($dark-gray, 0.8);
   }
@@ -1063,21 +1062,6 @@ body {
   margin: auto;
   .container {
     padding-top: 20%;
-    a:first-child {
-      margin-top: 42px;
-    }
-    a:nth-child(2) {
-      margin-top: 32px;
-    }
-    a:nth-child(3) {
-      margin-top: 16px;
-    }
-    a:nth-child(4) {
-      margin-top: 9px;
-    }
-    a:nth-child(5) {
-      margin-top: 15px;
-    }
   }
 }
 
@@ -3632,13 +3616,6 @@ body.posa .page-scroll-show .header {
   z-index: -1;
 }
 
-[class*="not-only-money"] > .page-offset > .title h1,
-.success > .page-offset > .title h1 {
-  font-family: Raleway-Light;
-  font-size: 55px;
-  margin-top: 100px;
-}
-
 [class*="not-only-money"] > .page-offset > .title h2,
 .success > .page-offset > .title h2 {
   font-family: Raleway-Light;
@@ -4376,6 +4353,20 @@ a.contact-us.inline {
       &:hover {
         background-color: #dad65c;
       }
+    }
+  }
+  .logo-content {
+    .info {
+      height: 37%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .logo-circles {
+      height: 38%;
+    }
+    .iqw-nav {
+      height: 25%;
     }
   }
 }

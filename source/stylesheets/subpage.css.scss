@@ -9,12 +9,14 @@ $subpage-margin-lg: 60px;
   width: 2px;
 }
 
-.webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru .subpage-header {
-  h1 {
-    font-size: 2.5vw;
-  }
-  h2 {
-    font-size: 1.6vw;
+.webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru, .mobilni-aplikace-nove-generace {
+  .subpage-header {
+    h1 {
+      font-size: 2.5vw;
+    }
+    h2 {
+      font-size: 1.6vw;
+    }
   }
 }
 
@@ -193,15 +195,14 @@ $subpage-margin-lg: 60px;
       list-style: none;
       width: 70%;
       margin: auto;
-      li .numbers {
-        margin-right: 40px;
-        width: 120px;
-        max-height: 200px;
-        div {
-          padding-left: 70px;
-          p {
-            font-family: Raleway-Light;
-          }
+      li {
+        .numbers {
+          margin-right: 40px;
+          width: 120px;
+          max-height: 200px;
+        }
+        a {
+          color: var(--blue);
         }
       }
       li:not(:first-child) {
