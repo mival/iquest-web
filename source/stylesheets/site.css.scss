@@ -186,6 +186,7 @@ $space-lg: 60px;
 
 .text-orange {
   color: $bright-orange;
+  font-weight: bold;
 }
 
 .text-blue {
@@ -517,6 +518,7 @@ body {
     align-items: center;
     border-radius: 50%;
     color: white;
+    font-weight: bold;
     display: flex;
     font-size: 16px;
     height: 7vw;
@@ -2240,39 +2242,13 @@ body {
   margin-top: 20px;
 
   table {
-    input,
-    textarea {
-      border-radius: 3px;
-      border: 1px solid #cccccc;
-      box-sizing: border-box;
-      color: #565656;
-      font-size: 15px;
-      outline: none;
-      padding: 2px 6px;
-      width: 100%;
-    }
-
-    textarea {
-      border-color: #cccccc;
-      height: 86px;
-    }
-
-    label.error,
-    span.error {
-      width: 100% !important;
-
-      &.show {
-        color: red;
-        height: 8px;
-      }
-    }
-
     button {
       border: none;
       border-radius: $border-radius;
       background-color: $bright-orange;
       color: white;
-      padding: 6px 15px;
+      padding: 9px 15px;
+      font-weight: bold;
       margin: 5px 0 0 25%;
       white-space: nowrap;
 
@@ -2841,24 +2817,14 @@ body.posa .page-scroll-show .header {
   margin: 30px 0 0 0;
 }
 
-.what-we-do > .title {
-  margin-top: var(--space-for-navbar);
-  position: relative;
-  text-align: start;
-  padding: 70px $space-lg 0px;
-}
-
 .what-we-do .info-container {
   background-color: var(--middle-gray);
-  padding: 12em 0;
-  margin: 10rem 0;
-  transform: skewY(-12deg);
+  padding: 3rem $space-lg 0;
+  margin-top: 12rem;
   color: white;
+  position: relative;
   width: 100%;
-  .info-container--skew-restore {
-    transform: skewY(12deg);
-    padding: 0 $space-lg;
-  }
+  box-sizing: border-box;
   ul {
     padding-left: 1.2rem;
   }
@@ -2877,20 +2843,48 @@ body.posa .page-scroll-show .header {
         color: white;
       }
   }
+  &::before {
+    content: "";
+    height: 30vw;
+    z-index: -1;
+    position: absolute;
+    top: -16vw;
+    left: 0;
+    background-color: var(--middle-gray);
+    transform: skewY(-14deg);
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    height: 20vw;
+    z-index: -1;
+    position: absolute;
+    bottom: -22vh;
+    left: 0;
+    background-color: var(--middle-gray);
+    transform: skewY(10deg);
+    width: 100%;
+  }
+}
+
+.what-we-do .info-container__content {
   &:before {
     @include dots;
     height: 15vh;
-    bottom: 0;
+    bottom: -22vh;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAG0lEQVR42mL6DwVMDFDAAsSMIAZcZEAYAAEGAKyECB6X8Cx+AAAAAElFTkSuQmCC);
   }
   &:after {
     @include dots;
     height: 15vh;
-    bottom: -15vh;
+    bottom: -38vh;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAH0lEQVR42mLx9I/+zwAETAxQwPj/P1gAITIgDIAAAwC9QwUTYvKcrwAAAABJRU5ErkJggg==);
   }
 }
 
+.what-we-do .tags {
+  padding-top: 40vh;
+}
 .what-we-do .our-technology {
   margin: 80px 0;
 }
@@ -3406,7 +3400,7 @@ body.posa .page-scroll-show .header {
   left: $space-lg;
   opacity: 0.5;
   position: absolute;
-  top: 25px;
+  top: 0;
   z-index: 3;
   transition: opacity 0.25s;
 }
@@ -4674,42 +4668,6 @@ a.contact-us.inline {
             margin-bottom: 38px;
           }
 
-          input[type="text"],
-          input[type="email"],
-          textarea {
-            background-color: #f4f4f4;
-            border-radius: 6px;
-            border: 1px solid transparent;
-            border: none;
-            box-sizing: border-box;
-            display: block;
-            font-weight: 100;
-            margin-top: 20px;
-            outline: none;
-            padding: 11px 16px;
-            width: 100%;
-            &.error {
-              border: 1px solid red;
-            }
-          }
-
-          span.error {
-            color: red !important;
-            width: 100% !important;
-
-            &.show {
-              height: 6px;
-            }
-          }
-
-          textarea {
-            height: 120px;
-            max-height: 120px;
-            max-width: 100%;
-            min-height: 120px;
-            min-width: 100%;
-          }
-
           a.call-us {
             background-color: white;
             border-radius: 50%;
@@ -4731,6 +4689,43 @@ a.contact-us.inline {
         }
       }
     }
+  }
+}
+
+// TODO:  check if works
+form {
+  input,
+  textarea {
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 100;
+    outline: none;
+    padding: 11px 16px;
+    width: 100%;
+    &.error {
+      border: 1px solid red;
+    }
+  }
+
+  span.error {
+    color: red !important;
+    width: 100% !important;
+
+    &.show {
+      height: 6px;
+    }
+  }
+
+  textarea {
+    height: 120px;
+    max-height: 120px;
+    max-width: 100%;
+    min-height: 120px;
+    min-width: 100%;
   }
 }
 
@@ -4836,18 +4831,4 @@ a.contact-us.inline {
   .circle {
     max-width: 250px;
   }
-}
-
-.skew-left-restore {
-  transform: skewY(28deg);
-}
-.skew-left {
-  transform: skewY(-28deg);
-}
-.scew-right {
-  transform: skewY(9deg);
-}
-
-.scew-right-restore {
-  transform: skewY(-9deg);
 }

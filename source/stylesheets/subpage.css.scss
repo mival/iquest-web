@@ -9,14 +9,20 @@ $subpage-margin-lg: 60px;
   width: 2px;
 }
 
+.webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru .subpage-header {
+  h1 {
+    font-size: 2.5vw;
+  }
+  h2 {
+    font-size: 1.6vw;
+  }
+}
+
 .subpage {
     overflow: hidden;
-    .back-fixed {
-      top: 0;
-    }
   }
 
-.subpage-buttons-container {
+.more-information__buttons {
   .button {
     text-transform: uppercase;
     background: linear-gradient(90deg, var(--blue), var(--green));
@@ -37,7 +43,7 @@ $subpage-margin-lg: 60px;
   }
 }
   
-.subpage-header {
+.subpage-header, .what-we-do__header {
     height: calc(100vh - #{var(--space-for-navbar)});
     margin-top: var(--space-for-navbar);
     overflow-x: hidden;
@@ -48,70 +54,70 @@ $subpage-margin-lg: 60px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .header-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 35vw;
-        padding-top: 50px;
-        margin-left: $subpage-margin-lg;
-        z-index: 2;
-      }
-      .subpage-buttons-container {
-        margin-left: $subpage-margin-lg;
-        margin-bottom: 25px;
-        z-index: 2;
-        position: absolute;
-        width: 35vw;
-        min-width: 580px;
-        bottom: 0;
+    }
+    .header-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 50px;
+      margin-left: $subpage-margin-lg;
+      z-index: 2;
+    }
+    .container-i-want-to-know-more {
+      margin-left: $subpage-margin-lg;
+      margin-bottom: 25px;
+      z-index: 2;
+      position: absolute;
+      width: 35vw;
+      min-width: 580px;
+      bottom: 0;
 
-        .i-want-to-know-more {
-          vertical-align: middle;
-          padding-left: 50px;
-          display: inline-block;
-          cursor: pointer;
-          font-size: 20px;
-          color: #000;
-          text-decoration: none;
-          position: relative;
-          height: 34px;
-          line-height: 34px;
-        }
-        
-        .i-want-to-know-more:before,
-        .i-want-to-know-more:after {
-          content: "";
-          width: 35px;
-          height: 34px;
-          position: absolute;
-          left: 0;
-          top: 0;
-          background-repeat: no-repeat;
-          transition: opacity 0.2s linear;
-        }
-        .i-want-to-know-more:before {
-          opacity: 1;
-          background-image: url(../images/icon-view-more.png);
-        }
-        .i-want-to-know-more:after {
-          opacity: 0;
-          background-image: url(../images/icon-view-more-hover.png);
-        }
-        .i-want-to-know-more:hover:before,
-        .i-want-to-know-more:active:before,
-        .i-want-to-know-more:focus:before {
-          opacity: 0;
-        }
-        .i-want-to-know-more:hover:after,
-        .i-want-to-know-more:active:after,
-        .i-want-to-know-more:focus:after {
-          opacity: 1;
-        }
-        .i-want-to-know-more span {
-          vertical-align: middle;
-          transition: transform 0.2s linear;
-        }
+      .i-want-to-know-more {
+        vertical-align: middle;
+        padding-left: 50px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        height: 34px;
+        line-height: 34px;
+        text-transform: uppercase;
+      }
+      
+      .i-want-to-know-more:before,
+      .i-want-to-know-more:after {
+        content: "";
+        width: 35px;
+        height: 34px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        transition: opacity 0.2s linear;
+      }
+      .i-want-to-know-more:before {
+        opacity: 1;
+        background-image: url(../images/icon-view-more.png);
+      }
+      .i-want-to-know-more:after {
+        opacity: 0;
+        background-image: url(../images/icon-view-more-hover.png);
+      }
+      .i-want-to-know-more:hover:before,
+      .i-want-to-know-more:active:before,
+      .i-want-to-know-more:focus:before {
+        opacity: 0;
+      }
+      .i-want-to-know-more:hover:after,
+      .i-want-to-know-more:active:after,
+      .i-want-to-know-more:focus:after {
+        opacity: 1;
+      }
+      .i-want-to-know-more span {
+        vertical-align: middle;
+        transition: transform 0.2s linear;
       }
     }
     .intro-image-container {
@@ -164,6 +170,15 @@ $subpage-margin-lg: 60px;
           }
       }
     }
+}
+
+
+.subpage-header .header-text {
+  width: 35vw;
+}
+
+.what-we-do__header .header-text {
+  width: 75vw;
 }
   
 .subpage-points {

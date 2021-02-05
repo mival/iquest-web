@@ -99,6 +99,15 @@
     font-size: 1.15vw
   }
 
+  .what-we-do .info-container {
+    &::before {
+      height: 50vh;
+    }
+    &::after {
+      height: 40vh;
+    }
+  }
+
   // subpage
 
   .subpage-points{ 
@@ -169,7 +178,7 @@
 
   //subpage
 
-  .subpage-buttons-container .button {
+  .more-information__buttons .button {
     padding: 9px 18px;
   }
   .subpage-points {
@@ -285,30 +294,30 @@
 
   //subpage
 
-  .subpage-header {
-    .intro-text-container {
-      .subpage-buttons-container {
-        font-size: 0.9rem;
-        .button:not(:last-child) {
-          margin-right: 10px;
-        }
-        .button {
-          padding: 7px 12px;
-        }
-        .i-want-to-know-more {
-          padding-left: 40px;
-          font-size: 1.1rem;
-          &:before, &:after {
-            background-size: 1.8rem;
-            background-position: center;
-          }
+  .webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru .subpage-header .header-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .subpage-header, .what-we-do__header {
+    .container-i-want-to-know-more {
+      .button:not(:last-child) {
+        margin-right: 10px;
+      }
+      .button {
+        padding: 7px 12px;
+      }
+      .i-want-to-know-more {
+        padding-left: 40px;
+        font-size: 1.1rem;
+        &:before, &:after {
+          background-size: 1.8rem;
+          background-position: center;
         }
       }
-    
-      .header-text {
-        h2 {
-          font-size: 2rem;
-        }
+    }
+    .header-text {
+      h2 {
+        font-size: 2rem;
       }
     }
   }
@@ -438,31 +447,31 @@
   }
 
   .what-we-do {
-    & > .title {
-      padding: 70px var(--space-sm) 0px;
-      text-align: center;
-    }
     .back-fixed {
       left: var(--space-sm)
     }
     .info-container {
-      padding: 6rem 0;
-      margin: 6rem 0;
+      padding: 0;
+      margin: 6rem 0 0;
       .what-is h2 {
         text-align: center;
       }
       .info h2 {
         text-align: start;
       }
-      .info-container--skew-restore {
-        padding: 0 var(--space-sm);
-      }
-      &:before {
-        height: 7.5vh;
-      }
       &:after {
-        height: 7.5vh;
-        bottom: -8vh;
+        bottom: -12vh;
+      }
+      .info-container__content {
+        padding: 0 var(--space-sm);
+        &:before {
+          height: 9vh;
+          bottom: -11.5vh;
+        }
+        &:after {
+          height: 9vh;
+          bottom: -22vh;
+        }
       }
     }
     .info .box {
@@ -479,27 +488,30 @@
         }
       }
     }
+    .tags {
+      padding-top: 25vh;
+    }
   }
 
   //subpage
 
-  .subpage-header {
+  .subpage-header, .what-we-do__header {
+    .container-i-want-to-know-more {
+      margin-left: 20px;
+    }
     .intro-text-container {
-      .subpage-buttons-container {
-        margin-left: 20px;
-      }
       width: 100% !important;
       .back-fixed {
         left: 20px;
       }
-      .header-text {
-        margin-left: 20px;
-        h1 {
-          font-size: 1.8rem;
-        }
-        h2 {
-          font-size: 1.5rem;
-        }
+    }
+    .header-text {
+      margin-left: 20px;
+     h1 {
+       font-size: 2rem;
+     }
+      h2 {
+        font-size: 1.7rem;
       }
     }
       .intro-image-container {
@@ -571,15 +583,15 @@
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .social-icons {
     padding-bottom: 25px !important;
@@ -1257,10 +1269,8 @@
   }
 
   .what-we-do {
-    & > .title {
-      margin-top: 12%;
-    }
     .info-container {
+      margin-top: 10rem;
       .contact-button {
         padding: 0 25px;
         letter-spacing: 2px;
@@ -1289,49 +1299,50 @@
 
 
   //subpage 
-  .subpage-header {
+  .subpage-header, .what-we-do__header {
     margin-top: var(--space-for-navbar) / 2;
     height: auto;
+    margin-top: 4vh;
     .intro-text-container {
       width: 100% !important;
       height: auto;
       .back-fixed {
         left: 10px;
       }
-      .header-text {
-        position: relative;
-        padding: 120px 20px 0 20px;
-        box-sizing: border-box;
-        text-align: center;
-        left: 0;
-        height: auto;
-        margin-bottom: 26px;
-        margin-left: 0;
-        width: 100%;
+    }
+    .header-text {
+      position: relative;
+      padding: 120px 20px 0 20px;
+      box-sizing: border-box;
+      text-align: center;
+      left: 0;
+      height: auto;
+      margin-bottom: 26px;
+      margin-left: 0;
+      width: 100%;
+    }
+    .container-i-want-to-know-more {
+      display: flex;
+      width: 100%;
+      min-width: unset;
+      margin-left: 0;
+      flex-direction: column;
+      position: relative;
+      left: 0;
+      font-size: 0.9rem;
+      .button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
       }
-      .subpage-buttons-container {
-        display: flex;
-        width: 100%;
-        min-width: unset;
-        margin-left: 0;
-        flex-direction: column;
-        position: relative;
-        left: 0;
-        font-size: 0.9rem;
-        .button:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 15px;
-        }
-        .button {
-          padding: 11px 29px;
-        }
-        .i-want-to-know-more {
-          padding-left: 40px;
-          font-size: 1.1rem;
-          &:before {
-            background-size: 1.8rem;
-            background-position: center;
-          }
+      .button {
+        padding: 11px 29px;
+      }
+      .i-want-to-know-more {
+        padding-left: 40px;
+        font-size: 1.1rem;
+        &:before {
+          background-size: 1.8rem;
+          background-position: center;
         }
       }
     }
@@ -1371,7 +1382,7 @@
   }
   .subpage-more-information {
     padding: 67% 0 20%;
-    .subpage-buttons-container {
+    .container-i-want-to-know-more {
       .button:not(:last-child) {
         margin-right: 2px;
       }
@@ -1398,7 +1409,6 @@
 }
 
 @media screen and (max-height: 700px) and (min-width: 768px) {
-
 
   #opening > .title {
     height: 70vh;
@@ -1429,6 +1439,14 @@
         max-width: 64px !important;
         max-height: 64px !important;
       }
+  }
+  .webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru .subpage-header {
+    h1 {
+      font-size: 4.5vh; 
+    }
+    h2 {
+      font-size: 3vh;
+    }
   }
 }
 
@@ -1463,7 +1481,7 @@
 @media screen and (max-width: 580px) {
 
   h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   h2 {
@@ -1569,18 +1587,6 @@
     }
   }
 
-  .what-we-do {
-    .info-container {
-      &:before {
-        height: 7.5vh;
-      }
-      &:after {
-        height: 7.5vh;
-        bottom: -8vh;
-      }
-    }
-  }
-
   //subpage 
   .subpage-reference {
     margin-bottom: -3px;
@@ -1598,7 +1604,7 @@
       top: 13%;
       height: 90px;
     }
-    .subpage-buttons-container {
+    .more-information__buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
