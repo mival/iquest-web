@@ -219,7 +219,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
-  munuOpenEl.addEventListener("click", function openMenu() {
+  munuOpenEl.addEventListener("click", function openMenu(enent) {
+    event.preventDefault();
     const menuCloseElement = document.querySelector("#menu-close");
     const overlayEl = document.getElementById("overlay");
     bodyEl.style.overflow = "hidden";

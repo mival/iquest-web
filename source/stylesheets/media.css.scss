@@ -324,15 +324,6 @@
     }
   }
 
-
-  .info.icons .container {
-    padding-top: 20vh;
-  }
-
-  .wavy-background {
-    height: 105%;
-  }
-
   .what-we-do {
     .info .box {
       &.left img {
@@ -411,10 +402,6 @@
     font-size: 1.7vw
   }
 
-  .info.icons .container {
-    padding-top: 25%;
-  }
-
   .info.icons .container .box {
     font-size: 15px
   }
@@ -458,11 +445,9 @@
         padding: 0 var(--space-sm);
         &:before {
           height: 9vh;
-          bottom: -11.5vh;
         }
         &:after {
           height: 9vh;
-          bottom: -22vh;
         }
       }
     }
@@ -760,11 +745,6 @@
 
   #opening .reference .circles-box .circle:nth-child(even) {
     top: 0
-  }
-
-  .wavy-background {
-    top: 30%;
-    height: 70%;
   }
   
   #more_than_10_years {
@@ -1388,18 +1368,6 @@
   }
 }
 
-@media screen and (max-height: 870px) {
-  .info.icons .container {
-    padding-top: 14%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .info.icons .container {
-    padding-top: 10%;
-  } 
-}
-
 @media screen and (max-height: 700px) and (min-width: 768px) {
 
   #opening > .title {
@@ -1408,14 +1376,13 @@
 
   .main-container {
     height: 30vh;
-    .wavy-background {
-      top: 8%;
-      height: 225%;
-    }
   }
-  .info.icons .container {
-    padding-top: 5%;
+
+  .wavy-background {
+    top: 10%;
+    height: 90%;
   }
+
   .info .icons-container {
       a.box {
         flex-direction: row !important;
@@ -1490,12 +1457,11 @@
   .main-container {
     height: auto;
     margin-top: 4rem;
-    opacity: .9;
     overflow: hidden;
     .wavy-background {
-      width: 200%;
-      top: 0%;
-      height: 100%;
+      width: 350%;
+      top: -30%;
+      height: 130%;
     }
   }
   .info.icons .container {
