@@ -2864,6 +2864,7 @@ body.posa .page-scroll-show .header {
 .what-we-do .info-container__content {
   &:before {
     @include dots;
+    display: none;
     height: 15vh;
     bottom: -22vh;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAG0lEQVR42mL6DwVMDFDAAsSMIAZcZEAYAAEGAKyECB6X8Cx+AAAAAElFTkSuQmCC);
@@ -2871,6 +2872,7 @@ body.posa .page-scroll-show .header {
   &:after {
     @include dots;
     height: 15vh;
+    display: none;
     bottom: -38vh;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAH0lEQVR42mLx9I/+zwAETAxQwPj/P1gAITIgDIAAAwC9QwUTYvKcrwAAAABJRU5ErkJggg==);
   }
