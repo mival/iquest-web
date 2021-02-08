@@ -559,6 +559,7 @@ body {
     left: 0;
     margin-top: -9px;
     position: absolute;
+    transition: all 0.6s;
     right: 0;
     top: 50%;
   }
@@ -586,7 +587,6 @@ body {
         }
       }
       .text {
-        transition: inherit;
         top: 60%;
       }
     }
@@ -2857,11 +2857,12 @@ body.posa .page-scroll-show .header {
     left: 0;
     background-color: var(--middle-gray);
     width: 100%;
-    background: linear-gradient(10deg, rgba(255,255,255,1) 50.1%, var(--middle-gray) 50%);
+    background: linear-gradient(10deg, rgba(255,255,255,1) 50%, var(--middle-gray) 50.2%);
   }
 }
 
 .what-we-do .info-container__content {
+  overflow: hidden;
   &:before {
     @include dots;
     display: none;
@@ -3420,189 +3421,37 @@ body.posa .page-scroll-show .header {
   line-height: 150%;
   padding: 20px 0;
   width: 100%;
-
-  .fa-stack-1x {
-    color: $dark-gray !important;
-  }
-
-  .fa-github {
-    color: $dark-gray !important;
-  }
-
-  .fa-stack-2x {
-    color: #d5eaf8;
-  }
-
-  .center {
-    text-align: center;
-    padding-bottom: 0px !important;
-  }
-
-  .services {
-    color: #d5eaf8 !important;
-    font-size: 0.9em;
-    margin-bottom: -33px;
-    padding-top: 33px !important;
-
-    ul {
-      font-size: 0.9em;
-    }
-
-    .title {
-      border-bottom: 1px solid #d5eaf8;
-      display: inline-block;
-      padding-bottom: 2px;
-    }
-  }
-
-  .contact-mail {
-    color: #d5eaf8 !important;
-    font-size: 0.9em !important;
-    margin-bottom: -33px;
-    padding-top: 33px !important;
-
-    .title {
-      border-bottom: 1px solid #d5eaf8;
-      display: inline-block;
-      padding-bottom: 2px;
-    }
-
-    .inner form .form-group {
-      clear: both;
-      margin-bottom: 5px;
-      padding-top: 10px;
-    }
-
-    .inner form .form-group label {
-      float: left;
-      width: 11%;
-    }
-
-    .inner form .form-group input {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      padding: 5px;
-      width: 60%;
-    }
-
-    .inner form .form-group textarea {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      min-height: 60px;
-      padding: 5px;
-      width: 60%;
-    }
-
-    .inner form button[type="submit"] {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      margin: 5px 0 0 11%;
-      padding: 5px 15px;
-    }
-  }
-
-  .social-icons {
-    padding-bottom: 25px !important;
-  }
-
-  .contact {
-    color: #d5eaf8;
-    font-size: 1.5em;
-    letter-spacing: 3px;
-    padding-bottom: 0px;
-
-    td {
-      padding: 10px 10px 5px 0px;
-    }
-  }
-
   .container {
       box-sizing: border-box;
       padding: 0 25px;
       margin: auto;
-
       .inner {
         p {
           margin: 5px 0;
+          a:hover {
+            color: white;
+          }
         }
-      }
-
-      .inner ul {
-        margin-bottom: 0;
-        padding-left: 15px;
-      }
-
-      .inner ul li {
-        font-size: 13px;
-        line-height: 155%;
-      }
-
-      .inner .fa-phone,
-      .inner .fa-envelope {
-        margin-left: -2px;
-        text-align: center;
-        width: 17px;
-      }
-
-      .inner form .form-group {
-        clear: both;
-        margin-bottom: 16px;
-      }
-
-      .inner form .form-group label {
-        float: left;
-        width: 25%;
-      }
-
-      .inner form .form-group input {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        padding: 5px;
-        width: 60%;
-      }
-
-      .inner form .form-group textarea {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        max-width: 60%;
-        min-height: 80px;
-        min-width: 60%;
-        padding: 5px;
-        width: 60%;
-      }
-
-      .inner form button[type="submit"] {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: $border-radius;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        margin: 5px 0 0 25%;
-        padding: 5px 15px;
+        ul {
+          margin-bottom: 0;
+          padding-left: 15px;
+          li {
+            font-size: 13px;
+            line-height: 155%;
+          }
+        }
+        .fa-phone,
+        .fa-envelope {
+         margin-left: -2px;
+         text-align: center;
+         width: 17px;
+       }
       }
   }
 }
 
 .fas {
   text-align: right;
-}
-
-.copyright {
-  background-color: #d5eaf8 !important;
-  color: $dark-gray;
-  font-size: 1.1em;
-  font-weight: 900;
-  margin: 30px -20px -20px;
-  padding: 15px;
-}
-
-.fv-center {
-  top: 50%;
 }
 
 [class*="not-only-money"] > .page-offset > .title,
@@ -3708,37 +3557,6 @@ body.posa .page-scroll-show .header {
 
 .c-phone {
   text-decoration: none !important;
-}
-
-.contact-form {
-  .error {
-    border-color: red !important;
-    outline-color: red;
-    position: relative;
-  }
-
-  label {
-    line-height: 15px;
-  }
-
-  label.error,
-  span.error {
-    color: #ffb9b9;
-    display: block !important;
-    font-size: 12px;
-    height: 0;
-    line-height: 18px !important;
-    margin-bottom: 4px;
-    opacity: 0;
-    text-align: right;
-    transition: 1s;
-    width: 85% !important;
-
-    &.show {
-      height: 21px;
-      opacity: 1;
-    }
-  }
 }
 
 .c-facebook:hover {
@@ -4334,6 +4152,18 @@ a.contact-us.inline {
 }
 
 .iquest-way {
+  .logo-content:first-child {
+    height: inherit;
+    .info {
+      height: 37%;
+    }
+    .logo-circles {
+      height: 38%;
+    }
+    .iqw-nav {
+      height: 25%;
+    }
+  }
   a.contact-bubble {
     position: fixed;
     z-index: 10;
@@ -4369,16 +4199,9 @@ a.contact-us.inline {
   }
   .logo-content {
     .info {
-      height: 37%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-    }
-    .logo-circles {
-      height: 38%;
-    }
-    .iqw-nav {
-      height: 25%;
     }
   }
 }
@@ -4638,11 +4461,8 @@ a.contact-us.inline {
             height: 100%;
             flex-direction: column;
             justify-content: space-between;
-
-            &#contact_form_kozultace_zdarma {
-              button[type="submit"] {
-                margin-top: 32px;
-              }
+            span.error {
+              color: darkred;
             }
           }
 
@@ -4695,7 +4515,6 @@ a.contact-us.inline {
   }
 }
 
-// TODO:  check if works
 form {
   input,
   textarea {
@@ -4715,8 +4534,7 @@ form {
   }
 
   span.error {
-    color: red !important;
-    width: 100% !important;
+    color: red;
 
     &.show {
       height: 6px;
