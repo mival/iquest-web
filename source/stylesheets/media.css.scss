@@ -1433,6 +1433,13 @@
     font-size: 1.3rem;
   }
 
+  #menu {
+    max-width: 100vw;
+    ul a li {
+      margin-left: 20px;
+   }
+  }
+
   .main-container {
     height: auto;
     margin-top: 4rem;

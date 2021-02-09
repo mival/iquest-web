@@ -186,6 +186,7 @@ $subpage-margin-lg: 60px;
     .subpage-numbers {
       color: white;
       list-style: none;
+      z-index: -1;
       width: 70%;
       margin: auto;
       li {
