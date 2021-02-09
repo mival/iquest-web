@@ -35,10 +35,10 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   p,
   ul {
@@ -266,12 +266,6 @@
 
   //subpage
 
-  .webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru, .mobilni-aplikace-nove-generace {
-    .subpage-header .header-text h2 {
-      font-size: 1.5rem;
-    }
-  }
-
   .subpage-header, .what-we-do__header {
     .container-i-want-to-know-more {
       .button:not(:last-child) {
@@ -287,11 +281,6 @@
           background-size: 1.8rem;
           background-position: center;
         }
-      }
-    }
-    .header-text {
-      h2 {
-        font-size: 2rem;
       }
     }
   }
@@ -472,11 +461,11 @@
     }
     .header-text {
       margin-left: 20px;
-     h1 {
-       font-size: 2rem;
-     }
+      h1 {
+        font-size: 2.4rem;
+      }
       h2 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
       }
     }
       .intro-image-container {
@@ -680,9 +669,8 @@
   }
 
   #opening>.title .title1 {
-    font-family: Raleway-Light;
+    font-weight: 300;
     font-size: 37px !important;
-    font-weight: 700;
     margin-bottom: 15px
   }
 
@@ -772,7 +760,7 @@
   }
 
   .page .logo-content .info h4 {
-    font-family: Raleway-light;
+    font-weight: 300;
     font-weight: normal;
     opacity: 0.7;
     padding: 0 15px;
@@ -866,7 +854,7 @@
   [class*='why-iquest'] .content .pillar h2,
   [class*='proc-iquest'] .content .pillar h2 {
     margin: 0;
-    font-family: Raleway-light
+    font-weight: 300;
   }
 
   [class*='why-iquest'] .content .pillar p,
@@ -883,7 +871,7 @@
 
   [class*='why-iquest'] .content .pillar.active h2,
   [class*='proc-iquest'] .content .pillar.active h2 {
-    font-family: Raleway-medium
+    font-weight: 500;
   }
 
   .scroll-left,
@@ -891,7 +879,6 @@
   .mobile-hide {
     display: none
   }
-
   #large_applications {
     top: 0;
     left: 0
@@ -1042,9 +1029,9 @@
     .h1-volne {
       margin: 0 15px 20px;
       text-align: left;
-      font-family: Raleway-Light;
+      font-weight: 300;
       font-size: 37px;
-      font-weight: bold;
+          font-weight: 600;
       line-height: 115%;
     }
 
@@ -1094,14 +1081,14 @@
       color: #1e1e1e;
       margin: 0 15px 20px;
       text-align: left;
-      font-family: Raleway-Light;
+      font-weight: 300;
       font-size: 37px !important;
-      font-weight: bold;
+          font-weight: 600;
       line-height: 115%;
     }
 
     .developers-h2 {
-      font-family: Raleway-Light;
+      font-weight: 300;
       font-size: 2em !important;
       padding: 0 15px;
       color: #008780;

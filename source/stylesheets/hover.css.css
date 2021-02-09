@@ -3480,7 +3480,7 @@
   position: absolute;
   left: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.1s;
@@ -3521,7 +3521,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.1s;
@@ -3589,7 +3589,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -3652,7 +3652,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -3686,7 +3686,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
   -webkit-transition-property: transform;
@@ -3755,7 +3755,7 @@
   right: 1em;
   opacity: 1;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -3798,7 +3798,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.5s;
@@ -3854,7 +3854,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
 }
 
 .hvr-icon-float-away:after {
@@ -3915,7 +3915,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -3957,7 +3957,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -3998,7 +3998,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4059,7 +4059,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -4111,7 +4111,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -4165,7 +4165,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -4221,7 +4221,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4282,7 +4282,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4329,7 +4329,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4372,7 +4372,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4413,7 +4413,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4454,7 +4454,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4495,7 +4495,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -4580,7 +4580,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -4668,7 +4668,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -4766,7 +4766,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -4858,7 +4858,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -4918,7 +4918,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -5042,7 +5042,7 @@
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }

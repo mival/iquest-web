@@ -9,20 +9,9 @@ $subpage-margin-lg: 60px;
   width: 2px;
 }
 
-.webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru, .mobilni-aplikace-nove-generace {
-  .subpage-header {
-    h1 {
-      font-size: 2.5vw;
-    }
-    h2 {
-      font-size: 1.6vw;
-    }
-  }
-}
-
 .subpage {
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
 
 .more-information__buttons {
   .button {
@@ -48,7 +37,6 @@ $subpage-margin-lg: 60px;
 .subpage-header, .what-we-do__header {
     height: calc(100vh - #{var(--space-for-navbar)});
     margin-top: var(--space-for-navbar);
-    overflow-x: hidden;
     z-index: 3;
     position: relative;
     .intro-text-container {
@@ -61,9 +49,14 @@ $subpage-margin-lg: 60px;
       position: absolute;
       top: 0;
       left: 0;
-      padding-top: 50px;
       margin-left: $subpage-margin-lg;
       z-index: 2;
+      h1 {
+        font-size: 3.8vw;
+      }
+      h2 {
+        font-size: 1.5vw;
+      }
     }
     .container-i-want-to-know-more {
       margin-left: $subpage-margin-lg;
@@ -176,7 +169,7 @@ $subpage-margin-lg: 60px;
 
 
 .subpage-header .header-text {
-  width: 35vw;
+  width: 40vw;
 }
 
 .what-we-do__header .header-text {

@@ -194,7 +194,7 @@
 }
 
 .subpage-points .subpage-numbers li .numbers div p {
-  font-family: Raleway-Light;
+  font-weight: 300;
 }
 
 .subpage-points .subpage-numbers li:not(:first-child) {

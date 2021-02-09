@@ -597,7 +597,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bold;
+      font-weight: 600;
 }
 
 /*
@@ -7374,7 +7374,7 @@ table {
   position: absolute;
   left: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.1s;
@@ -7415,7 +7415,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.1s;
@@ -7483,7 +7483,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -7546,7 +7546,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -7580,7 +7580,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
   -webkit-transition-property: transform;
@@ -7649,7 +7649,7 @@ table {
   right: 1em;
   opacity: 1;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -7692,7 +7692,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.5s;
@@ -7748,7 +7748,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
 }
 
 .hvr-icon-float-away:after {
@@ -7809,7 +7809,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -7851,7 +7851,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -7892,7 +7892,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -7953,7 +7953,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -8005,7 +8005,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -8059,7 +8059,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-timing-function: ease-out;
@@ -8115,7 +8115,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8176,7 +8176,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8223,7 +8223,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8266,7 +8266,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8307,7 +8307,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8348,7 +8348,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8389,7 +8389,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-duration: 0.3s;
@@ -8474,7 +8474,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -8562,7 +8562,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -8660,7 +8660,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -8752,7 +8752,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -8812,7 +8812,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -8936,7 +8936,7 @@ table {
   position: absolute;
   right: 1em;
   padding: 0 1px;
-  font-family: FontAwesome;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -9184,7 +9184,7 @@ html.remodal-is-locked body .navigation .navbar {
   font-size: 24px;
   text-align: center;
   margin-bottom: 24px;
-  font-family: 'Raleway-medium';
+  font-weight: 500;
 }
 
 .remodal p a {
@@ -9212,7 +9212,7 @@ html.remodal-is-locked body .navigation .navbar {
 }
 
 .remodal strong {
-  font-family: 'Raleway-medium';
+  font-weight: 500;
 }
 
 .remodal .contact-bubble {
@@ -9772,7 +9772,7 @@ html.remodal-is-locked body .navigation .navbar {
 }
 
 .subpage-points .subpage-numbers li .numbers div p {
-  font-family: Raleway-Light;
+  font-weight: 300;
 }
 
 .subpage-points .subpage-numbers li:not(:first-child) {
@@ -10027,13 +10027,13 @@ html.remodal-is-locked body .navigation .navbar {
 }
 
 @font-face {
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-display: swap;
   src: url(../fonts/Raleway-Medium.ttf);
 }
 
 @font-face {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-display: swap;
   src: url(../fonts/Raleway-Light.ttf);
 }
@@ -10266,7 +10266,7 @@ html.remodal-is-locked body .navigation .navbar {
 
 .font-medium,
 b {
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-weight: normal;
 }
 
@@ -10323,8 +10323,8 @@ a {
 h1,
 h2,
 h3 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
+  
   line-height: 120%;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -10333,7 +10333,7 @@ h3 {
 h1 b,
 h2 b,
 h3 b {
-  font-weight: lighter;
+  
 }
 
 h1 {
@@ -10361,7 +10361,7 @@ ul {
 
 body {
   color: #1e1e1e;
-  font-family: Raleway-Medium, sans-serif;
+  font-weight: 500;, sans-serif;
   font-weight: 100;
   margin: 0;
   position: relative;
@@ -10931,7 +10931,7 @@ body {
   padding: 0;
   list-style: none;
   text-align: center;
-  font-weight: bold;
+      font-weight: 600;
 }
 
 .we-are-the-champions ul li {
@@ -10997,7 +10997,7 @@ body {
 
 #opening > .title,
 #more_than_10_years > .title {
-  font-family: Raleway-light;
+  font-weight: 300;
   width: 100%;
 }
 
@@ -11031,8 +11031,8 @@ body {
 
 #opening > .title .title1,
 #opening > .title .title2 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
+  
   line-height: 115%;
 }
 
@@ -11098,7 +11098,7 @@ body {
 
 .info.icons .container .box {
   font-size: 19px;
-  font-weight: lighter;
+  
   float: left;
   line-height: 130%;
   position: relative;
@@ -11408,7 +11408,7 @@ body {
 #more_than_10_years .title .title1 {
   color: white;
   font-size: 4vw;
-  font-weight: lighter;
+  
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -11466,8 +11466,8 @@ body {
 }
 
 .page .logo-content .info h2 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
+  
   opacity: 0.8;
   margin: 10px 0;
 }
@@ -11554,12 +11554,12 @@ body {
 
 .page .logo-content .iqw-nav .initial .text {
   font-size: 1vw;
-  font-family: Raleway-Medium;
+  font-weight: 500;
 }
 
 #iquest_logo .logo-content .text {
   font-size: 1.5vw;
-  font-family: Raleway-Medium;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -12173,7 +12173,6 @@ body {
   background: black;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  font: normal 20px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
   line-height: 1.4;
   padding: 10px 15px;
@@ -12181,7 +12180,6 @@ body {
 
 .img-maps > .add-img span {
   color: white;
-  font: normal 24px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
   font-size: 20px;
   line-height: 1;
@@ -12193,7 +12191,6 @@ body {
 
 .img-maps > p span {
   color: white;
-  font: normal 24px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
 }
 
@@ -12238,7 +12235,7 @@ body {
 }
 
 [class*="contact"] .box table tr td:first-child {
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-size: 15px;
   text-align: right;
   width: 100px;
@@ -12888,12 +12885,12 @@ body.posa .page-scroll-show .header {
 }
 
 .what-we-do > .title h1 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 55px;
 }
 
 .what-we-do > .title h2 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 35px;
   line-height: 140%;
 }
@@ -13065,20 +13062,20 @@ body.posa .page-scroll-show .header {
 }
 
 .h1-volne {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 4em;
   text-align: right;
 }
 
 .volne-dev-h1 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 2.5em;
   margin-top: 40px;
 }
 
 .volne-text-p {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 600;
 }
 
@@ -13173,32 +13170,32 @@ body.posa .page-scroll-show .header {
 
 .developers-h1 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 50px !important;
   text-align: center;
 }
 
 .developers-p {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 22px !important;
   font-weight: 500;
 }
 
 .developers-p2 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 500;
   margin: 25px 0px;
 }
 
 .developers-h2 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 40px !important;
   font-weight: 500;
 }
 
 .developers-list {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 18px !important;
 }
 
@@ -13837,14 +13834,14 @@ body.posa .page-scroll-show .header {
 
 [class*="not-only-money"] > .page-offset > .title h1,
 .success > .page-offset > .title h1 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 55px;
   margin-top: 100px;
 }
 
 [class*="not-only-money"] > .page-offset > .title h2,
 .success > .page-offset > .title h2 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 35px;
   line-height: 140%;
   margin-top: 35px;
@@ -13887,7 +13884,7 @@ body.posa .page-scroll-show .header {
 }
 
 [class*="not-only-money"] .box .text h3 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 42px;
   line-height: 140%;
   margin-bottom: 50px;
@@ -14157,7 +14154,7 @@ body.posa .page-scroll-show .header {
 
 .mobilni-aplikace-nove-generace .icons .text {
   color: black;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 30px;
   font-weight: 500;
   margin-top: 8px;
@@ -14506,7 +14503,7 @@ a.contact-us.inline {
 
 .icons-container .text {
   color: white;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 600;
   margin-top: 8px;
 }
@@ -15060,7 +15057,7 @@ a.contact-us.inline {
 .map-marker-label {
   position: absolute;
   font-size: 14px;
-  font-weight: lighter;
+  
 }
 
 .nav-back {

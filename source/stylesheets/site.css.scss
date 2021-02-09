@@ -87,24 +87,6 @@ $space-lg: 60px;
 @import "subpage.css";
 @import "pf2018.css";
 
-@font-face {
-  font-family: Raleway-Medium;
-  font-display: swap;
-  src: url(../fonts/Raleway-Medium.ttf);
-}
-
-@font-face {
-  font-family: Raleway-Light;
-  font-display: swap;
-  src: url(../fonts/Raleway-Light.ttf);
-}
-
-@font-face {
-  font-family: Raleway-Thin;
-  font-display: swap;
-  src: url(../fonts/Raleway-Thin.ttf);
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -182,11 +164,12 @@ $space-lg: 60px;
 
 .text-yellow {
   color: $yellow-dark;
+  font-weight: 500;
 }
 
 .text-orange {
   color: $bright-orange;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .text-blue {
@@ -303,7 +286,7 @@ $space-lg: 60px;
 }
 
 .font-medium {
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-weight: normal;
 }
 
@@ -356,8 +339,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
   line-height: 120%;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -367,6 +349,7 @@ h4 {
   line-height: 120%;
   margin-bottom: 15px;
   margin-top: 15px;
+  font-weight: 500;
 }
 
 h1 b,
@@ -384,15 +367,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 p,
@@ -408,8 +391,6 @@ ul {
 
 body {
   color: #1e1e1e;
-  font-family: Raleway-Medium, sans-serif;
-  font-weight: 100;
   margin: 0;
   position: relative;
 }
@@ -518,7 +499,7 @@ body {
     align-items: center;
     border-radius: 50%;
     color: white;
-    font-weight: bold;
+        font-weight: 600;
     display: flex;
     font-size: 16px;
     height: 7vw;
@@ -905,6 +886,7 @@ body {
   margin-top: 15px;
   margin-right: 12px;
   padding: 9px 21px;
+  font-weight: 500;
   i {
     margin-right: 0.7rem;
     font-size: 2rem;
@@ -994,13 +976,14 @@ body {
 
 #opening > .title,
 #more_than_10_years > .title {
-  font-family: Raleway-light;
+  font-weight: 300;
   width: 100%;
 }
 
 #opening address {
   font-size: 21px;
   font-style: normal;
+  font-weight: 500;
   width: 100%;
   position: absolute;
   padding-top: 15px;
@@ -1029,8 +1012,8 @@ body {
 
 #opening > .title .title1,
 #opening > .title .title2 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
+  
   line-height: 115%;
 }
 
@@ -1077,7 +1060,7 @@ body {
 }
 
 .info.icons .container .box {
-  font-weight: lighter;
+  
   float: left;
   line-height: 130%;
   position: relative;
@@ -1376,7 +1359,7 @@ body {
 #more_than_10_years .title .title1 {
   color: white;
   font-size: 4vw;
-  font-weight: lighter;
+  
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1431,12 +1414,12 @@ body {
 .page .logo-content .info h3 {
   color: $cerculean;
   margin: 0 0 10px;
-  font-weight: bold;
+      font-weight: 600;
 }
 
 .page .logo-content .info h4 {
-  font-family: Raleway-Light;
-  font-weight: lighter;
+  font-weight: 300;
+  
   opacity: 0.8;
   margin: 10px 0;
 }
@@ -1524,12 +1507,12 @@ body {
 
 .page .logo-content .iqw-nav .initial .text {
   font-size: 1vw;
-  font-family: Raleway-Medium;
+  font-weight: 500;
 }
 
 #iquest_logo .logo-content .text {
   font-size: 1.5vw;
-  font-family: Raleway-Medium;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -2140,7 +2123,6 @@ body {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  font: normal 20px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
   line-height: 1.4;
   padding: 10px 15px;
@@ -2148,7 +2130,6 @@ body {
 
 .img-maps > .add-img span {
   color: white;
-  font: normal 24px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
   font-size: 20px;
   line-height: 1;
@@ -2160,7 +2141,6 @@ body {
 
 .img-maps > p span {
   color: white;
-  font: normal 24px/45px Raleway-Light, Sans-Serif;
   letter-spacing: -1px;
 }
 
@@ -2202,12 +2182,12 @@ body {
 [class*="contact"] .box table tr td {
   line-height: 135%;
   padding: 5px 8px;
-  font-family: Raleway-light;
+  font-weight: 300;
   vertical-align: top;
 }
 
 [class*="contact"] .box table tr td:first-child {
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-weight: 600;
   font-size: 15px;
   text-align: right;
@@ -2243,7 +2223,7 @@ body {
       background-color: $bright-orange;
       color: white;
       padding: 9px 15px;
-      font-weight: bold;
+          font-weight: 600;
       margin: 5px 0 0 25%;
       white-space: nowrap;
 
@@ -2935,7 +2915,6 @@ body.posa .page-scroll-show .header {
   ul li, p {
     font-size: 1.3rem;
     line-height: 175%;
-    font-family:Raleway-light, sans-serif;
   }
 }
 
@@ -2961,20 +2940,20 @@ body.posa .page-scroll-show .header {
 }
 
 .h1-volne {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 4em;
   text-align: right;
 }
 
 .volne-dev-h1 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 2.5em;
   margin-top: 40px;
 }
 
 .volne-text-p {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 600;
 }
 
@@ -3077,32 +3056,32 @@ body.posa .page-scroll-show .header {
 
 .developers-h1 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 50px !important;
   text-align: center;
 }
 
 .developers-p {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 22px !important;
   font-weight: 500;
 }
 
 .developers-p2 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 500;
   margin: 25px 0px;
 }
 
 .developers-h2 {
   color: #008780;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 40px !important;
   font-weight: 500;
 }
 
 .developers-list {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 18px !important;
 }
 
@@ -3254,7 +3233,7 @@ body.posa .page-scroll-show .header {
   left: 0;
   line-height: 170%;
   opacity: 0.9;
-  font-family: Raleway-Light;
+  font-weight: 300;
   position: absolute;
   top: 0;
   width: 250px;
@@ -3397,7 +3376,7 @@ body.posa .page-scroll-show .header {
   left: $space-lg;
   opacity: 0.5;
   position: absolute;
-  top: 0;
+  top: -35px;
   z-index: 3;
   transition: opacity 0.25s;
 }
@@ -3479,7 +3458,7 @@ body.posa .page-scroll-show .header {
 
 [class*="not-only-money"] > .page-offset > .title h2,
 .success > .page-offset > .title h2 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 35px;
   line-height: 140%;
   margin-top: 35px;
@@ -3522,7 +3501,7 @@ body.posa .page-scroll-show .header {
 }
 
 [class*="not-only-money"] .box .text h3 {
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-size: 42px;
   line-height: 140%;
   margin-bottom: 50px;
@@ -3766,7 +3745,7 @@ body.posa .page-scroll-show .header {
 
   .icons .text {
     color: black;
-    font-family: Raleway-Light;
+    font-weight: 300;
     font-size: 30px;
     font-weight: 500;
     margin-top: 8px;
@@ -4113,7 +4092,7 @@ a.contact-us.inline {
 
 .icons-container .text {
   color: white;
-  font-family: Raleway-Light;
+  font-weight: 300;
   font-weight: 600;
   margin-top: 8px;
 }
@@ -4315,8 +4294,7 @@ a.contact-us.inline {
               border-radius: 50%;
               color: #fff;
               display: block;
-              font-family: Arial;
-              font-weight: 200;
+              font-weight: 600;
               height: 32px;
               left: 0;
               line-height: 32px;
@@ -4455,6 +4433,12 @@ a.contact-us.inline {
           text-align: center;
           width: 348px;
           height: 100%;
+          margin-right: auto;
+          margin-left: auto;
+
+          h4 {
+            margin: 0;
+          }
 
           form {
             display: flex;
@@ -4477,17 +4461,9 @@ a.contact-us.inline {
             }
           }
 
-          h4 {
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 8px;
-            margin: 0;
-          }
-
           span.sub-title {
             display: block;
             font-size: 20px;
-            font-weight: 100;
             margin-bottom: 38px;
           }
 
@@ -4524,7 +4500,6 @@ form {
     border: none;
     box-sizing: border-box;
     display: block;
-    font-weight: 100;
     outline: none;
     padding: 11px 16px;
     width: 100%;
@@ -4621,7 +4596,7 @@ form {
 .map-marker-label {
   position: absolute;
   font-size: 14px;
-  font-weight: lighter;
+  
 }
 
 // TODO - optional - currently not used
