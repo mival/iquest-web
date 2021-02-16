@@ -2,50 +2,58 @@
 title: Development of mobile applications for the public | iQuest s.r.o.
 subtitle: We create attractive, fast and modern mobile apps for smartphones. Reach your audience with the perfect mobile app by iQuest.
 ---
-<div class="what-we-do what-we-do-app">
-  <header></header>
-  <div class="title">
+<div class="what-we-do">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
-      <% link_to t('urls.mobile_applications') do %><i class="fa fa-3x fa-arrow-circle-left"></i><% end %>
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up" data-aos="fade-up">We develop the next generation mobile applications</h1>
-    <h2 data-aos="fade-up" style="margin-bottom:80px;">Perfect solution for your startup or running project</h2>
+    <div class="header-text">
+      <h1 data-aos="fade-up" data-aos="fade-up">We develop the next generation mobile applications</h1>
+      <h2 data-aos="fade-up" style="margin-bottom:80px;">Perfect solution for your startup or running project</h2>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">I want to know more</span></a>
+    </div>
   </div>
-    <%= partial 'kinds_of_products' %>
-  <div class="info">
-    <div class="box left v-center">
-      <img alt="mobilní aplikace pro veřejnost" src="/images/verejne_mobile_applications_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>How does our mobile applications for everyone differ from others?</b></p>
-        <ul>
-          <li>An applications full of the best ideas.</li>
-          <li>A great design that will interest.</li>
-          <li>An attractive control, corresponding with the latest trends.</li>
-          <li>Maximum possible utilization of the phone hardware.</li>
-        </ul>
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="info m-b-10 p-b-10">
+        <div class="box left">
+          <img alt="mobilní aplikace pro veřejnost" src="/images/verejne_mobile_applications_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>How does our mobile applications for everyone differ from others?</h3>
+            <ul>
+              <li>An applications full of the best ideas.</li>
+              <li>A great design that will interest.</li>
+              <li>An attractive control, corresponding with the latest trends.</li>
+              <li>Maximum possible utilization of the phone hardware.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="info">
-    <div class="box right v-center">
-      <img alt="veřejné hybridní mobilní aplikace" src="/images/verejne_mobile_applications_2.jpg" data-aos="fade-left" />
-      <div class="offset" data-aos="fade-right">
-        <p><b>Why use mobile applications from iQuest?</b></p>
-        <ul>
-          <li>We develop mobile applications for multiple platforms.</li>
-          <li>We bring speed, economy and quality.</li>
-          <li>We have been developing very demanding systems for more than 14 years.</li>
-          <li>We have experience with big systems.</li>
-          <li>We are not just developers, we also like to consult the business model of the project.</li>
-          <li>During development we perform user testing.</li>
-          <li>We help you with marketing support and viral spread of applications.</li>
-        </ul>
+      <div class="info">
+        <div class="box right">
+          <img alt="veřejné hybridní mobilní aplikace" src="/images/verejne_mobile_applications_2.jpg" data-aos="fade-left" />
+          <div data-aos="fade-right">
+            <h3>Why use mobile applications from iQuest?</h3>
+            <ul>
+              <li>We develop mobile applications for multiple platforms.</li>
+              <li>We bring speed, economy and quality.</li>
+              <li>We have been developing very demanding systems for more than 14 years.</li>
+              <li>We have experience with big systems.</li>
+              <li>We are not just developers, we also like to consult the business model of the project.</li>
+              <li>During development we perform user testing.</li>
+              <li>We help you with marketing support and viral spread of applications.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <h3 class="text-center m-b-0 m-t-10 p-t-4  font-bold" data-aos="fade-up">We are not just programmers. We have experience and we make software for people.</h3>
+      <div class="text-center button-row"><%= link_to "Contact us", t('urls.contact'), :class => 'contact-button' %></div>
     </div>
   </div>
-
-  <h3 class="text-green mobile-h3" data-aos="fade-up">We are not just programmers.<br />We have experience and we make software for people.</h3>
-  <%= link_to "Contact us", t('urls.contact'), :class => 'contact-button blue', :'data-aos' => 'fade-up' %>
+  <div class="bg--gray-skew"></div>
+  <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>

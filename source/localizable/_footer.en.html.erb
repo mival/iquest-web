@@ -1,66 +1,56 @@
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-33">
-				<div class="offset">
-					<div class="title">With all the things we help you?</div>
-					<div class="inner">
-						<ul>
-							<li>Analyze problems or assignment</li>
-							<li>For help creating award</li>
-							<li>Project System</li>
-							<li>Graphic design</li>
-							<li>Development and Implementation</li>
-							<li>Integration with other systems</li>
-							<li>Optimization of the user experience</li>
-							<li>Operation</li>
-							<li>Support</li>
-						</ul>
+			<div class="col-100">
+				<div class="row">
+					<div class="col-33">
+						<div class="inner">
+							<h4 class="text-yellow text">Kancelář Brno</h4>
+							<p>iQuest s.r.o.</p>
+							<p>Cejl 494/25</p>
+							<p>602 00 Brno</p>
+							<p class="text-yellow">
+								<% link_to t('urls.contact') do %>
+									<%= t('footer.map') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
+								<% end  %>
+							</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-33">
-				<div class="offset">
-					<div class="title"><%= t('footer.we_are') %>:</div>
-					<div class="inner">
-						iQuest s.r.o.
-						<br /> Sněmovní 9
-						<br /> 118 00 Praha 1 - Malá strana
-						<br />
-						<br />
-						<a href="tel:+420777314768" class="c-phone"><i class="fa fa-phone"></i> 777 314 768</a>
-						<br />
-						<i class="fa fa-envelope"></i> <a href="mailto:vyvojari@iquest.cz">vyvojari@iquest.cz</a>
-						<br />
-						<br />
-						<% link_to t('urls.contact') do %>
-							<%= t('footer.map') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
-						<% end  %>
+					<div class="col-33 text-center">
+						<div class="inner">
+							<h4 class="text-orange">Sídlo a centrála Praha</h4>
+							<p>	iQuest s.r.o.</p>
+							<p> Sněmovní 9</p>
+							<p> 118 00 Praha 1 - Malá strana </p>	
+							<p class="text-orange">
+								<% link_to t('urls.contact') do %>
+									<%= t('footer.map') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
+								<% end  %>
+							</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-33">
-				<div class="offset">
-					<div class="title"><%= t('footer.simply_contact_us') %>:</div>
-					<div class="inner">
-						<form action="//formspree.io/vyvojari@iquest.cz" method="POST" id="contact_form" class="contact-form" novalidate>
-							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
-							<input type="text" name="_gotcha" style="display:none" />
-							<div class="form-group">
-								<label for="email">E-mail:</label>
-								<input type="email" name="email" id="email" required>
-								<span class="error" aria-live="polite"></span>
-							</div>
-							<div class="form-group">
-								<label for="message"><%= t('footer.message') %>:</label>
-								<textarea wrap="soft | hard" name="message" id="message" required><%= t('footer.message_example') %></textarea>
-								<span class="error" aria-live="polite"></span>
-							</div>
-							<button type="submit" id='submit_<%= current_page.page_id.split('.')[0].gsub('/', '_') %>'><i class="fa fa-share"></i> <%= t('footer.send_contact') %></button>
-						</form>
+					<div class="col-33 text-right text-orange">
+						<div class="inner">
+							<br />
+							<br />
+							<p>
+								<a href="tel:+420777314768" class="c-phone"><i class="fa fa-phone"></i> 777 314 768</a>
+							</p>
+							<p>
+								<a href="mailto:vyvojari@iquest.cz"><i class="fa fa-envelope p-r-1"></i>  vyvojari@iquest.cz</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<br />
+		<br />
+		<div class="flex justify-center row">
+			<a href="https://www.facebook.com/iquest.cz" class="c-facebook", aria-label="facebook stránka"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/iQuestCZ" class="c-twitter"><i class="fa fa-twitter", aria-label="twitter profil"></i></a>
+			<a href="https://www.linkedin.com/company/iquest-s-r-o-/?originalSubdomain=cz" class="c-linkedin", aria-label="linkedin profil"><i class="fa fa-linkedin"></i></a>
+		</div>
+		<br />
 	</div>
 </footer>

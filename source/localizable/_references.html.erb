@@ -1,5 +1,5 @@
 <div class="reference">
-	<h3 class="text-center" data-aos="fade-up"><%= t('pages.main.examples_of_work') %>:</h3>
+	<h2 class="text-center" data-aos="fade-up"><%= t('pages.main.examples_of_work') %>:</h2>
 	<div class="circles-box" data-aos="fade-up">
 		<% url = '/en' if I18n.locale == :en %>
 		<%= link_to '', "#{url}/reference/greenswan", :class => 'circle greenswan', 'aria-label': "přejít na stránku společnosti greenswan" %>
@@ -21,7 +21,7 @@
 		<%= link_to '', "#{url}/reference/one-click", :class => 'circle one-click', 'aria-label': "přejít na stránku společnosti one-click" %>
 		<%= link_to '', "#{url}/reference/", :class => 'circle jungheinrich', 'aria-label': "přejít na stránku společnosti jungheinrich" %>
 	</div>
-	<% link_to t('urls.reference'), :class => 'more-references text-blue', :'data-aos' => 'fade-up', 'aria-label': "přejít na stránku více referencí" do %>
-		<%= t('pages.main.more_references') %> <i class="fa fa-lg fa-arrow-circle-right"></i>
+	<% link_to t('urls.reference'), :class => 'text-center', :'data-aos' => 'fade-up', 'aria-label': "přejít na stránku více referencí" do %>
+		<h3 class='flex items-center justify-center m-t-8 text-orange'><%= t('pages.main.more_references') %><i class="fa fa-arrow-circle-right text-orange p-l-1"></i></h3>
 	<% end  %>
 </div>

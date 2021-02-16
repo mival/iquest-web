@@ -19,52 +19,27 @@
   .page-scroll-show .header {
     height: 18.3vw
   }
-
-  .what-we-do header {
-    background-size: 100%;
-    height: 18vw
-  }
-
-  .what-we-do .info,
-  .what-we-do .what-is {
+  .info-container {
     margin: 100px auto 0;
     width: 1143px;
   }
 }
 
-@media screen and (min-width: 1450px) {
-  .webove-aplikace-na-miru .navigation,
-  .firemni-informacni-systemy-na-miru .navigation,
-  .podnikove-mobilni-aplikace .navigation {
-    height: 130px
-  }
-
-  .webove-aplikace-na-miru .page-nav,
-  .firemni-informacni-systemy-na-miru .page-nav,
-  .podnikove-mobilni-aplikace .page-nav {
-    top: 130px
-  }
-
-  .webove-aplikace-na-miru .page-offset,
-  .firemni-informacni-systemy-na-miru .page-offset,
-  .podnikove-mobilni-aplikace .page-offset {
-    padding-top: 205px
-  }
-}
-
 @media screen and (max-width: 1600px) {
   h1 {
-    font-size: 1.9vw
+    font-size: 3.1rem;
   }
 
   h2 {
-    font-size: 1.5vw
+    font-size: 2.4rem;
   }
 
   h3 {
-    font-size: 1.4vw
+    font-size: 1.8rem;
   }
-
+  h4 {
+    font-size: 1.5rem;
+  }
   p,
   ul {
     font-size: 1.3vw
@@ -80,11 +55,6 @@
 
   .page .logo-content .iqw-nav .initial .text {
     font-size: 1.1vw
-  }
-
-  .info.icons {
-    margin-left: 22%;
-    margin-right: 22%
   }
 
   .info.icons .container .box {
@@ -109,19 +79,30 @@
   .page-offset ul {
     font-size: 1.15vw
   }
+
+  // subpage
+
+  .subpage-main__list {
+  top: -80px;
+  }
+  .subpage-more-information {
+    &:before {
+      height: 225px;
+    }
+  }
 }
 
 @media screen and (max-width: 1400px) {
   h1 {
-    font-size: 2.1vw
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.7vw
+    font-size: 2.3rem;
   }
 
   h3 {
-    font-size: 1.6vw
+    font-size: 1.4rem
   }
 
   p,
@@ -137,10 +118,6 @@
     font-size: 1.3vw
   }
 
-  .info.icons {
-    margin-left: 20%;
-    margin-right: 20%
-  }
 
   .info.icons .container .box {
     font-size: 17px
@@ -164,21 +141,27 @@
   .page-offset ul {
     font-size: 1.35vw
   }
+
+  //subpage
+
+  .more-information__buttons .button {
+    padding: 9px 18px;
+  }
+  .subpage-main__list {
+    &:after {
+      height: 150px;
+    }
+     li .numbers {
+      margin-right: 30px;
+      width: 97px;
+     }
+  }
+  .subpage-more-information {
+    padding: 25% 0 10%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 2.3vw
-  }
-
-  h2 {
-    font-size: 1.9vw
-  }
-
-  h3 {
-    font-size: 1.8vw
-  }
-
   p,
   ul {
     font-size: 1.7vw
@@ -196,6 +179,14 @@
     font-size: 4.5vw
   }
 
+  #opening .our-technology, #opening .reference {
+    margin-top: 120px;
+  }
+
+  .tags {
+    padding: 0 20px;
+  }
+
   .page .initial.curve {
     font-size: 2vw
   }
@@ -211,11 +202,6 @@
 
   .page .logo-content .iqw-nav .initial .text {
     font-size: 1.5vw
-  }
-
-  .info.icons {
-    margin-left: 17%;
-    margin-right: 17%
   }
 
   .title .info.icons .container .box {
@@ -242,7 +228,7 @@
   }
 
   .cards {
-    padding-left: 20px
+    padding: 0;
   }
 
   .cards .info {
@@ -256,34 +242,54 @@
     height: 168px
   }
 
-  .what-we-do .info .box img {
-    position: static
-  }
+  //subpage
 
-  .what-we-do .info .box.left .offset {
-    padding-left: 0;
-    margin-top: 30px
+  .subpage-header, .what-we-do__header {
+    .container-i-want-to-know-more {
+      .button:not(:last-child) {
+        margin-right: 10px;
+      }
+      .button {
+        padding: 7px 12px;
+      }
+      .i-want-to-know-more {
+        padding-left: 40px;
+        font-size: 1.1rem;
+        &:before, &:after {
+          background-size: 1.8rem;
+          background-position: center;
+        }
+      }
+    }
   }
-
-  .what-we-do .info .box.right .offset {
-    padding-right: 0
-  }
-
-  .we-are-the-champions {
-    width: auto;
-    margin-left: 15px;
-    margin-right: 15px
+  .subpage-more-information {
+    padding: 30% 0 10%;
   }
 }
 
 @media screen and (max-width: 1140px) {
-  .what-we-do .benefits .box {
-    width: 50%;
+  .kinds-of-contacts {
+    .container {
+      button[type=submit], a.submit {
+        min-width: 150px;
+      }
+      .cont {
+        width: 100% !important;
+      }
+    }
   }
 
-  .kinds-of-contacts {
-    .cont {
-      width: 100% !important;
+  .what-we-do {
+    .info .box {
+      &.left img {
+        padding-right: 3%;
+      }
+      &.right img {
+        padding-left: 3%;
+      }
+      ul li {
+        line-height: 150%;
+      }
     }
   }
 }
@@ -298,33 +304,40 @@
     line-height: 40px;
   }
 
+  #opening {
+    .tag {
+      font-size: 1rem;
+      padding: 6px 12px 7px;
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #more_than_10_years .title .title1 {
+    font-size: 5vw
+  }
+
   h1 {
-    font-size: 2.5vw
+    font-size: 2.8rem
   }
 
   h2 {
-    font-size: 2.1vw
+    font-size: 2.1rem;
   }
 
   h3 {
-    font-size: 2vw
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
   }
 
   p,
   ul {
     font-size: 1.9vw
-  }
-
-  #opening .title .title1 {
-    font-size: 5.7vw
-  }
-
-  #opening .title .title2 {
-    font-size: 3.6vw
-  }
-
-  #more_than_10_years .title .title1 {
-    font-size: 5vw
   }
 
   .page .offset {
@@ -342,11 +355,6 @@
 
   .page .logo-content .iqw-nav .initial .text {
     font-size: 1.7vw
-  }
-
-  .info.icons {
-    margin-left: 12%;
-    margin-right: 12%
   }
 
   .info.icons .container .box {
@@ -371,26 +379,109 @@
   .page-offset ul {
     font-size: 1.75vw
   }
+
+  .what-we-do {
+    .back-fixed {
+      left: var(--space-sm)
+    }
+    .info-container {
+      padding: 0;
+      margin: 6rem 0 0;
+      .what-is h2 {
+        text-align: center;
+      }
+      .info h2 {
+        text-align: start;
+      }
+      .info-container__content {
+        padding: 0 var(--space-sm);
+        &:before {
+          height: 9vh;
+        }
+        &:after {
+          height: 9vh;
+        }
+      }
+    }
+    .info .box {
+      overflow: hidden;
+      &.right, &.left {
+        flex-direction: column;
+        img {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 5rem;
+          width: 60%;
+          margin-left: auto;
+          object-position: right;
+        }
+      }
+    }
+    .tags {
+      padding-top: 25vh;
+    }
+  }
+
+  //subpage
+
+  .subpage-header, .what-we-do__header {
+    .container-i-want-to-know-more {
+      margin-left: 20px;
+    }
+    .intro-text-container {
+      width: 100% !important;
+      .back-fixed {
+        left: 20px;
+      }
+    }
+    .header-text {
+      margin-left: 20px;
+      h1 {
+        font-size: 2.4rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+      .intro-image-container {
+        width: 75%;
+        top: 32%;
+        right: 4%;
+        bottom: unset;
+      }
+  }
+
+  .subpage-main {
+    margin-top: 196px;
+  }
+  .subpage-main__list {
+    top: 50px;
+    width: 88%;
+    li:not(:first-child) {
+      margin-top: 65px;
+    }
+  }
+  .subpage-more-information {
+    padding: 50% 0 20%;
+    &:before {
+      top: 22%;
+    }
+  }
 }
 
 @media screen and (max-width: 860px) {
   .kinds-of-contacts {
     height: 100%;
-    // overflow: auto;
     margin-top: 60px;
-    background: #415D71;
-    .image-map {
-      display: none;
-  }
-
     .container {
       padding: 40px 0;
+      padding: 135px 0 40px;
 
       .row {
-        display: block !important;
+        flex-direction: column;
+        align-items: center;
 
         .col {
-          display: block !important;
           margin: 0 auto;
           width: 80%;
           margin-top: 24px;
@@ -415,26 +506,32 @@
 }
 
 @media screen and (max-width: 768px) {
-  .what-we-do .benefits .box {
-    width: 100%;
+  h1 {
+    font-size: 2.5rem;
   }
 
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
   .social-icons {
     padding-bottom: 25px !important;
     display: flex;
-    /* text-align: center !important; */
   }
 
   .col-offset-40 {
     margin-left: 0%;
   }
 
-  .restyling {
+  .icons-container {
     margin-top: 0px;
     padding-bottom: 40px;
   }
 
-  .restyling .text {
+  .icons-container .text {
     text-align: center;
   }
 
@@ -449,18 +546,6 @@
 
   [class*='reference'] .desktop {
     display: none;
-  }
-
-  h1 {
-    font-size: 21px
-  }
-
-  h2 {
-    font-size: 18px
-  }
-
-  h3 {
-    font-size: 18px
   }
 
   p,
@@ -510,7 +595,7 @@
 
   .navigation {
     height: 80px;
-    z-index: 3
+    z-index: 4;
   }
 
   .navigation #logo {
@@ -542,19 +627,10 @@
     margin-right: -10px
   }
 
-  #opening {
-    padding-bottom: 75px
-  }
-
   #opening address {
     font-size: 17px;
     line-height: 140%;
     padding-top: 10px;
-  }
-
-  #opening>.title {
-    padding-top: 140px;
-    padding-bottom: 30px
   }
 
   #opening>.title .title1,
@@ -563,9 +639,8 @@
   }
 
   #opening>.title .title1 {
-    font-family: Raleway-thin;
+    font-weight: 300;
     font-size: 37px !important;
-    font-weight: 700;
     margin-bottom: 15px
   }
 
@@ -575,10 +650,13 @@
     opacity: 0.7
   }
 
+  .iquest-way .logo-content:first-child .iqw-nav {
+    height: auto;
+  }
+
   .info.icons {
-    margin-top: 20px !important;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .info.icons .container .box {
@@ -591,7 +669,6 @@
   }
 
   #opening .circles {
-    // margin-top: 200px
     margin-top: 80px
   }
 
@@ -601,9 +678,15 @@
   }
 
   #opening .our-technology,
-  #opening .reference,
-  #opening .we-are-the-champions {
+  #opening .reference {
     margin-top: 75px
+  }
+
+  .our-technology .cards {
+    padding-left: 0;
+    .card {
+      width: 290px;
+    }
   }
 
   #opening .reference .circles-box .circle {
@@ -613,15 +696,7 @@
   #opening .reference .circles-box .circle:nth-child(even) {
     top: 0
   }
-
-  #opening .reference .more-references {
-    margin-top: 30px
-  }
-
-  #opening .our-technology .more-technology {
-    margin-top: 40px
-  }
-
+  
   #more_than_10_years {
     background-size: auto 100%;
     background-position: right
@@ -649,13 +724,13 @@
     margin-bottom: 25px
   }
 
-  .page .logo-content .info h1 {
+  .page .logo-content .info h3 {
     margin-top: 0;
-    margin-bottom: 8px
+    margin-bottom: 8px;
   }
 
-  .page .logo-content .info h2 {
-    font-family: Raleway-light;
+  .page .logo-content .info h4 {
+    font-weight: 300;
     font-weight: normal;
     opacity: 0.7;
     padding: 0 15px;
@@ -669,10 +744,6 @@
   .page .logo-content .iqw-nav {
     padding: 0 25px;
     overflow-x: hidden
-  }
-
-  .breadcrumb {
-    display: none !important;
   }
 
   .page .logo-content .iqw-nav .initial {
@@ -753,7 +824,7 @@
   [class*='why-iquest'] .content .pillar h2,
   [class*='proc-iquest'] .content .pillar h2 {
     margin: 0;
-    font-family: Raleway-light
+    font-weight: 300;
   }
 
   [class*='why-iquest'] .content .pillar p,
@@ -770,7 +841,7 @@
 
   [class*='why-iquest'] .content .pillar.active h2,
   [class*='proc-iquest'] .content .pillar.active h2 {
-    font-family: Raleway-medium
+    font-weight: 500;
   }
 
   .scroll-left,
@@ -778,7 +849,6 @@
   .mobile-hide {
     display: none
   }
-
   #large_applications {
     top: 0;
     left: 0
@@ -911,63 +981,12 @@
     font-size: 17px
   }
 
-  .what-we-do header {
-    background-position: none;
-    height: auto;
-    display: none
-  }
-
-  .what-we-do .title h1 {
-    font-family: Raleway-thin;
-    font-size: 37px;
-    font-weight: bold;
-    line-height: 115%;
-    margin: 90px 0 25px;
-    padding-left: 15px;
-    padding-right: 15px
-  }
-
-  .what-we-do .title h2 {
-    font-family: Raleway-thin;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 130%;
-    opacity: 0.7;
-    padding-left: 15px;
-    padding-right: 15px
-  }
-
   .what-we-do .title {
     overflow: hidden;
   }
 
-  .what-we-do .what-is,
-  .what-we-do .info {
-    margin: 0 25px 0 !important;
-  }
-
-  .what-we-do .icons {
-    margin-left: 0px !important;
-  }
-
   .what-we-do .v-center {
     display: block !important;
-  }
-
-  .what-we-do .what-is .box.left img,
-  .what-we-do .what-is .box.right img,
-  .what-we-do .info .box.left img,
-  .what-we-do .info .box.right img {
-    width: 100%
-  }
-
-  .what-we-do .info .box ul {
-    padding-left: 17px;
-
-    li {
-      font-size: 17px;
-      line-height: 120%;
-    }
   }
 
   .back-fixed {
@@ -980,9 +999,9 @@
     .h1-volne {
       margin: 0 15px 20px;
       text-align: left;
-      font-family: Raleway-thin;
+      font-weight: 300;
       font-size: 37px;
-      font-weight: bold;
+          font-weight: 600;
       line-height: 115%;
     }
 
@@ -1032,14 +1051,14 @@
       color: #1e1e1e;
       margin: 0 15px 20px;
       text-align: left;
-      font-family: Raleway-thin;
+      font-weight: 300;
       font-size: 37px !important;
-      font-weight: bold;
+          font-weight: 600;
       line-height: 115%;
     }
 
     .developers-h2 {
-      font-family: SupriaSans-Light;
+      font-weight: 300;
       font-size: 2em !important;
       padding: 0 15px;
       color: #008780;
@@ -1075,9 +1094,13 @@
     }
   }
 
-  footer.footer .container .offset {
+  footer.footer .container {
     padding-left: 0;
-    padding-right: 0
+    padding-right: 0;
+    .col-33 {
+      text-align: center!important;
+      margin-bottom: 40px;
+    }
   }
 
   .not-only-money>.page-offset {
@@ -1136,7 +1159,7 @@
     margin: 0 0 50px
   }
 
-  .restyling .img-wrap {
+  .icons-container .img-wrap {
     width: 80px;
     height: 80px;
   }
@@ -1160,15 +1183,266 @@
       background-size: 50vh;
     }
   }
-}
 
-@media screen and (max-width: 580px) {
-  .contact-telefon {
-    display: none;
+  .contact-text {
+    overflow-y: auto;
   }
 
-  .what-we-do .benefits .box {
-    width: 100%;
+  .what-we-do {
+    .info-container {
+      margin-top: 10rem;
+      .contact-button {
+        padding: 0 25px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+      }
+    }
+    .info .box {
+      &.right, &.left {
+        img {
+          padding-bottom: 3rem;
+          width: 100%;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+  .technologie {
+    text-align: center;
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  //subpage 
+  .subpage-header, .what-we-do__header {
+    margin-top: var(--space-for-navbar) / 2;
+    height: auto;
+    margin-top: 4vh;
+    .intro-text-container {
+      width: 100% !important;
+      height: auto;
+      .back-fixed {
+        left: 10px;
+      }
+    }
+    .header-text {
+      position: relative;
+      padding: 120px 20px 0 20px;
+      box-sizing: border-box;
+      text-align: center;
+      left: 0;
+      height: auto;
+      margin-bottom: 26px;
+      margin-left: 0;
+      width: 100%;
+    }
+    .container-i-want-to-know-more {
+      display: flex;
+      width: 100%;
+      min-width: unset;
+      margin-left: 0;
+      flex-direction: column;
+      position: relative;
+      left: 0;
+      font-size: 0.9rem;
+      .button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      .button {
+        padding: 11px 29px;
+      }
+      .i-want-to-know-more {
+        padding-left: 40px;
+        font-size: 1.1rem;
+        &:before {
+          background-size: 1.8rem;
+          background-position: center;
+        }
+      }
+    }
+    .intro-image-container {
+      position: relative;
+      overflow: visible;
+      margin-left: 0;
+    }
+  }
+  .subpage-main {
+    margin-top: 48px;
+    padding-bottom: 40px;
+  }
+  .subpage-main__list {
+    top: -30px;
+    padding-left: 0;
+    li {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .numbers {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 70px;
+    }
+    }
+    li:not(:first-child) {
+      margin-top: 40px;
+    }
+    &:after {
+      top: 100%;
+    }
+  }
+  .subpage-more-information {
+    padding: 67% 0 20%;
+    .container-i-want-to-know-more {
+      .button:not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+  }
+  .description-clearfix {
+    height: 130px;
+  }
+  .progresivni-webove-aplikace .subpage-main__list:first-child .article-item {
+    flex-direction: column-reverse;
+  }
+  .article-item__description {
+    top: -10%;
+    &.play-link {
+      right: 0;
+    }
+    &.down-link {
+      left: 0;
+    } 
+  }
+  .article-item__text {
+    p, h2 {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-height: 700px) and (min-width: 768px) {
+
+  #opening > .title {
+    height: 70vh;
+  }
+
+  .main-container {
+    height: 30vh;
+  }
+
+  .wavy-background {
+    top: 10%;
+    height: 90%;
+  }
+
+  .info .icons-container {
+      a.box {
+        flex-direction: row !important;
+        .text {
+          padding-left: 10px;
+          text-align: start;
+        }
+        &:not(:last-child) {
+          margin-right: 15px;
+          
+        }
+      }
+      img {
+        max-width: 64px !important;
+        max-height: 64px !important;
+      }
+  }
+  .webove-aplikace-na-miru, .firemni-informacni-systemy-na-miru, .mobilni-aplikace-nove-generace {
+    .subpage-header {
+      h1 {
+        font-size: 4.5vh; 
+      }
+      h2 {
+        font-size: 3vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .why-iquest,
+  .proc-iquest {
+    .pillar-3 {
+      background-size: auto 61px;
+      background-position: bottom -10px right -50vw !important;
+    }
+
+    .pillar-4 {
+      background-size: auto 61px;
+      background-position: bottom -10px right !important;
+    }
+
+    .to-home {
+      width: 140px;
+      height: 44px;
+      position: fixed;
+      display: block;
+      right: 30px;
+      bottom: 6px;
+    }
+  }
+  #presentation .logo-content .info {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 580px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  #menu {
+    max-width: 100vw;
+    ul a li {
+      margin-left: 20px;
+   }
+  }
+
+  .main-container {
+    height: auto;
+    margin-top: 4rem;
+    overflow: hidden;
+    .wavy-background {
+      width: 350%;
+      top: -30%;
+      height: 130%;
+    }
+  }
+  .info.icons .container {
+    flex-direction: column;
+    align-items: center;
+    .box {
+      margin-top: 1rem !important;
+    }
+  }
+
+  .icons-container .img-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-telefon {
+    display: none;
   }
 
   a.contact-bubble.fixed {
@@ -1237,64 +1511,24 @@
       text-align: center;
     }
   }
-}
 
-@media screen and (max-height: 700px) and (min-width: 768px) {
-  .restyling {
-    a.box:nth-child(2) .text {
-      margin-top: 6px;
+  //subpage 
+  .subpage-more-information  {
+    padding: 30% 0 20%;
+    &:before {
+      top: 13%;
+      height: 90px;
     }
+    .more-information__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    .img-wrap {
-      float: left;
-
-      img {
-        max-width: 64px !important;
-        max-height: 64px !important;
+      .button {
+        margin-right: 0;
+        margin-top: 1.5rem;
       }
     }
-
-    .text {
-      text-align: left;
-      margin-left: 14px;
-      float: left;
-      margin-top: 16px;
-      box-sizing: border-box;
-
-      .br {
-        display: inherit;
-      }
-    }
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .why-iquest,
-  .proc-iquest {
-    .pillar-3 {
-      background-size: auto 61px;
-      background-position: bottom -10px right -50vw !important;
-    }
-
-    .pillar-4 {
-      background-size: auto 61px;
-      background-position: bottom -10px right !important;
-    }
-
-    .to-home {
-      width: 140px;
-      height: 44px;
-      position: fixed;
-      display: block;
-      right: 30px;
-      bottom: 6px;
-    }
-  }
-}
-
-@media screen and (max-height: 700px) {
-  #presentation .logo-content .info {
-    display: none;
   }
 }
 
@@ -1335,13 +1569,61 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .contact-text {
-    height: 100vh;
-    overflow-y: auto;
+//subpage media 
+
+@media screen and (max-width: 550px) {
+  [class*="why-iquest"] .content, [class*="proc-iquest"] .content {
+    position: static;
+    .pillar {
+      min-height: 25vh;
+      position: static;
+      padding-bottom: 60px;
+      &.active {
+        position: absolute;
+        height: 100vh;
+      }
+    }
+    .pillar.pillar-3 {
+      background-image: none;
+    }
+    .to-home {
+      display: none;
+    }
+  }
+  .subpage-main__list {
+    li .numbers {
+    width: 50px;
+    }
+    &:after {
+      top: 99%;
+    }
+  }
+  .page .scroll-content {
+    height: unset;
+  }
+  .page {
+    position: static;
+    top: unset !important;
+    .offset {
+      margin-top: unset;
+      margin-right: 0;
+      position: static;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      text-align: center;
+      ul {
+        text-align: start;
+      }
+    }
   }
 
-  .info.icons {
-    margin-bottom: 125px;
+  #we_connect_techno.page .offset {
+    margin-bottom: 0;
+}
+}
+
+@media screen and (max-width: 432px) {
+  .subpage-more-information {
+    padding: 47% 0 20%;
   }
 }

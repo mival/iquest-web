@@ -3,41 +3,48 @@ title: Web and mobile applications development for people organization | iQuest 
 subtitle: Organize staff using internet technologies. Planning work in the office and in the field, clear assignment and task control, field employees control by GPS
 ---
 <div class="what-we-do">
-  <header></header>
-  <div class="title">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
       <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up">People organization</h1>
-  </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Organizing staff using internet technologies is a trend today. It stopped to be a competitive advantage and became the necessity.</h3>
-    <p data-aos="fade-up">We will create customized system for you in which responsible assigning of work will be a piece of cake.</p>
-  </div>
-
-  <div class="info">
-    <div class="box right">
-      <img alt="Organizace lidí" src="/images/app_kinds/people_organization_1.jpg" data-aos="fade-left" />
-      <div class="offset" data-aos="fade-right">
-        <p><b>When will you utilize a customized system?</b></p>
-        <ul>
-          <li>You have staff in field and you need to organize them.</li>
-          <li>For assigning tasks ordinary system is not enough for you.</li>
-          <li>You feel the need of work division automatization.</li>
-          <li>You require exact assigning and sorting of work.</li>
-          <li>You want to communicate using smartphones.</li>
-          <li>Your goal is sophisticated reporting about your team’s activities.</li>
-        </ul>
-        <p><a href="/kontakt">Now we are here for you.</a></p>
-      </div>
+    <div class="header-text">
+      <h1 data-aos="fade-up">People organization</h1>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">I want to know more</span></a>
     </div>
   </div>
+
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="what-is m-b-10 p-b-10 text-center">
+        <h2 data-aos="fade-up">Organizing staff using internet technologies is a trend today. It stopped to be a competitive advantage and became the necessity.</h2>
+        <h3 data-aos="fade-up" class='font-bold'>We will create customized system for you in which responsible assigning of work will be a piece of cake.</h3>
+      </div>
+      <div class="info">
+        <div class="box right">
+          <img alt="Organizace lidí" src="/images/app_kinds/people_organization_1.jpg" data-aos="fade-left" />
+          <div data-aos="fade-right">
+            <h3>When will you utilize a customized system?</h3>
+            <ul>
+              <li>You have staff in field and you need to organize them.</li>
+              <li>For assigning tasks ordinary system is not enough for you.</li>
+              <li>You feel the need of work division automatization.</li>
+              <li>You require exact assigning and sorting of work.</li>
+              <li>You want to communicate using smartphones.</li>
+              <li>Your goal is sophisticated reporting about your team’s activities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center button-row"><%= link_to "Contact us", t('urls.contact'), :class => 'contact-button' %></div>
+    </div>
+  </div>
+  <div class="bg--gray-skew"></div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

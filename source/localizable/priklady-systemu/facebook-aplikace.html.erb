@@ -3,35 +3,40 @@ title: Vývoj facebook aplikací | iQuest s.r.o.
 subtitle: Taky neustále vidíte lidi se smartphonem v ruce? Do Facebooku prostě pořád někdo kouká. Rádi vám navrhneme, jak facebookové aplikace vylepší právě vaše podnikání.
 ---
 <div class="what-we-do">
-  <header></header>
-  <div class="title">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
       <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up">Facebook aplikace</h1>
-  </div>
-
-  <div class="info">
-    <div class="box right">
-      <img alt="Facebook aplikace" src="/images/app_kinds/facebook_applications_1.jpg" data-aos="fade-left" />
-      <div class="offset" data-aos="fade-right">
-        <p><b>Taky neustále vidíte lidi se smartphonem v ruce? Do Facebooku prostě pořád někdo kouká.</b></p>
-        <p>Využijte toho pro svůj business! Komunikujte s lidmi přímo na této sociální síti. Jak? Pomocí aplikace integrované přímo do Facebooku. Všechno je pak snadnější. Registrace, sdílení vašeho obsahu nebo vytváření zajímavých akcí. Šiřte se virálně.</p>
-      </div>
+    <div class="header-text">
+      <h1 data-aos="fade-up">Facebook aplikace</h1>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
     </div>
   </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Pro koho jsou facebookové aplikace vhodné?</h3>
-    <p data-aos="fade-up">Prakticky pro všechny, kdo chtějí zaujmout lidi na největší sociální síti světa.</p>
-    <p data-aos="fade-up"><a href="/kontakt">Rádi vám navrhneme, jak facebookové aplikace vylepší právě vaše podnikání.</a></p>
-    <br />
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="info">
+        <div class="box right">
+          <img alt="Facebook aplikace" src="/images/app_kinds/facebook_applications_1.jpg" data-aos="fade-left" />
+          <div data-aos="fade-right">
+            <h3>Taky neustále vidíte lidi se smartphonem v ruce? Do Facebooku prostě pořád někdo kouká.</h3>
+            <p>Využijte toho pro svůj business! Komunikujte s lidmi přímo na této sociální síti. Jak? Pomocí aplikace integrované přímo do Facebooku. Všechno je pak snadnější. Registrace, sdílení vašeho obsahu nebo vytváření zajímavých akcí. Šiřte se virálně.</p>
+          </div>
+        </div>
+      </div>
+      <div class="what-is text-center m-t-10 p-t-10">
+        <h2 data-aos="fade-up">Pro koho jsou facebookové aplikace vhodné?</h2>
+        <h3 data-aos="fade-up">Prakticky pro všechny, kdo chtějí zaujmout lidi na největší sociální síti světa.</h3>
+      </div>
+      <div class="text-center button-row"><%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button' %></div>
+    </div>
   </div>
+  <div class="bg--gray-skew"></div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

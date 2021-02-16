@@ -12,7 +12,9 @@ cz:
     join_us                    : '/prace-programator-ruby-on-rails/'
     development                : '/webove-aplikace-na-miru/'
     information_systems        : '/firemni-informacni-systemy-na-miru/'
+    progressive_web_apps       : '/progresivni-webove-aplikace/'
     mobile_applications        : '/mobilni-aplikace-nove-generace/'
+    startups                   : '/startups/'
     mobilni_aplikace           : '/podnikove-mobilni-aplikace/'
     verejne_aplikace           : '/verejne-mobilni-aplikace/'
     blog                       : 'http://blog.iquest.cz/'
@@ -20,7 +22,6 @@ cz:
     frontend_developer         : '/frontend-developer/'
     backend_developer          : '/backend-developer/'
     # Kinds of products
-    progressive_web_apps       : 'https://www.progresivni-webove-aplikace.cz/'
     reservation_systems        : '/priklady-systemu/rezervacni-systemy/'
     vendor_portals             : '/priklady-systemu/prodejni-portaly/'
     crm_systems                : '/priklady-systemu/crm-systemy/'
@@ -105,13 +106,14 @@ cz:
         development         : 'Rozsáhlé <br />webové<br />aplikace'
         information_systems : 'Firemní<br />informační<br />systémy <br class="br" /> na míru'
         mobile_applications : 'Mobilní <br />aplikace'
+        progressive_web_apps: 'Progresivní webové aplikace'
+        startups            : 'Startupy'
 
     contact:
       contact_us: 'Kontaktujte nás'
 
 
   kinds_of_products:
-    progressive_web_apps       : 'progresivní webové aplikace'
     reservation_systems        : 'rezervační systémy'
     vendor_portals             : 'prodejní portály'
     crm_systems                : 'CRM systémy'
@@ -132,7 +134,6 @@ cz:
 
 
   footer:
-    we_are            : 'Jsme'
     map               : 'mapa'
     simply_contact_us : 'Kontaktujte nás jednoduše, ozveme se Vám zpět'
     message           : 'Vzkaz'

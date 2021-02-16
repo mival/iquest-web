@@ -122,13 +122,14 @@ en:
         development         : 'Web<br />Application<br />Development'
         information_systems  : 'Tailored<br />corporate<br />information <br class="br" /> systems'
         mobile_applications : 'Mobile<br />applications new<br /> generation'
+        progressive_web_apps: 'Progressive web apps'
+        startups            : 'Startups'
 
     contact:
       contact_us: 'Contact us'
 
 
   kinds_of_products:
-    progressive_web_apps       : 'progressive web apps'
     reservation_systems        : 'reservation systems'
     vendor_portals             : 'vendor portals'
     crm_systems                : 'CRM systems'
@@ -146,7 +147,6 @@ en:
     ostatni                    : 'others'
 
   footer:
-    we_are            : 'We are'
     map               : 'map'
     simply_contact_us : 'Simply contact us, we will contact you back'
     message           : 'Message'

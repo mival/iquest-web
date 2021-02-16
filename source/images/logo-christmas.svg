@@ -4,7 +4,7 @@
 	 viewBox="0 0 416.3 58.5" style="enable-background:new 0 0 416.3 58.5;" xml:space="preserve">
       <defs>
         <linearGradient id="MyGradient">
-          <stop offset="0%" stop-color="#4590af" />
+          <stop offset="0%" stop-color="#00AFAC" />
           <stop offset="25%" stop-color="#418f8f" />
           <stop offset="50%" stop-color="#f9d126" />
           <stop offset="75%" stop-color="#efac52" />

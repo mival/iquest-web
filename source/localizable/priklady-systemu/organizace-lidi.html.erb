@@ -3,41 +3,47 @@ title: Vývoj systémů na míru pro organizace personálu | iQuest s.r.o.
 subtitle: Organizujte personál prostřednictvím internetových technologií. Tento trend přestal být konkurenční výhodou a stal se nutností. Vytvoříme pro vás systém na míru.
 ---
 <div class="what-we-do">
-  <header></header>
-  <div class="title">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
       <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up">Organizace lidí</h1>
-  </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Organizovat personál prostřednictvím internetových technologií je dnes trend. Přestal být konkurenční výhodou a stal se nutností.</h3>
-    <p data-aos="fade-up">Vytvoříme pro vás systém na míru, pomocí něhož bude hračka zodpovědně přidělovat práci. A to ať už se jedná o interní nebo externí pracovníky.</p>
-  </div>
-
-  <div class="info">
-    <div class="box right">
-      <img alt="Organizace lidí" src="/images/app_kinds/people_organization_1.jpg" data-aos="fade-left" />
-      <div class="offset" data-aos="fade-right">
-        <p><b>Kdy systém na míru skvěle využijete?</b></p>
-        <ul>
-          <li>Máte pracovníky v terénu a potřebujete je organizovat.</li>
-          <li>Pro přidělování úkolů vám nestačí běžné aplikace.</li>
-          <li>Cítíte potřebu automatizace rozdělování práce.</li>
-          <li>Vyžadujete přesné zadávání a přebírání práce.</li>
-          <li>Chcete komunikovat prostřednictvím smartphonů.</li>
-          <li>Vaším cílem je propracovaný reporting o činnosti vašich týmů.</li>
-        </ul>
-        <p><a href="/kontakt">Teď jsme tu pro vás my.</a></p>
-      </div>
+    <div class="header-text">
+      <h1 data-aos="fade-up">Organizace lidí</h1>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
     </div>
   </div>
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="what-is m-b-10 p-b-10 text-center">
+        <h2 data-aos="fade-up">Organizovat personál prostřednictvím internetových technologií je dnes trend. Přestal být konkurenční výhodou a stal se nutností.</h2>
+        <h3 data-aos="fade-up" class='font-bold'>Vytvoříme pro vás systém na míru, pomocí něhož bude hračka zodpovědně přidělovat práci. A to ať už se jedná o interní nebo externí pracovníky.</h3>
+      </div>
+      <div class="info">
+        <div class="box right">
+          <img alt="Organizace lidí" src="/images/app_kinds/people_organization_1.jpg" data-aos="fade-left" />
+          <div data-aos="fade-right">
+            <h3>Kdy systém na míru skvěle využijete?</h3>
+            <ul>
+              <li>Máte pracovníky v terénu a potřebujete je organizovat.</li>
+              <li>Pro přidělování úkolů vám nestačí běžné aplikace.</li>
+              <li>Cítíte potřebu automatizace rozdělování práce.</li>
+              <li>Vyžadujete přesné zadávání a přebírání práce.</li>
+              <li>Chcete komunikovat prostřednictvím smartphonů.</li>
+              <li>Vaším cílem je propracovaný reporting o činnosti vašich týmů.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center button-row"><%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button' %></div>
+    </div>
+  </div>
+  <div class="bg--gray-skew"></div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

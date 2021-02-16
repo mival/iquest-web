@@ -3,47 +3,51 @@ title: Vývoj databází | iQuest s.r.o.
 subtitle: Nechte si navrhnout optimální datové struktury a databázovou infrastrukturu. Vystavíme zabezpečenou webovou a mobilní aplikaci, o vaše data budeme pečovat s radostí.
 ---
 <div class="what-we-do">
-  <header></header>
-  <div class="title">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
       <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up">Databáze</h1>
-  </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">Pro ty, co udržují spoustu dat a chtějí je mít k dispozici odkudkoliv.</h3>
-    <p data-aos="fade-up">Budujeme specializované databáze dostupné na webu či v mobilu. Vše se zabezpečením, rychlým vyhledáváním a filtrováním. Související data propojujeme.</p>
-  </div>
-
-  <div class="info">
-    <div class="box left">
-      <img alt="Vývoj databází" src="/images/app_kinds/databases_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>Co je dobré na internet převést?</b></p>
-        <ul>
-          <li>Databáze klientů.</li>
-          <li>Databáze pracovníků (HR).</li>
-          <li>Databáze obchodních případů.</li>
-          <li>Databáze zakázek.</li>
-          <li>Databáze smluv či jiných dokumentů.</li>
-          <li>Katalog zboží s rozsáhlou možností vyhledávání.</li>
-          <li>Veškeré další možné databáze, které chcete mít přes internet dostupné z jakéhokoliv místa na světě.</li>
-        </ul>
-      </div>
+    <div class="header-text">
+      <h1 data-aos="fade-up">Databáze</h1>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
     </div>
   </div>
-
-  <div class="what-is" data-aos="fade-up">
-    <h3>Navrhneme optimální datové struktury a databázovou infrastrukturu. Vystavíme zabezpečenou webovou a mobilní aplikaci, o vaše data budeme pečovat s radostí.</h3>
-    <p><a href="/kontakt">Poptejte pro sebe ideální řešení.</a></p>
-    <br />
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="what-is m-b-10 p-b-10 text-center">
+        <h2 data-aos="fade-up">Pro ty, co udržují spoustu dat a chtějí je mít k dispozici odkudkoliv.</h2>
+        <h3 data-aos="fade-up" class='font-bold'>Budujeme specializované databáze dostupné na webu či v mobilu. Vše se zabezpečením, rychlým vyhledáváním a filtrováním. Související data propojujeme.</h3>
+      </div>
+      <div class="info">
+        <div class="box left">
+          <img alt="Vývoj databází" src="/images/app_kinds/databases_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>Co je dobré na internet převést?</h3>
+            <ul>
+              <li>Databáze klientů.</li>
+              <li>Databáze pracovníků (HR).</li>
+              <li>Databáze obchodních případů.</li>
+              <li>Databáze zakázek.</li>
+              <li>Databáze smluv či jiných dokumentů.</li>
+              <li>Katalog zboží s rozsáhlou možností vyhledávání.</li>
+              <li>Veškeré další možné databáze, které chcete mít přes internet dostupné z jakéhokoliv místa na světě.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="what-is m-t-10 p-t-10 text-center" data-aos="fade-up">
+        <h3 class="font-bold">Navrhneme optimální datové struktury a databázovou infrastrukturu. Vystavíme zabezpečenou webovou a mobilní aplikaci, o vaše data budeme pečovat s radostí.</h3>
+      </div>
+      <div class="text-center button-row"><%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button' %></div>
+    </div>
   </div>
+  <div class="bg--gray-skew"></div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

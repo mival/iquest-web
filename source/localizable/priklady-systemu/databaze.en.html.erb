@@ -3,47 +3,51 @@ title: Database development | iQuest s.r.o.
 subtitle: Leave us to design optimal data structures and database infrastructure. We will exhibit a secure web and mobile application, we will be glad to take care of your data.
 ---
 <div class="what-we-do">
-  <header></header>
-  <div class="title">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
       <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up">Databases</h1>
-  </div>
-
-  <div class="what-is">
-    <h3 data-aos="fade-up">For those who keep a lot of data and want them to be available from anywhere.</h3>
-    <p data-aos="fade-up">We build specialized databases available on web or mobile. Everything with security, quick search and filtering. We interconnect the related data.</p>
-  </div>
-
-  <div class="info">
-    <div class="box left">
-      <img alt="Vývoj databází" src="/images/app_kinds/databases_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>What is good to convert to the internet?</b></p>
-        <ul>
-          <li>Client database.</li>
-          <li>Employee database (HR).</li>
-          <li>Business case database.</li>
-          <li>Orders database.</li>
-          <li>Database of contracts and other documents.</li>
-          <li>Product catalog with extensive search capabilities.</li>
-          <li>All other possible databases you want to have available through the internet from anywhere in the world.</li>
-        </ul>
-      </div>
+    <div class="header-text">
+      <h1 data-aos="fade-up">Databases</h1>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">I want to know more</span></a>
     </div>
   </div>
-
-  <div class="what-is" data-aos="fade-up">
-    <h3>We will design data structures and database infrastructure. We will exhibit a secure web and mobile application, we will be glad to take care of your data.</h3>
-    <p><a href="/kontakt">Ask for ideal solution for you.</a></p>
-    <br />
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="what-is m-b-10 p-b-10 text-center">
+        <h2 data-aos="fade-up">For those who keep a lot of data and want them to be available from anywhere.</h2>
+        <h3 data-aos="fade-up" class="font-bold">We build specialized databases available on web or mobile. Everything with security, quick search and filtering. We interconnect the related data.</h3>
+      </div>
+      <div class="info">
+        <div class="box left">
+          <img alt="Vývoj databází" src="/images/app_kinds/databases_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>What is good to convert to the internet?</h3>
+            <ul>
+              <li>Client database.</li>
+              <li>Employee database (HR).</li>
+              <li>Business case database.</li>
+              <li>Orders database.</li>
+              <li>Database of contracts and other documents.</li>
+              <li>Product catalog with extensive search capabilities.</li>
+              <li>All other possible databases you want to have available through the internet from anywhere in the world.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="what-is m-t-10 p-t-10 text-center" data-aos="fade-up">
+        <h3 class="font-bold">We will design data structures and database infrastructure. We will exhibit a secure web and mobile application, we will be glad to take care of your data.</h3>
+      </div>
+      <div class="text-center button-row"><%= link_to "Contact us", t('urls.contact'), :class => 'contact-button' %></div>
+    </div>
   </div>
+  <div class="bg--gray-skew"></div>
   <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
-<%= partial 'icons' %>
 <%= partial 'footer' %>
 
 <script type="text/javascript">

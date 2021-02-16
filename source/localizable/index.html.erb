@@ -39,16 +39,16 @@ redirect_url: '/'
 	<div class="title inner-center">
 		<h1 class="title1 text-center" data-aos="fade-up"><%= t('pages.main.title') %></h1>
 		<h2 class="title2 text-center" data-aos="fade-up"><%= t('pages.main.sub_title') %></h2>
+	</div>
+	<div class="main-container">
+		<svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wavy-background">
+			<path d="M-15.24,32.06 C190.74,95.22 264.10,-59.70 545.14,90.28 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path>
+		</svg>
 		<%= partial 'icons' %>
 	</div>
-
-	<div class="clear"></div>
-
 	<%= partial 'kinds_of_products' %>
 
 	<%= partial 'references' %>
-
-	<%= partial 'our_technology' %>
 
 	<div class="steps">
 		<div class="container">
@@ -68,13 +68,13 @@ redirect_url: '/'
 			</div>
 		</div>
 	</div>
+
+	<%= partial 'our_technology' %>
+
 	<div class="kinds-of-contacts">
-		<picture>
-			<source loading="lazy" class="image-map" srcset="../images/map_bg.webp" type="image/webp" media="(min-width: 861px)" width="1700" height="630">
-			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.webp" type="image/webp" media="(max-width: 860px)" width="860" height="80">  
-			<source loading="lazy" class="image-map" srcset="../images/map_bg-small.png" type="image/png" media="(max-width: 860px)" width="860" height="80">  
-			<img loading="lazy" class="image-map" alt="Logo hand" src="../images/map_bg.png" width="1700" height="630" />
-		</picture>
+		<svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wavy-background">
+			<path d="M-252.54,-26.14 C312.36,38.97 46.56,-18.25 636.84,9.38 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path>
+		</svg>
 		<div class="container">
 			<div class="row">
 				<div class="col col1">
@@ -91,12 +91,12 @@ redirect_url: '/'
 									<input type="email" name="email" id="email" placeholder="email" required>
 									<span class="error" aria-live="polite"></span>
 								</div>
-								<div class="form-group">
+								<div class="form-group m-t-5">
 									<textarea name="message" id="message" required>Dobrý den, &#010;rádi bychom poptali ...&#010;&#010;Tel.:&nbsp;</textarea>
 									<span class="error" aria-live="polite"></span>
 								</div>
 							</div>
-							<div><button type="submit" id='submit_<%= current_page.page_id.split('.')[0] %>'>ODESLAT</button></div>
+							<div class="p-t-6"><button type="submit" id='submit_<%= current_page.page_id.split('.')[0] %>'>ODESLAT</button></div>
 						</form>
 					</div>
 				</div>
@@ -105,11 +105,11 @@ redirect_url: '/'
 						<h4>Navštivte nás</h4>
 						<div>
 							<span class="sub-title city">Praha:</span>
-							<span class="sub-title first">Sněmovní 9, 118 00 Praha 1 - Malá Strana</span>
+							<span class="sub-title first">Sněmovní 9<br> 118 00 Praha 1 - Malá Strana</span>
 							<span class="sub-title city">Brno:</span>
-							<span class="sub-title">Cejl 494/25, Brno</span>
+							<span class="sub-title">Cejl 494/25<br>602 00 Brno</span>
 						</div>
-						<div><a href="/kontakt" class="submit">ZOBRAZIT MAPU</a></div>
+						<div class='flex justify-center'><a href="/kontakt" class="submit">ZOBRAZIT MAPU</a></div>
 					</div>
 				</div>
 				<div class="col col3">
@@ -118,7 +118,7 @@ redirect_url: '/'
 							<input type="hidden" name="_next" value="https://www.iquest.cz/success" />
 							<input type="text" name="_gotcha" style="display:none" />
 							<input type="text" name="tema" value="Zavolejte mě prosím." style="display:none" />
-							<div class="shadow">
+							<div>
 								<h4>Zavolejte nám</h4>
 								<span class="sub-title"><a href="tel:+420777314768" aria-label="zavolejte nám">+ 420 777 314 768</a></span>
 								<a href="tel:+420777314768" class="call-us fa fa-phone" aria-label="zavolejte nám"></a>

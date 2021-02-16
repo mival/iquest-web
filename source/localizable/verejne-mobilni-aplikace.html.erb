@@ -2,50 +2,58 @@
 title: Vývoj mobilních aplikací pro veřejnost | iQuest s.r.o.
 subtitle: Máte nápad na veřejně dostupnou mobilní aplikace? Nechte nás vyvinout běžné veřejně dostupné mobilní aplikace. Dokonalé řešení pro Váš startup nebo bežící projekt.
 ---
-<div class="what-we-do what-we-do-app">
-  <header></header>
-  <div class="title">
+<div class="what-we-do">
+  <div class="what-we-do__header">
     <div class="back-fixed" data-aos="fade-left">
-      <% link_to t('urls.mobile_applications') do %><i class="fa fa-3x fa-arrow-circle-left"></i><% end %>
+      <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
     </div>
-    <h1 data-aos="fade-up" data-aos="fade-up">Vyvíjíme mobilní aplikace nové generace</h1>
-    <h2 data-aos="fade-up" style="margin-bottom:80px;">Dokonalé řešení pro Váš startup nebo bežící projekt</h2>
+    <div class="header-text">
+      <h1 data-aos="fade-up" data-aos="fade-up">Vyvíjíme mobilní aplikace nové generace</h1>
+      <h2 data-aos="fade-up" style="margin-bottom:80px;">Dokonalé řešení pro Váš startup nebo bežící projekt</h2>
+    </div>
+    <div class='flex container-i-want-to-know-more items-center'>
+      <a href="#info-container" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
+    </div>
   </div>
-    <%= partial 'kinds_of_products' %>
-  <div class="info">
-    <div class="box left v-center">
-      <img alt="mobilní aplikace pro veřejnost" src="/images/verejne_mobile_applications_1.jpg" data-aos="fade-right" />
-      <div class="offset" data-aos="fade-left">
-        <p><b>V čem jsou naše mobilní aplikace pro všechny jiné?</b></p>
-        <ul>
-          <li>Aplikace plné nejlepších nápadů.</li>
-          <li>Skvělý design, který zaujme.</li>
-          <li>Atraktivní ovládání odpovídající nejnovějším trendům.</li>
-          <li>Maximalní možné využití hardware telefonu.</li>
-        </ul>
+  <div class="info-container" id="info-container">
+    <div class="info-container__content container">
+      <div class="info m-b-10 p-b-10">
+        <div class="box left">
+          <img alt="mobilní aplikace pro veřejnost" src="/images/verejne_mobile_applications_1.jpg" data-aos="fade-right" />
+          <div data-aos="fade-left">
+            <h3>V čem jsou naše mobilní aplikace pro všechny jiné?</h3>
+            <ul>
+              <li>Aplikace plné nejlepších nápadů.</li>
+              <li>Skvělý design, který zaujme.</li>
+              <li>Atraktivní ovládání odpovídající nejnovějším trendům.</li>
+              <li>Maximalní možné využití hardware telefonu.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="info">
-    <div class="box right v-center">
-      <img alt="veřejné hybridní mobilní aplikace" src="/images/verejne_mobile_applications_2.jpg" data-aos="fade-left" />
-      <div class="offset" data-aos="fade-right">
-        <p><b>Proč mobilní aplikace od iQuest?</b></p>
-        <ul>
-          <li>Vyvíjíme mobilní aplikace pro více platforem. Více informací o <a href="https://www.jedenvyvoj.cz/">hybridních aplikacích zde.</a></li>
-          <li>Přinášíme rychlost, úsporu a kvalitu.</li>
-          <li>Vyvíjíme již více než 17 let i velmi náročné systémy.</li>
-          <li>Máme zkušenost s velkými systémy.</li>
-          <li>Nejsme pouze vývojáři, rádi konzultujeme i byznys model projektu.</li>
-          <li>V průběhu vývoje provádíme uživatelské testování.</li>
-          <li>Děláme podporu marketingu a virální šíření aplikací.</li>
-        </ul>
+      <div class="info">
+        <div class="box right">
+          <img alt="veřejné hybridní mobilní aplikace" src="/images/verejne_mobile_applications_2.jpg" data-aos="fade-left" />
+          <div data-aos="fade-right">
+            <h3>Proč mobilní aplikace od iQuest?</h3>
+            <ul>
+              <li>Vyvíjíme mobilní aplikace pro více platforem. Více informací o <a href="https://www.jedenvyvoj.cz/">hybridních aplikacích zde.</a></li>
+              <li>Přinášíme rychlost, úsporu a kvalitu.</li>
+              <li>Vyvíjíme již více než 17 let i velmi náročné systémy.</li>
+              <li>Máme zkušenost s velkými systémy.</li>
+              <li>Nejsme pouze vývojáři, rádi konzultujeme i byznys model projektu.</li>
+              <li>V průběhu vývoje provádíme uživatelské testování.</li>
+              <li>Děláme podporu marketingu a virální šíření aplikací.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <h3 class="text-center m-b-0 m-t-10 p-t-4  font-bold" data-aos="fade-up">Nejsme jen programátoři. Máme zkušenosti a software děláme pro lidi.</h3>
+      <div class="text-center button-row"><%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button' %></div>
     </div>
   </div>
-
-  <h3 class="text-green mobile-h3" data-aos="fade-up">Nejsme jen programátoři.<br />Máme zkušenosti a software děláme pro lidi.</h3>
-  <%= link_to "Kontaktujte nás", t('urls.contact'), :class => 'contact-button blue', :'data-aos' => 'fade-up' %>
+  <div class="bg--gray-skew"></div>
+  <%= partial 'kinds_of_products' %>
   <%= partial 'references' %>
   <%= partial 'our_technology' %>
 </div>
