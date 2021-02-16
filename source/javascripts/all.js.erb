@@ -242,18 +242,18 @@ document.addEventListener("DOMContentLoaded", function() {
       })
     });
   });
-  const scrollLink = document.querySelector(".scroll-link");
-  scrollLink.addEventListener("click", function(e) {
-  e.preventDefault();
-  const href = this.getAttribute("href");
-  const viewportOffset = document.querySelector(href).getBoundingClientRect();
-  const PADDING = 40;
-  const offsetTop = viewportOffset.top - PADDING;
-  scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-});
+  const scrollLink = document.querySelectorAll(".scroll-link");
+  scrollLink.forEach(link => link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const viewportOffset = document.querySelector(href).getBoundingClientRect();
+    const PADDING = 40;
+    const offsetTop = viewportOffset.top + window.pageYOffset - PADDING;
+    scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  }));
 });
 
 

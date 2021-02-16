@@ -2,14 +2,14 @@
 title: Vývoj firemních informačních systémů na míru | iQuest s.r.o.
 subtitle: Nechte si navrhnout Váš nový informační systém od zkušených odborníků. Vytvořímé informační systém, odpovidající Vašemu podnikání.
 ---
-<div class="subpage container-lg">
+<div class="subpage ">
   <header class="subpage-header row">
       <div class="col-30 intro-text-container relative">
         <div class="back-fixed" data-aos="fade-left">
           <a href="/"><i class="fa fa-3x fa-arrow-circle-left"></i></a>
         </div>
         <div class="header-text" data-aos="fade-up">
-            <h1 data-aos="fade-up">Řešení na míru pro malé firmy i nadnárodní korporace
+            <h1 data-aos="fade-up">Řešení na míru pro malé firmy <br> i nadnárodní korporace
             </h1>
             <h2>
                 Provádíme procesní a datovou analýzu a vývoj moderních vnitřních i internetových systému.
@@ -19,7 +19,7 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
             </h2>
         </div>
         <div class='flex container-i-want-to-know-more items-center'>
-          <a href="#subpage-numbers" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
+          <a href="#subpage-main__list" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
         </div>
       </div>
       <div class="intro-image-container relative col-70">
@@ -34,8 +34,8 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
         <div class="smartphone-image-container"><img src="/images/Smartphons/next.png" alt="Naučné weby"></div>
       </div>
   </header>
-  <div class="subpage-points">
-    <ul class='subpage-numbers' id="subpage-numbers">
+  <div class="subpage-main">
+    <ul class='subpage-main__list' id="subpage-main__list">
       <li class="flex items-center">
         <img class="numbers" data-aos="fade-right" src="/images/Numbers/1.png" alt="one">
         <div data-aos="fade-left">
@@ -78,11 +78,13 @@ subtitle: Nechte si navrhnout Váš nový informační systém od zkušených od
       </li>
     </ul>
   </div>
+  <div class="bg--gray-skew"></div>
   <div class="subpage-reference">
     <div class=''>
       <%= partial 'references' %>
     </div>
   </div>
+  <div class="bg--white-skew"></div>
   <div class="subpage-more-information bg-stretch">
     <div class="more-information__buttons" data-aos="fade-right">
       <% link_to t('urls.why_iquest'), :class => 'button', 'aria-label': "přejít na stránku proč iquest" do %>

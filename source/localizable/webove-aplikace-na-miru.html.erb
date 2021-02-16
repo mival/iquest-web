@@ -2,7 +2,7 @@
 title: Vývoj webových aplikací na míru pro Vaše podnikání | iQuest s.r.o.
 subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokonalou, moderní a technologicky vyspělou webovou aplikaci, či rozsáhlý webový informační systém.
 ---
-<div class="subpage container-lg">
+<div class="subpage ">
   <header class="subpage-header row">
       <div class="col-30 intro-text-container relative">
         <div class="back-fixed" data-aos="fade-left">
@@ -14,7 +14,7 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
           <h2>na míru pro Vaše podnikání</h2>
         </div> 
         <div class='flex container-i-want-to-know-more items-center'>
-          <a href="#subpage-numbers" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
+          <a href="#subpage-main__list" class="scroll-link i-want-to-know-more" aria-labelledby="article-content-link-text"><span id="article-content-link-text">Chci vědět více</span></a>
         </div>
       </div>
       <div class="intro-image-container relative col-70">
@@ -28,8 +28,8 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
         <div class="smartphone-image-container"><img src="/images/Smartphons/science_web_persian_green.png" alt="Naučné weby"></div>
       </div>
   </header>
-  <div class="subpage-points">
-    <ul class='subpage-numbers' id="subpage-numbers">
+  <div class="subpage-main">
+    <ul class='subpage-main__list' id="subpage-main__list">
       <li class="flex items-center">
         <img class="numbers" data-aos="fade-right" src="/images/Numbers/1.png" alt="one">
         <div data-aos="fade-left">
@@ -70,11 +70,13 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
       </li>
     </ul>
   </div>
+  <div class="bg--gray-skew"></div>
   <div class="subpage-reference">
     <div class=''>
       <%= partial 'references' %>
     </div>
   </div>
+  <div class="bg--white-skew"></div>
   <div class="subpage-more-information bg-stretch">
     <div class="more-information__buttons" data-aos="fade-right">
       <% link_to t('urls.why_iquest'), :class => 'button', 'aria-label': "přejít na stránku proč iquest" do %>
@@ -86,9 +88,6 @@ subtitle: Vývoj webových aplikací nechte na nás. Vytvoříme pro Vás dokona
       <a href="/kontakt" aria-label="Kontaktujte nás" class='button'>Kontaktujte nás</a>
     </div>
   </div>
-  <!-- <div class="subpage-our-technology">
-    <%= partial 'our_technology' %>
-  </div> -->
 </div>
 
 <%= partial 'footer' %>

@@ -9739,7 +9739,7 @@ html.remodal-is-locked body .navigation .navbar {
   right: -10%;
 }
 
-.subpage-points {
+.subpage-main {
   background-color: var(--middle-gray);
   width: 100%;
   position: relative;
@@ -9749,7 +9749,7 @@ html.remodal-is-locked body .navigation .navbar {
   z-index: 2;
 }
 
-.subpage-points .subpage-numbers {
+.subpage-main .subpage-main__list {
   color: white;
   list-style: none;
   width: 70%;
@@ -9761,25 +9761,25 @@ html.remodal-is-locked body .navigation .navbar {
   top: -157px;
 }
 
-.subpage-points .subpage-numbers li .numbers {
+.subpage-main .subpage-main__list li .numbers {
   margin-right: 40px;
   width: 120px;
   max-height: 200px;
 }
 
-.subpage-points .subpage-numbers li .numbers div {
+.subpage-main .subpage-main__list li .numbers div {
   padding-left: 70px;
 }
 
-.subpage-points .subpage-numbers li .numbers div p {
+.subpage-main .subpage-main__list li .numbers div p {
   font-weight: 300;
 }
 
-.subpage-points .subpage-numbers li:not(:first-child) {
+.subpage-main .subpage-main__list li:not(:first-child) {
   margin-top: 120px;
 }
 
-.subpage-points .subpage-numbers:after {
+.subpage-main .subpage-main__list:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -9791,7 +9791,7 @@ html.remodal-is-locked body .navigation .navbar {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAARCAYAAAD39H0RAAAAG0lEQVR42mL6DwVMDFDAAsSMIAZcZEAYAAEGAKyECB6X8Cx+AAAAAElFTkSuQmCC);
 }
 
-.subpage-points:before {
+.subpage-main:before {
   content: "";
   background-color: var(--middle-gray);
   height: 55vw;
@@ -9803,7 +9803,7 @@ html.remodal-is-locked body .navigation .navbar {
   width: 100%;
 }
 
-.subpage-points:after {
+.subpage-main:after {
   content: "";
   background-color: var(--middle-gray);
   height: 50vw;

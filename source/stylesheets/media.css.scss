@@ -82,14 +82,8 @@
 
   // subpage
 
-  .subpage-points{ 
-    .subpage-numbers {
-    top: -80px;
-    }
-  }
-
-  .subpage-reference {
-    margin-top: 440px;
+  .subpage-main__list {
+  top: -80px;
   }
   .subpage-more-information {
     &:before {
@@ -153,30 +147,14 @@
   .more-information__buttons .button {
     padding: 9px 18px;
   }
-  .subpage-points {
-    .subpage-numbers {
-      &:after {
-        height: 150px;
-      }
-       li .numbers {
-        margin-right: 30px;
-        width: 97px;
-       }
+  .subpage-main__list {
+    &:after {
+      height: 150px;
     }
-  }
-  .subpage-reference {
-    margin-top: 365px;
-    padding: 0;
-    margin-bottom: -1rem;
-    & > div .reference {
-      &:after {
-        top: 107%;
-      }
-      &:before {
-        top: -170px;
-        height: 170px;
-      }
-    }
+     li .numbers {
+      margin-right: 30px;
+      width: 97px;
+     }
   }
   .subpage-more-information {
     padding: 25% 0 10%;
@@ -283,9 +261,6 @@
         }
       }
     }
-  }
-  .subpage-reference {
-    margin-top: 400px;
   }
   .subpage-more-information {
     padding: 30% 0 10%;
@@ -476,20 +451,15 @@
       }
   }
 
-  .subpage-points {
+  .subpage-main {
     margin-top: 196px;
-    .subpage-numbers {
-      top: 50px;
-      width: 88%;
-      li:not(:first-child) {
-        margin-top: 65px;
-      }
-    }
   }
-  .subpage-reference {
-    margin-top: 375px;
-    margin-bottom: -9rem;
-    max-height: 465px;
+  .subpage-main__list {
+    top: 50px;
+    width: 88%;
+    li:not(:first-child) {
+      margin-top: 65px;
+    }
   }
   .subpage-more-information {
     padding: 50% 0 20%;
@@ -1303,33 +1273,29 @@
       margin-left: 0;
     }
   }
-  .subpage-points {
+  .subpage-main {
     margin-top: 48px;
     padding-bottom: 40px;
-    .subpage-numbers {
-      top: -30px;
-      padding-left: 0;
-      li {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        .numbers {
-          margin-right: 0;
-          margin-bottom: 30px;
-          width: 70px;
-      }
-      }
-      li:not(:first-child) {
-        margin-top: 40px;
-      }
-      &:after {
-        top: 100%;
-      }
-    }
   }
-  .subpage-reference {
-    margin-top: 365px;
-    max-height: 650px;
+  .subpage-main__list {
+    top: -30px;
+    padding-left: 0;
+    li {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .numbers {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 70px;
+    }
+    }
+    li:not(:first-child) {
+      margin-top: 40px;
+    }
+    &:after {
+      top: 100%;
+    }
   }
   .subpage-more-information {
     padding: 67% 0 20%;
@@ -1339,11 +1305,25 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 715px) {
-  .subpage-reference {
-    margin-top: 425px;
+  .description-clearfix {
+    height: 130px;
+  }
+  .progresivni-webove-aplikace .subpage-main__list:first-child .article-item {
+    flex-direction: column-reverse;
+  }
+  .article-item__description {
+    top: -10%;
+    &.play-link {
+      right: 0;
+    }
+    &.down-link {
+      left: 0;
+    } 
+  }
+  .article-item__text {
+    p, h2 {
+      width: 100%;
+    }
   }
 }
 
@@ -1534,16 +1514,6 @@
   }
 
   //subpage 
-  .subpage-reference {
-    margin-bottom: -3px;
-    max-height: 671px;
-    & > div .reference {
-      &:after {
-        top: 102%;
-        height: 90px;
-      }
-    }
-  }
   .subpage-more-information  {
     padding: 30% 0 20%;
     &:before {
@@ -1621,14 +1591,12 @@
       display: none;
     }
   }
-  .subpage-points {
-    .subpage-numbers {
-      li .numbers {
-      width: 50px;
-      }
-      &:after {
-        top: 99%;
-      }
+  .subpage-main__list {
+    li .numbers {
+    width: 50px;
+    }
+    &:after {
+      top: 99%;
     }
   }
   .page .scroll-content {
@@ -1655,17 +1623,7 @@
 }
 }
 
-@media screen and (max-width: 420px) {
-  .subpage-reference {
-    max-height: 925px;
-  }
-}
-
 @media screen and (max-width: 432px) {
-  .subpage-reference {
-    margin-top: 650px;
-  }
-
   .subpage-more-information {
     padding: 47% 0 20%;
   }

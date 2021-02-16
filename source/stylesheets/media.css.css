@@ -124,10 +124,10 @@
   .subpage-header div:nth-child(2).intro-image-container .smartphone-image-container {
     width: 76%;
   }
-  .subpage-points {
+  .subpage-main {
     height: 1380px;
   }
-  .subpage-points .subpage-numbers {
+  .subpage-main .subpage-main__list {
     top: -80px;
   }
   .subpage-reference {
@@ -211,10 +211,10 @@
     top: 28%;
     right: -15%;
   }
-  .subpage-points {
+  .subpage-main {
     height: 1500px;
   }
-  .subpage-points .subpage-numbers li .numbers {
+  .subpage-main .subpage-main__list li .numbers {
     margin-right: 30px;
     width: 97px;
   }
@@ -565,15 +565,15 @@
     top: 31%;
     right: -6%;
   }
-  .subpage-points {
+  .subpage-main {
     margin-top: 196px;
     height: 1380px;
   }
-  .subpage-points .subpage-numbers {
+  .subpage-main .subpage-main__list {
     top: 50px;
     width: 88%;
   }
-  .subpage-points .subpage-numbers li:not(:first-child) {
+  .subpage-main .subpage-main__list li:not(:first-child) {
     margin-top: 65px;
   }
   .subpage-reference {
@@ -1297,15 +1297,15 @@
     top: 59%;
     left: 36%;
   }
-  .subpage-points {
+  .subpage-main {
     margin-top: 48px;
     height: 2135px;
   }
-  .subpage-points .subpage-numbers {
+  .subpage-main .subpage-main__list {
     top: -30px;
     padding-left: 0;
   }
-  .subpage-points .subpage-numbers li {
+  .subpage-main .subpage-main__list li {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1315,12 +1315,12 @@
             align-items: center;
     text-align: center;
   }
-  .subpage-points .subpage-numbers li .numbers {
+  .subpage-main .subpage-main__list li .numbers {
     margin-right: 0;
     margin-bottom: 30px;
     width: 70px;
   }
-  .subpage-points .subpage-numbers li:not(:first-child) {
+  .subpage-main .subpage-main__list li:not(:first-child) {
     margin-top: 40px;
   }
   .subpage-reference {
@@ -1490,7 +1490,7 @@
     top: 71%;
     left: 16%;
   }
-  .subpage-points {
+  .subpage-main {
     height: 2693px;
   }
   .subpage-reference {

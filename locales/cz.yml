@@ -12,6 +12,7 @@ cz:
     join_us                    : '/prace-programator-ruby-on-rails/'
     development                : '/webove-aplikace-na-miru/'
     information_systems        : '/firemni-informacni-systemy-na-miru/'
+    progressive_web_apps       : '/progresivni-webove-aplikace/'
     mobile_applications        : '/mobilni-aplikace-nove-generace/'
     startups                   : '/startups/'
     mobilni_aplikace           : '/podnikove-mobilni-aplikace/'
@@ -21,7 +22,6 @@ cz:
     frontend_developer         : '/frontend-developer/'
     backend_developer          : '/backend-developer/'
     # Kinds of products
-    progressive_web_apps       : 'https://www.progresivni-webove-aplikace.cz/'
     reservation_systems        : '/priklady-systemu/rezervacni-systemy/'
     vendor_portals             : '/priklady-systemu/prodejni-portaly/'
     crm_systems                : '/priklady-systemu/crm-systemy/'
