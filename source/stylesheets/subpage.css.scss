@@ -31,7 +31,7 @@ $subpage-margin-lg: 60px;
     z-index: 3;
     position: relative;
     .intro-text-container {
-      height: 100%;
+      height: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
