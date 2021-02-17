@@ -2,7 +2,7 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 activate :directory_indexes
-set :trailing_slash, true
+set :trailing_slash, false
 set :lang, :cz
 activate :i18n, :langs => [:cz, :en]
 
