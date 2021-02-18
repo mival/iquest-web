@@ -217,14 +217,19 @@ $subpage-margin-lg: 60px;
 }
 
 .subpage-more-information {
-  background-image: url("/images/web_application_development_back.jpg");
   background-attachment: fixed;
   color: white;
   background-color: var(--dark-gray);
   text-align: center;
   padding: 25% 0 20%;
   position: relative;
-  background-blend-mode: exclusion;
+  video {
+    mix-blend-mode: soft-light;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }   
 }
 
 .bg-stretch {
