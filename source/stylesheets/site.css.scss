@@ -735,17 +735,19 @@ body {
   z-index: 10;
 }
 
-#menu #menu-close {
-  cursor: pointer;
+#menu .menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 2em;
   margin: 0 30px;
   padding: 0 10px;
+  #menu-close {
+    z-index: 5;
+  }
 }
 
-#menu #menu-close img {
+#menu .menu-header img {
   width: 25px;
 }
 
