@@ -251,7 +251,6 @@ const scrollLink = document.querySelectorAll(".scroll-link");
         const viewportOffset = document.querySelector(href).getBoundingClientRect();
         const PADDING = 40;
         const offsetTop = viewportOffset.top + window.pageYOffset - PADDING;
-        console.log('offsetTop', offsetTop)
         scrollTo({
           top: offsetTop,
           behavior: 'smooth'
