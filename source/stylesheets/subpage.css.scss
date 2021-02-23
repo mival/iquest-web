@@ -163,8 +163,15 @@ $subpage-margin-lg: 60px;
   width: 40vw;
 }
 
-.what-we-do__header .header-text {
-  width: 75vw;
+.what-we-do__header {
+  height: auto;
+  margin-bottom: 21rem;
+  .header-text {
+    width: 75vw;
+  }
+  .header-text, .container-i-want-to-know-more {
+    position: relative;
+  }
 }
   
 .subpage-main {
