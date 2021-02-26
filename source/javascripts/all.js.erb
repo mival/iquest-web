@@ -1,25 +1,26 @@
 //= require jquery.easing.compatibility
 
-function load_page(e, n, t, a) {
-  $.ajax({
-    url: e,
-    success: function(o) {
-      var l = $(o).filter(n).children();
-      $(t).empty().append(l), a(e)
-    }
-  })
+function load_page(url, pageLoadClass, pagePreloadClass, a) {
+    $.ajax({
+      url: url,
+      success: function(result) {
+        const childOfPageLoadClass = $(result).filter(pageLoadClass).children();
+        $(pagePreloadClass).empty().append(childOfPageLoadClass), a(url)
+      }
+    })
 }
-
-function page_scroll(e) {
+  
+function page_scroll(urlsArray) {
+  console.log('urlsArray', urlsArray);
   function n(e) {
     var n = window.location.pathname;
-    current_page_name = n, l = o.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += o.length : c >= o.length && (c -= o.length)
+    current_page_name = n, l = urlsArray.indexOf(current_page_name), "undefined" == typeof e && (e = l), c = e + 1, i = e - 1, 0 > i ? i += urlsArray.length : c >= urlsArray.length && (c -= urlsArray.length)
   }
-
+  
   function t() {
     a("left"), a("right")
   }
-
+  
   function a(e) {
     $(".page-scroll-" + e).off().click(function(a) {
       $('body').addClass('posa');
@@ -28,39 +29,37 @@ function page_scroll(e) {
       if (!r) {
         r = !0;
         var l = null,
-          u = null;
-        "left" == e ? (l = i, u = "100%") : "right" == e && (l = c, u = "-100%"), $(".page-load").addClass("process").after('<div class="page-preload-' + e + '"></div>'), load_page(o[l], ".page-load", ".page-preload-" + e, function(a) {
-          n(l), setTimeout(function() {
-            $(".page-load").css("left", u), $(".page-preload-" + e).css("left", 0)
-          }, 500), setTimeout(function() {
-            $('body').removeClass('posa');
-            $(".page-load").remove(), $(".page-preload-" + e).addClass("page-load").removeClass("page-preload-" + e), r = !1, contact_bubble_init()
-          }, 1e3), t(), history.pushState(null, null, a)
-        })
-      }
-      a.preventDefault()
-    })
-  }
-
-  var o = e,
+        u = null;
+          "left" == e ? (l = i, u = "100%") : "right" == e && (l = c, u = "-100%"), $(".page-load").addClass("process").after('<div class="page-preload-' + e + '"></div>'), load_page(urlsArray[l], ".page-load", ".page-preload-" + e, function(a) {
+            n(l), setTimeout(function() {
+              $(".page-load").css("left", u), $(".page-preload-" + e).css("left", 0)
+            }, 500), setTimeout(function() {
+              $('body').removeClass('posa');
+              $(".page-load").remove(), $(".page-preload-" + e).addClass("page-load").removeClass("page-preload-" + e), r = !1
+            }, 1e3), t(), history.pushState(null, null, a)
+          })
+        }
+        a.preventDefault()
+      })
+    }
     l = null,
     c = null,
     i = null,
     r = !1;
-  n(), t(), window.addEventListener("popstate", function() {
-    load_page(window.location.pathname, ".page-load", ".page-load", function() {
-      n(), t()
+    n(), t(), window.addEventListener("popstate", function() {
+      load_page(window.location.pathname, ".page-load", ".page-load", function() {
+        n(), t()
+      })
     })
-  })
-}
-
+  }
+  
 var getUrlParameter = function(e) {
   var n, t, a = decodeURIComponent(window.location.search.substring(1)),
     o = a.split("&");
   for (t = 0; t < o.length; t++)
     if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
 };
-
+  
 function contactBubbleAnimation() {
   const contactBubbleEl = document.querySelector('.contact-bubble');
   contactBubbleEl.addEventListener('mouseover', function(e) {
@@ -78,7 +77,7 @@ function contactBubbleAnimation() {
     }
   })
 }
-
+  
 function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
   const showErrors = function() {
     if(emailElement.validity.valueMissing) {
@@ -245,8 +244,8 @@ document.addEventListener("DOMContentLoaded", function() {
 const scrollLink = document.querySelectorAll(".scroll-link");
   if(scrollLink.length) {
     scrollLink.forEach(function(link) {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
         const href = this.getAttribute("href");
         const viewportOffset = document.querySelector(href).getBoundingClientRect();
         const PADDING = 40;
