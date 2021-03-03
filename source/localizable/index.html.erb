@@ -149,62 +149,29 @@ redirect_url: '/'
 <%= partial 'footer' %>
 
 <script type="text/javascript">
-	$(window).scroll(function(){
-		$('.circles').scrollTop($(document).scrollTop());
+	window.addEventListener('scroll', function(){
+		document.querySelector('.circles').scrollTop = window.pageYOffset;
 	});
 
-	$('<img alt="Greenswan" src="/images/Refs/greenswan.png" />');
-	$('<img alt="cia-news" src="/images/Refs/cia-news.png" />');
-	$('<img alt="Cemio" src="/images/Refs/cemio.png" />');
-	$('<img alt="Ignum" src="/images/Refs/ignum.png" />');
-	$('<img alt="modry-andel" src="/images/Refs/modry-andel.png" />');
-	$('<img alt="Autoprima" src="/images/Refs/autoprima.png" />');
-	$('<img alt="Procare" src="/images/Refs/procare.png" />');
+	document.querySelectorAll('.reference .circle').forEach(function(circle) {
+		circle.addEventListener('mouseenter', function() {
+			circle.classList.add('animated');
+			circle.classList.add('pulse'); 
+		})
+		circle.addEventListener('mouseleave', function() {
+			circle.classList.remove('animated');
+			circle.classList.remove('pulse'); 
+		})
+	}) 
 
-	$('.reference .circle').on('mouseenter', function() {
-		$(this).addClass('animated pulse');
-	}).on('mouseleave', function() {
-		$(this).removeClass('animated pulse');
-	})
-
-	$('.info .box').on('mouseenter', function() {
-		$(this).find('img').addClass('animated pulse');
-	}).on('mouseleave', function() {
-		$(this).find('img').removeClass('animated pulse');
-	})
-
-	function makeNewPosition($container) {
-		// Get viewport dimensions (remove the dimension of the div)
-		$container = ($container || $(window))
-		var h = $container.height() - 50;
-		var w = $container.width() - 50;
-
-		var nh = Math.floor(Math.random() * h);
-		var nw = Math.floor(Math.random() * w);
-
-		return [nh, nw];
-	}
-
-	function animateDiv(element) {
-		var $target = $(element);
-		var newq = makeNewPosition($target.parent());
-		var oldq = $target.offset();
-		var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-		$(element).animate({
-				top: newq[0],
-				left: newq[1]
-		}, speed, function() {
-				animateDiv(element);
-		});
-	};
-
-	function calcSpeed(prev, next) {
-		var x = Math.abs(prev[1] - next[1]);
-		var y = Math.abs(prev[0] - next[0]);
-		var greatest = x > y ? x : y;
-		var speedModifier = 0.07;
-		var speed = Math.ceil(greatest / speedModifier);
-		return speed;
-	}
+	document.querySelectorAll('.info .box').forEach(function(box) {
+		box.addEventListener('mouseenter', function() {
+			box.querySelector("img").classList.add('animated');
+			box.querySelector("img").classList.add('pulse'); 
+		})
+		box.addEventListener('mouseleave', function() {
+			box.querySelector("img").classList.remove('animated');
+			box.querySelector("img").classList.remove('pulse'); 
+		})
+	}) 
 </script>

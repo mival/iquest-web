@@ -118,13 +118,14 @@
 </aside>
 
 <script type="text/javascript">
-  $( window ).on('resize', menu_change);
-  $( window ).on('load', menu_change);
+  window.addEventListener('resize', menu_change);
+  window.addEventListener('load', menu_change);
   function menu_change() {
+    const menuHiddenLinks = document.querySelectorAll('.hide');
     if (window.matchMedia('(max-width: 768px)').matches) {
-      $('.hide').show();
+      menuHiddenLinks.forEach(function(link){link.style.display = "block"})
     } else {
-      $('.hide').hide();
+      menuHiddenLinks.forEach(function(link){link.style.display = "none"})
     }
   }
 </script>
