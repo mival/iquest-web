@@ -1,18 +1,33 @@
-//= require jquery.easing.compatibility
-
-function load_page(url, pageLoadClass, pagePreloadClass, callbackfunction) {
-  $.ajax({
-    url: url,
-    success: function(result) {
-      const childOfPageLoadClass = $(result).filter(pageLoadClass).children();
-      $(pagePreloadClass).empty().append(childOfPageLoadClass), callbackfunction(url)
-    }
-  })
+function loadPage(url, pageLoadClass, pagePreloadClass, callbackfunction) {
+  httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function(){
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 200) {
+          const httpResponse = httpRequest.response;
+          console.log('httpResponse', httpResponse);
+          const childOfPageLoadClass = httpResponse.querySelector(pageLoadClass).firstElementChild;
+          const elementPagePreload = document.querySelector(pagePreloadClass);
+          contentOfChildOfPageLoadClass = childOfPageLoadClass.outerHTML;
+          console.log('contentOfChildOfPageLoadClass', contentOfChildOfPageLoadClass);
+          elementPagePreload.innerHTML = contentOfChildOfPageLoadClass;
+          callbackfunction(url);
+        }
+      }
+  };
+  httpRequest.open('GET', url);
+  httpRequest.responseType = "document";
+  httpRequest.send();
 }
 
 function page_scroll(urlsArray) {
-  console.log('urlsArray', urlsArray);
-  function n(IndexOfPageCurrent) {
+  let l = null;
+  let indexIncrement = null;
+  let indexDecrement = null;
+  let state = false;
+  setIndex(); 
+  addEventListenersToScroll(); 
+
+  function setIndex(IndexOfPageCurrent) {
     const currentOrPreviousPageName = window.location.pathname;
     const IndexOfPageCurrentOrPrevious = urlsArray.indexOf(currentOrPreviousPageName);
     "undefined" == typeof IndexOfPageCurrent && (IndexOfPageCurrent = IndexOfPageCurrentOrPrevious);
@@ -21,42 +36,60 @@ function page_scroll(urlsArray) {
     0 > indexDecrement ? indexDecrement += urlsArray.length : indexIncrement >= urlsArray.length && (indexIncrement -= urlsArray.length);
   }
 
-
-  
-  function t() {
-    scrool("left"), scrool("right")
+  function addEventListenersToScroll() {
+    scroolOnClick("left"); 
+    scroolOnClick("right");
   }
   
-  function scrool(direction) {
-    $(".page-scroll-" + direction).off().click(function(a) {
-      $('body').addClass('posa');
-      $(".page-scroll-show .header").css("top", $(document).scrollTop());
-      if (!whatIsR) {
-        whatIsR = true;
-        var l = null,
-        u = null;
-          "left" == direction ? (l = indexDecrement, u = "100%") : "right" == direction && (l = indexIncrement, u = "-100%"), $(".page-load").addClass("process").after('<div class="page-preload-' + direction + '"></div>'), load_page(urlsArray[l], ".page-load", ".page-preload-" + direction, function(a) {
-            n(l), setTimeout(function() {
-              $(".page-load").css("left", u), $(".page-preload-" + direction).css("left", 0)
-            }, 500), setTimeout(function() {
-              $('body').removeClass('posa');
-              $(".page-load").remove(), $(".page-preload-" + direction).addClass("page-load").removeClass("page-preload-" + direction), whatIsR = false
-            }, 1e3), t(), history.pushState(null, null, a)
+  function scroolOnClick(direction) {
+    const elemenArrowButtons = document.querySelectorAll(`.page-scroll-${direction}`);
+    elemenArrowButtons.forEach(function(button) {
+    button.addEventListener('click', eventHandler);
+      function eventHandler(evnt) {
+        const elementBody = document.body;
+	      elementBody.classList.add('posa');
+        document.querySelector(".page-scroll-show .header").style.top = elementBody.scrollTop;
+        if (!state) {
+          state = true;
+          let scrollToIndex = null;
+          let cssScrollDirection = null;
+	        const elementPageLoad = document.querySelector(".page-load");
+          direction == "left" ? (scrollToIndex = indexDecrement, cssScrollDirection = "100%") : direction == "right" && (scrollToIndex = indexIncrement, cssScrollDirection = "-100%"); 
+          elementPageLoad.classList.add("process");
+          const createdElementPreload = document.createElement('div');
+          createdElementPreload.classList.add(`page-preload-${direction}`);
+          elementPageLoad.parentNode.insertBefore(createdElementPreload, elementPageLoad.nextSibling);
+		      loadPage(urlsArray[scrollToIndex], ".page-load", `.page-preload-${direction}`, function(url) {
+            const elementPagePreloadWithDirection = document.querySelector(`.page-preload-${direction}`);
+            setIndex(scrollToIndex); 
+            setTimeout(function() {
+              elementPageLoad.style.left = cssScrollDirection;
+		  	      elementPagePreloadWithDirection.style.left = 0;
+            }, 500);
+            setTimeout(function() {
+            elementBody.classList.remove('posa');
+            elementPageLoad.remove();
+            elementPagePreloadWithDirection.classList.add("page-load");
+            elementPagePreloadWithDirection.classList.remove(`page-preload-${direction}`)
+            state = false
+            }, 1e3);
+            history.pushState(null, null, url);
+            addEventListenersToScroll();
           })
         }
-        a.preventDefault()
-      })
-    }
-    let l = null;
-    let indexIncrement = null;
-    let indexDecrement = null;
-    let whatIsR = false;
-    n(), t(), window.addEventListener("popstate", function() {
-      load_page(window.location.pathname, ".page-load", ".page-load", function() {
-        n(), t()
-      })
+        evnt.preventDefault();
+      }
     })
   }
+
+  window.addEventListener("popstate", function() {
+    console.log('popstate was triggered');
+    loadPage(window.location.pathname, ".page-load", ".page-load", function() {
+        setIndex(); 
+        addEventListenersToScroll();
+    })
+  })
+}
   
 function contactBubbleAnimation() {
   const contactBubbleEl = document.querySelector('.contact-bubble');
@@ -129,7 +162,6 @@ function formValidation(emailElement, emailElementError, messageElement, message
 
 document.addEventListener("DOMContentLoaded", function() {
   const bodyEl = document.querySelector("body");
-  const overlayEl = document.getElementById("overlay");
   const menuEl = document.getElementById("menu");
   const munuOpenEl = document.getElementById("menu_open");
 
