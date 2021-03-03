@@ -1343,12 +1343,13 @@
   .info .icons-container {
       a.box {
         flex-direction: row !important;
+        width: auto !important;
         .text {
           padding-left: 10px;
           text-align: start;
         }
         &:not(:last-child) {
-          margin-right: 15px;
+          margin-right: 5px;
           
         }
       }
