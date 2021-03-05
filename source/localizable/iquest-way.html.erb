@@ -240,7 +240,7 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
       </div>
     </div>
 
-    <div id="large_applications" class="page vertical yellow-dark text-white inverse">
+    <div id="large_applications" class="page vertical cerculean text-white inverse">
       <div class="scroll-up mobile-hide">
         <div class="box">
           <img class="arrow-up" height="33" width="56" alt="Next_page_arrow_up_white" src="/images/next_page_arrow_up_white.png" />
@@ -507,29 +507,31 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
 </div>
 
 <script>
-  var slowdown, stop_scrolling, scroll_top, page_height, navigation_half_height;
-  var current_page = 0;
-  var iqw_current_page = 0;
-  var mobile;
+  let slowdown, stop_scrolling, scroll_top, page_height, navigation_half_height;
+  let current_page = 0;
+  let iqw_current_page = 0;
+  let mobile;
 
-  $(window).width() > 768 ? mobile = 2 : mobile = 1;
+  window.innerWidth > 768 ? mobile = 2 : mobile = 1;
 
   //scroll action
-  $('.page .scroll-down .box').click(function() {
-    var $page = $(this).closest('.page');
-    $('html, body').stop().animate({
-      scrollTop: $page.offset().top + $page.height()
-    }, 1000);
-    presentation(current_page + 1);
+  document.querySelectorAll('.page .scroll-down .box').forEach(function(el) {
+    el.addEventListener("click", function() {
+      let page = el.closest(".page").nextElementSibling;
+      console.log('page down', page);
+      page.scrollIntoView({behavior: 'smooth'});
+    })
+  })
 
-  });
-  $('.page .scroll-up .box').click(function() {
-    var $page = $(this).closest('.page');
-    $('html, body').stop().animate({
-      scrollTop: $page.offset().top - $page.height()
-    }, 1000);
-    presentation(current_page + 1);
-  });
+  document.querySelectorAll('.page .scroll-up .box').forEach(function(el) {
+    el.addEventListener("click", function() {
+      let page;
+      let closestParentPage = el.closest(".page");
+      closestParentPage.id === 'large_applications_logo' ? page = closestParentPage.closest("#iquest-way").previousElementSibling : page = closestParentPage.previousElementSibling;
+      page.scrollIntoView({behavior: 'smooth'});
+    })
+  })
+
 
   //parallax control
   $(window).scroll(function() {
@@ -660,10 +662,11 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
   //presentation animation
   $('#presentation .iq-logo').hide();
   $('#presentation .logo-circles .circle').hide();
-  var presentation_play = false;
+  let presentation_play = false;
   var presentation_state = 'first';
 
   function presentation(page) {
+
     if (page == 0 && !presentation_play) {
       presentation_play = true;
       switch (presentation_state) {
@@ -727,7 +730,7 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
   if (slide && slide !== 'undefined') {
     scroll_to_page(slide - 1);
   }
-
+console.log('button',  $('#contact_button'));
   // Contact us button.
   var isShowContactButton = false;
   var contact_button = function(current_page){

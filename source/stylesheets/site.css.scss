@@ -234,6 +234,11 @@ $space-lg: 60px;
   @include hover($yellow-dark);
 }
 
+.cerculean {
+  background-color: $cerculean;
+  @include hover($cerculean);
+}
+
 .orange {
   background-color: $orange;
   @include hover($orange);
@@ -1095,7 +1100,10 @@ body {
 }
 
 #large_applications_logo {
+  height: 100%;
+  position: absolute;
   top: 0;
+  width: 100%;
 }
 
 #large_applications {

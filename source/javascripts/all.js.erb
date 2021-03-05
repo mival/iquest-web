@@ -90,13 +90,20 @@ function page_scroll(urlsArray) {
     })
   })
 }
+
+let getUrlParameter = function(e) {
+	let n, t, a = decodeURIComponent(window.location.search.substring(1)),
+		o = a.split("&");
+	for (t = 0; t < o.length; t++)
+		if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
+};
   
 function contactBubbleAnimation() {
   const contactBubbleEl = document.querySelector('.contact-bubble');
   contactBubbleEl.addEventListener('mouseover', function(e) {
     if(e.target.nodeName === 'SPAN') {
       const childrenCollection = contactBubbleEl.children;
-      for(var i = 0; i < childrenCollection.length; i+=1 ) {
+      for(let i = 0; i < childrenCollection.length; i+=1 ) {
         const currentChildren =  childrenCollection[i];
         if (currentChildren.className.includes('bubble')) {
           currentChildren.classList.remove('bounceIn');
