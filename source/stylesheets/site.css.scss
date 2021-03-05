@@ -223,6 +223,10 @@ $space-lg: 60px;
   animation: fadeIn ease 0.4s;
 }
 
+.fade-in-slow {
+  animation: fadeIn ease .6s;
+}
+
 // Colors
 .yellow {
   background-color: $yellow;
