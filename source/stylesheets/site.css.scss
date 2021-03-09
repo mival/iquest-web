@@ -219,12 +219,16 @@ $space-lg: 60px;
   animation: fadeOut ease 0.4s;
 }
 
+.fade-out-slow {
+  animation: fadeOut ease 0.6s;
+}
+
 .fade-in {
   animation: fadeIn ease 0.4s;
 }
 
 .fade-in-slow {
-  animation: fadeIn ease .6s;
+  animation: fadeIn ease 0.6s;
 }
 
 // Colors

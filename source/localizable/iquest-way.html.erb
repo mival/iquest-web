@@ -554,7 +554,6 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
       });
 
       presentation(current_page);
-      contact_button(current_page);
     }, 100);
 
     //align page after stop scrolling
@@ -572,15 +571,6 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
   var arrows_elm = iqw_page_elm + ' .scroll-left, ' +
     iqw_page_elm + ' .scroll-right';
 
-  function iqw_toggle_arrows() {
-    if (iqw_current_page <= 0) {
-      $(iqw_page_elm + ' .scroll-left').addClass('hidden');
-    } else if (iqw_current_page > 0 &&  iqw_current_page < iqw_pages_length) {
-      $(arrows_elm).removeClass('hidden');
-    } else if (iqw_current_page >= iqw_pages_length) {
-      $(iqw_page_elm + ' .scroll-right').addClass('hidden');
-    }
-  }
 
   function scroll_to_page(page) {
     $('html, body').stop().animate({
@@ -594,73 +584,10 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
     }, 1000);
   }
 
-  //iquest_way scroll horizontal
-  function iquest_way_scroll(direction) {
-    $(iqw_page_elm + ' .scroll-' + direction).click(function() {
-      iqw_current_page += (direction == 'left') ? -1 : 1;
-
-      $(iqw_page_elm + ' .page.horizontal').removeClass('active').eq(iqw_current_page).addClass('active');
-      iqw_scroll_to_page(iqw_current_page);
-      iqw_toggle_arrows();
-
-      if ($(iqw_page_elm + ' .page.horizontal').eq(iqw_current_page).hasClass('inverse')) {
-        $('.navigation, ' + arrows_elm).addClass('inverse');
-      } else {
-        $('.navigation, ' + arrows_elm).removeClass('inverse');
-      }
-    });
-  }
-
-  var fade_circle = null;
-
-  $circles = $('#iquest_logo .logo-circles .circle');
-  $curves = $('#iquest_logo .logo-circles .curve:not(.iq-logo)');
-  $text = $('#iquest_logo .logo-content .text');
-
-  function logo_animation(page) {
-    var index = 0;
-
-    function clearAnimation() {
-      index = 0;
-      clearInterval(fade_circle);
-      fade_circle = null;
-      $circles.show();
-      $curves.show();
-      $text.text('Vše dohromady může být chaos');
-    }
-
-    switch (page) {
-      case 11:
-        var circles_length = $circles.length;
-
-        if (fade_circle == null) {
-          fade_circle = setInterval(function() {
-            $circles.eq(index).fadeOut(400);
-            index++;
-
-            if (index == circles_length / 2)
-              $text.text('Nebo symfonie');
-
-            if (index == circles_length) {
-              $curves.fadeOut(800, function() {
-                $text.text('iQuest way');
-              }).promise().done(function() {
-                setTimeout(function() {
-                  clearAnimation();
-                  logo_animation(page);
-                }, 5000);
-              });
-            }
-          }, 200);
-        }
-
-        break;
-    }
-  }
-
   //presentation animation
-  $('#presentation .iq-logo').hide();
-  $('#presentation .logo-circles .circle').hide();
+  const iqLogoElement = document.querySelector('#presentation .iq-logo');
+  const curveElementsWithoutLogo = document.querySelectorAll('#presentation .logo-circles .curve:not(.iq-logo)');
+  const logoCircleElements = document.querySelectorAll('#presentation .logo-circles .circle');
   let presentation_play = false;
   let presentation_state = 'first';
 
@@ -672,6 +599,13 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
         case 'first':
           time = 68;
           step = time;
+          iqLogoElement.style.display = "none";
+          curveElementsWithoutLogo.forEach(function(curve) {
+            curve.style.display = "block";
+            curve.classList.remove("fade-out-slow");
+            curve.classList.add("fade-in");
+          });
+          console.log('first');
           const circleElements = document.querySelectorAll('#presentation .logo-circles .section .circle');
           circles_length = circleElements.length;
           circleElements.forEach(function(circle, index) {
@@ -689,18 +623,17 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
         case 'second':
           time = 75;
           step = time;
+          console.log('second');
           const circleElements2 = document.querySelectorAll('#presentation .logo-circles-5 .circle');
           circles_length = circleElements2.length;
           circleElements2.forEach(function(circle, index) {
             circle.style.display =" none";
-            document.querySelector('#presentation .iq-logo').style.display = 'block';
-            document.querySelector('#presentation .iq-logo').style.animation = `fadeIn ease ${(circles_length * time/1000).toFixed(1)}s`;
+            iqLogoElement.style.display = 'block';
+            iqLogoElement.style.animation = `fadeIn ease ${(circles_length * time/1000).toFixed(1)}s`;
             setTimeout(function() {
               circle.style.display = "block";
               circle.classList.add("fade-in-slow"); 
-              console.log('second')
               if (!--circles_length) {
-                console.log('third')
                 change_state('third');
               }
             }, 
@@ -708,11 +641,26 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
           });
           break;
         case 'third':
-          $('#presentation .logo-circles .curve:not(.iq-logo)').fadeOut('slow');
-          $('#presentation .logo-circles .circle').fadeOut('slow');
+          curveElementsWithoutLogo.forEach(function(curve) {
+            curve.classList.remove("fade-in");
+            curve.classList.add("fade-out-slow");
+            setTimeout(function() {
+              curve.style.display = "none";
+            }, 600) 
+          })
+          console.log('third');
+          logoCircleElements.forEach(function(circle) {
+            circle.classList.remove("fade-in-slow");
+            circle.classList.add("fade-out-slow");
+            setTimeout(function() {
+              circle.style.display = "none";
+            }, 600) 
+          });
           setTimeout(function() {
-            $('#presentation .iq-logo').fadeOut('slow');
-            $('#presentation .logo-circles .curve:not(.iq-logo)').fadeIn('slow');
+            iqLogoElement.classList.add("fade-out-slow");
+            setTimeout(function() {
+              iqLogoElement.style.display = "none";
+              }, 600) 
             change_state('first');
           }, 4000);
           break;
@@ -737,20 +685,4 @@ subtitle: iQuest Way je propracovaná metodika návrhu a vývoje informačních 
   if (slide && slide !== 'undefined') {
     scroll_to_page(slide - 1);
   }
-console.log('button',  $('#contact_button'));
-  // Contact us button.
-  var isShowContactButton = false;
-  var contact_button = function(current_page){
-    if(current_page !== 0 && !isShowContactButton){
-      $('#contact_button').removeClass().addClass('contact-bubble fixed bounceIn animated page-' + current_page);
-      $('#contact_button').children('[class ^= bubble]').addClass('bounceIn');
-      setTimeout(function(){
-        $('#contact_button').children('[class ^= bubble]').css('display', 'block');
-      }, 300);
-      isShowContactButton = true;
-    }else if(isShowContactButton){
-      $('#contact_button').removeClass().addClass('contact-bubble fixed bounceIn animated page-' + current_page);
-    }
-  }
-  // Contact us button ./
 </script>
