@@ -26,16 +26,16 @@
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function() {
+	document.addEventListener("DOMContentLoaded", function(event) { 
 		setTimeout(function() {
-			$(".circle1").addClass("circle1-end circle-new");
-			$(".circle1").removeClass("circle1 circle");
-			$(".circle2").addClass("circle2-end circle-new");
-			$(".circle2").removeClass("circle2 circle");
-			$(".circle3").addClass("circle3-end circle-new");
-			$(".circle3").removeClass("circle3 circle");
-			$(".circle4").addClass("circle4-end circle-new");
-			$(".circle4").removeClass("circle4 circle");
+			document.querySelector(".circle1").classList.add("circle1-end", "circle-new");
+			document.querySelector(".circle1").classList.remove("circle1", "circle");
+			document.querySelector(".circle2").classList.add("circle2-end", "circle-new");
+			document.querySelector(".circle2").classList.remove("circle2", "circle");
+			document.querySelector(".circle3").classList.add("circle3-end", "circle-new");
+			document.querySelector(".circle3").classList.remove("circle3", "circle");
+			document.querySelector(".circle4").classList.add("circle4-end", "circle-new");
+			document.querySelector(".circle4").classList.remove("circle4", "circle");
 		}, 2000);
-	})
+	});
 </script>

@@ -64,50 +64,84 @@ subtitle: We create sophisticated and precisely written software that meet the l
 
 <script>
   //pillar open toggle
-  $('.pillar').click(function() {
-    if (!$('.pillar').hasClass('active')) {
-      $('.navigation .navbar .back').remove();
-      $(this).addClass('active animate');
-      active_close_btn();
-    } else {
-      if (!$('.pillar').hasClass('animate')) {
-        $(this).removeClass('active');
-        $('.navigation .navbar .close').remove();
-        active_back_btn();
+  const navbarEl = document.querySelector('.navigation .navbar');
+  const pillars = document.querySelectorAll(".pillar");
+  pillars.forEach(function(pillar) {
+    pillar.addEventListener('click', function(){
+      if(!this.classList.contains('active')) {
+        const backLink = document.querySelector('.navigation .navbar .back');
+        backLink.parentNode.removeChild(backLink);
+        this.classList.add("active", "animate");
+        activeCloseBtn();
+      } else {
+        if (!Array.from(pillars).some(pillar => pillar.classList.contains("animate"))) {
+          this.classList.remove("active");
+          const closeLink = document.querySelector('.navigation .navbar .close');
+          closeLink.parentNode.removeChild(closeLink);
+          activeBackBtn();
+        }
       }
-    }
-  }).on('transitionend', function() {
-    $(this).removeClass('animate')
+    })
+    pillar.addEventListener('transitionend', function() {
+      this.classList.remove("animate");
+    })
   });
 
-  $(document).on('click', '.navigation .navbar .close', function() {
-    $('.pillar.active').removeClass('active');
-    $(this).remove();
-    active_back_btn();
-  });
+  document.addEventListener("click", function() {
+    const closeLinks = document.querySelectorAll(".navigation .navbar .close");
+    closeLinks.forEach(function(closeLink) {
+      closeLink.addEventListener("click", function() {
+        document.querySelector(".pillar.active").classList.remove('active');
+        closeLink.parentNode.removeChild(closeLink);
+        activeBackBtn();
+      })
+    })
+  })
+
+
 
   //open pillar from url
-  var pillar_active = getUrlParameter('pillar');
+  let pillar_active = getUrlParameter('pillar');
 
   if (pillar_active !== 'undefined' && (pillar_active == 1 ||
       pillar_active == 2 ||
       pillar_active == 3 ||
       pillar_active == 4)) {
-    active_close_btn();
-    $('.pillar').eq(pillar_active - 1).addClass('active animate');
+    activeCloseBtn();
+    document.querySelectorAll(".pillar")[pillar_active - 1].classList.add('active', 'animate');
   } else {
-    active_back_btn();
+    activeBackBtn();
   }
 
-  function active_back_btn() {
-    $('.navigation .navbar').prepend('<li class="back"><a class="small" href="/" title="">' +
-      '<span class="text"><i class="fa fa-lg fa-arrow-left"></i></span>' +
-      '</a></li>');
+  function activeBackBtn() {
+    const newBackEl = document.createElement("li");
+    newBackEl.classList.add("back");
+    const newLink = document.createElement("a");
+    newLink.classList.add("small");
+    newLink.href = '/';
+    const newSpanEl = document.createElement("span");
+    newSpanEl.classList.add('text');
+    const newIconEl = document.createElement("i");
+    newIconEl.classList.add("fa", "fa-lg" , "fa-arrow-left");
+    newSpanEl.appendChild(newIconEl);
+    newLink.appendChild(newSpanEl);
+    newBackEl.appendChild(newLink);
+    navbarEl.insertBefore(newBackEl, navbarEl.firstChild);
   }
 
-  function active_close_btn() {
-    $('.navigation .navbar').prepend('<li class="close"><a class="small" href="#" title="">' +
-      '<span class="text"><i class="fa fa-lg fa-times"></i></span>' +
-      '</a></li>');
+  function activeCloseBtn() {
+    const newCloseEl = document.createElement("li");
+    newCloseEl.classList.add("close");
+    const newLink = document.createElement("a");
+    newLink.classList.add("small");
+    newLink.href = '#';
+    const newSpanEl = document.createElement("span");
+    newSpanEl.classList.add('text');
+    const newIconEl = document.createElement("i");
+    newIconEl.classList.add("fa", "fa-lg" , "fa-times");
+    newSpanEl.appendChild(newIconEl);
+    newLink.appendChild(newSpanEl);
+    newCloseEl.appendChild(newLink);
+    navbarEl.insertBefore(newCloseEl, navbarEl.firstChild);
   }
 </script>

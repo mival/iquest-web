@@ -2,31 +2,29 @@
 title: Contact us | iQuest s.r.o.
 subtitle: Do you have any questions? Contact us by phone or e-mail.
 ---
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT79g0yz7iWCU1kZ4iNXaayEI_gcC_ZxA"></script>
 <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Praha, Czech republic",
-    "postalCode": "118 00",
-    "streetAddress": "Sněmovní 9"
-  },
-  "email": "iquest@iquest.cz",
-  "telephone": "+420 774 314 763",
-  "telephone": "+420 774 314 768",
-  "name": "iQuest s.r.o.",
-
-  "@type": "subOrganization",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Brno, Czech republic",
-    "postalCode": "602 00",
-    "streetAddress": "Cejl 494/25"
-  },
-  "name": "iQuest s.r.o.",
-}
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Praha, Czech republic",
+      "postalCode": "118 00",
+      "streetAddress": "Sněmovní 9"
+    },
+    "email": "iquest@iquest.cz",
+    "telephone": ["+420 774 314 763","+420 774 314 768"],
+    "name": "iQuest s.r.o.",
+    "subOrganization" : {
+    "@type": "Organization",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brno, Czech republic",
+      "postalCode": "602 00",
+      "streetAddress": "Cejl 494/25"
+    },
+    "name": "iQuest s.r.o."}
+  }
 </script>
 
 <div id="map-canvas"></div>
@@ -87,74 +85,3 @@ subtitle: Do you have any questions? Contact us by phone or e-mail.
 </div>
 
 <%= partial 'footer' %>
-
-<script>
-  var point = {
-    lat: 50.080469,
-    lng: 14.405934
-  };
-  var markerSize = {
-    x: 22,
-    y: 40
-  };
-
-
-  google.maps.Marker.prototype.setLabel = function(label) {
-    this.label = new MarkerLabel({
-      map: this.map,
-      marker: this,
-      text: label
-    });
-    this.label.bindTo('position', this, 'position');
-  };
-
-  var MarkerLabel = function(options) {
-    this.setValues(options);
-    this.span = document.createElement('span');
-    this.span.className = 'map-marker-label';
-  };
-
-  MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
-    onAdd: function() {
-      this.getPanes().overlayImage.appendChild(this.span);
-      var self = this;
-      this.listeners = [
-        google.maps.event.addListener(this, 'position_changed', function() {
-          self.draw();
-        })
-      ];
-    },
-    draw: function() {
-      var text = String(this.get('text'));
-      var position = this.getProjection().fromLatLngToDivPixel(this.get('position'));
-      this.span.innerHTML = text;
-      this.span.style.left = (position.x - (markerSize.x / 2)) - (text.length * 3) + 10 + 'px';
-      this.span.style.top = (position.y - markerSize.y + 40) + 'px';
-    }
-  });
-
-  function initialize() {
-    var myLatLng = new google.maps.LatLng(point.lat, point.lng);
-    var gmap = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 17,
-      center: myLatLng,
-      scrollwheel: false,
-      panControl: false,
-      mapTypeControl: false,
-      streetViewControl: false,
-      zoomControl: true,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.RIGHT_CENTER
-      }
-    });
-    var myMarker = new google.maps.Marker({
-      map: gmap,
-      position: myLatLng,
-      label: 'iQuest s.r.o.',
-      draggable: true
-    });
-  }
-
-  initialize();
-</script>
