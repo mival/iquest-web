@@ -1095,56 +1095,7 @@ body {
   background-color: rgba(73, 79, 92, 0.8);
 }
 
-#presentation {
-  top: 0;
-}
 
-#more_than_10_years {
-  top: 100%;
-}
-
-#iquest-way {
-  top: 200%;
-}
-
-#large_applications_logo {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-#large_applications {
-  top: 100%;
-}
-
-#we_connect_people_logo {
-  top: 200%;
-}
-
-#we_connect_people {
-  top: 300%;
-}
-
-#we_connect_tasks_logo {
-  top: 400%;
-}
-
-#we_connect_tasks {
-  top: 500%;
-}
-
-#we_connect_techno_logo {
-  top: 600%;
-}
-
-#we_connect_techno {
-  top: 700%;
-}
-
-#iquest_logo {
-  top: 800%;
-}
 
 #opening > .title,
 #more_than_10_years > .title {
@@ -1543,12 +1494,6 @@ body {
 
 #more_than_10_years .scroll-down {
   color: white;
-}
-
-.page .scroll-content {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 .page .offset {
@@ -4281,6 +4226,27 @@ a.contact-us.inline {
 }
 
 .iquest-way {
+  overflow: hidden;
+  .scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-destination: 0 0;
+    scroll-snap-type: y mandatory;
+    scroll-snap-type: mandatory;
+    .page {
+      scroll-snap-align: start;
+      position: relative;
+      height: 100vh;
+      top: unset;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+    }
+  }
   .logo-content:first-child {
     height: inherit;
     .info {
