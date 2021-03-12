@@ -4,11 +4,9 @@ function loadPage(url, pageLoadClass, pagePreloadClass, callbackfunction) {
       if (httpRequest.readyState === 4) {
         if (httpRequest.status === 200) {
           const httpResponse = httpRequest.response;
-          console.log('httpResponse', httpResponse);
           const childOfPageLoadClass = httpResponse.querySelector(pageLoadClass).firstElementChild;
           const elementPagePreload = document.querySelector(pagePreloadClass);
           contentOfChildOfPageLoadClass = childOfPageLoadClass.outerHTML;
-          console.log('contentOfChildOfPageLoadClass', contentOfChildOfPageLoadClass);
           elementPagePreload.innerHTML = contentOfChildOfPageLoadClass;
           callbackfunction(url);
         }
@@ -83,7 +81,6 @@ function page_scroll(urlsArray) {
   }
 
   window.addEventListener("popstate", function() {
-    console.log('popstate was triggered');
     loadPage(window.location.pathname, ".page-load", ".page-load", function() {
         setIndex(); 
         addEventListenersToScroll();
