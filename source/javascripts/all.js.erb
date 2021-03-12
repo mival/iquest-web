@@ -18,29 +18,29 @@ function loadPage(url, pageLoadClass, pagePreloadClass, callbackfunction) {
 }
 
 function page_scroll(urlsArray) {
-  let l = null;
-  let indexIncrement = null;
-  let indexDecrement = null;
-  let state = false;
-  setIndex(); 
-  addEventListenersToScroll(); 
+  var l = null;
+  var indexIncrement = null;
+  var indexDecrement = null;
+  var state = false;
+  setIndex();
+  addEventListenersToScroll();
 
   function setIndex(IndexOfPageCurrent) {
     const currentOrPreviousPageName = window.location.pathname;
     const IndexOfPageCurrentOrPrevious = urlsArray.indexOf(currentOrPreviousPageName);
     "undefined" == typeof IndexOfPageCurrent && (IndexOfPageCurrent = IndexOfPageCurrentOrPrevious);
     indexIncrement = IndexOfPageCurrent + 1;
-    indexDecrement = IndexOfPageCurrent - 1; 
+    indexDecrement = IndexOfPageCurrent - 1;
     0 > indexDecrement ? indexDecrement += urlsArray.length : indexIncrement >= urlsArray.length && (indexIncrement -= urlsArray.length);
   }
 
   function addEventListenersToScroll() {
-    scroolOnClick("left"); 
+    scroolOnClick("left");
     scroolOnClick("right");
   }
-  
+
   function scroolOnClick(direction) {
-    const elemenArrowButtons = document.querySelectorAll(`.page-scroll-${direction}`);
+    const elemenArrowButtons = document.querySelectorAll('.page-scroll-' + direction);
     elemenArrowButtons.forEach(function(button) {
     button.addEventListener('click', eventHandler);
       function eventHandler(evnt) {
@@ -49,17 +49,17 @@ function page_scroll(urlsArray) {
         document.querySelector(".page-scroll-show .header").style.top = elementBody.scrollTop;
         if (!state) {
           state = true;
-          let scrollToIndex = null;
-          let cssScrollDirection = null;
+          var scrollToIndex = null;
+          var cssScrollDirection = null;
 	        const elementPageLoad = document.querySelector(".page-load");
-          direction == "left" ? (scrollToIndex = indexDecrement, cssScrollDirection = "100%") : direction == "right" && (scrollToIndex = indexIncrement, cssScrollDirection = "-100%"); 
+          direction == "left" ? (scrollToIndex = indexDecrement, cssScrollDirection = "100%") : direction == "right" && (scrollToIndex = indexIncrement, cssScrollDirection = "-100%");
           elementPageLoad.classList.add("process");
           const createdElementPreload = document.createElement('div');
-          createdElementPreload.classList.add(`page-preload-${direction}`);
+          createdElementPreload.classList.add('page-preload-' + direction);
           elementPageLoad.parentNode.insertBefore(createdElementPreload, elementPageLoad.nextSibling);
-		      loadPage(urlsArray[scrollToIndex], ".page-load", `.page-preload-${direction}`, function(url) {
-            const elementPagePreloadWithDirection = document.querySelector(`.page-preload-${direction}`);
-            setIndex(scrollToIndex); 
+		      loadPage(urlsArray[scrollToIndex], ".page-load", '.page-preload-' + direction, function(url) {
+            const elementPagePreloadWithDirection = document.querySelector('.page-preload-' + direction);
+            setIndex(scrollToIndex);
             setTimeout(function() {
               elementPageLoad.style.left = cssScrollDirection;
 		  	      elementPagePreloadWithDirection.style.left = 0;
@@ -68,7 +68,7 @@ function page_scroll(urlsArray) {
             elementBody.classList.remove('posa');
             elementPageLoad.remove();
             elementPagePreloadWithDirection.classList.add("page-load");
-            elementPagePreloadWithDirection.classList.remove(`page-preload-${direction}`)
+            elementPagePreloadWithDirection.classList.remove('page-preload-' + direction)
             state = false
             }, 1e3);
             history.pushState(null, null, url);
@@ -82,25 +82,25 @@ function page_scroll(urlsArray) {
 
   window.addEventListener("popstate", function() {
     loadPage(window.location.pathname, ".page-load", ".page-load", function() {
-        setIndex(); 
+        setIndex();
         addEventListenersToScroll();
     })
   })
 }
 
-let getUrlParameter = function(e) {
-	let n, t, a = decodeURIComponent(window.location.search.substring(1)),
+var getUrlParameter = function(e) {
+	var n, t, a = decodeURIComponent(window.location.search.substring(1)),
 		o = a.split("&");
 	for (t = 0; t < o.length; t++)
 		if (n = o[t].split("="), n[0] === e) return void 0 === n[1] ? !0 : n[1]
 };
-  
+
 function contactBubbleAnimation() {
   const contactBubbleEl = document.querySelector('.contact-bubble');
   contactBubbleEl.addEventListener('mouseover', function(e) {
     if(e.target.nodeName === 'SPAN') {
       const childrenCollection = contactBubbleEl.children;
-      for(let i = 0; i < childrenCollection.length; i+=1 ) {
+      for(var i = 0; i < childrenCollection.length; i+=1 ) {
         const currentChildren =  childrenCollection[i];
         if (currentChildren.className.includes('bubble')) {
           currentChildren.classList.remove('bounceIn');
@@ -112,7 +112,7 @@ function contactBubbleAnimation() {
     }
   })
 }
-  
+
 function formValidation(emailElement, emailElementError, messageElement, messageElementError, formElement) {
   const showErrors = function() {
     if(emailElement.validity.valueMissing) {
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
       })
     });
   });
-  
+
 const scrollLink = document.querySelectorAll(".scroll-link");
   if(scrollLink.length) {
     scrollLink.forEach(function(link) {
