@@ -142,7 +142,7 @@
     font-size: 1.35vw
   }
 
-  .steps .container .image-row .col{
+  .educational-content .container .image-row .col{
     margin: 15px;
     &:nth-child(odd) {
       top: 0;
@@ -476,6 +476,32 @@
     &:before {
       top: 22%;
     }
+  }
+  .narrow {
+    padding: 0 1rem;
+  }
+  .advice-points {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+  .advice-points > .row.narrow {
+    padding-left: 0;
+  }
+  .comparison .table {
+    .point {
+      padding: 15px 12px;
+    }
+    .heading {
+      h3 {
+        padding: 20px 0;
+      }
+      margin-bottom: 0;
+    }
+  }
+  .ideas {
+    margin: 50px 0 80px;
+    text-align: center;
+    padding: 0 1rem;
   }
 }
 
@@ -1303,6 +1329,27 @@
     p, h2 {
       width: 100%;
     }
+  }
+  .advice-points > .row.narrow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+  .advice-points .number {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .comparison .table {
+    flex-direction: column;
+  }
+  .comparison .table {
+    .left, .right {
+      width: 100%;
+    }
+  }
+  .comparison .table .heading h3 {
+    border-top: 1px solid #e0e0e0;
   }
 }
 

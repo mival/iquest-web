@@ -50,13 +50,13 @@ redirect_url: '/'
 	<div class="bg--gray-skew"></div>
 
 	<%= partial 'references' %>
-	<div class="steps-container">
-		<div class="steps">
+	<div class="educational-content-container">
+		<div class="educational-content">
 			<div class="container">
 				<div class="flex image-row">
-					<a data-aos="fade-down" href="https://www.vyvojaplikace.cz/start-up/vybiram-dodavatele.html" target="_blank" class="col col1">
+					<% link_to t('urls.choosing_a_supplier'), class: "col1 col", :'data-aos' => 'fade-down', target: "_blank" do %>
 						<span></span>
-					</a>
+					<% end %>
 					<a data-aos="fade-up" href="https://www.vyvojaplikace.cz/navrhujeme-system.html" target="_blank" class="col col2">
 						<span></span>
 					</a>

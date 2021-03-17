@@ -74,6 +74,7 @@ $cerculean: #4590af;
   --yellow: #f2e999;
   --space-for-navbar: 250px;
   --space-sm: 20px;
+  --cerculean: #4590af;
 }
 
 $space-lg: 60px;
@@ -84,6 +85,7 @@ $space-lg: 60px;
 @import "hover.css";
 @import "layout.css";
 @import "subpage.css";
+@import "educational_content.css";
 @import "pf2018.css";
 
 @keyframes fadeIn {
@@ -1062,7 +1064,7 @@ body {
   }
   &:hover {
     background-color: transparent;
-    color: $bright-orange;
+    color: white;
   }
 }
 
@@ -4305,7 +4307,7 @@ a.contact-us.inline {
   display: none;
 }
 
-.steps-container {
+.educational-content-container {
   background-color:  $dark-gray;
   margin-top: 10vw;
   padding-top: 3vw;
@@ -4336,7 +4338,7 @@ a.contact-us.inline {
   }
 }
 
-.steps {
+.educational-content {
   width: 100%;
   .container {
     height: 100%;
@@ -4399,10 +4401,11 @@ a.contact-us.inline {
               background-color: $blue-dark;
             }
             &:after {
-              content: "ak má vypadat \a projekt systému?";
+              content: "Jak má vypadat \a projekt systému?";
             }
           }
         }
+        
 
         &.col3 {
           span {
@@ -4466,7 +4469,7 @@ a.contact-us.inline {
   }
 }
 
-.steps-container + .bg--gray-skew {
+.educational-content-container + .bg--gray-skew {
   background: linear-gradient(10deg, white 50%, $dark-gray 50.2%);
 }
 

@@ -14579,7 +14579,7 @@ a.contact-us.inline {
   display: none;
 }
 
-.steps {
+.educational-content {
   margin-top: 150px;
   background: url(../images/bubbles.png) center top 27px no-repeat, url(../images/curve.png) center no-repeat;
   height: 240px;
@@ -14587,19 +14587,19 @@ a.contact-us.inline {
   width: 100%;
 }
 
-.steps .container {
+.educational-content .container {
   height: 100%;
   margin: 0 auto;
   max-width: 1280px;
 }
 
-.steps .container .row {
+.educational-content .container .row {
   display: table;
   height: 100%;
   width: 100%;
 }
 
-.steps .container .row .col {
+.educational-content .container .row .col {
   display: table-cell;
   padding-top: 52px;
   position: relative;
@@ -14608,46 +14608,46 @@ a.contact-us.inline {
   width: 25%;
 }
 
-.steps .container .row .col.col1 {
+.educational-content .container .row .col.col1 {
   top: 40px;
 }
 
-.steps .container .row .col.col1 span {
+.educational-content .container .row .col.col1 span {
   color: #343434;
 }
 
-.steps .container .row .col.col1 span:before {
+.educational-content .container .row .col.col1 span:before {
   background: #f18c4f url(../images/market-analysis-icon.png) center no-repeat;
 }
 
-.steps .container .row .col.col1 span strong {
+.educational-content .container .row .col.col1 span strong {
   background-color: #f18c4f;
 }
 
-.steps .container .row .col.col2 {
+.educational-content .container .row .col.col2 {
   top: 34px;
 }
 
-.steps .container .row .col.col2 span:before {
+.educational-content .container .row .col.col2 span:before {
   background: #c8c8c8 url(../images/vrstva5.png) center top 15px no-repeat;
   background-size: 77%;
 }
 
-.steps .container .row .col.col3 {
+.educational-content .container .row .col.col3 {
   top: 10px;
 }
 
-.steps .container .row .col.col3 span:before {
+.educational-content .container .row .col.col3 span:before {
   background: #c8c8c8 url(../images/web-development-icon.png) center top 28px no-repeat;
   background-size: 69%;
 }
 
-.steps .container .row .col.col4 span:before {
+.educational-content .container .row .col.col4 span:before {
   background: #c8c8c8 url(../images/vrstva4.png) center no-repeat;
   background-size: 62%;
 }
 
-.steps .container .row .col span {
+.educational-content .container .row .col span {
   color: #626262;
   display: inline-block;
   font-size: 22px;
@@ -14659,7 +14659,7 @@ a.contact-us.inline {
   text-align: center;
 }
 
-.steps .container .row .col span:before {
+.educational-content .container .row .col span:before {
   content: "";
   background-color: #c8c8c8;
   border-radius: 50%;
@@ -14671,7 +14671,7 @@ a.contact-us.inline {
   width: 100px;
 }
 
-.steps .container .row .col span p {
+.educational-content .container .row .col span p {
   display: inline-block;
   font-size: 20px;
   margin-top: 0;
@@ -14679,7 +14679,7 @@ a.contact-us.inline {
   position: relative;
 }
 
-.steps .container .row .col span p strong {
+.educational-content .container .row .col span p strong {
   background-color: #c8c8c8;
   border-radius: 50%;
   color: #fff;

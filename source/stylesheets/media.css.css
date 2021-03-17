@@ -1197,11 +1197,11 @@
     width: 80px;
     height: 80px;
   }
-  .steps {
+  .educational-content {
     background-image: none;
     height: auto;
   }
-  .steps .container .row .col {
+  .educational-content .container .row .col {
     display: inline-block;
     padding-top: 30px;
     width: 100%;
