@@ -310,3 +310,62 @@
     position: relative;
     text-align: left;
 }
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .line {
+        background: #e0e0e0;
+        height: calc(100% - 90px - 121px);
+        left: 50%;
+        position: absolute;
+        top: 90px;
+        width: 1px;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.timeline .item {
+    width: 50%;
+    align-self: flex-start;
+    position: relative;
+    .number {
+        display: flex;
+        max-width: 45px;
+        position: absolute;
+        right: -48px;
+        background-color: var(--middle-gray);
+        top: 65px;
+        z-index: 1;
+    }
+    .text h2 {
+        font-weight: 500;
+        margin-bottom: 13px;
+    }
+    .separator {
+        color: rgb(65, 65, 65);
+        width: 600px;
+        .circle {
+            color: rgb(65, 65, 65);
+            margin-right: 0;
+            margin-left: 17.5px;
+            background-color: #6e7a86;
+        }
+    }
+}
+
+.timeline .first .number, .timeline .third .number, .timeline .fifth .number {
+    left: -22px;
+}
+
+.timeline .first, .timeline .third, .timeline .fifth {
+    align-self: flex-end;
+    text-align: right;
+}
+

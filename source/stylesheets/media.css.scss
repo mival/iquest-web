@@ -169,6 +169,14 @@
   .subpage-more-information {
     padding: 25% 0 10%;
   }
+  .timeline {
+    width: 90%;
+    .item .separator {
+      overflow: hidden;
+      width: auto;
+      height: 25px;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -301,6 +309,9 @@
         line-height: 150%;
       }
     }
+  }
+  .ideas {
+    text-align: center;
   }
 }
 
@@ -1350,6 +1361,27 @@
   }
   .comparison .table .heading h3 {
     border-top: 1px solid #e0e0e0;
+  }
+  .timeline {
+    width: 100%;
+  }
+  .timeline .line {
+    left: 15px;
+    top: 60px;
+  }
+  .timeline .item {
+    margin: 5px 0;
+    text-align: right;
+    width: 100%;
+    .number {
+      height: 30px;
+      font-size: 15px;
+      left: auto;
+      min-width: 30px;
+      right: auto;
+      top: 55px;
+      width: 30px;
+    }
   }
 }
 

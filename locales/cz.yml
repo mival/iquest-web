@@ -63,6 +63,7 @@ cz:
     local-loyalty              : '/reference/local-loyalty'
     # educational content
     choosing_a_supplier        : '/educational_content/choosing_a_supplier'
+    design_a_system            : '/educational_content/design_a_system'
 
   # default_meta_title: 'iQuest - Měníme myšlenky v software'
   default_meta_title: 'iQuest s.r.o'
