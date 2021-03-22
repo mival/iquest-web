@@ -36,7 +36,6 @@ cz:
     b2b_portals                : '/priklady-systemu/b2b-b2c-portaly'
     intranety                  : '/priklady-systemu/intranety'
     erp_systemy                : '/priklady-systemu/erp-systemy'
-    ostatni                    : '/priklady-systemu/ostatni'
     # Reference
     greenswan                  : '/reference/greenswan'
     modry_andel                : '/reference/modry-andel'

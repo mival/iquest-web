@@ -13001,10 +13001,6 @@ body.posa .page-scroll-show .header {
   position: relative;
 }
 
-.priklady-systemu_ostatni .what-we-do .info .box {
-  min-height: 195px;
-}
-
 .what-we-do .info .box img {
   position: absolute;
   vertical-align: middle;
@@ -13392,12 +13388,6 @@ body.posa .page-scroll-show .header {
 .en_systems_erp-systems .what-we-do header,
 .priklady-systemu_erp-systemy .what-we-do header {
   background-image: url("/images/app_kinds/erp_main.jpg");
-  background-position: 50%;
-}
-
-.en_systems_others .what-we-do header,
-.priklady-systemu_ostatni .what-we-do header {
-  background-image: url("/images/app_kinds/ostatni_main.jpg");
   background-position: 50%;
 }
 
