@@ -560,6 +560,10 @@ body {
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -4356,17 +4360,11 @@ a.contact-us.inline {
           span:before {
             top: 0;
           }
-          &:hover {
-            span:after {transform: rotate(-12deg) translate(-44%, -73%);}
-          }
         }
         &:nth-child(even) {
           top: 0;
           span:before {
             bottom: 0;
-          }
-          &:hover {
-            span:after {transform: rotate(12deg) translate(-53%, -30%);}
           }
         }
         &:hover {
@@ -4375,8 +4373,7 @@ a.contact-us.inline {
             opacity: 0.95!important;
           }
           span:after {
-            font-size: 2.2rem!important;
-            line-height: 200%;
+            font-size: 2.1rem!important;
             color: white;
             font-weight: 400!important;
             background: transparent!important;
@@ -4389,7 +4386,7 @@ a.contact-us.inline {
               background-color: $bright-orange;
             }
             &:after {
-              content: "Je to na dlouho. \a Jak se nesplést?";
+              content: "Jak vybrat \a dodavatele";
             }
           }
         }
@@ -4401,12 +4398,10 @@ a.contact-us.inline {
               background-color: $blue-dark;
             }
             &:after {
-              content: "Jak má vypadat \a projekt systému?";
+              content: "Jak vypadá \a projekt systému?";
             }
           }
         }
-        
-
         &.col3 {
           span {
             background: $yellow-dark url(../images/project.jpg) center no-repeat;
@@ -4414,19 +4409,24 @@ a.contact-us.inline {
               background-color: $yellow-dark;
             }
             &:after {
-              content: "Co dělat \a v průběhu vývoje?";
+              content: "Průběh \a vývoje aplikací";
             }
           }
         }
-
         &.col4 {
+          &:hover {
+            span:after {
+              font-size: 1.6rem!important;
+            }
+          }
           span {
             background: $green-dark url(../images/developer.jpg) center no-repeat;
             &:before {
               background-color: $green-dark;
             }
             &:after {
-              content: "Vývojáři \a softwaru";
+              content: "Jaké jsou týmové role \a při vývoji software?";
+              font-size: 1.5rem;
             }
           }
         }
@@ -4451,12 +4451,15 @@ a.contact-us.inline {
           &:after {
             transition: all .5s;
             white-space: pre;
+            text-align: center;
             color: white;
             background: rgba($dark-gray, .6);
-            font-size: 2.1rem;
+            font-size: 1.9rem;
+            box-sizing: border-box;
             line-height: 40px;
+            height: 120px;
             font-weight: 600;
-            padding: 2.5rem;
+            padding: 20px;
             width: 100%;
             position: absolute;
             top: 50%;

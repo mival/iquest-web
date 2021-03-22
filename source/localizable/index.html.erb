@@ -54,15 +54,15 @@ redirect_url: '/'
 		<div class="educational-content">
 			<div class="container">
 				<div class="flex image-row">
-					<% link_to t('urls.choosing_a_supplier'), class: "col1 col", :'data-aos' => 'fade-down', target: "_blank" do %>
+					<% link_to t('urls.choosing_a_supplier'), class: "col1 col", :'data-aos' => 'fade-down' do %>
 						<span></span>
 					<% end %>
-					<% link_to t('urls.design_a_system'), class: "col2 col", :'data-aos' => 'fade-up', target: "_blank" do %>
+					<% link_to t('urls.design_a_system'), class: "col2 col", :'data-aos' => 'fade-up' do %>
 						<span></span>
-					<% end %>
-					<a data-aos="fade-down" href="https://www.vyvojaplikace.cz/vyvoj-software.html" target="_blank" class="col col3">
+					<% end %> 
+					<% link_to t('urls.software_development'), class: "col3 col", :'data-aos' => 'fade-down' do %>
 						<span></span>
-					</a>
+					<% end %> 
 					<a data-aos="fade-up" href="https://www.vyvojari-software.cz" target="_blank" class="col col4">
 						<span></span>
 					</a>
