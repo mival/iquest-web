@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const roleItems = document.querySelectorAll('#content-wrap .role-item');
       roleItems.forEach(function(item, curIndex) {
         item.addEventListener('click', function(e) {
-          for (let i = 0; i < roleItems.length; i += 1) {
+          for (var i = 0; i < roleItems.length; i += 1) {
             const description = roleItems[i].querySelector('.role-description');
             if (i === curIndex) {
               roleItems[i].classList.add("active");

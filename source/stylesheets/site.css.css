@@ -12514,8 +12514,8 @@ body {
   background-position: center;
   background-size: 100%;
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 50px $box-shadow-gray;
-          box-shadow: inset 0 0 50px $box-shadow-gray;
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: table;
   position: absolute;
@@ -12632,8 +12632,8 @@ body.posa .page-scroll-show .header {
 
 .page-scroll-show .content {
   background-color: white;
-  -webkit-box-shadow: 0 0 20px $box-shadow-gray;
-          box-shadow: 0 0 20px $box-shadow-gray;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   min-height: 320px;
   padding: 40px 47px 30px;
   position: relative;
@@ -13463,8 +13463,8 @@ body.posa .page-scroll-show .header {
 }
 
 .cards .card {
-  -webkit-box-shadow: 0 1px 4px 0 $box-shadow-gray;
-          box-shadow: 0 1px 4px 0 $box-shadow-gray;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   float: left;
   height: 346px;
@@ -14402,8 +14402,8 @@ a.contact-bubble div.bubble-2 i {
 a.contact-bubble div.bubble-3 {
   background-color: #00afac;
   border-radius: 50%;
-  -webkit-box-shadow: 2px -2px 3px -2px $box-shadow-gray;
-          box-shadow: 2px -2px 3px -2px $box-shadow-gray;
+  -webkit-box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.2);
   height: 30px;
   left: 14px;
   line-height: 30px;

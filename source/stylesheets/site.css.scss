@@ -58,7 +58,6 @@ $black-light: #525252;
 $middle-gray: #7f8f9c;
 $dark-gray: #494f5c;
 $light-gray: #e0e0e0;
-$box-shadow-gray: rgba(0, 0, 0, 0.2);
 $bright-orange: #f18c4f;
 $orange: #fdd7a8;
 $yellow-dark: #dfdb71;
@@ -178,7 +177,7 @@ $space-lg: 60px;
   border: 1px $middle-gray solid;
   text-align: justify;
   width: 80%;
-  box-shadow: 0 4px 8px 0 $box-shadow-gray, 0 6px 20px 0 $light-gray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 $light-gray;
 
   /* Add animation */
   -webkit-animation-name: example; /* Chrome, Safari, Opera */
@@ -2583,7 +2582,7 @@ body {
   background-position: center;
   background-size: 100%;
   border-radius: 50%;
-  box-shadow: inset 0 0 50px $box-shadow-gray;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: table;
   position: absolute;
@@ -2695,7 +2694,7 @@ body.posa .page-scroll-show .header {
 
 .page-scroll-show .content {
   background-color: $white;
-  box-shadow: 0 0 20px $box-shadow-gray;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   min-height: 320px;
   padding: 40px 47px 30px;
   position: relative;
@@ -3348,7 +3347,7 @@ body.posa .page-scroll-show .header {
 }
 
 .cards .card {
-  box-shadow: 0 1px 4px 0 $box-shadow-gray;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: $border-radius;
   cursor: pointer;
   float: left;
@@ -4113,7 +4112,7 @@ a.contact-bubble {
   div.bubble-3 {
     background-color: $blue-dark;
     border-radius: 50%;
-    box-shadow: 2px -2px 3px -2px $box-shadow-gray;
+    box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.2);
     height: 30px;
     left: 14px;
     line-height: 30px;
