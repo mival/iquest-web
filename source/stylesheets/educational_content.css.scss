@@ -594,7 +594,7 @@ $ico-size: 53px;
     }
     a:hover .role-name, a:active .role-name, a:focus .role-name {
         background: -webkit-linear-gradient(left, rgba(226,214,112,1) 0%,rgba(240,186,105,1) 33%,rgba(91,151,127,1) 66%,rgba(82,143,196,1) 100%);
-        -webkit-background-clip: text;
+       background-clip: text;
         -webkit-text-fill-color: transparent
     }
     .role-item.active {
