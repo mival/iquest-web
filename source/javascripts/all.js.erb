@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function() {
               indx === firstPageIndex ? dot.classList.add("current") : dot.classList.remove("current");
             }) 
         }
-    })} else if (document.querySelector(".developers-page")) {
+    })} else if (document.querySelector(".developers-page") && window.matchMedia('(min-width: 768px)').matches) {
       const roleItems = document.querySelectorAll('#content-wrap .role-item');
       roleItems.forEach(function(item, curIndex) {
         item.addEventListener('click', function(e) {

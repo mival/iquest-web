@@ -73,13 +73,16 @@ $ico-size: 53px;
         background: transparent;
     }
 
+    .title-container {
+        margin: calc(var(--space-for-navbar)/2) auto 0;
+    }
+
     .narrow {
     max-width: 800px;
-    margin: calc(var(--space-for-navbar)/2) auto 0;
     position: relative;
     .back-fixed {
         opacity: 1;
-        left: 0;
+        left: 8px;
         position: absolute;
         a {
             line-height: $ico-size;
@@ -90,12 +93,6 @@ $ico-size: 53px;
         .fa {
             font-size: 1.5rem;
         }
-    }
-    h4.subtitle {
-        font-size: 3vh
-    }
-    h1.title-1 {
-        font-size: 6vh;
     }
     }
 

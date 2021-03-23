@@ -488,33 +488,38 @@
       top: 22%;
     }
   }
-  .narrow {
-    padding: 0 1rem;
-  }
-  .advice-points {
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-  }
-  .advice-points > .row.narrow {
-    padding-left: 0;
-  }
-  .comparison .table {
-    .point {
-      padding: 15px 12px;
+  .educational_content {
+    .narrow {
+      padding: 0 1rem;
     }
-    .heading {
-      h3 {
-        padding: 20px 0;
+    .advice-points {
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+    .advice-points > .row.narrow {
+      padding-left: 0;
+    }
+    .comparison .table {
+      .point {
+        padding: 15px 12px;
       }
-      margin-bottom: 0;
+      .heading {
+        h3 {
+          padding: 20px 0;
+        }
+        margin-bottom: 0;
+      }
+    }
+    .ideas {
+      margin: 50px 0 80px;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .nav-dots {
+      display: none;
     }
   }
-  .ideas {
-    margin: 50px 0 80px;
-    text-align: center;
-    padding: 0 1rem;
-  }
-}
+} 
 
 @media screen and (max-width: 860px) {
   .kinds-of-contacts {
@@ -1341,49 +1346,103 @@
       width: 100%;
     }
   }
-  .advice-points > .row.narrow {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-right: 0;
-  }
-  .advice-points .number {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-  .comparison .table {
-    flex-direction: column;
-  }
-  .comparison .table {
-    .left, .right {
+  .educational_content {
+    .advice-points > .row.narrow {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-right: 0;
+    }
+    .advice-points .number {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    .comparison .table {
+      flex-direction: column;
+    }
+    .comparison .table {
+      .left, .right {
+        width: 100%;
+      }
+    }
+    .narrow .back-fixed {
+      display: none;
+    }
+    .comparison .table .heading h3 {
+      border-top: 1px solid #e0e0e0;
+    }
+    .timeline {
       width: 100%;
     }
-  }
-  .comparison .table .heading h3 {
-    border-top: 1px solid #e0e0e0;
-  }
-  .timeline {
-    width: 100%;
-  }
-  .timeline .line {
-    left: 15px;
-    top: 60px;
-  }
-  .timeline .item {
-    margin: 5px 0;
-    text-align: right;
-    width: 100%;
-    .number {
-      height: 30px;
-      font-size: 15px;
-      left: auto;
-      min-width: 30px;
-      right: auto;
-      top: 55px;
-      width: 30px;
+    .timeline .line {
+      left: 15px;
+      top: 60px;
+    }
+    .timeline .item {
+      margin: 5px 0;
+      text-align: right;
+      width: 100%;
+      .number {
+        height: 30px;
+        font-size: 15px;
+        left: auto;
+        min-width: 30px;
+        right: auto;
+        top: 55px;
+        width: 30px;
+      }
+    }
+    .full-page {
+      .right, .left {
+        width: 100%;
+        &.text {
+          align-items: center;
+        }
+      }
+      &:nth-child(even) {
+        .wrapper {
+          flex-direction: column-reverse;
+        }
+      }
+      .wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        .image {
+          margin-top: 1.5rem;
+        }
+        .left.image {
+          justify-content: center;
+        }
+      }
+    }
+    #content-wrap {
+      background-image: none;
+      height: unset;
+      padding-bottom: 5rem;
+      .role-item {
+        margin: auto;
+        width: 92%;
+        position: static;
+        .role-description {
+          display: block;
+          position: sticky;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+          max-height: max-content;
+          ul {
+            padding: 0;
+            list-style: none;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
     }
   }
-}
+} 
 
 @media screen and (max-height: 700px) and (min-width: 768px) {
 
@@ -1426,6 +1485,9 @@
       h2 {
         font-size: 3vh;
       }
+    }
+    #content-wrap {
+      background-image: none;
     }
   }
 }
