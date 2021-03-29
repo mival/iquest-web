@@ -177,6 +177,15 @@
       height: 25px;
     }
   }
+  .educational_content {
+    .timeline .item .separator {
+      width: unset;
+    }
+    .advice-points {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -556,6 +565,8 @@
   }
 }
 
+//media
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -701,8 +712,20 @@
     opacity: 0.7
   }
 
-  .iquest-way .logo-content:first-child .iqw-nav {
-    height: auto;
+  .educational_content .content.development {
+    scroll-snap-type: unset;
+  }
+
+  .iquest-way {
+    .scroller {
+      scroll-snap-type: unset;
+      .page {
+        height: unset;
+      }
+    }
+    .logo-content:first-child .iqw-nav {
+      height: auto;
+    }
   }
 
   .info.icons {
@@ -756,7 +779,6 @@
   #more_than_10_years .title .title1 {
     font-size: 30px;
     line-height: 130%;
-    padding: 0 15px
   }
 
   .page .offset {
@@ -792,7 +814,7 @@
     display: none
   }
 
-  .page .logo-content .iqw-nav {
+  .page .logo-content {
     padding: 0 25px;
     overflow-x: hidden
   }
@@ -831,10 +853,12 @@
     -ms-user-select: none;
     user-select: none
   }
-
-  .page.inverse .offset {
-    padding-left: 10px;
-    padding-right: 30px
+  $mobile-padding: 20px;
+  .iquest-way .logo-content:first-child {
+    height: 95vh;
+    .iqw-nav {
+      padding: 0;
+    }
   }
 
   .page.inverse .offset .initial img {
@@ -1347,6 +1371,19 @@
     }
   }
   .educational_content {
+    .ico-shadow.start-up {
+      display: none;
+    }
+    .title-container {
+      margin: calc(var(--space-for-navbar)/4) auto 0;
+      h4 {
+        height: 100%;
+      }
+      .title-1 {
+        margin: 0;
+        height: 100%;
+      }
+    }
     .advice-points > .row.narrow {
       flex-direction: column;
       align-items: center;
@@ -1516,6 +1553,7 @@
   }
 }
 
+$mobile-padding-sm: 15px;
 
 @media screen and (max-width: 580px) {
   h1 {
@@ -1723,12 +1761,10 @@
   .page {
     position: static;
     top: unset !important;
-    .offset {
-      margin-top: unset;
-      margin-right: 0;
+    .offset, .title1 {
       position: static;
-      padding-top: 80px;
-      padding-bottom: 40px;
+      margin: 0;
+      padding: 80px $mobile-padding-sm 40px;
       text-align: center;
       ul {
         text-align: start;
