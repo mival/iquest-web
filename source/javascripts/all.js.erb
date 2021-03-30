@@ -303,17 +303,25 @@ document.addEventListener("DOMContentLoaded", function() {
       const roleItems = document.querySelectorAll('#content-wrap .role-item');
       roleItems.forEach(function(item, curIndex) {
         item.addEventListener('click', function(e) {
+          console.log("click at the full item")
           for (var i = 0; i < roleItems.length; i += 1) {
             const description = roleItems[i].querySelector('.role-description');
             if (i === curIndex) {
-              roleItems[i].classList.add("active");
+              const currentItem = roleItems[i];
+              currentItem.classList.add("active");
               if (description) {
-                roleItems[i].querySelector('.role-description').classList.add("active");
+                description.classList.add("active");
+                description.querySelector(".fa-times").addEventListener("click", function(e){
+                  e.stopPropagation();
+                  console.log('current target', e.currentTarget);
+                  console.log('current item 2',currentItem);
+                  currentItem.querySelector(".role-description").classList.remove("active");
+                });
               }
             } else {
               roleItems[i].classList.remove("active");
               if (description) {
-                roleItems[i].querySelector('.role-description').classList.remove("active");
+                description.classList.remove("active");
               }
             }
           }

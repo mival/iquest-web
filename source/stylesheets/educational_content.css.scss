@@ -572,6 +572,9 @@ $ico-size: 53px;
             transform: rotate(45deg);
             box-shadow: 0 2px 5px rgba(0,0,0,.25);
         }
+        .fa-times {
+            color: var(--dark-gray);
+        }
     }
     .description-left .role-description {
         right: 250px;

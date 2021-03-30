@@ -527,6 +527,9 @@
     .nav-dots {
       display: none;
     }
+    .role-description {
+      width: 380px;
+    }
   }
 } 
 
@@ -1371,17 +1374,23 @@
     }
   }
   .educational_content {
+    #footer {
+      height: unset;
+      footer {
+        position: relative;
+      }
+    }
     .ico-shadow.start-up {
       display: none;
     }
     .title-container {
       margin: calc(var(--space-for-navbar)/4) auto 0;
       h4 {
-        height: 100%;
+        line-height: 100%;
       }
       .title-1 {
         margin: 0;
-        height: 100%;
+        line-height: 100%;
       }
     }
     .advice-points > .row.narrow {
@@ -1468,6 +1477,9 @@
           text-align: center;
           width: 100%;
           max-height: max-content;
+          .fa-times {
+            display: none;
+          }
           ul {
             padding: 0;
             list-style: none;
