@@ -303,7 +303,6 @@ document.addEventListener("DOMContentLoaded", function() {
       const roleItems = document.querySelectorAll('#content-wrap .role-item');
       roleItems.forEach(function(item, curIndex) {
         item.addEventListener('click', function(e) {
-          console.log("click at the full item")
           for (var i = 0; i < roleItems.length; i += 1) {
             const description = roleItems[i].querySelector('.role-description');
             if (i === curIndex) {
@@ -313,8 +312,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 description.classList.add("active");
                 description.querySelector(".fa-times").addEventListener("click", function(e){
                   e.stopPropagation();
-                  console.log('current target', e.currentTarget);
-                  console.log('current item 2',currentItem);
                   currentItem.querySelector(".role-description").classList.remove("active");
                 });
               }
