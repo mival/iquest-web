@@ -12,7 +12,7 @@
       @each $type in ((abbr: m, name: margin), (abbr: p, name: padding)) {
         $type-abbr: map-get($type, abbr);
         $type-name: map-get($type, name);
-        $value: #{$i / 4}#{if($i == 0, '', 'em')};
+        $value: #{$i / 4}#{if($i == 0, "", "em")};
 
         @if not($type-abbr == p and $i < 0) {
           @if $dir-key == a {
@@ -31,7 +31,7 @@
 }
 
 @mixin dots {
-  content:"";
+  content: "";
   position: absolute;
   left: 50%;
   margin-left: -1px;
@@ -85,7 +85,6 @@ $body-text-color: #1e1e1e;
 
 $space-lg: 60px;
 
-
 @import "normalize.css";
 @import "animate.css";
 @import "hover.css";
@@ -123,22 +122,34 @@ $space-lg: 60px;
   background-color: $bright-orange;
   border: 2px solid $bright-orange;
   color: $white;
- &:hover {
-  border: 2px solid $bright-orange;
-  color: $bright-orange;
-  background-color: transparent;
- }
+  &:hover {
+    border: 2px solid $bright-orange;
+    color: $bright-orange;
+    background-color: transparent;
+  }
 }
 
 @-webkit-keyframes example {
-  from {top:-100px;opacity: 0;}
-  to {top:0px;opacity:1;}
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 /* Add animation (Standard syntax) */
 @keyframes example {
-  from {top:-100px;opacity: 0;}
-  to {top:0px;opacity:1;}
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 /* The modal's background*/
@@ -192,7 +203,7 @@ $space-lg: 60px;
   float: right;
   font-size: 35px;
   font-weight: bold;
-  color:  $white;
+  color: $white;
   position: absolute;
   top: 0;
   right: 0;
@@ -211,26 +222,25 @@ $space-lg: 60px;
   border: 0;
   outline: 0;
   background: transparent;
-   &:hover,
-   &:focus {
+  &:hover,
+  &:focus {
     color: #2b2e38;
   }
   &:before {
     font-size: 25px;
     line-height: 35px;
-  
+
     position: absolute;
     top: 0;
     left: 0;
-  
+
     display: block;
-  
+
     width: 35px;
-  
+
     content: "\00d7";
     text-align: center;
   }
-  
 }
 
 .closebtn:hover,
@@ -442,7 +452,8 @@ $space-lg: 60px;
   font-weight: normal;
 }
 
-.font-bold, b {
+.font-bold,
+b {
   font-weight: 600;
 }
 
@@ -574,7 +585,7 @@ ul {
 
 .nowrap,
 .back {
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 body {
@@ -691,7 +702,7 @@ body {
     align-items: center;
     border-radius: 50%;
     color: $white;
-        font-weight: 600;
+    font-weight: 600;
     display: flex;
     font-size: 16px;
     height: 7vw;
@@ -1103,11 +1114,9 @@ body {
   top: 0;
 }
 
-#opening .tags {  
+#opening .tags {
   background-color: rgba(73, 79, 92, 0.8);
 }
-
-
 
 #opening > .title,
 #more_than_10_years > .title {
@@ -1148,7 +1157,7 @@ body {
 #opening > .title .title1,
 #opening > .title .title2 {
   font-weight: 300;
-  
+
   line-height: 115%;
 }
 
@@ -1195,7 +1204,6 @@ body {
 }
 
 .info.icons .container .box {
-  
   float: left;
   line-height: 130%;
   position: relative;
@@ -1499,7 +1507,7 @@ body {
 #more_than_10_years .title .title1 {
   color: $white;
   font-size: 4vw;
-  
+
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1548,12 +1556,12 @@ body {
 .page .logo-content .info h3 {
   color: $cerculean;
   margin: 0 0 10px;
-      font-weight: 600;
+  font-weight: 600;
 }
 
 .page .logo-content .info h4 {
   font-weight: 300;
-  
+
   opacity: 0.8;
   margin: 10px 0;
 }
@@ -2370,7 +2378,7 @@ body {
 [class*="why-iquest"] .navigation,
 [class*="proc-iquest"] .navigation {
   left: initial;
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 [class*="why-iquest"] .navigation #logo,
@@ -2826,8 +2834,18 @@ body.posa .page-scroll-show .header {
   background-position: auto;
 }
 
+.page-scroll-show.GHMP .header {
+  background-image: url("/images/Refs/GHMP_back.jpg");
+  background-position: auto;
+}
+
 .page-scroll-show.autoprima .header {
   background-image: url("/images/Refs/autoprima_back.jpg");
+  background-position: center bottom;
+}
+
+.page-scroll-show.bakker .header {
+  background-image: url("/images/Refs/bakker_back.jpg");
   background-position: center bottom;
 }
 
@@ -2938,19 +2956,19 @@ body.posa .page-scroll-show .header {
   }
   .contact-button {
     letter-spacing: 4px;
-      color: black;
-      background-color: $white;
-      line-height: 60px;
-      padding: 0 40px;
-      display: inline-block;
-      border-radius: 41px;
-      font-weight: 600;
-      position: relative;
-      text-transform: uppercase;
-      &:hover {
-        background: linear-gradient(to right, $blue 0%, $green 100%);
-        color: $white;
-      }
+    color: black;
+    background-color: $white;
+    line-height: 60px;
+    padding: 0 40px;
+    display: inline-block;
+    border-radius: 41px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    &:hover {
+      background: linear-gradient(to right, $blue 0%, $green 100%);
+      color: $white;
+    }
   }
   &::before {
     content: "";
@@ -2961,7 +2979,11 @@ body.posa .page-scroll-show .header {
     left: 0;
     background-color: var(--middle-gray);
     width: 100%;
-    background: linear-gradient(-14deg, var(--middle-gray) 50%,rgba(255,255,255,1) 50.1%);
+    background: linear-gradient(
+      -14deg,
+      var(--middle-gray) 50%,
+      rgba(255, 255, 255, 1) 50.1%
+    );
   }
 }
 
@@ -2973,7 +2995,6 @@ body.posa .page-scroll-show .header {
   margin: 80px 0;
 }
 
-
 .what-we-do .info h3 {
   margin-top: 0;
 }
@@ -2982,7 +3003,7 @@ body.posa .page-scroll-show .header {
   margin: 35px 20% 50px;
 }
 
-.what-we-do .button-row{
+.what-we-do .button-row {
   margin-top: 5%;
 }
 
@@ -3012,20 +3033,20 @@ body.posa .page-scroll-show .header {
   }
 }
 
-
 .what-we-do .info .box img {
   width: 40%;
   object-fit: contain;
   object-position: top;
 }
 .what-we-do .info .box {
-  ul li, p {
+  ul li,
+  p {
     font-size: 1.3rem;
     line-height: 175%;
   }
 }
 
-.what-we-do+.icons .icons-container.container  {
+.what-we-do + .icons .icons-container.container {
   padding-top: 0;
   padding-bottom: 70px;
   a {
@@ -3371,7 +3392,7 @@ body.posa .page-scroll-show .header {
 }
 
 .technologie {
-  .cards .card.half { 
+  .cards .card.half {
     height: 168px;
     width: 204px;
   }
@@ -3508,31 +3529,31 @@ body.posa .page-scroll-show .header {
   padding: 20px 0;
   width: 100%;
   .container {
-      box-sizing: border-box;
-      padding: 0 25px;
-      margin: auto;
-      .inner {
-        p {
-          margin: 5px 0;
-          a:hover {
-            color: $white;
-          }
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: auto;
+    .inner {
+      p {
+        margin: 5px 0;
+        a:hover {
+          color: $white;
         }
-        ul {
-          margin-bottom: 0;
-          padding-left: 15px;
-          li {
-            font-size: 13px;
-            line-height: 155%;
-          }
-        }
-        .fa-phone,
-        .fa-envelope {
-         margin-left: -2px;
-         text-align: center;
-         width: 17px;
-       }
       }
+      ul {
+        margin-bottom: 0;
+        padding-left: 15px;
+        li {
+          font-size: 13px;
+          line-height: 155%;
+        }
+      }
+      .fa-phone,
+      .fa-envelope {
+        margin-left: -2px;
+        text-align: center;
+        width: 17px;
+      }
+    }
   }
 }
 
@@ -4020,7 +4041,7 @@ body.posa .page-scroll-show .header {
         height: 30px;
         justify-content: center;
         margin: 10px auto;
-       white-space: nowrap;
+        white-space: nowrap;
         width: 100px;
       }
 
@@ -4258,7 +4279,7 @@ a.contact-us.inline {
       &::-webkit-scrollbar {
         display: none;
         width: 0;
-    }
+      }
     }
   }
   .logo-content:first-child {
@@ -4320,7 +4341,7 @@ a.contact-us.inline {
 }
 
 .educational-content-container {
-  background-color:  $dark-gray;
+  background-color: $dark-gray;
   margin-top: 10vw;
   padding-top: 3vw;
   padding-bottom: 2vw;
@@ -4331,7 +4352,8 @@ a.contact-us.inline {
   &:after {
     left: 80%;
   }
-  &:before, &:after {
+  &:before,
+  &:after {
     background: linear-gradient(90deg, black 50%, $white 50%);
     content: ".........................................................................................";
     position: absolute;
@@ -4377,19 +4399,20 @@ a.contact-us.inline {
         }
         &:hover {
           span:before {
-            height: 400px!important;
-            opacity: 0.95!important;
+            height: 400px !important;
+            opacity: 0.95 !important;
           }
           span:after {
-            font-size: 2.1rem!important;
+            font-size: 2.1rem !important;
             color: $body-text-color;
-            font-weight: 400!important;
-            background: transparent!important;
+            font-weight: 400 !important;
+            background: transparent !important;
           }
         }
         &.col1 {
           span {
-            background: $bright-orange url(../images/choose.jpg) center no-repeat;
+            background: $bright-orange url(../images/choose.jpg) center
+              no-repeat;
             &:before {
               background-color: $bright-orange;
             }
@@ -4424,11 +4447,12 @@ a.contact-us.inline {
         &.col4 {
           &:hover {
             span:after {
-              font-size: 1.6rem!important;
+              font-size: 1.6rem !important;
             }
           }
           span {
-            background: $green-dark url(../images/developer.jpg) center no-repeat;
+            background: $green-dark url(../images/developer.jpg) center
+              no-repeat;
             &:before {
               background-color: $green-dark;
             }
@@ -4448,8 +4472,8 @@ a.contact-us.inline {
           border-radius: $border-radius;
           overflow: hidden;
           &:before {
-            content: '';
-            transition: all .5s;
+            content: "";
+            transition: all 0.5s;
             opacity: 0.8;
             height: 0px;
             position: absolute;
@@ -4457,8 +4481,8 @@ a.contact-us.inline {
             right: 0;
           }
           &:after {
-            transition: all .5s;
-           white-space: pre;
+            transition: all 0.5s;
+            white-space: pre;
             text-align: center;
             color: $white;
             font-size: 1.9rem;
@@ -4750,7 +4774,7 @@ form {
 
       &.contact-us {
         clear: both;
-        color:  $white;
+        color: $white;
         display: inline-block;
         position: inherit;
       }
@@ -4761,7 +4785,6 @@ form {
 .map-marker-label {
   position: absolute;
   font-size: 14px;
-  
 }
 
 // TODO - optional - currently not used
@@ -4793,7 +4816,6 @@ form {
     max-width: 250px;
   }
 }
-
 
 .consultation-iframe {
   border: none;
