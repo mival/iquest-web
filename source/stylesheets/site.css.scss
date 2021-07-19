@@ -465,8 +465,28 @@ b {
   display: table !important;
 }
 
+.m-auto {
+  margin: auto;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-4 {
+  flex: 4;
 }
 
 .flex-column {
@@ -4821,4 +4841,139 @@ form {
 .consultation-iframe {
   border: none;
   width: 100%;
+}
+
+////////////// TODO: TYTO STYLY JSOU PRO NOVE ZOBRAZENI REFERENCI, UDELAT NOVEJ STYLESHEET
+
+.company {
+  &-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &-solution {
+    color: $green-dark;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &-result {
+    font-weight: bold;
+  }
+
+  &-titles {
+    color: $green-dark;
+    font-weight: bold;
+    margin-right: 0rem;
+    width: 115px;
+  }
+}
+
+.reference {
+  &__block {
+    &--first {
+      background-image: url("../images/4delete.png");
+      background-size: cover;
+      height: 900px;
+      position: relative;
+
+      &_info {
+        padding-top: 280px;
+        padding-left: 15%;
+        width: 550px;
+
+        & > div {
+          margin-bottom: 4rem;
+        }
+
+        &-logo {
+          width: auto;
+        }
+      }
+
+      &_pills {
+        bottom: 0;
+        left: -35px;
+        position: absolute;
+      }
+    }
+    &--second {
+      background-color: rgb(211, 211, 211);
+      position: relative;
+      padding: 7rem 0;
+      overflow: hidden;
+
+      &_text {
+        font-weight: bold;
+        line-height: 25px;
+        margin: auto;
+        text-align: center;
+        width: 80%;
+      }
+
+      &_pills {
+        position: absolute;
+        right: -165px;
+        top: 23px;
+      }
+    }
+    &--third {
+      background-image: url("../images/conference_people.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 33% 0%;
+      display: flex;
+      padding: 5rem 20%;
+
+      @media screen and (min-width: 1000px) {
+        background-position: 40% 0%;
+      }
+
+      &_title {
+        color: $green-dark;
+        font-size: 28px;
+        font-weight: bold;
+        margin-right: 10rem;
+      }
+      &_text {
+        font-weight: bold;
+      }
+    }
+
+    &--fourth {
+    }
+
+    &--fifth {
+      background-image: url("../images/calendar_background.png");
+      background-size: cover;
+      position: relative;
+      padding-top: 4rem;
+      padding-bottom: 14rem;
+
+      &_plan {
+        width: 100%;
+      }
+
+      &_points {
+        position: absolute;
+        background-color: white;
+        box-shadow: 19px 13px 27px -7px rgba(89, 200, 220, 0.397);
+        -webkit-box-shadow: 19px 13px 27px -7px rgba(89, 200, 220, 0.397);
+        border-radius: 14px;
+        margin: auto;
+        padding: 4rem;
+        transform: translateX(50%);
+        right: 50%;
+        width: 70%;
+
+        & > div {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.delete_me {
+  height: 900px;
 }
