@@ -62,9 +62,12 @@ $bright-orange: #f18c4f;
 $orange: #fdd7a8;
 $yellow-dark: #dfdb71;
 $blue: #00d6cf;
+$lighter-blue: #5FCBE1;
 $green: #00ceb3;
+$lighter-green: #00CFB6;
 $border-radius: 12px;
 $cerculean: #4590af;
+$white-blue: #F9FDFE;
 $white: #fff;
 $body-text-color: #1e1e1e;
 
@@ -4872,7 +4875,7 @@ form {
 .reference {
   &__block {
     &--first {
-      background-image: url("../images/4delete.png");
+      background-image: url("../images/Refs/greenswan_background.png");
       background-size: cover;
       height: 900px;
       position: relative;
@@ -4898,10 +4901,13 @@ form {
       }
     }
     &--second {
-      background-color: rgb(211, 211, 211);
+      background-color: $white-blue;
+      margin-top: -3.7rem;
       position: relative;
       padding: 7rem 0;
       overflow: hidden;
+      clip-path: polygon(0 22%, 100% 0%, 100% 78%, 0% 100%);
+      z-index: 1;
 
       &_text {
         font-weight: bold;
@@ -4913,17 +4919,21 @@ form {
 
       &_pills {
         position: absolute;
-        right: -165px;
+        height: 13rem;
+        width: auto;
+        right: 0px;
         top: 23px;
+        z-index: 3;
       }
     }
     &--third {
       background-image: url("../images/conference_people.png");
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: 33% 0%;
       display: flex;
       padding: 5rem 20%;
+      margin-top: -3rem;
 
       @media screen and (min-width: 1000px) {
         background-position: 40% 0%;
@@ -4941,6 +4951,28 @@ form {
     }
 
     &--fourth {
+      clip-path: polygon(0 22%, 100% 0%, 100% 79%, 0% 100%);
+      margin-top: -3rem;
+      padding: 11rem 0;
+      position: relative;
+      z-index: 1;
+
+      &_bgvideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: .6;
+        overflow: hidden;
+      }
+
+      &_videocontent {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &--fifth {
@@ -4949,6 +4981,7 @@ form {
       position: relative;
       padding-top: 4rem;
       padding-bottom: 14rem;
+      margin-top: -5rem;
 
       &_plan {
         width: 100%;
@@ -4971,6 +5004,157 @@ form {
         }
       }
     }
+
+
+
+    &--sixth {
+      padding-top: 24rem;
+      position: relative;
+      padding-bottom: 8rem;
+
+      &_header {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      &_box {
+        background-color: $white-blue;
+        border-radius: 14px;
+        margin: 0.3rem;
+        height: 96px;
+        padding: 0.7rem;
+        width: 20%;
+        box-sizing: border-box;
+        position: relative;
+
+        &:hover {
+          background-image: url('../images/4delete2.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position:  100% 0;
+          transition: all .8s;
+
+          &::after {
+            border: 2px solid $lighter-blue;
+            transform: rotate(2deg);
+          }
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 99%;
+          width: 99%;
+          background-color: white;
+          border-radius: 14px;
+          position: absolute;
+          top: -1px;
+          left: 0;
+          z-index: -1;
+          transition: all .4s;
+
+      }
+      }
+
+      &_links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 80%;
+      }
+
+      &_title {
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      &_detail {
+        color: $lighter-blue;
+      }
+    }
+
+
+    &--seventh {
+      text-align: center;
+      padding: 4rem 0;
+      background-image: url('../images/Refs/greenswan_meeting.png');
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+
+
+      &_dots {
+        top: -5rem;
+        background-image: url('../images/doted_line.png');
+        height: 7rem;
+        position: absolute;
+        right: 50%;
+        width: 2px;
+
+      }
+
+      &_title {
+        color: $lighter-blue;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 1rem;
+      }
+
+      &_text {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      &_large {
+        margin-top: 1.5rem;
+        font-size: 28px;
+        color: $lighter-green;
+        font-weight: bold;
+      }
+    }
+
+    &--eighth {
+      background-image: url('../images/Refs/greenswan_hands.png');
+      background-size: cover;
+      height: 22rem;
+      margin-top: -3rem;
+      position: relative;
+      clip-path: polygon(0 22%, 100% 0%, 100% 99%, 0% 100%);
+      z-index: 2;
+      margin-bottom: -1rem;
+
+      &_background {
+        background-color: rgba(6, 11, 39, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        & > a:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+
+      &_link {
+        background: $lighter-green;
+        border-radius: 30px;
+        color: white;
+        font-size: 14px;
+        padding: 13px 20px;
+        text-transform: uppercase;
+
+      }
+
+
+    }
+
+
+
   }
 }
 
